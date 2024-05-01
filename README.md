@@ -1,3 +1,3 @@
 # Belize-Maya-Forest-Trust
-Web Application for the Belize Maya Forest trust
-This is a upcoming summer project.
+Web Application for the Belize Maya Forest trust. <br>
+This is an upcoming summer project.
