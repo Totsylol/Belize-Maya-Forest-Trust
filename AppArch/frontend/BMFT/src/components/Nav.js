@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { TfiAngleDown } from "react-icons/tfi";
+import styles from "./nav.module.css"
 
 
 const Nav = () => {
 
   return (
     <div>
-      <header className="bg-green-500"> 
+      <header className={styles.header}> 
         <nav className='flex justify-between items-center w-[92%] mx-auto'>
           <div>
 
