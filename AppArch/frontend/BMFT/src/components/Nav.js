@@ -7,8 +7,8 @@ const Nav = () => {
 
   return (
     <div>
-      <header className={styles.header}>
-      <nav className={styles.nav}>
+      <header>
+      <nav>
           <div>
             <ul>
               <li>What We Do</li>
