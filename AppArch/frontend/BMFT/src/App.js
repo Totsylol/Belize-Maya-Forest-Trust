@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Newsletter from "./components/Newsletter";
 import Involvement from "./components/Involvement";
 import FAQ from "./components/FAQ"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -14,19 +15,24 @@ function App() {
           <Nav></Nav>
             <Home></Home> 
           </Route>
+          
           <Route path = "/News">
           <Nav></Nav>
+         
             <Newsletter></Newsletter>
           </Route>
           <Route path = "/FAQ">
           <Nav></Nav>
           <FAQ></FAQ>
           </Route>
+         
           <Route path = "/Involvement">
           <Nav></Nav>
           <Involvement></Involvement>
           </Route>
           </Switch>
+          <Footer>
+          </Footer>
       </Router>
     </div>
   );
