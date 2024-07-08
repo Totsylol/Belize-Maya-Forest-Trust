@@ -1,32 +1,32 @@
 import React from 'react';
 import styles from './styles/footer.module.css';
 import { Link } from 'react-router-dom';
-import Button from './Button'
+
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
+    <div className={styles.footercontainer}>
+      <section className={styles.footersubscription}>
+        <p className={styles.footersubscriptionheading}>
           Belize Maya Forest Trust
         </p>
-        <p className='footer-subscription-text'>
+        <p className={styles.footersubscriptiontext}>
         </p>
-        <div className='input-areas'>
+        <div className={styles.inputareas}>
           <form>
             <input
-              className='footer-input'
+              className={styles.footerinput}
               name='email'
               type='email'
               placeholder='Your Email'
             />
-        <Button>Subscribe</Button>
+        
           </form>
         </div>
       </section>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+      <div class='footerlinks'>
+        <div className={styles.footerlinkwrapper}>
+          <div className={styles.footerlinkitems}>
             <h2>About Us</h2>
             <Link to='/sign-up'>Our Story</Link>
             <Link to='/'>Biodiversity</Link>
@@ -34,14 +34,14 @@ function Footer() {
             <Link to='/'>Conerservation Targets</Link>
             <Link to='/'>Threats</Link>
           </div>
-          <div class='footer-link-items'>
+          <div class={styles.footerlinkitems}>
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
             <Link to='/'>Donate</Link>
             <Link to='/'></Link>
           </div>
-          <div class='footer-link-items'>
+          <div class={styles.footerlinkitems}>
             <h2>Social Media</h2>
             <Link to='/'>Email Us</Link>
             <Link to='/'>Facebook</Link>
@@ -50,15 +50,15 @@ function Footer() {
           </div>
         </div>
       </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
+      <section className={styles.socialmedia}>
+        <div className={styles.socialmediawrap}>
+          <div class='footerlogo'>
+            <Link to='/' className={styles.sociallogo}>
               <i class='fab fa-typo3' />
             </Link>
           </div>
-          <small class='website-rights'> ©Belize Maya Forest Trust 2020</small>
-          <div class='social-icons'>
+          <small className={styles.websiterights}> ©Belize Maya Forest Trust 2020</small>
+          <div className={styles.socialicons}>
             <Link
               class='social-icon-link facebook'
               to='/'
