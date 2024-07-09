@@ -19,9 +19,8 @@ function Footer() {
               className={styles.footerinput}
               name='email'
               type='email'
-              placeholder='Your Email'
+              placeholder='Email'
             />
-        
           </form>
         </div>
       </section>
