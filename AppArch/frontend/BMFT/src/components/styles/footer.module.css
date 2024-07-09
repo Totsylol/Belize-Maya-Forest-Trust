@@ -1,3 +1,4 @@
+
 .footercontainer {
     background-color: #242424;
     background-color: #00bef0;
@@ -6,11 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
     position: fixed;
     width: 100%;
     bottom: 0;
-  
   }
   
   .footersubscription {
