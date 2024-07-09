@@ -31,9 +31,10 @@ function App() {
           <Involvement></Involvement>
           </Route>
           </Switch>
-          <Footer>
-          </Footer>
+          
+          <Footer/>
       </Router>
+      
     </div>
   );
 }
