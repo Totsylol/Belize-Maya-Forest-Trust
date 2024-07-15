@@ -1,20 +1,47 @@
-
-.header{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    position: fixed;
-    height: 9vh;
-    top:0;
-    left:0;
-    width: 100%;
-    padding: 20px 100px;
-    background:rgba(0,0,0,.9);
-    z-index: 100;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.nav{
+
+.logo{
+    width: 10%;
+    height: auto;
+}
+
+.nav {
+    background-color:rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+}
+
+.nav ul{
+    list-style: none;
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-end;
     align-items: center;
+}
+
+.nav li{
+    height: 13vh;
+}
+
+.nav a{
+    height: 100%;
+    padding: 0 50px;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.nav a:hover{
+    color:grey;
+}
+
+.nav li:first-child{
+    margin-top: 1vh;
+    margin-left: 3vh;
+    margin-right: auto;
 }
