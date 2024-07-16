@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/foot.module.css';
 import { Link } from 'react-router-dom';
-import { Routes ,Route } from 'react-router-dom';
+import FinalBMFT from './assets/FinalBMFT.jpg';
 
 
 function Footer() {
@@ -10,10 +10,11 @@ function Footer() {
     <div className={styles.footercontainer}>
       <section className={styles.footersubscription}>
         <p className={styles.footersubscriptionheading}>
-          Belize Maya Forest Trust
+        Subscribe to Our Newsletter
         </p>
         <p className={styles.footersubscriptiontext}>
         </p>
+        <img className={styles.FinalBMFT} src={FinalBMFT}/>
         <div className={styles.inputareas}>
           <form>
             <input
