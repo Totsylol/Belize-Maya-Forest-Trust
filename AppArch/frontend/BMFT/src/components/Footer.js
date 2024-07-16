@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './styles/foot.module.css';
 import { Link } from 'react-router-dom';
-
+import { Routes ,Route } from 'react-router-dom';
 
 
 function Footer() {
   return (
+    
     <div className={styles.footercontainer}>
       <section className={styles.footersubscription}>
         <p className={styles.footersubscriptionheading}>
@@ -21,7 +22,10 @@ function Footer() {
               type='email'
               placeholder='Email'
             />
-          </form>
+            </form>
+            <button className={styles.subbutton}>
+            Subscribe
+          </button>
         </div>
       </section>
       <div class='footerlinks'>
@@ -46,7 +50,8 @@ function Footer() {
             <Link to='/'>Email Us</Link>
             <Link to='/'>Facebook</Link>
             <Link to='/'>Youtube</Link>
-           
+            
+            
           </div>
         </div>
       </div>
