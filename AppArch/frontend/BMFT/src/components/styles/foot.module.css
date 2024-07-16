@@ -9,14 +9,15 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
+    
+ 
 }
 .FinalBMFT{
     height: 120px;
     position: relative;
     left: -700px;
     border-radius: 15px;
-    top: -100px;
+    top: 120px;
   
 
 }
@@ -26,8 +27,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 16px;
+    padding: 10px;
     color: #ffffff;
+    height: 0px;
 }
 
 
@@ -43,8 +45,8 @@
     position: relative;
     margin-bottom: 24px;
     font-size: 24px;
-    top: 50px;
-    right: -770px;
+    top: 200px;
+    right: -630px;
     text-decoration: underline;
   }
   
@@ -56,12 +58,12 @@
   .subbutton{
     position: relative;
     margin-right: -1900px;
-    top: -150px;
-    left: -90px;
+    top: 0px;
+    left: -220px;
     font-family: "Verdana", Times, sans-serif;
     color: #f5f5f5;
     background-color: #52c742;
-    padding: 10px 10px;
+    padding: 10px 9px;
     border-radius: 0px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -79,8 +81,8 @@
     position: relative;
     padding: 8px 20px;
     border-radius: 10px;
-    margin-right: -1420px;
-    top: -90px;
+    margin-right: -1200px;
+    top: 60px;
     outline: none;
     border: none;
     font-size: 18px;
@@ -108,15 +110,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 16px;
+    margin: 10px;
     text-align: left;
-    width: 400px;
+    width: 300px;
     box-sizing: border-box;
+
    
   }
   
   .footerlinkitems h2 {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   
   .footerlinkitems > h2 {
