@@ -13,11 +13,13 @@
  
 }
 .FinalBMFT{
+    
     height: 120px;
     position: relative;
     left: -700px;
     border-radius: 15px;
     top: 120px;
+   
   
 
 }
@@ -214,6 +216,6 @@
   
   @media (max-width: 600px) {
     .footercontainer {
-      padding: 6vw 0 3vw 0; /* Adjust padding for smaller screens */
+      padding: 6vw 0 3vw 0; 
     }
   }
