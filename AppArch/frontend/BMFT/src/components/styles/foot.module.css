@@ -192,30 +192,133 @@
     margin-bottom: 16px;
   }
   
-  @media screen and (max-width: 600px) {
-    .footerlinks {
-      padding-top: 2rem;
+  @media (max-width: 1634px) {
+    
+    .footerlinkitems {
+    width: 200px;
+    }
+  
+    .FinalBMFT {
+        left: -550px;
+    }
+  
+    .footersubscriptionheading {
+        margin-left: -300px;
+    }
+  
+    .subbutton {
+    margin-left: -300px;
+    
     }
   
     .footerinput {
-      width: 100%;
+     margin-left:-300px;
     }
-  
-    .btn {
-      width: 100%;
-    }
-  
-    .footerlinkwrapper {
-      flex-direction: column;
-    }
-  
-    .socialmediawrap {
-      flex-direction: column;
-    }
+}
+    @media (max-width: 1339px) {
+        .subbutton {
+            margin-left: -300px;
+            
+            }
+          
+            .footerinput {
+             margin-left:-300px;
+            }
+            .FinalBMFT {
+                left: -500px;
+            }
+           
+
   }
-  
-  @media (max-width: 600px) {
-    .footercontainer {
-      padding: 6vw 0 3vw 0; 
+  @media (max-width: 1325px) {
+    .footercontainer{
+        padding: 70px;
     }
-  }
+
+
+}
+@media (max-width: 1291px) {
+    .subbutton {
+        margin-left: -400px;
+        
+        }
+      
+        .footerinput {
+         margin-left:-400px;
+        }
+        .footersubscriptionheading {
+            left: 585px;
+        }
+       
+
+}
+@media (max-width: 1236px) {
+    .FinalBMFT{
+        left: -470px;
+    }
+       
+
+}
+@media (max-width: 1227px) {
+    .footercontainer{
+        padding: 7rem 0;
+    }
+
+}
+@media (max-width: 1199px) {
+    .footercontainer{
+        padding: 7rem 0;
+    }
+        .footerlinkitems {
+            width: 150px;
+            font-size: 13px;
+            }
+          
+            .FinalBMFT {
+                left: -430px;
+            }
+          
+            .footersubscriptionheading {
+                margin-left: -400px;
+            }
+          
+            .subbutton {
+            margin-left: -530px;
+            
+            }
+          
+            .footerinput {
+             margin-left:-530px;
+            }
+    }
+    @media (max-width: 1199px) {
+        .footercontainer{
+            padding: 5rem 1;
+        
+        }
+    }
+        @media (max-width: 1199px) {
+            .footercontainer{
+                padding: 200px;
+                width: 100%;
+               
+            }
+            .FinalBMFT{
+                    left: -400px;
+                    top: 100px;
+            }
+                .footerinput{
+                    top: 10px;
+                }
+                .subbutton{
+                    top:-50px;
+                }
+                .footersubscriptionheading{
+                    top: 150px;
+                    left: 575px;
+                }
+        }
+    
+    
+    
+
