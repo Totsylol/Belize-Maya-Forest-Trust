@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import styles from "../styles/login.module.css";
 import { FaUser } from "react-icons/fa";
 import { IoLockClosedSharp } from "react-icons/io5";
-
+import bgVid from '../assets/bgvid.mp4';
 import logo from '../assets/logo.png';
 
 
