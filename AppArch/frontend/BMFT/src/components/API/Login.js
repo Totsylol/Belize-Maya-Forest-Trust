@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom';
 import styles from "../styles/login.module.css";
 import { FaUser } from "react-icons/fa";
 import { IoLockClosedSharp } from "react-icons/io5";
-import bgVid from '../assets/bgvid.mp4';
+/*import bgVid from '../assets/bgvid.mp4';*/
 import logo from '../assets/logo.png';
-
+/* <video className={styles.videobg} src={bgVid} autoPlay muted loop /> */
 
 const Login = () => {
 
@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <div>
         
-          <video className={styles.videobg} src={bgVid} autoPlay muted loop />
+        
           <a href ='./'><img className={styles.logo} src={logo}/></a>
 
           <div className={styles.wrapper}>

@@ -15,29 +15,33 @@ function App() {
           <Route exact path = "/">
           <Nav></Nav>
             <Home></Home> 
+            <Footer/>
           </Route>
           
           <Route path = "/News">
           <Nav></Nav>
-         
             <Newsletter></Newsletter>
+            <Footer/>
           </Route>
           <Route path = "/FAQ">
           <Nav></Nav>
           <FAQ></FAQ>
+          <Footer/>
           </Route>
          
           <Route path = "/Involvement">
           <Nav></Nav>
           <Involvement></Involvement>
+          <Footer/>
           </Route>
+          
        
 
           <Route path = "/Login">
           <Login></Login>
           </Route>
           </Switch>
-          <Footer/>
+          
           
       </Router>
       
