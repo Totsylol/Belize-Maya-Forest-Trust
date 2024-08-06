@@ -5,6 +5,7 @@ import Newsletter from "./components/Newsletter";
 import Involvement from "./components/Involvement";
 import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
+import Login from "./components/API/Login"
 
 function App() {
   return (
@@ -30,9 +31,13 @@ function App() {
           <Nav></Nav>
           <Involvement></Involvement>
           </Route>
+       
+
+          <Route path = "/Login">
+          <Login></Login>
+          </Route>
           </Switch>
           
-          <Footer/>
       </Router>
       
     </div>
