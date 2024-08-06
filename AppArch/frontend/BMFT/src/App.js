@@ -37,6 +37,7 @@ function App() {
           <Login></Login>
           </Route>
           </Switch>
+          <Footer/>
           
       </Router>
       
