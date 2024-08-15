@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles/WWDInfo.module.css'; 
-import AboutBMF from "./assets/AboutBMF.jpg"
+{/*import AboutBMF from "./assets/AboutBMF.jpg"*/}
 
 const WWDInfo = () => {
     return (
@@ -14,9 +14,11 @@ const WWDInfo = () => {
                     <p>The trustee, steward, and manager of the BMF is a local nonprofit organization, the BMFT, established in December 2020. The BMFT was also registered as an NGO under Belize's NGO Act in August 2021. The BMFT needed a strategic plan to guide its programs and operations and therefore embarked on a yearlong stakeholder engagement and participation process to develop a Conservation Action Plan (CAP). The BMF CAP is presented here and encompasses strategies to improve conservation targets or mitigate threats to those targets in the BMF and surrounding landscape. Its elaboration involved planning steps as outlined in the Conservation Measures Partnership’s Open Standards for the Practice of Conservation.</p>
                 </div>
             </div>
+            {/*}
             <div className={styles.imageContainer}>
                 <img src={AboutBMF} alt="BMF Forest" className={styles.image} />
             </div>
+    */}
         </section>
     );
 };
