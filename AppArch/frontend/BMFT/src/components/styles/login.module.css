@@ -167,6 +167,14 @@
     font-family: "Poppins", sans-serif;
   }
 
+
+  @keyframes scaleUpDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); } 
+    100% { transform: scale(1); } 
+  }
+  
+  
   .logo {
     position: fixed; 
     top: 2vh;
@@ -174,10 +182,13 @@
     width: 4%;
     height: auto;
     z-index: 2;
-}
-
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out; 
+  }
   
-  
+  .logo:active {
+    animation: scaleUpDown 0.4s ease-in-out; 
+  }
   
   @media(max-width: 768px){
     .inputbox {
