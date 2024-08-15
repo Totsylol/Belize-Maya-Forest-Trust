@@ -1,0 +1,40 @@
+.newsfeedpanel {
+  width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  margin: 20px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.newsfeedpanel:hover {
+  transform: translateY(-5px);
+}
+
+.paneltitle h2 {
+  font-size: 2em;
+  color: #333;
+  margin: 20px 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #333;
+}
+
+.paneldescription p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+}
+
+.panelimage {
+  margin-top: 20px;
+}
+
+.panelimage img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
