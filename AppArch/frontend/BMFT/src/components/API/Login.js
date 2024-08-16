@@ -14,43 +14,82 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const nav = useHistory();
 
-  return (
-    <div>
-        
-        
-          <a href ='./'><img className={styles.logo} src={logo}/></a>
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-          <div className={styles.wrapper}>
-              <div className={styles.container}>
-                  <form action="" style={{maxWidth: '100vw'}}> 
-                      <div className={styles.header}> 
-                          <h1><span className={styles.h1}>Admin</span><span className={styles.h2}> Access</span></h1>
-                      </div>
-          
-                      <div className={styles.inputbox}> 
-                          <input className ={styles.input} value={email || userName} onChange={(e) => setEmail(e.target.value) || setUserName(e.target.value)} type="text" placeholder='Username' required/> 
-                          <FaUser className={styles.icon}/>
-                      </div>
-          
-                      <div className={styles.inputbox}> 
-                          <input className ={styles.input} value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' required/> 
-                          <IoLockClosedSharp className={styles.icon}/>
-                      </div>
-          
-                      <div className={styles.forgot}> 
-                          <label className={styles.in}><input className={styles.in} type="checkbox"/>Remember me</label>
-                          <a className ={styles.a} href="./reset-password">Forgot password?</a>
-                      </div>
-          
-                      <button className={styles.btn} type="submit">sign in</button>
-                      <div className={styles.register}>
-                          <p className={styles.p}>First time here?<a className ={styles.a2} href='./register'> Register</a></p>
-                      </div>
-                  </form>
-              </div>
-          </div>
-    </div>
-  )
-}
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    user_name: emailOrUserName,
+                    password: password
+                })
+            });
 
-export default Login
+            const data = await response.json();
+
+            if (response.ok) {
+                // Save the token in local storage or a context/state management
+                localStorage.setItem('token', data.access_token);
+                console.log('Login successful');
+                nav.push('/dashboard'); // Redirect to a protected route after successful login
+            } else {
+                console.error('Login failed:', data.error);
+                alert('Login failed. Please check your credentials.');
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('An error occurred. Please try again later.');
+        }
+    };
+
+    return (
+        <div>
+            <a href='./'><img className={styles.logo} src={logo} alt="Logo"/></a>
+            <div className={styles.wrapper}>
+                <div className={styles.container}>
+                    <form onSubmit={handleSubmit} style={{maxWidth: '100vw'}}>
+                        <div className={styles.header}>
+                            <h1><span className={styles.h1}>Admin</span><span className={styles.h2}> Access</span></h1>
+                        </div>
+                        <div className={styles.inputbox}>
+                            <input
+                                className={styles.input}
+                                value={emailOrUserName}
+                                onChange={(e) => setEmailOrUserName(e.target.value)}
+                                type="text"
+                                placeholder='Username or Email'
+                                required
+                            />
+                            <FaUser className={styles.icon}/>
+                        </div>
+                        <div className={styles.inputbox}>
+                            <input
+                                className={styles.input}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                type="password"
+                                placeholder='Password'
+                                required
+                            />
+                            <IoLockClosedSharp className={styles.icon}/>
+                        </div>
+                        <div className={styles.forgot}>
+                            <label className={styles.in}><input className={styles.in} type="checkbox"/>Remember me</label>
+                            <a className={styles.a} href="./reset-password">Forgot password?</a>
+                        </div>
+                        <button className={styles.btn} type="submit">Sign in</button>
+                        <div className={styles.register}>
+                            <p className={styles.p}>First time here?<a className={styles.a2} href='./register'> Register</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Login;

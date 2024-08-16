@@ -1,15 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
-const User = require('./models/userModel'); 
-
-const app = express();
-app.use(express.json()); 
+const User = require('../Model/userModel'); // Correct path to userModel
 
 const userController = express.Router();
-
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key';
 
 // Route to login
@@ -42,9 +37,4 @@ userController.post('/login', [
     }
 });
 
-app.use('/api', userController);
-
-const PORT = process.env.PORT || 3000;
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
-    .catch(err => console.error("MongoDB connection error:", err));
+module.exports = userController; // Export the router
