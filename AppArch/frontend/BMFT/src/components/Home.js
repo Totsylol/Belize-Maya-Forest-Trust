@@ -1,37 +1,41 @@
 import React from 'react'
 import styles from "./styles/home.module.css"
+import home from "./assets/Home.jpg"
+import aerial from "./assets/cenoteaerial.jpg"
+import cenote from "./assets/cenote.jpg"
+import diver1 from "./assets/diver1.jpg"
+import fish from "./assets/fish.jpg"
+import diver2 from "./assets/diver2.jpg"
+import agrigo from "./assets/Agrigo.jpg"
+import anti from "./assets/antiwaste.JPG"
+import visit from "./assets/visit.jpg"
 import LivePatrolTracker from './LivePatrolTracker'
 
 const Home = () => {
   return (
     <div>
+      
       <div className={styles.container}> 
+      <img src={home} className={styles.img2}/>
       <div className={styles.gallery}>
 
       <div className={styles.column}>
 
         <div className={styles.img}>
-          <img src='./assets/cenoteaerial.jpg'/>
+          <img src={aerial}/>
         </div>
-        <div className={styles.img}>
-          <img src='./assets/Home.jpg'/>
-        </div>
-        <div className={styles.img}>
-          <img src='./assets/cenote.jpg'/>
-        </div>
-
       </div>
 
       <div className={styles.column}>
 
         <div className={styles.img}>
-          <img src='./assets/diver1.jpg'/>
+          <img src={diver1}/>
         </div>
         <div className={styles.img}>
-          <img src='./assets/fish.jpg'/>
+          <img src={fish}/>
         </div>
         <div className={styles.img}>
-          <img src='./assets/diver2.jpg'/>
+          <img src={diver2}/>
         </div>
         
       </div>
@@ -39,13 +43,13 @@ const Home = () => {
       <div className={styles.column}>
 
         <div className={styles.img}>
-          <img src='./assets/Agrigo.jpg'/>
+          <img src={agrigo}/>
         </div>
         <div className={styles.img}>
-          <img src='./assets/antiwaste.jpg'/>
+          <img src={anti}/>
         </div>
         <div className={styles.img}>
-          <img src='./assets/visit.jpg'/>
+          <img src={visit}/>
         </div>
         
       </div>
