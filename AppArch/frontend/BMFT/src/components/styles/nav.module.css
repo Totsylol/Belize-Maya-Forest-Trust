@@ -26,6 +26,7 @@
     background-color:rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 .nav ul{

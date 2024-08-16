@@ -9,28 +9,12 @@ function Footer() {
     
     <div className={styles.footercontainer}>
       <section className={styles.footersubscription}>
-        <p className={styles.footersubscriptionheading}>
-        Subscribe to Our Newsletter
-        </p>
         <p className={styles.footersubscriptiontext}>
         </p>
-        <img className={styles.FinalBMFT} src={FinalBMFT}/>
-        <div className={styles.inputareas}>
-          <form>
-            <input
-              className={styles.footerinput}
-              name='email'
-              type='email'
-              placeholder='Email'
-            />
-            </form>
-            <button className={styles.subbutton}>
-            Subscribe
-          </button>
-        </div>
       </section>
       <div class='footerlinks'>
         <div className={styles.footerlinkwrapper}>
+        <img className={styles.FinalBMFT} src={FinalBMFT}/>
           <div className={styles.footerlinkitems}>
             <h2>About Us</h2>
             <Link to='/sign-up'>Our Story</Link>
@@ -54,6 +38,23 @@ function Footer() {
             
             
           </div>
+          
+          <div className={styles.inputareas}>
+            <p className={styles.footersubscriptionheading}>
+        Subscribe to Our Newsletter
+        </p>
+          <form>
+            <input
+              className={styles.footerinput}
+              name='email'
+              type='email'
+              placeholder='Email'
+            />
+            </form>
+            <button className={styles.subbutton}>
+            Subscribe
+          </button>
+        </div>
         </div>
       </div>
       <section className={styles.socialmedia}>
