@@ -1,101 +1,66 @@
 .footercontainer {
-  background-color: #00bef0;
+  background-color: #00bef0; 
   padding: 2rem 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 1;
-  left: 0;
-  width: 100%;
 }
-
-.FinalBMFT {
-  height: 120px;
-  position: relative;
-  border-radius: 20px;
-  margin-top: 20px; 
-  left: -750px;
-  top: 260px;
-}
-
 
 .footersubscription {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0px;
-  color: #ffffff;
-  height: auto; 
-  
-}
-
-.footersubscription > p {
-  font-family: 'Display Fonts', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .footersubscriptionheading {
-  margin-right: -1330px;
-  margin-bottom: -320px;
-  font-size: 24px;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   text-decoration: underline;
 }
 
-.footersubscriptiontext {
-
-  margin-bottom: 30px;
-
+.FinalBMFT {
+  border-radius: 20px;
+  height: 120px;
+  object-fit: cover; 
+  margin-top: 2rem;
+  margin-right: 90px;
 }
 
-.subbutton{
-  position: relative;
-  margin-right: -1900px;
-  top: 132.5px;
-  left: -182px;
-  font-family: "Verdana", Times, sans-serif;
-  color: #f5f5f5;
-  background-color: #52c742;
-  padding: 10px 10px;
-  transform: scale(1.34);
-  width: 80px;
-  height: 34.5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  font-size: 10px;
-  text-transform: uppercase;
+.inputareas {
+  margin-top: rem;
+  margin-left: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerinput:focus {
+  outline: none;
+}
+.footerinput {
+  padding: 0.8rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 1rem;
+  background-color: #fff; 
+}
+
+.subbutton {
+  background-color: #52c742; 
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: ease background-color 250ms;
-  
-        }
-
+}
 .subbutton:hover {
-  background-color: #41a534;
-}
-
-.footerinput {
-  padding: 8px 20px;
-  border-radius: 10px;
-  position: relative;
-  font-size: 20px;
-  color: #000000;
-  right: -643px;
-  top: 175px;
-  height: 49px;
-  width: 100%;
-  transform: scale(0.9);
- 
- 
-}
-
-.footerlinks {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
+  background-color: rgb(60, 154, 48);
 }
 
 .footerlinkwrapper {
@@ -103,7 +68,6 @@
   flex-wrap: wrap; 
   justify-content: center;
 }
-
 .footerlinkitems {
   display: flex;
   flex-direction: column;
@@ -113,7 +77,6 @@
   width: 300px;
   box-sizing: border-box;
 }
-
 .footerlinkitems h2 {
   margin-bottom: 20px;
   color: #fff;
@@ -131,64 +94,62 @@
   transition: 0.3s ease-out;
 }
 
+
 .websiterights {
-  color: #000000;
-  margin-bottom: 16px;
+  color: #fff;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 1350px){
-  .footersubscriptionheading{
-    margin-right: -1100px;
-
-  
- }
- .footerinput{
-  left: 200px;
- }
-  .subbutton{
-
-   margin-left: 200px;
+@media (max-width: 815px) {
+  .footercontainer {
+    padding: 1rem;
   }
-  
-
-}
-@media (max-width: 1561px){
-
-.footerlinkitems{
-  margin-right: -100px;
-}
-
-.FinalBMFT {
-  
-  left: -600px;
- }
-
-}
-
-
-@media (max-width: 1738px) {
-  
 
   .FinalBMFT {
-   position:relative;
-   margin-left: 180px;
+    max-height: 100px; /* Adjust for smaller screens */
+    margin: 1rem 0;
   }
 
-  .footersubscriptionheading {
-    font-size: 22px;
-   margin-left: -300px;
-  }
-
-  
-  .subbutton{
-   left: -300px;
-  }
-  .footerinput {
-   left: 500px;
-    
+  .footerlinkwrapper {
+    flex-direction: column;
+    align-items: center;
   }
 
   .footerlinkitems {
-    width: 300px; 
+    width: 100%;
+    max-width: 280px;
+    margin: 0.5rem 0;
+  }
+
+  .footerinput {
+    max-width: 250px;
+  }
+
+  .subbutton {
+    max-width: 250px;
+  }
+
+  .footersubscriptionheading {
+    font-size: 1rem;
   }
 }
+
+
+@media (max-width: 1472px){
+  .FinalBMFT{
+    display: none;
+  }
+}
+
+@media (max-width: 1472px) {
+   .footerlinkitems{
+    font-size: 10px;
+    margin-right: -70px;
+    margin-left: -70px;
+   }
+ .FinalBMFT{
+  position: relative;
+  right: 40px;
+  top: -20px;
+ }
+  }
