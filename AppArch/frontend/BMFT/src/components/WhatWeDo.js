@@ -6,7 +6,7 @@ import WWDHeader3 from './assets/WWDHeader3.JPG';
 import WWDInfo from './WWDInfo';
 import WWDPanel from './WWDPanel';
 import WWDPanel2 from './WWDPanel2';
-
+import Biography from './Biography';
 const images = [WWDHeader1, WWDHeader2, WWDHeader3];
 
 const WhatWeDoPage = () => {
@@ -51,6 +51,10 @@ const WhatWeDoPage = () => {
         <WWDInfo />
         <WWDPanel />
         <WWDPanel2 />
+      </section>
+      <section className={`${styles.section2} ${styles.animateRollIn}`}>
+      <header className={styles.banner2}>Our People</header>
+<Biography></Biography>
       </section>
     </div>
   );
