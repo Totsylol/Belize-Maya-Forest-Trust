@@ -125,7 +125,7 @@ import JRob from "./assets/JRob.jpg"
             imgSrc: MichealHM
           },
           {
-            name: "Justin Pepper1",
+            name: "Justin Pepper",
             position: "Uknown",
             description: "Justin Pepper is the Bobolink Foundation’s Chief Conservation Officer. Bobolink’s focus is biodiversity conservation in the Americas, emphasizing grasslands, coastal conservation, wildlife and wild landscapes, and community-based conservation. Prior to Bobolink, Justin worked for Audubon, first, supporting, amplifying and celebrating grassroots conservation leaders in the Chicago area, and later, developing a market-based approach to grassland bird conservation in partnership with conservation-minded ranchers. He previously worked for the Missouri Department of Conservation and The Nature Conservancy of Minnesota and graduated from the University of Kansas. ",
             imgSrc: JPepper
