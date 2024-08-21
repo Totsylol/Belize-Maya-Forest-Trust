@@ -1,65 +1,64 @@
 .biographypage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax value to fit your design */
+    gap: 20px; /* Space between the panels */
     padding: 20px;
     width: 100%;
+    box-sizing: border-box;
   }
   
   .teammember {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+    margin: 0;
     border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 12px;
     width: 100%;
-    max-width: 1200px;
     box-sizing: border-box;
-    background-color: #f9f9f9;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .teammember:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .image {
-    flex-shrink: 0;
-    width: 120px;
-    height: 120px;
+    width: 100px; /* Adjust size of the image */
+    height: 100px; /* Adjust size of the image */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px; /* Space between image and text */
   }
   
   .image img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s;
   }
   
-  .image:hover img {
+  .teammember:hover .image img {
     transform: scale(1.05);
   }
   
   .description {
-    flex: 1;
-    padding-left: 20px;
+    text-align: center;
   }
   
   .name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin: 0;
+    margin: 5px 0;
     color: #333;
   }
   
   .position {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin: 5px 0;
     color: #666;
   }
   
@@ -69,7 +68,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +83,7 @@
   }
   
   .modalContent {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     width: 80%;
@@ -143,7 +141,9 @@
     transition: color 0.3s;
   }
   
-  .close:hover {
+  .close:hover,
+  .close:focus {
     color: #f00;
+    outline: none; /* Removes default outline */
   }
   
