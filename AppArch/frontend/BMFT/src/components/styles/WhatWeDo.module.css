@@ -139,7 +139,7 @@
 }
 
 .sectionContentParagraph {
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .secondheader{
@@ -210,36 +210,35 @@ right: -1200px;
 
 
 .banner {
-  width: 100%; 
-    height: 130px; 
-    background-color: #60b854 ; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: white; 
-    font-family: Arial, sans-serif; 
-    transform: perspective(30000px) rotateX(15deg) translateZ(20px);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
-    margin-top: 70px;
-    margin-bottom: -100px;
-    font-family: Arial, sans-serif; 
-    font-size: 24px;
+  background-color: #52c742 ; 
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 1.5rem; 
+    
 }
 .banner2 {
-  width: 100%; 
-    height: 130px; 
-    background-color: #60b854 ; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: white; 
-    font-family: Arial, sans-serif; 
-    transform: perspective(30000px) rotateX(15deg) translateZ(20px);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
-    margin-top: -100px;
-    font-family: Arial, sans-serif; 
-    font-size: 24px;
-    margin-top: -60px;
+  background-color: #52c742 ; 
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 1.5rem; 
+  margin-top: -70px;
+   
+}
+.banner3 {
+  background-color: #52c742 ; 
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 80px; 
+  
    
 }
 @keyframes rollIn {

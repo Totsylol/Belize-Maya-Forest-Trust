@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
 import Login from "./components/API/Login"
 import WhatWeDo from "./components/WhatWeDo";
+import AgroProj from "./components/AgroProj";
 
 function App() {
   return (
@@ -38,6 +39,12 @@ function App() {
           <Route path = "/Involvement">
           <Nav></Nav>
           <Involvement></Involvement>
+          <Footer/>
+          </Route>
+         
+          <Route path = "/AgroProj">
+          <Nav></Nav>
+          <AgroProj></AgroProj>
           <Footer/>
           </Route>
           
