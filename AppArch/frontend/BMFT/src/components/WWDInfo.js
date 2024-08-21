@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles/WWDInfo.module.css'; 
-import AboutBMF from "./assets/AboutBMF.jpg"; // Ensure the path is correct
+
 
 const WWDInfo = () => {
     return (

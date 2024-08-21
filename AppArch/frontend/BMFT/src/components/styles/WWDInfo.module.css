@@ -22,11 +22,11 @@
    
 }
 
-/* Maintain existing styles for the text */
+
 .textContainer {
     text-align: left;
     max-width: 100%;
-    margin: 0; /* Reset margin if needed */
+    margin: 0; 
 }
 
 .content {
