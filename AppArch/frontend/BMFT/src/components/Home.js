@@ -6,13 +6,13 @@ import diver1 from "./assets/diver1.jpg"
 import fish from "./assets/fish.jpg"
 import diver2 from "./assets/diver2.jpg"
 import agrigo from "./assets/Agrigo.jpg"
-import c2 from "./assets/cenote2.jpg"
-import c3 from "./assets/cenote3.jpg"
+import c3 from "./assets/c3.jpg"
 import c4 from "./assets/c4.jpg"
 import c5 from "./assets/c5.jpg"
 import c6 from "./assets/c6.jpg"
 import c7 from "./assets/c7.jpg"
 import c8 from "./assets/c8.jpg"
+import c9 from "./assets/c8.jpg"
 import fish2 from "./assets/fish2.jpg"
 import fish3 from "./assets/fish3.jpg"
 import LivePatrolTracker from './LivePatrolTracker'
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
 
         <div className={styles.img}>
-            <img src={c2}/>
+            <img src={c9}/>
         </div>
 
        
