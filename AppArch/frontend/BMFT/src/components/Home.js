@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from "./styles/home.module.css"
 import home from "./assets/Home.jpg"
-import aerial from "./assets/cenoteaerial.jpg"
 import cenote from "./assets/cenote.jpg"
 import diver1 from "./assets/diver1.jpg"
 import fish from "./assets/fish.jpg"
@@ -86,7 +85,7 @@ const Home = () => {
         </div>
 
         <div className={styles.img}>
-          <img src={aerial}/>
+          
         </div>
         
         <div className={styles.img}>
