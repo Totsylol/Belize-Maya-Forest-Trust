@@ -16,7 +16,7 @@ const Home = () => {
     <div>
       
       <div className={styles.container}> 
-      <img src={home} className={styles.img2}/>
+    
       <div className={styles.gallery}>
 
       <div className={styles.column}>
@@ -46,10 +46,10 @@ const Home = () => {
           <img src={agrigo}/>
         </div>
         <div className={styles.img}>
-          <img src={anti}/>
+          
         </div>
         <div className={styles.img}>
-          <img src={visit}/>
+          
         </div>
         
       </div>
