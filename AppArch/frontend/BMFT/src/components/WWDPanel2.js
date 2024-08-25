@@ -10,12 +10,14 @@ const panelsData = [
     id: 1,
     imgSrc: WWDFire,
     title: 'Protecting Biodiversity',
+    link: '/protbio'
    
   },
   {
     id: 2,
     imgSrc: CommOut,
     title: 'Outreach',
+    link: '/outreach'
     
   },
   {

@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import Login from "./components/API/Login"
 import WhatWeDo from "./components/WhatWeDo";
 import AgroProj from "./components/AgroProj";
+import ProtBio from "./components/ProtBio";
+import Outreach from "./components/Outreach";
 
 function App() {
   return (
@@ -45,6 +47,18 @@ function App() {
           <Route path = "/AgroProj">
           <Nav></Nav>
           <AgroProj></AgroProj>
+          <Footer/>
+          </Route>
+
+          <Route path = "/ProtBio">
+          <Nav></Nav>
+          <ProtBio></ProtBio>
+          <Footer/>
+          </Route>
+
+          <Route path = "/outreach">
+          <Nav></Nav>
+          <Outreach></Outreach>
           <Footer/>
           </Route>
           

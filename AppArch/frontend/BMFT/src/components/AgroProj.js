@@ -3,7 +3,7 @@ import styles from './styles/AgroProj.module.css';
 import APField from './assets/APField.jpg'; 
 import APpeople from './assets/APpeople.jpg';
 import APgreen from './assets/APgreen.jpg';
-import WWDPanel from './WWDPanel';
+
 
 const AgroProj = () => {
     return (
@@ -33,7 +33,6 @@ const AgroProj = () => {
                     <iframe
                         src="https://www.youtube.com/embed/RmMZr0urvOs"
                         title="Regenerative Agriculture Overview"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         className={styles.video}
