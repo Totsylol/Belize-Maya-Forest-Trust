@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactUs from "../ContactUs.js"
+import ContactUs from "../GeneralFeatures/ContactUs.js"
 
 const FAQ = () => {
   return (
