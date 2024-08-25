@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import styles from './styles/WhatWeDo.module.css';
-import WWDHeader1 from './assets/WWDHeader1.JPG';
-import WWDHeader2 from './assets/WWDHeader2.jpg';
-import WWDHeader3 from './assets/WWDHeader3.JPG';
-import WWDInfo from './WWDInfo';
-import WWDPanel from './WWDPanel';
-import WWDPanel2 from './WWDPanel2';
-import Biography from './Biography';
+import styles from '../styles/WhatWeDo.module.css';
+import WWDHeader1 from '../assets/WWDHeader1.JPG';
+import WWDHeader2 from '../assets/WWDHeader2.jpg';
+import WWDHeader3 from '../assets/WWDHeader3.JPG';
+import WWDInfo from '../WWDFeatures/WWDInfo';
+import WWDPanel from '../WWDFeatures/WWDPanel';
+import WWDPanel2 from '../WWDFeatures/WWDPanel2';
+import Biography from '../GeneralFeatures/Biography';
 const images = [WWDHeader1, WWDHeader2, WWDHeader3];
 
 const WhatWeDoPage = () => {

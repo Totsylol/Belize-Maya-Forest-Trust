@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles/AgroProj.module.css';
-import APField from './assets/APField.jpg'; 
-import APpeople from './assets/APpeople.jpg';
-import APgreen from './assets/APgreen.jpg';
+import styles from '../styles/AgroProj.module.css';
+import APField from '../assets/APField.jpg'; 
+import APpeople from '../assets/APpeople.jpg';
+import APgreen from '../assets/APgreen.jpg';
 
 
 const AgroProj = () => {

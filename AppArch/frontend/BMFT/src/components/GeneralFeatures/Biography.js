@@ -1,13 +1,13 @@
      import React, { useState } from 'react';
-      import styles from './styles/biography.module.css';
-      import Elma from "./assets/Elma.png";
-      import Tzul from "./assets/Tzul.JPG";
-import ProfilePic from "./assets/ProfilePic.jpg";
-import MichealHM from "./assets/MichealHM.png"
-import JPepper from "./assets/JPepper.png"
-import MGruin from "./assets/MGruin.png"
-import DBuck from "./assets/DBuck.jpg"
-import JRob from "./assets/JRob.jpg"
+      import styles from '../styles/biography.module.css';
+      import Elma from "../assets/Elma.png";
+      import Tzul from "../assets/Tzul.JPG";
+import ProfilePic from "../assets/ProfilePic.jpg";
+import MichealHM from "../assets/MichealHM.png"
+import JPepper from "../assets/JPepper.png"
+import MGruin from "../assets/MGruin.png"
+import DBuck from "../assets/DBuck.jpg"
+import JRob from "../assets/JRob.jpg"
 
       const teamMembers = [
         {

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import styles from './styles/Outreach.module.css';
-import OTclean from "./assets/OTclean.JPG"
-import OTsign from "./assets/OTsign.JPG"
-import OTteam from "./assets/OTteam.JPG"
-import OTplan from "./assets/OTplan.JPG"
-import OTteam2 from "./assets/OTteam2.JPG"
-import OTplan2 from "./assets/OTplan2.JPG"
-import OTduo from "./assets/OTduo.jpg"
-import OTteach from "./assets/OTteach.jpg"
-import OTclass from "./assets/OTclass.JPG"
+import styles from '../styles/Outreach.module.css';
+import OTclean from "../assets/OTclean.JPG"
+import OTsign from "../assets/OTsign.JPG"
+import OTteam from "../assets/OTteam.JPG"
+import OTplan from "../assets/OTplan.JPG"
+import OTteam2 from "../assets/OTteam2.JPG"
+import OTplan2 from "../assets/OTplan2.JPG"
+import OTduo from "../assets/OTduo.jpg"
+import OTteach from "../assets/OTteach.jpg"
+import OTclass from "../assets/OTclass.JPG"
 
 const Outreach = () => {
    

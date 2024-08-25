@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles/ProtBio.module.css';
-import PBfireteam from './assets/PBfireteam.jpg';
-import PBCheck from "./assets/PBCheck.jpg"
-import PBfire from "./assets/PBfire.jpg"
+import styles from '../styles/ProtBio.module.css';
+import PBfireteam from '../assets/PBfireteam.jpg';
+import PBCheck from "../assets/PBCheck.jpg"
+import PBfire from "../assets/PBfire.jpg"
 
 const ProtBio = () => {
         return (

@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import styles from "./styles/home.module.css"
-import home from "./assets/Home.jpg"
-import cenote from "./assets/cenote.jpg"
-import diver1 from "./assets/diver1.jpg"
-import fish from "./assets/fish.jpg"
-import diver2 from "./assets/diver2.jpg"
-import agrigo from "./assets/Agrigo.jpg"
-import c3 from "./assets/c3.jpg"
-import c4 from "./assets/c4.jpg"
-import c5 from "./assets/c5.jpg"
-import c6 from "./assets/c6.jpg"
-import c7 from "./assets/c7.jpg"
-import c8 from "./assets/c8.jpg"
-import c9 from "./assets/c9.jpg"
-import fish2 from "./assets/fish2.jpg"
-import fish3 from "./assets/fish3.jpg"
-import LivePatrolTracker from './LivePatrolTracker'
+import styles from "../styles/home.module.css"
+import home from "../assets/Home.jpg"
+import cenote from "../assets/cenote.jpg"
+import diver1 from "../assets/diver1.jpg"
+import fish from "../assets/fish.jpg"
+import diver2 from "../assets/diver2.jpg"
+import agrigo from "../assets/Agrigo.jpg"
+import c3 from "../assets/c3.jpg"
+import c4 from "../assets/c4.jpg"
+import c5 from "../assets/c5.jpg"
+import c6 from "../assets/c6.jpg"
+import c7 from "../assets/c7.jpg"
+import c8 from "../assets/c8.jpg"
+import c9 from "../assets/c9.jpg"
+import fish2 from "../assets/fish2.jpg"
+import fish3 from "../assets/fish3.jpg"
+import LivePatrolTracker from '../GeneralFeatures/LivePatrolTracker'
 
 const Home = () => {
 

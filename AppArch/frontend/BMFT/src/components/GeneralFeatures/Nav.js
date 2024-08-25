@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TfiAngleDown } from "react-icons/tfi";
-import styles from "./styles/nav.module.css"
-import logo from './assets/logo.png';
+import styles from "../styles/nav.module.css"
+import logo from '../assets/logo.png';
 
 
 const Nav = () => {

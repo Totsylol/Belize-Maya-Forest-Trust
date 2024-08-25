@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles/WWDPanel2.module.css';
-import WWDFire from "./assets/WWDFire.jpg"
-import CommOut from "./assets/CommOut.jpg"
-import Agrigo from "./assets/Agrigo.jpg"
+import styles from '../styles/WWDPanel2.module.css';
+import WWDFire from "../assets/WWDFire.jpg"
+import CommOut from "../assets/CommOut.jpg"
+import Agrigo from "../assets/Agrigo.jpg"
 import { Link } from 'react-router-dom';
 
 const panelsData = [

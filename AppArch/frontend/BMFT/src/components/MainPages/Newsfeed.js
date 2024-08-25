@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from  './styles/Newsfeed.module.css';
+import styles from  '../styles/Newsfeed.module.css';
 
 const Newsfeed = ({ title, description, imageUrl }) => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './styles/foot.module.css';
+import styles from '../styles/foot.module.css';
 import { Link } from 'react-router-dom';
-import FinalBMFT from './assets/FinalBMFT.jpg';
+import FinalBMFT from '../assets/FinalBMFT.jpg';
 
 
 function Footer() {

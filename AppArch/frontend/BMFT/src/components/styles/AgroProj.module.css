@@ -1,12 +1,12 @@
-/* Keyframes for the roll-in animation */
+
 @keyframes rollIn {
     0% {
-        transform: translateY(50px); /* Start slightly below the view */
-        opacity: 0; /* Fully transparent */
+        transform: translateY(50px); 
+        opacity: 0; 
     }
     100% {
-        transform: translateY(0); /* End at its original position */
-        opacity: 1; /* Fully opaque */
+        transform: translateY(0); 
+        opacity: 1; 
     }
 }
 
@@ -17,7 +17,7 @@
     padding: 2rem;
     box-sizing: border-box;
     min-height: 100vh;
-    animation: rollIn 1s ease-out; /* Apply the roll-in animation */
+    animation: rollIn 1s ease-out; 
 }
 
 .header {

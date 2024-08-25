@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Home from "./components/Home";
-import Nav from "./components/Nav";
-import Newsletter from "./components/Newsletter";
-import Involvement from "./components/Involvement";
-import FAQ from "./components/FAQ"
-import Footer from "./components/Footer"
+import Home from "./components/MainPages/Home";
+import Nav from "./components/GeneralFeatures/Nav";
+import Newsletter from "./components/GeneralFeatures/Newsletter";
+import Involvement from "./components/MainPages/Involvement";
+import FAQ from "./components/MainPages/FAQ"
+import Footer from "./components/GeneralFeatures/Footer"
 import Login from "./components/API/Login"
-import WhatWeDo from "./components/WhatWeDo";
-import AgroProj from "./components/AgroProj";
-import ProtBio from "./components/ProtBio";
-import Outreach from "./components/Outreach";
+import WhatWeDo from "./components/MainPages/WhatWeDo";
+import AgroProj from "./components/WWDFeatures/AgroProj";
+import ProtBio from "./components/WWDFeatures/ProtBio";
+import Outreach from "./components/WWDFeatures/Outreach";
 
 function App() {
   return (
