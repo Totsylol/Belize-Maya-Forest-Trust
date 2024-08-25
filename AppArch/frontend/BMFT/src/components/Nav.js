@@ -11,7 +11,7 @@ const Nav = () => {
        
       <nav className={styles.nav}>
          <ul>
-          <li><img className={styles.logo} src={logo}/></li>
+          <li><a href ='/'><img className={styles.logo} src={logo}/></a></li>
           <li><a href='/WhatWeDo'>What We Do</a></li>
           <li><a href = '/FAQ'>FAQ</a></li>
           <li><a href='/'>News</a></li>

@@ -17,7 +17,6 @@
     z-index: -1;
   }
   
-  /*video filter*/
   .wrapper {
     position: absolute;
     width: 100%;
@@ -29,10 +28,9 @@
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  /*input*/
   .container {
     padding: 6vh 10vh;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .5);
     border: none;
     border-radius: 20px;
     max-width: 90vw;
