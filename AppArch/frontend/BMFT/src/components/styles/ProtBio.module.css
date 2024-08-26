@@ -14,7 +14,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     box-sizing: border-box;
     min-height: 100vh;
     animation: rollIn 1s ease-out; 
