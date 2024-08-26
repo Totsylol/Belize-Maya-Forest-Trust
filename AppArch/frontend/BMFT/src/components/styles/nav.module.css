@@ -56,6 +56,6 @@
 
 .nav li:first-child{
     margin-top: 1vh;
-    margin-left: 3vh;
+    margin-left: -3vh;
     margin-right: auto;
 }

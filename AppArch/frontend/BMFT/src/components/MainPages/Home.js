@@ -17,21 +17,22 @@ import fish2 from "../assets/fish2.jpg"
 import fish3 from "../assets/fish3.jpg"
 import LivePatrolTracker from '../GeneralFeatures/LivePatrolTracker'
 
-const Home = () => {
+const Home = ({ setNavbarVisible }) => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalImgSrc, setModalImgSrc] = useState('');
+  const [modalCaption, setModalCaption] = useState('');
 
-    const [modalVisible, setModalVisible] = useState(false);
-    const [modalImgSrc, setModalImgSrc] = useState('');
-    const [modalCaption, setModalCaption] = useState('');
-  
-    const openModal = (src, alt) => {
+  const openModal = (src, alt) => {
       setModalImgSrc(src);
       setModalCaption(alt);
       setModalVisible(true);
-    };
-  
-    const closeModal = () => {
+      setNavbarVisible(false); // Hide the navbar
+  };
+
+  const closeModal = () => {
       setModalVisible(false);
-    };
+      setNavbarVisible(true); // Show the navbar
+  };
 
   return (
     <div>

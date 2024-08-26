@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/MainPages/Home";
 import Nav from "./components/GeneralFeatures/Nav";
@@ -12,14 +13,17 @@ import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
 
 function App() {
+  const [isNavbarVisible, setNavbarVisible] = useState(true);
+
+
   return (
     <div className="App">
       <Router>
           <Switch>
-          <Route exact path = "/">
-          <Nav></Nav>
-            <Home></Home> 
-            <Footer/>
+          <Route exact path="/">
+                <Nav isVisible={isNavbarVisible} />
+                <Home setNavbarVisible={setNavbarVisible} />
+                <Footer />
           </Route>
           
           <Route path = "/WhatWeDo">
