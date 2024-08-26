@@ -28,12 +28,12 @@ const Home = ({ setNavbarVisible }) => {
       setModalImgSrc(src);
       setModalCaption(alt);
       setModalVisible(true);
-      setNavbarVisible(false); // Hide the navbar
+      setNavbarVisible(false); 
   };
 
   const closeModal = () => {
       setModalVisible(false);
-      setNavbarVisible(true); // Show the navbar
+      setNavbarVisible(true); 
   };
 
   return (
