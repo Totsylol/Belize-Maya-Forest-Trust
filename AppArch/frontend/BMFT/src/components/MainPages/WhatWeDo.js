@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/WhatWeDo.module.css';
 import WWDHeader1 from '../assets/WWDHeader1.JPG';
 import WWDHeader2 from '../assets/WWDHeader2.jpg';
@@ -7,6 +7,7 @@ import WWDInfo from '../WWDFeatures/WWDInfo';
 import WWDPanel from '../WWDFeatures/WWDPanel';
 import WWDPanel2 from '../WWDFeatures/WWDPanel2';
 import Biography from '../GeneralFeatures/Biography';
+
 const images = [WWDHeader1, WWDHeader2, WWDHeader3];
 
 const WhatWeDoPage = () => {
@@ -20,15 +21,30 @@ const WhatWeDoPage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 10000); 
+
+    return () => clearInterval(interval); 
+  }, []);
+
   return (
     <div className={styles.pageContainer}>
-      <header className={`${styles.header} ${styles.animateRollIn}`}>
-        <div className={styles.headerImageWrapper} style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+      <header className={`${styles.header}`}>
+        <div className={styles.headerImageWrapper}>
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`BMFT Header ${index + 1}`} className={styles.headerImage} />
+            <img
+              key={index}
+              src={image}
+              alt={`Header ${index + 1}`}
+              className={`${styles.headerImage} ${index === currentImageIndex ? styles.active : ''}`}
+            />
           ))}
         </div>
-        <h1 className={`${styles.titleoverlay}`}>Setting the Standard for Effective and Enduring Conservation Worldwide</h1>
+        <h1 className={styles.titleoverlay}>
+          Setting the Standard for Effective and Enduring Conservation Worldwide
+        </h1>
         <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={handlePreviousImage}>
           &lt;
         </button>
@@ -53,8 +69,7 @@ const WhatWeDoPage = () => {
         <WWDPanel2 />
       </section>
       <section className={`${styles.section2} ${styles.animateRollIn}`}>
-      <header className={styles.banner2}>Our People</header>
-<Biography></Biography>
+        <header className={styles.banner2}>Conservation Threats</header>
       </section>
     </div>
   );
