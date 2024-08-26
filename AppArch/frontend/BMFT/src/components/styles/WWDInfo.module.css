@@ -3,13 +3,12 @@
     position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
+    align-items: center; 
     padding: 2rem;
     box-sizing: border-box; 
     overflow: hidden; 
-    top: -160px;
-    margin-bottom: -160px;
+  
+    
 }
 
 .contentBox {
@@ -17,8 +16,8 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    width: 100%;
-    max-width: 100%;
+ 
+
    
 }
 

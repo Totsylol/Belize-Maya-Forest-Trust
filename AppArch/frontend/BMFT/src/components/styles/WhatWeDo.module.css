@@ -136,34 +136,6 @@ background-color: #f9f9f9;
   margin-bottom: 80px;
 }
 
-.secondheader{
-  position: relative;
-  padding: 50px;
-  font-size: 35px;
-font-weight: bold;
-  
-  color: #0a0909;
-  text-align: left;
-}
-
-.blueunderline{
-  position:relative;
-  height: 5px;
-  width: 180px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  top:-25px;
-}
-.blueunderline2{
-  position: relative;
-  height: 5px;
-  width: 18px;
-  right: -184px;
-  top: -30px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
 .titleoverlay {
   position: Absolute;
   top: 250px;
@@ -175,33 +147,11 @@ font-weight: bold;
   text-align: center;
 
 }
-
-
-.ytvideo{
-  position: relative;
-  height: 0;
-  margin-left: -100px;
-  overflow: hidden;
-  max-width: 100%;
-  
-}
-.ytvideo{
-  position: relative;
-  width:560px;
-  height:315px;
-  border-radius: 20px;
-right: -1200px;
-  
-
-}
 .section {
   margin-bottom: 10px;
   margin-top:160px;
   text-align: center;
-  
-  
 }
-
 
 .banner {
   background-color: #52c742 ; 
@@ -210,7 +160,7 @@ right: -1200px;
     font-size: 2.5rem;
     font-weight: bold;
     border-radius: 8px;
-    margin-bottom: 1.5rem; 
+   
     
 }
 .banner2 {
@@ -220,8 +170,7 @@ right: -1200px;
   font-size: 2.5rem;
   font-weight: bold;
   border-radius: 8px;
-  margin-bottom: 1.5rem; 
-  margin-top: -70px;
+ 
    
 }
 .banner3 {
@@ -231,9 +180,7 @@ right: -1200px;
   font-size: 2.5rem;
   font-weight: bold;
   border-radius: 8px;
-  margin-bottom: 80px; 
-  
-   
+   margin-top: -150px;
 }
 @keyframes rollIn {
   0% {

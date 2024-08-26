@@ -60,11 +60,12 @@ const WhatWeDoPage = () => {
             Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.
           </p>
           <header className={styles.banner}>About the BMF</header>
+          <WWDInfo />
         </div>
       </section>
 
       <section className={`${styles.section2} ${styles.animateRollIn}`}>
-        <WWDInfo />
+        
         <header className={styles.banner3}>Community Stewardship</header>
         <WWDPanel2 />
       </section>
