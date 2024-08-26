@@ -1,61 +1,156 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-@keyframes scaleUpDown {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.8); } 
-    100% { transform: scale(1); } 
-  }
-  
-  
-  .logo {
+.logo {
     width: 10%;
     height: auto;
     cursor: pointer;
     transition: transform 0.4s ease-in-out; 
-  }
-  
-  .logo:active {
-    animation: scaleUpDown 0.4s ease-in-out; 
-  }
-
-.nav {
-    background-color:rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
 }
 
-.nav ul{
+.logo:active {
+    animation: scaleUpDown 0.4s ease-in-out; 
+}
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navList {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.nav li{
     height: 13vh;
+    padding: 0 20px;
 }
 
-.nav a{
+
+.navItem {
+    position: relative; 
     height: 100%;
-    padding: 0 50px;
+}
+
+.logoItem {
+    margin-right: auto;
+    margin-left: -3vh;
+}
+
+/* Navbar links */
+.navLink {
+    height: 100%;
+    padding: 0 20px;
     font-size: 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.nav a:hover{
-    color:grey;
+.navLink:hover {
+    color: grey;
 }
 
-.nav li:first-child{
-    margin-top: 1vh;
-    margin-left: 3vh;
-    margin-right: auto;
+/* Mega Menu Styles */
+.dropdownContent {
+    display: none;
+    position: fixed;
+    top: 13vh; /* Just below the navbar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the content relative to the viewport */
+    width: 100vw; /* Full width of the viewport */
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdownContent {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.column h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.column a {
+    color: #555;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.column a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for logo */
+@keyframes scaleUpDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); } 
+    100% { transform: scale(1); } 
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .column {
+        flex: 1 1 30%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navList {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navItem {
+        width: 100%;
+    }
+
+    .dropdownContent {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 10px 0;
+    }
 }

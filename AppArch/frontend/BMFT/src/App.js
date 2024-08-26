@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/MainPages/Home";
 import Nav from "./components/GeneralFeatures/Nav";
@@ -12,52 +13,55 @@ import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
 
 function App() {
+  const [isNavbarVisible, setNavbarVisible] = useState(true);
+
+
   return (
     <div className="App">
       <Router>
           <Switch>
-          <Route exact path = "/">
-          <Nav></Nav>
-            <Home></Home> 
-            <Footer/>
+          <Route exact path="/">
+                <Nav isVisible={isNavbarVisible} />
+                <Home setNavbarVisible={setNavbarVisible} />
+                <Footer />
           </Route>
           
           <Route path = "/WhatWeDo">
-            <Nav></Nav>
+            <Nav isVisible={isNavbarVisible} />
             <WhatWeDo></WhatWeDo>
             <Footer/>
           </Route>
           <Route path = "/News">
-          <Nav></Nav>
+            <Nav isVisible={isNavbarVisible} />
             <Newsletter></Newsletter>
             <Footer/>
           </Route>
           <Route path = "/FAQ">
-          <Nav></Nav>
+          <Nav isVisible={isNavbarVisible} />
           <FAQ></FAQ>
           <Footer/>
           </Route>
          
           <Route path = "/Involvement">
-          <Nav></Nav>
+          <Nav isVisible={isNavbarVisible} />
           <Involvement></Involvement>
           <Footer/>
           </Route>
          
           <Route path = "/AgroProj">
-          <Nav></Nav>
+          <Nav isVisible={isNavbarVisible} />
           <AgroProj></AgroProj>
           <Footer/>
           </Route>
 
           <Route path = "/ProtBio">
-          <Nav></Nav>
+          <Nav isVisible={isNavbarVisible} />
           <ProtBio></ProtBio>
           <Footer/>
           </Route>
 
           <Route path = "/outreach">
-          <Nav></Nav>
+          <Nav isVisible={isNavbarVisible} />
           <Outreach></Outreach>
           <Footer/>
           </Route>
