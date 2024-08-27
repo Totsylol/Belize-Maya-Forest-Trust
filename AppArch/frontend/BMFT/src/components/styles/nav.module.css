@@ -8,11 +8,11 @@
     width: 10%;
     height: auto;
     cursor: pointer;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .logo:active {
-    animation: scaleUpDown 0.4s ease-in-out;
+    animation: scaleUpDown 0.1s ease-in-out;
 }
 
 .nav {
@@ -20,7 +20,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 90px;
     z-index: 1000;
     box-shadow: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -75,7 +75,7 @@
     position: relative;
     height: 100%;
     padding: 0 20px;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -99,19 +99,20 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 300px;
     max-height: 0;
     overflow: hidden;
     background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     padding: 0;
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
     z-index: 999;
 }
 
 .dropdown:hover .dropdownContent {
-    max-height: 600px;
+    max-height: 200px;
     padding: 20px 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .row {
@@ -119,12 +120,12 @@
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 5px;
     width: 100%;
 }
 
 .column {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .column h3 {
@@ -134,15 +135,31 @@
 
 .column a {
     color: #555;
-    padding: 12px 0;
+    padding: 5px 0;
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
 }
 
-.column a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.column a:hover,
+.column a.active {
+    color: #00bef0;
 }
+
+.column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bef0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 @keyframes scaleUpDown {
     0% { transform: scale(1); }

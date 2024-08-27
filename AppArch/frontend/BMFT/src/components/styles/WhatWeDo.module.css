@@ -1,7 +1,7 @@
 .pageContainer {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
- 
+  animation: rollIn 1s ease-out forwards;
 background-color: #f9f9f9;
   position: relative; 
   z-index: 5;

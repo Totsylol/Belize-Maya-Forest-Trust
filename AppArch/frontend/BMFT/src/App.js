@@ -38,7 +38,7 @@ function App() {
             <Newsfeed></Newsfeed>
             <Footer/>
           </Route>
-          <Route path = "/FAQ">
+          <Route path = "/Our Team">
           <Nav isVisible={isNavbarVisible} />
           <FAQ></FAQ>
           <Footer/>
