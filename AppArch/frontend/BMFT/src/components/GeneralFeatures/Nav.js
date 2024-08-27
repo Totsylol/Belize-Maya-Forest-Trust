@@ -47,7 +47,7 @@ const Nav = ({ isVisible, currentPage }) => {
                         <div className={styles.row}>
                             <div className={styles.column}>
                                 <a href="#">FAQ 1</a>
-                                <a href="#">FAQ 2</a>
+                                <a href="/rangers">Rangers</a>
                                 <a href="#">FAQ 3</a>
                             </div>
                             <div className={styles.column}>
