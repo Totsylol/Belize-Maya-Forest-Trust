@@ -8,7 +8,7 @@ import JPepper from "../assets/JPepper.png"
 import MGruin from "../assets/MGruin.png"
 import DBuck from "../assets/DBuck.jpg"
 import JRob from "../assets/JRob.jpg"
-import WWDHeader3 from '../assets/WWDHeader3.JPG';
+
 
 const teamMembers = [
     {
@@ -96,12 +96,7 @@ const Rangers = () => {
   };
 
   return (
- 
-    
     <div className={styles.biographypage}>
-        
-        <img src={WWDHeader3} alt="Main Wildlife Image" className={styles.headerImage} />
-        <section className={styles.infoSection}>
       {teamMembers.map((member) => (
         <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
           <div className={styles.image}>
@@ -126,7 +121,6 @@ const Rangers = () => {
           </div>
         </div>
       </div>
-      </section>
     </div>
   );
 };

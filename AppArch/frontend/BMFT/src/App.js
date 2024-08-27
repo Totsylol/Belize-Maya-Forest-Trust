@@ -12,7 +12,7 @@ import AgroProj from "./components/WWDFeatures/AgroProj";
 import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
 import Rangers from "./components/BIOPages/Rangers";
-
+import Staff from "./components/GeneralFeatures/Staff";
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -59,6 +59,12 @@ function App() {
           <Route path = "/ProtBio">
           <Nav isVisible={isNavbarVisible} />
           <ProtBio></ProtBio>
+          <Footer/>
+          </Route>
+
+          <Route path = "/staff">
+          <Nav isVisible={isNavbarVisible} />
+          <Staff></Staff>
           <Footer/>
           </Route>
 
