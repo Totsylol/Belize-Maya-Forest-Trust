@@ -7,6 +7,7 @@ import WWDInfo from '../WWDFeatures/WWDInfo';
 import WWDPanel from '../WWDFeatures/WWDPanel';
 import WWDPanel2 from '../WWDFeatures/WWDPanel2';
 import Biography from '../GeneralFeatures/Biography';
+import Conservation from '../WWDFeatures/Conservation';
 
 const images = [WWDHeader1, WWDHeader2, WWDHeader3];
 
@@ -70,7 +71,8 @@ const WhatWeDoPage = () => {
         <WWDPanel2 />
       </section>
       <section className={`${styles.section2} ${styles.animateRollIn}`}>
-        <header className={styles.banner2}>Conservation Threats</header>
+        <header className={styles.banner2}>BMF Conservation</header>
+            <Conservation></Conservation>
       </section>
     </div>
   );
