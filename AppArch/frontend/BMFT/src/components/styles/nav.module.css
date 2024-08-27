@@ -8,11 +8,11 @@
     width: 10%;
     height: auto;
     cursor: pointer;
-    transition: transform 0.4s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
 }
 
 .logo:active {
-    animation: scaleUpDown 0.4s ease-in-out; 
+    animation: scaleUpDown 0.4s ease-in-out;
 }
 
 .nav {
@@ -20,7 +20,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; 
+    height: 80px;
     z-index: 1000;
     box-shadow: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -41,53 +41,53 @@
 }
 
 .navItem {
-    position: relative; 
+    position: relative;
     height: 100%;
 }
+.navLink:hover,
+.navLink.active {
+    color: #00bef0;
+}
 
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bef0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 .logoItem {
     margin-right: auto;
     margin-left: -3vh;
 }
 
 .navLink {
+    position: relative;
     height: 100%;
-    padding: 0 20px; 
+    padding: 0 20px;
     font-size: 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: white; 
+    color: white;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .navLink.scrolled {
-    color: black; 
+    color: black;
 }
 
-.navLink:hover,
-.navLink.active {
-    color:#00bef0 ; 
-}
-
-.navLink::after {
-    content: ""; 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px; 
-    background-color: #00bef0; 
-    transform: scaleX(0);
-    transform-origin: bottom right; 
-    transition: transform 0.3s ease-in-out; 
-}
-
-.navLink:hover::after {
-    transform: scaleX(1); 
-    transform-origin: bottom left; 
-}
 
 .dropdown {
     position: relative;
@@ -97,7 +97,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     max-height: 0;
@@ -110,7 +110,7 @@
 }
 
 .dropdown:hover .dropdownContent {
-    max-height: 600px; 
+    max-height: 600px;
     padding: 20px 0;
 }
 
@@ -134,7 +134,7 @@
 
 .column a {
     color: #555;
-    padding: 12px 0; 
+    padding: 12px 0;
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
@@ -146,8 +146,8 @@
 
 @keyframes scaleUpDown {
     0% { transform: scale(1); }
-    50% { transform: scale(0.8); } 
-    100% { transform: scale(1); } 
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
 }
 
 @media screen and (max-width: 992px) {
