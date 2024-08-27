@@ -78,7 +78,7 @@ const Conservation = () => {
           <Dropdown 
               title="Impaired Genetic Viability"
               content="Information about Impaired Genetic Viability."
-              imageUrl="genetic-viability.jpg"
+              
           />
           <Dropdown 
             title="Solid Waste Contamination"
@@ -98,22 +98,22 @@ const Conservation = () => {
           <Dropdown 
             title="Illegal Logging"
             content="Information about Illegal Logging."
-            imageUrl="illegal-logging.jpg"
+            
           />
           <Dropdown 
             title="Overfishing"
             content="Information about Overfishing."
-            imageUrl="overfishing.jpg"
+            
           />
           <Dropdown 
             title="Pesticide Contamination & Sedimentation"
             content="Information about Pesticide Contamination and Sedimentation."
-            imageUrl="pesticide-contamination.jpg"
+            
           />
           <Dropdown 
             title="Deforestation/Clearing of Riparian Buffers"
             content="Information about Deforestation and Clearing of Riparian Buffers."
-            imageUrl="deforestation.jpg"
+          
           />
         </div>
       </section>
