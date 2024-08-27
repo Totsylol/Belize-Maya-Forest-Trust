@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/MainPages/Home";
 import Nav from "./components/GeneralFeatures/Nav";
-import Newsletter from "./components/GeneralFeatures/Newsletter";
+import Newsfeed from "./components/MainPages/Newsfeed";
 import Involvement from "./components/MainPages/Involvement";
 import FAQ from "./components/MainPages/FAQ"
 import Footer from "./components/GeneralFeatures/Footer"
@@ -11,6 +11,8 @@ import WhatWeDo from "./components/MainPages/WhatWeDo";
 import AgroProj from "./components/WWDFeatures/AgroProj";
 import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
+import Rangers from "./components/BIOPages/Rangers";
+
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -33,7 +35,7 @@ function App() {
           </Route>
           <Route path = "/News">
             <Nav isVisible={isNavbarVisible} />
-            <Newsletter></Newsletter>
+            <Newsfeed></Newsfeed>
             <Footer/>
           </Route>
           <Route path = "/FAQ">
@@ -66,6 +68,11 @@ function App() {
           <Footer/>
           </Route>
           
+          <Route path = "/rangers">
+          <Nav isVisible={isNavbarVisible} />
+          <Rangers></Rangers>
+          <Footer/>
+          </Route>
        
 
           <Route path = "/Login">
