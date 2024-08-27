@@ -32,46 +32,30 @@ const Nav = ({ isVisible, currentPage }) => {
                     <div className={styles.dropdownContent}>
                         <div className={styles.row}>
                             <div className={styles.column}>
-                                <h3>Category 1</h3>
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                            <div className={styles.column}>
-                                <h3>Category 2</h3>
-                                <a href="#">Link 4</a>
-                                <a href="#">Link 5</a>
-                                <a href="#">Link 6</a>
-                            </div>
-                            <div className={styles.column}>
-                                <h3>Category 3</h3>
-                                <a href="#">Link 7</a>
-                                <a href="#">Link 8</a>
-                                <a href="#">Link 9</a>
+                                <a href="/outreach">Outreach</a>
+                                <a href="/protbio">Protecting Biodiversity</a>
+                                <a href="/agroproj">Regenerative Agriculture Project</a>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li className={`${styles.navItem} ${styles.dropdown}`}>
-                    <a href='/FAQ' className={`${styles.navLink} ${currentPage === 'faq' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                        FAQ
+                    <a href='/Our Team' className={`${styles.navLink} ${currentPage === 'Our Team' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
+                          Our Team
                     </a>
                     <div className={styles.dropdownContent}>
                         <div className={styles.row}>
                             <div className={styles.column}>
-                                <h3>General</h3>
                                 <a href="#">FAQ 1</a>
                                 <a href="#">FAQ 2</a>
                                 <a href="#">FAQ 3</a>
                             </div>
                             <div className={styles.column}>
-                                <h3>Technical</h3>
                                 <a href="#">FAQ 4</a>
                                 <a href="#">FAQ 5</a>
                                 <a href="#">FAQ 6</a>
                             </div>
                             <div className={styles.column}>
-                                <h3>Billing</h3>
                                 <a href="#">FAQ 7</a>
                                 <a href="#">FAQ 8</a>
                                 <a href="#">FAQ 9</a>
