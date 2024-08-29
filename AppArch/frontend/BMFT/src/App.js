@@ -14,6 +14,7 @@ import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
 import Rangers from "./components/BIOPages/Rangers";
 import Staff from "./components/GeneralFeatures/Staff";
+import Communitystewards from './components/WWDFeatures/Communitystewards';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -34,18 +35,20 @@ function App() {
             <WhatWeDo></WhatWeDo>
             <Footer/>
           </Route>
+
           <Route path = "/News">
             <Nav isVisible={isNavbarVisible} />
             <Newsfeed></Newsfeed>
             <Footer/>
           </Route>
+
           <Route path = "/Our Team">
           <Nav isVisible={isNavbarVisible} />
           <FAQ></FAQ>
           <Footer/>
           </Route>
          
-          <Route path = "/Involvement">
+          <Route path = "/Getinvolved">
           <Nav isVisible={isNavbarVisible} />
           <Involvement></Involvement>
           <Footer/>
@@ -55,6 +58,12 @@ function App() {
           <Nav isVisible={isNavbarVisible} />
           <AgroProj></AgroProj>
           <Footer/>
+          </Route>
+
+          <Route path = "/communitystewards">
+          <Nav isVisible={isNavbarVisible} />
+          <Communitystewards></Communitystewards>
+          <Footer/> 
           </Route>
 
           <Route path = "/ProtBio">

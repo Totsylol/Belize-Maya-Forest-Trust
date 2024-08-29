@@ -69,7 +69,7 @@ const Nav = ({ isVisible, currentPage }) => {
                     </a>
                 </li>
                 <li className={`${styles.navItem}`}>
-                    <a href='/GetInvolved' className={`${styles.navLink} ${currentPage === 'getinvolved' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
+                    <a href='/Getinvolved' className={`${styles.navLink} ${currentPage === 'getinvolved' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
                         Get Involved
                     </a>
                 </li>
