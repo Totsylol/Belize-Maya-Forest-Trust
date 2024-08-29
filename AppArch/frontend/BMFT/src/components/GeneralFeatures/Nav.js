@@ -35,6 +35,7 @@ const Nav = ({ isVisible, currentPage }) => {
                                 <a href="/outreach">Outreach</a>
                                 <a href="/protbio">Protecting Biodiversity</a>
                                 <a href="/agroproj">Regenerative Agriculture Project</a>
+                                <a href="/communitystewards">Community Stewards Program</a>
                             </div>
                         </div>
                     </div>
