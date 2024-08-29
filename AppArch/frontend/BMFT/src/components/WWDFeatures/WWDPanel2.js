@@ -26,6 +26,13 @@ const panelsData = [
     title: 'Regenerative Agriculture Program',
     link: '/agroproj'
   },
+
+  {
+    id: 4,
+    imgSrc: Agrigo,
+    title: 'Community Stewards Program',
+    link: '/communitystewards'
+  },
 ];
 
 const Panel = ({ imgSrc, title, description, link }) => (
