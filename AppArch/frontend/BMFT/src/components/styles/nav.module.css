@@ -67,6 +67,16 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+.nav li:first-child{
+    margin-top: 0.4vh;
+    margin-right: auto;
+}
+
+.nav li:first-child a.navLink::after {
+    display: none; 
+}
+
 .logoItem {
     margin-right: auto;
     margin-left: -3vh;
