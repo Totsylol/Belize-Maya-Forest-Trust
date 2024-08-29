@@ -1,14 +1,18 @@
-
 @keyframes rollIn {
     0% {
-        transform: translateY(50px); 
-        opacity: 0; 
+        transform: translateY(50px);
+        opacity: 0;
     }
     100% {
-        transform: translateY(0); 
-        opacity: 1; 
+        transform: translateY(0);
+        opacity: 1;
     }
-}
+    
+  }
+  .animateRollIn {
+    animation: rollIn 1s ease-out forwards;
+    
+  }
 .header {
     width: 100%;
     position: relative;
@@ -210,6 +214,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    animation: rollIn 1s ease-out; 
 }
 
 
