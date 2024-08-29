@@ -41,7 +41,7 @@ const Nav = ({ isVisible, currentPage }) => {
                 </li>
                 <li className={`${styles.navItem} ${styles.dropdown}`}>
                     <a href='/Our Team' className={`${styles.navLink} ${currentPage === 'Our Team' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                          Our Team
+                          Placeholder
                     </a>
                     <div className={styles.dropdownContent}>
                         <div className={styles.row}>
