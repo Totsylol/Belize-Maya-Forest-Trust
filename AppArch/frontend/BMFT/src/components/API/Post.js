@@ -34,7 +34,7 @@ const Post = () => {
                 },
             });
             console.log(response.data);
-            togglePopup(); // Close the popup after submission
+            togglePopup(); 
         } catch (error) {
             console.error('Error uploading the news post', error);
         }
