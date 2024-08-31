@@ -1,13 +1,16 @@
 const mongoose = require('mongoose');
 
-const newsSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    year: { type: Number, required: true },
-    author: { type: String, required: true },
-    description: { type: String, required: true },
-    image: { type: String, required: true } // Assuming you're storing the file path or URL
+const fileSchema = new mongoose.Schema({
+    name: String,
+    type: String,
+    content: Buffer,
+    title: String,
+    year: Number,
+    author: String,
+    description: String,
+    uploadDate: { type: Date, default: Date.now }
 });
 
-const News = mongoose.model('News', newsSchema);
+const File = mongoose.model('File', fileSchema, 'BMFT.News'); // Specify 'BMFT.News' collection
 
-module.exports = News;
+module.exports = File;
