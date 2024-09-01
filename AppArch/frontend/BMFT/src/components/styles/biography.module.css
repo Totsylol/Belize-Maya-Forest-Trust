@@ -91,6 +91,7 @@
     position: relative;
     transform: translateY(-50px);
     transition: transform 0.3s;
+    border: 2px solid #aaabac;
   }
   
   .modal.show .modalContent {
