@@ -5,16 +5,20 @@
 }
 
 .logo {
-    width: 10%;
+    width: 60px; 
     height: auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
-    margin-left: -20px;
+    position: fixed; 
+    top: 10px; 
+    left: 20px; 
+    z-index: 1001; 
 }
 
 .logo:active {
     animation: scaleUpDown 0.1s ease-in-out;
 }
+
 
 .nav {
     background-color: transparent;
