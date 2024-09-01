@@ -9,7 +9,7 @@
     height: auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
-    margin-left: -50px;
+    margin-left: -20px;
 }
 
 .logo:active {
@@ -45,6 +45,7 @@
     position: relative;
     height: 100%;
 }
+
 .navLink:hover,
 .navLink.active {
     color: #00bef0;
@@ -68,7 +69,7 @@
     transform-origin: bottom left;
 }
 
-.nav li:first-child{
+.nav li:first-child {
     margin-top: 0.4vh;
     margin-right: auto;
 }
@@ -93,14 +94,14 @@
     color: white;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-left:50px;
+    margin-left: 50px;
 }
 
 .navLink.scrolled {
     color: black;
 }
 
-
+/* Dropdown Styles */
 .dropdown {
     position: relative;
 }
@@ -171,8 +172,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-
-
 @keyframes scaleUpDown {
     0% { transform: scale(1); }
     50% { transform: scale(0.8); }
@@ -214,4 +213,31 @@
     .column {
         padding: 10px 0;
     }
+}
+
+
+.donationButton {
+    background-color: #00bef0; 
+    color: white; 
+    padding: 6px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00bef0; 
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease; 
+    margin-top:23px;
+    margin-left: 30px;
+}
+
+.donationButton {
+    transition: transform 0.3s ease; 
+}
+
+.donationButton:hover {
+    transform: scale(1.05); 
 }
