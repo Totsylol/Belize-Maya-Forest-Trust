@@ -21,10 +21,10 @@ function Footer() {
             <a href='/communitystewards'>Community Stewards</a>
           </div>
           <div className={styles.footerlinkitems}>
-            <h2>Contact Us</h2>
-            <a href='/'>Contact</a>
-            <a href='/'>Support</a>
-            <a href='/'>Donate</a>
+            <h2>Learn More</h2>
+            <a href='/whatwedo'>What We Do</a>
+            <a href='/news'>News</a>
+            <a href='/staff'>The Team</a>
           </div>
           <div className={styles.footerlinkitems}>
             <h2>Social Media</h2>
