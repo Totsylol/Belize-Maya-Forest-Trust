@@ -9,7 +9,7 @@
     height: auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
-    margin-left: -20px;
+    margin-left: -4vh;
 }
 
 .logo:active {

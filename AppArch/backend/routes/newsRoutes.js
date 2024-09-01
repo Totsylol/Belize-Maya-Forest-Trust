@@ -1,13 +1,11 @@
 const express = require('express');
 const multer = require('multer');
-const File = require('../models/newsModel'); // Adjust path to your file model
+const File = require('../models/newsModel'); 
 const router = express.Router();
 
-// Set up multer for file uploads
-const storage = multer.memoryStorage(); // Store file in memory
+const storage = multer.memoryStorage(); 
 const upload = multer({ storage: storage });
 
-// API route to handle file upload and data saving
 router.post('/news', upload.single('image'), async (req, res) => {
     try {
         const { title, year, author, description } = req.body;
@@ -17,7 +15,6 @@ router.post('/news', upload.single('image'), async (req, res) => {
             return res.status(400).json({ error: 'No file uploaded' });
         }
 
-        // Create a new document with the file and metadata
         const newFile = new File({
             name: image.originalname,
             type: image.mimetype,
@@ -28,7 +25,6 @@ router.post('/news', upload.single('image'), async (req, res) => {
             description: description,
         });
 
-        // Save the document to the database
         await newFile.save();
 
         res.status(201).json({ message: 'File uploaded successfully' });

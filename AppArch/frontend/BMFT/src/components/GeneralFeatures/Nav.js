@@ -53,7 +53,7 @@ const Nav = ({ isVisible, currentPage }) => {
                             </div>
                             <div className={styles.column}>
                                 <a href="#">FAQ 4</a>
-                                <a href="#">FAQ 5</a>
+                                <a href='/Login'>Login</a>
                                 <a href="#">FAQ 6</a>
                             </div>
                             <div className={styles.column}>
