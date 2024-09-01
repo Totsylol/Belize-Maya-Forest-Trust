@@ -42,7 +42,7 @@ const Nav = ({ isVisible, currentPage }) => {
                 </li>
                 <li className={`${styles.navItem} ${styles.dropdown}`}>
                     <a href='/Our Team' className={`${styles.navLink} ${currentPage === 'Our Team' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                          Placeholder
+                        Placeholder
                     </a>
                     <div className={styles.dropdownContent}>
                         <div className={styles.row}>
@@ -72,6 +72,12 @@ const Nav = ({ isVisible, currentPage }) => {
                 <li className={`${styles.navItem}`}>
                     <a href='/Getinvolved' className={`${styles.navLink} ${currentPage === 'getinvolved' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
                         Get Involved
+                    </a>
+                </li>
+                {/* Donation Button */}
+                <li className={`${styles.navItem} ${styles.donationItem}`}>
+                    <a href='/donate' className={`${styles.donationButton} ${isScrolled ? styles.scrolled : ''}`}>
+                        Donate
                     </a>
                 </li>
             </ul>
