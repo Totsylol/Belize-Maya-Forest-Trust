@@ -1,40 +1,40 @@
 const mongoose = require('mongoose');
-const { v4: uuidv4 } = require('uuid'); // For generating unique user IDs
+const { v4: uuidv4 } = require('uuid'); 
 
 const userSchema = new mongoose.Schema({
   userId: {
     type: String,
-    default: uuidv4, // Automatically generate a unique user ID
-    unique: true, // Ensure the userId is unique
+    default: uuidv4, 
+    unique: true, 
   },
   email: {
     type: String,
-    required: true, // Email is required
-    unique: true, // Ensure the email is unique
-    lowercase: true, // Convert email to lowercase before saving
-    trim: true, // Remove whitespace from email
-    match: [/.+\@.+\..+/, 'Please enter a valid email address'], // Basic email validation
+    required: true, 
+    unique: true, 
+    lowercase: true, 
+    trim: true, 
+    match: [/.+\@.+\..+/, 'Please enter a valid email address'], 
   },
   username: {
     type: String,
-    required: true, // Username is required
-    unique: true, // Ensure the username is unique
-    trim: true, // Remove whitespace from username
-    minlength: [3, 'Username must be at least 3 characters long'], // Min length validation
+    required: true, 
+    unique: true, 
+    trim: true, 
+    minlength: [3, 'Username must be at least 3 characters long'], 
   },
   password: {
     type: String,
-    required: true, // Password is required
+    required: true, 
   },
   verificationToken: {
     type: String,
-    default: '', // Default value, can be set when needed
+    default: '', 
   },
   createdAt: {
     type: Date,
-    default: Date.now, // Automatically set the creation date
+    default: Date.now, 
   },
-}, { collection: 'Users' }); // Explicitly setting the collection name to 'Users'
+}, { collection: 'Users' }); 
 
 const User = mongoose.model('User', userSchema);
 
