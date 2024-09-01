@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const File = require('../models/file'); // Adjust path to your file model
+const File = require('../models/newsModel'); // Adjust path to your file model
 const router = express.Router();
 
 // Set up multer for file uploads
@@ -8,7 +8,7 @@ const storage = multer.memoryStorage(); // Store file in memory
 const upload = multer({ storage: storage });
 
 // API route to handle file upload and data saving
-router.post('/api/news', upload.single('image'), async (req, res) => {
+router.post('/news', upload.single('image'), async (req, res) => {
     try {
         const { title, year, author, description } = req.body;
         const image = req.file;
@@ -34,6 +34,16 @@ router.post('/api/news', upload.single('image'), async (req, res) => {
         res.status(201).json({ message: 'File uploaded successfully' });
     } catch (err) {
         console.error('Error uploading the file:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+router.get('/news', async (req, res) => {
+    try {
+        const newsPosts = await File.find({});
+        res.status(200).json(newsPosts);
+    } catch (err) {
+        console.error('Error fetching news posts:', err);
         res.status(500).json({ error: 'Server error' });
     }
 });

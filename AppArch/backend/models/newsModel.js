@@ -9,8 +9,8 @@ const fileSchema = new mongoose.Schema({
     author: String,
     description: String,
     uploadDate: { type: Date, default: Date.now }
-});
+}, { collection: 'News' }); 
 
-const File = mongoose.model('File', fileSchema, 'BMFT.News'); // Specify 'BMFT.News' collection
+const File = mongoose.model('File', fileSchema);
 
 module.exports = File;

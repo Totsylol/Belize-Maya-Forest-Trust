@@ -1,33 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; 
 import styles from '../styles/Newsfeed.module.css';
 import Ntop from '../assets/Ntop.jpg';
-import fish from '../assets/fish.jpg';
-import fish2 from '../assets/fish2.jpg';
-
-const newsData = [
-  {
-    id: 1,
-    image: fish,
-    title: 'News Title 1',
-    date: 'August 27, 2024',
-    description: 'Short description of the news item. This should be a brief summary of the news.',
-    link: '#'
-  },
-  {
-    id: 2,
-    image: fish2,
-    title: 'News Title 2',
-    date: 'August 26, 2024',
-    description: 'Short description of the news item. This should be a brief summary of the news.',
-    link: '#'
-  },
-  // Add more news items eventually
-];
-
-
 
 function Newsfeed() {
+  const [newsData, setNewsData] = useState([]);
   const [selectedNews, setSelectedNews] = useState(null);
+
+  useEffect(() => {
+    const fetchNewsData = async () => {
+      try {
+        const response = await axios.get('/api/news'); 
+        setNewsData(response.data); 
+      } catch (error) {
+        console.error('Error fetching news data:', error); 
+      }
+    };
+
+    fetchNewsData(); 
+  }, []); 
 
   const handleOpenPopup = (news) => {
     setSelectedNews(news);
@@ -39,21 +30,26 @@ function Newsfeed() {
 
   return (
     <div className={styles.newsFeedPage}>
-         <h1 className={styles.titleoverlay}>
-          News
-        </h1>
+      <h1 className={styles.titleoverlay}>
+        News
+      </h1>
       <header className={styles.header}>
         <img src={Ntop} alt="Header" />
       </header>
       <main className={styles.newsFeed}>
         {newsData.map(news => (
-          <div key={news.id} className={styles.newsItem}>
-            <img src={news.image} alt={news.title} className={styles.newsImage} />
-            <a href={news.link} className={styles.newsTitle} onClick={(e) => {
+          <div key={news._id} className={styles.newsItem}>
+            <img src={`data:${news.type};base64,${btoa(
+              new Uint8Array(news.content.data).reduce(
+                (data, byte) => data + String.fromCharCode(byte),
+                ''
+              )
+            )}`} alt={news.title} className={styles.newsImage} />
+            <a href="#" className={styles.newsTitle} onClick={(e) => {
               e.preventDefault();
               handleOpenPopup(news);
             }}>{news.title}</a>
-            <p className={styles.newsDate}>{news.date}</p>
+            <p className={styles.newsDate}>{new Date(news.uploadDate).toLocaleDateString()}</p>
             <p className={styles.newsDescription}>{news.description}</p>
             <button className={styles.readMore} onClick={() => handleOpenPopup(news)}>Read More</button>
           </div>
@@ -72,6 +68,4 @@ function Newsfeed() {
   );
 }
 
- export default Newsfeed;
-
-
+export default Newsfeed;
