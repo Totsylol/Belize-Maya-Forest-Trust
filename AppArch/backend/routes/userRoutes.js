@@ -1,8 +1,12 @@
 const express = require('express');
-const { getUsers } = require('../controllers/userController');
-
+const multer = require('multer');
+const newsController = require('../controllers/newsController');
 const router = express.Router();
 
-router.get('/users', getUsers);
+const storage = multer.memoryStorage(); 
+const upload = multer({ storage: storage });
+
+
+router.post('/api/news', upload.single('image'), newsController.uploadNewsPost);
 
 module.exports = router;

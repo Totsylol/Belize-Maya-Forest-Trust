@@ -1,22 +1,33 @@
-const News = require('../models/newsModel');
+// controllers/newsController.js
+const File = require('../models/file'); // Adjust path to your file model
 
-const addNews = async (req, res) => {
+// Controller function to handle file uploads
+exports.uploadNewsPost = async (req, res) => {
     try {
-        const { title, year, author, description, image } = req.body;
+        const { title, year, author, description } = req.body;
+        const image = req.file;
 
-        const news = new News({
-            title,
-            year,
-            author,
-            description,
-            image,
+        if (!image) {
+            return res.status(400).json({ error: 'No file uploaded' });
+        }
+
+        // Create a new document with the file and metadata
+        const newFile = new File({
+            name: image.originalname,
+            type: image.mimetype,
+            content: image.buffer,
+            title: title,
+            year: year,
+            author: author,
+            description: description,
         });
 
-        const createdNews = await news.save();
-        res.status(201).json(createdNews);
-    } catch (error) {
-        res.status(500).json({ message: 'Server Error', error: error.message });
+        // Save the document to the database
+        await newFile.save();
+
+        res.status(201).json({ message: 'File uploaded successfully' });
+    } catch (err) {
+        console.error('Error uploading the file:', err);
+        res.status(500).json({ error: 'Server error' });
     }
 };
-
-module.exports = { addNews };
