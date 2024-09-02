@@ -1,0 +1,233 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    animation: rollIn 1s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.titleoverlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    z-index: 10;
+    animation: rollIn 1s ease-out;
+}
+
+.titleoverlay h1 {
+    margin: 0;
+}
+
+.infoSection {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.infoContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.infoContainer {
+    max-width: 50%;
+    text-align: left;
+}
+
+.infoContainer h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.infoContainer p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+.infoImage {
+    margin-top: 115px;
+    max-width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.header2 {
+    width: 100%;
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.header2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+}
+
+.titleoverlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+    z-index: 10;
+}
+
+.outreachSection {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px; 
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.textSide, .imageSide {
+    flex: 1;
+    padding: 2rem; 
+}
+
+.textSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff; 
+}
+
+.imageSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.textSide h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: oblique;
+}
+
+.textSide p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.outreachButton {
+    background-color: #52c742 ;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.outreachButton:hover {
+    background-color: #52c742 ;
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.infoContainer h2::after {
+    content: "";
+    display: block;
+    height: 7px;
+    width: 100%;
+    background: linear-gradient(to right, #1e748a, #3bf3f6); 
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    z-index: -1;
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.socials {
+    width: 150px !important;
+    height: 20px !important;
+    display: flex !important;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.socialIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.iconImage {
+    width: 40px;
+    height: 40px; 
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.iconImage:hover {
+    transform: scale(1.1); 
+}
+
+.socialIcon:focus {
+    outline: none;
+}

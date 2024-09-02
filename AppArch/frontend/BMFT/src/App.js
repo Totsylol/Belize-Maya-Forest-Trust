@@ -4,7 +4,7 @@ import Home from "./components/MainPages/Home";
 import Nav from "./components/GeneralFeatures/Nav";
 import Newsfeed from "./components/MainPages/Newsfeed";
 import Involvement from "./components/MainPages/Involvement";
-import FAQ from "./components/MainPages/FAQ"
+import WhoWeAre from "./components/MainPages/WhoWeAre"
 import Footer from "./components/GeneralFeatures/Footer"
 import Login from "./components/API/Login"
 import Post from "./components/API/Post"
@@ -42,9 +42,9 @@ function App() {
             <Footer/>
           </Route>
 
-          <Route path = "/Our Team">
+          <Route path = "/WhoWeAre">
           <Nav isVisible={isNavbarVisible} />
-          <FAQ></FAQ>
+          <WhoWeAre></WhoWeAre>
           <Footer/>
           </Route>
          

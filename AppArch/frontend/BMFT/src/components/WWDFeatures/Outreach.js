@@ -12,6 +12,7 @@ import OTclass from "../assets/OTclass.JPG"
 import OTschol from "../assets/OTschol.jpg"
 import OTschol1 from "../assets/OTschol1.JPG"
 import OTschol2 from "../assets/OTschol2.png"
+import Otop from "../assets/Otop.jpg"
 const Outreach = () => {
    
     const [currentImage1, setCurrentImage1] = useState(0);
@@ -32,9 +33,9 @@ const Outreach = () => {
 
     return (
         <div className={styles.pageContainer}>
+            <h1 className={styles.titleoverlay}>Community Outreach</h1>
             <header className={styles.header}>
-            <header className={styles.banner2}>Community Outreach</header>
-               
+                <img src={Otop} alt="Header" />
             </header>
             <section className={styles.outreachSection}>
                 <div className={styles.textSide}>
