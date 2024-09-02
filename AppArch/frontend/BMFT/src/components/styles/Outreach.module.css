@@ -1,21 +1,10 @@
 @keyframes rollIn {
     0% {
-        transform: translateY(50px); 
-        opacity: 0; 
-    }
-    100% {
-        transform: translateY(0); 
-        opacity: 1; 
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(100%);
+        transform: translateY(50px);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -28,7 +17,6 @@
     align-items: center;
     box-sizing: border-box;
     min-height: 100vh;
-    animation: rollIn 1s ease-out; 
 }
 
 .header {
@@ -36,6 +24,7 @@
     position: relative;
     height: 50vh;
     overflow: hidden;
+    animation: rollIn 1s ease-out; 
 }
 
 .header img {
@@ -70,6 +59,7 @@
     margin-bottom: 4rem;
     padding: 1rem;
     box-sizing: border-box;
+    animation: rollIn 1s ease-out; 
 }
 
 .textSide {
