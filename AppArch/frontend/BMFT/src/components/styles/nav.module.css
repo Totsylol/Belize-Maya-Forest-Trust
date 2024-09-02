@@ -9,7 +9,10 @@
     height: auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
-    margin-left: -4vh;
+    position: fixed; 
+    top: 10px; 
+    left: 20px; 
+    z-index: 1001; 
 }
 
 .logo:active {
