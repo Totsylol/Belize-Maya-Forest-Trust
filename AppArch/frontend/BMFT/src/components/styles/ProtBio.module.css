@@ -1,0 +1,282 @@
+@keyframes rollIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+  }
+  .animateRollIn {
+    animation: rollIn 1s ease-out forwards;
+    
+  }
+.header {
+    width: 100%;
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter:brightness(1);
+}
+
+.titleoverlay {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+    z-index: 10;
+}
+
+.pageContainer {
+ 
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    animation: rollIn 1s ease-out; 
+}
+
+
+
+.introduction {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.introText h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: oblique;
+}
+
+.introText p {
+    color: #333;
+    margin-top: 40px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.imageGallery {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.images {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.videoSection {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.videoSection h2 {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    font-style: oblique;
+    margin-top: 2rem;
+}
+
+.videoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border: none;
+}
+
+
+.topicSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.5rem auto; 
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1500px; 
+    width: 90%; 
+}
+.topicSection.reverse {
+    flex-direction: row-reverse;
+}
+
+.topicText {
+    flex: 1;
+    margin-right: 1.5rem; 
+    padding:40px;
+}
+
+.topicText h2 {
+    font-size: 1.6rem; 
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.topicText p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4; 
+}
+
+.topicImage {
+    flex: 1;
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
+}
+
+.topicImage:hover {
+    transform: scale(1.05); 
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    position: relative;
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.modalImage {
+    width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.modalClose {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    animation: rollIn 1s ease-out; 
+}
+
+
+.header2 {
+    width: 100%;
+    position: relative;
+    height: 20vh; 
+    overflow: hidden;
+    margin: 0; 
+}
+
+
+.header2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+    margin: 0;
+    padding: 0;
+    filter:brightness(0.5);
+}
+
+
+.titleoverlay2 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+    z-index: 10;
+}
+
+.descriptionSection {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.descriptionText {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+.des{
+font-style: italic;
+margin-top: 20px;
+}

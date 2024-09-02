@@ -1,0 +1,46 @@
+.panelsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px; 
+    justify-content: center; 
+    padding: 0 3%
+  }
+  
+  .panel {
+    flex: 1;
+    max-width: 300px; 
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .panelTitle{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .panelImage {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .panelContent {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+  }
+  

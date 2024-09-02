@@ -1,0 +1,25 @@
+
+.panel {
+  background-color: #52c742 ; 
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 1.5rem; 
+}
+  .paneltitle {
+    margin: 0; 
+    font-size: 24px; 
+  }
+  
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,150 @@
+.biographypage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .teammember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .teammember:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px; 
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .teammember:hover .image img {
+    transform: scale(1.05);
+  }
+  
+  .description {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .position {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .modal.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modalContent {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s;
+    border: 2px solid #aaabac;
+  }
+  
+  .modal.show .modalContent {
+    transform: translateY(0);
+  }
+  
+  .modalImage {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .modalImage img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .modalDetails {
+    text-align: center;
+  }
+  
+  .modalDetails .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .modalDetails .position {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .modalDetails p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f00;
+    outline: none; 
+  }
+  
