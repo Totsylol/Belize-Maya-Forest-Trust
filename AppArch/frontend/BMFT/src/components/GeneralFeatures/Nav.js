@@ -51,19 +51,6 @@ const Nav = ({ isVisible, currentPage }) => {
                                 <a href="/rangers">Rangers</a>
                                 <a href="#">FAQ 3</a>
                             </div>
-<<<<<<< HEAD
-=======
-                            <div className={styles.column}>
-                                <a href="#">FAQ 4</a>
-                                <a href='/Login'>Login</a>
-                                <a href="#">FAQ 6</a>
-                            </div>
-                            <div className={styles.column}>
-                                <a href="#">FAQ 7</a>
-                                <a href="#">FAQ 8</a>
-                                <a href="#">FAQ 9</a>
-                            </div>
->>>>>>> 295f81513a53098ded4d8bb30ffb267bf8eb475e
                         </div>
                     </div>
                 </li>
