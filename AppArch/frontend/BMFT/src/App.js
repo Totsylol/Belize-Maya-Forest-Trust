@@ -18,6 +18,7 @@ import Communitystewards from './components/WWDFeatures/Communitystewards';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const token = localStorage.getItem('token');
 
 
   return (
@@ -38,7 +39,7 @@ function App() {
 
           <Route path = "/News">
             <Nav isVisible={isNavbarVisible} />
-            <Newsfeed></Newsfeed>
+            {token ? <AdminNews /> : <Newsfeed />}
             <Footer/>
           </Route>
 
