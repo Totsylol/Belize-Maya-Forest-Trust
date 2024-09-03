@@ -18,6 +18,7 @@ import c11 from "../assets/c11.jpg"
 import fish2 from "../assets/fish2.jpg"
 import fish3 from "../assets/fish3.jpg"
 import LivePatrolTracker from '../GeneralFeatures/LivePatrolTracker'
+import Hometext from './Hometext'
 
 const Home = ({ setNavbarVisible }) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -43,18 +44,7 @@ const Home = ({ setNavbarVisible }) => {
       <div className={styles.gallery}>
       <div className={styles.textwrapper}>
         <div className={styles.textcontainer}>
-          <h1 className={styles.h1}>The Belize Maya Forest Trust</h1>
-          <p className={styles.p}>The Belize Maya Forest (BMF), previously known as Yalbac and Laguna Seca, were owned and managed by a foreign logging company. The properties were bought in December 2020 for protection by the Belize Maya Forest Trust (BMFT) through an effort led by TNC, and many other generous organizations and individual supporters.</p>  
-
-<h2 className={styles.h2}>BMFT’s Mission</h2>
-
-<p className={styles.p}>Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.</p>
-
-<h2 className={styles.h2}>BMFT’s Vision </h2>
-
-<p className={styles.p}>To be a global benchmark for effective and lasting conservation.</p>
-
-<p className={styles.p}>The BMF comprises of 236,000 acres of forest, rich in biodiversity, that will be protected in perpetuity for the people and Government of Belize (GoB). It was purchased from a US-based timber investment management company in December 2020, through the efforts of years of partnership amongst NGOs, government and private sector organizations, and individuals, as it represented the last remaining extensive and contiguous lowland broadleaf forest of     Belize. The reserve borders Guatemala to the west, the Rio Bravo Conservation and Management Area (RBCMA) to the north, and private agricultural lands of the Spanish Lookout community, Valley of Peace Farms Ltd., and others to the east and south. The northern part of the BMF also surrounds a private, mainly forested property, known as Gallon Jug, which includes the Chan Chich Lodge and Sylvester Village. Together with the RBCMA and Gallon Jug, the BMF comprises nine (9) percent of Belize’s land territory. </p>
+          <Hometext />
         </div>
             
         </div>
