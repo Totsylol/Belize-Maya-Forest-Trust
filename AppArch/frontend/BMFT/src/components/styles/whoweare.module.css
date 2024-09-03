@@ -88,10 +88,13 @@
 .header2 {
     width: 100%;
     position: relative;
-    height: 30vh;
+    height: 30vh; 
     overflow: hidden;
     margin: 0;
     margin-top: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .header2 img {
@@ -116,6 +119,7 @@
     text-align: center;
     z-index: 10;
 }
+
 
 .outreachSection {
     display: flex;
