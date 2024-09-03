@@ -30,14 +30,22 @@ function AdminNews() {
   };
 
   return (
+
     <div className={styles.newsFeedPage}>
+
       <h1 className={styles.titleoverlay}>
         News
       </h1>
       <header className={styles.header}>
         <img src={Ntop} alt="Header" />
       </header>
+
       <main className={styles.newsFeed}>
+
+            <div>
+                <Post/>
+            </div>
+
         {newsData.map(news => (
           <div key={news._id} className={styles.newsItem}>
             <img src={`data:${news.type};base64,${btoa(
@@ -65,10 +73,6 @@ function AdminNews() {
           )}
         </div>
       </main>
-
-            <div>
-                <Post/>
-            </div>
 
 
     </div>
