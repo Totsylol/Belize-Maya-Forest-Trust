@@ -15,7 +15,7 @@ import Outreach from "./components/WWDFeatures/Outreach";
 import Rangers from "./components/BIOPages/Rangers";
 import Staff from "./components/GeneralFeatures/Staff";
 import Communitystewards from './components/WWDFeatures/Communitystewards';
-import AdminNews from "./components/MainPages/AdminNews";
+import AdminNews from "./components/API/AdminNews";
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
