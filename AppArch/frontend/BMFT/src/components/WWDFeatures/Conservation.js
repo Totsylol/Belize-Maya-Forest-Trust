@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
-import styles from '../styles/conservation.module.css'; // Importing CSS module
-import Cjaguar from "../assets/Cjaguar.JPG"
-import Cforest from "../assets/Cforest.jpg"
-import Cturtle from "../assets/Cturtle.JPG"
-import Cpools from "../assets/Cpools.jpg"
-import Churricane from "../assets/Churricane.jpg"
-import Clionfish from "../assets/Clionfish.jpg"
-import Ctrash from "../assets/Ctrash.jpg"
-import Cfire from "../assets/Cfire.jpg"
-import Chunt from "../assets/Chunt.JPG"
+import styles from '../styles/conservation.module.css'; 
+import Cjaguar from "../assets/Cjaguar.JPG";
+import Cforest from "../assets/Cforest.jpg";
+import Cturtle from "../assets/Cturtle.JPG";
+import Cpools from "../assets/Cpools.jpg";
 
 const Dropdown = ({ title, content, imageUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.dropdown}>
+      <div className={styles.imageContainer}>
+        <img src={imageUrl} alt={title} className={styles.image} />
+      </div>
       <button 
-        className={`${styles.dropdownButton} ${isOpen ? styles.open : ''}`} 
+        className={`${styles.button} ${isOpen ? styles.buttonOpen : ''}`} 
         onClick={() => setIsOpen(!isOpen)}
       >
-        {title}
-        <span className={`${styles.arrow} ${isOpen ? styles.arrowUp : styles.arrowDown}`}></span>
+        <span className={styles.arrowContainer}>
+          <span className={styles.arrow}>→</span>
+        </span>
+        <span className={styles.buttonText}>Learn More</span>
       </button>
       <div 
         className={`${styles.dropdownContent} ${isOpen ? styles.show : ''}`}
       >
-        <img src={imageUrl} alt={title} className={styles.image} />
+        <span className={styles.dropdownTitle}>{title}</span>
         <p>{content}</p>
       </div>
     </div>
@@ -35,91 +35,36 @@ const Dropdown = ({ title, content, imageUrl }) => {
 const Conservation = () => {
   return (
     <div className={styles.container}>
-      
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Conservation Targets</h2>
-        <div className={styles.dropdownContainer}>
-          <Dropdown 
-            title="Forest Ecosystems"
-            content="Information about Forest Ecosystems."
-            imageUrl={Cforest}
-          />
-          <Dropdown 
-            title="Aquatic Ecosystems"
-            content="Information about Aquatic Ecosystems."
-            imageUrl={Cturtle}
-          />
-          <Dropdown 
-            title="Jaguars/Wildcats"
-            content="Information about Jaguars and Wildcats."
-            imageUrl={Cjaguar}
-          />
-          <Dropdown 
-            title="Cara Blanca Pools"
-            content="Information about Cara Blanca Pools."
-            imageUrl={Cpools}
-          />
-        </div>
+        <Dropdown 
+          title="Forest Ecosystems"
+          content="Information about Forest Ecosystems."
+          imageUrl={Cforest}
+        />
+        <Dropdown 
+          title="Aquatic Ecosystems"
+          content="Information about Aquatic Ecosystems."
+          imageUrl={Cturtle}
+        />
+        <Dropdown 
+          title="Jaguars/Wildcats"
+          content="Information about Jaguars and Wildcats."
+          imageUrl={Cjaguar}
+        />
+        <Dropdown 
+          title="Cara Blanca Pools"
+          content="Information about Cara Blanca Pools."
+          imageUrl={Cpools}
+        />
       </section>
-      
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Conservation Threats</h2>
-        <div className={styles.dropdownContainer}>
-          <Dropdown 
-           title="Invasive Non-native Species"
-           content="Information about Invasive Non-native Species."
-           imageUrl={Clionfish}
-          />
-          <Dropdown 
-            title="Climate Change & Hurricanes"
-            content="Information about Climate Change and Hurricanes."
-            imageUrl={Churricane}
-          />
-          <Dropdown 
-              title="Impaired Genetic Viability"
-              content="Information about Impaired Genetic Viability."
-              
-          />
-          <Dropdown 
-            title="Solid Waste Contamination"
-            content="Information about Solid Waste Contamination."
-            imageUrl={Ctrash}
-          />
-          <Dropdown 
-            title="Fire"
-            content="Information about Fire."
-            imageUrl={Cfire}
-          />
-          <Dropdown 
-            title="Hunting"
-            content="Information about Hunting."
-            imageUrl={Chunt}
-          />
-          <Dropdown 
-            title="Illegal Logging"
-            content="Information about Illegal Logging."
-            
-          />
-          <Dropdown 
-            title="Overfishing"
-            content="Information about Overfishing."
-            
-          />
-          <Dropdown 
-            title="Pesticide Contamination & Sedimentation"
-            content="Information about Pesticide Contamination and Sedimentation."
-            
-          />
-          <Dropdown 
-            title="Deforestation/Clearing of Riparian Buffers"
-            content="Information about Deforestation and Clearing of Riparian Buffers."
-          
-          />
-        </div>
+
+      <section className={styles.aboutPanel}>
+        <p className={styles.aboutText}>
+          This is where the small description for conservation threats goes.
+        </p>
       </section>
     </div>
   );
 };
-;
 
 export default Conservation;

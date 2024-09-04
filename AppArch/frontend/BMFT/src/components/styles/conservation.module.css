@@ -1,103 +1,143 @@
-.container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .section {
-    margin-bottom: 40px;
-  }
-  
-  .sectionTitle {
-    font-size: 1.5rem;
-    margin-bottom: 80px;
-    font-size: 16px;
- 
-  color: #020202 ;
+.dropdown {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  max-width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 6px;
+}
+
+.imageContainer {
+  margin-left: 40px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2ecd707d;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: padding 0.3s, background-color 0.3s, transform 0.3s;
+  margin: 0;
+  border-bottom: solid 5px #52c742;
+  border-right: solid 3px #52c742;
+  position: relative;
+  z-index: 10;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.button:hover .arrowContainer,
+.buttonOpen .arrowContainer {
+  opacity: 1;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.buttonOpen .arrowContainer {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.buttonText {
+  transition: transform 0.3s ease;
+}
+
+.dropdownContent {
+  width: 100%;
+  max-width: calc(100% - 0px);
+  margin-top: 0.5em;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding: 1em;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative; 
+  top: 0; 
+  left: 0px;
+  z-index: 5;
+  margin-top:-5px;
+}
+
+.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.section {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.aboutPanel {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  margin-top: -10px; 
+  width: 100%;
+  border-top: 2px solid #ccc;
+  margin-left: 20px;
+}
+
+.aboutText {
+  font-size: 20px;
+  color: #333;
+}
+
+.dropdownTitle {
+  text-decoration: underline;
   font-weight: bold;
-  }
-  
-  .dropdownContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .dropdown {
-    flex: 1 1 calc(25% - 20px); 
-    box-sizing: border-box;
-    max-width: calc(25% - 20px); 
-  }
-  
-  .dropdownButton {
-    background-color: #f7f7f7;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    position: relative;
-    box-sizing: border-box;
-    border: solid;
-    border-color: #52c742 ;
- 
-    border-width: 2px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-  }
-  
-  .dropdownButton:hover {
-    background-color: #dcdcdc;
-  }
-  
-  .arrow {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: solid #000000;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-  
-  .arrowUp {
-    transform: translateY(-50%) rotate(45deg);
-  }
-  
-  .arrowDown {
-    transform: translateY(-50%) rotate(-135deg);
-  }
-  
-  .dropdownContent {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    padding: 10px 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .show {
-    max-height: 500px;
-    opacity: 1;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
+}
