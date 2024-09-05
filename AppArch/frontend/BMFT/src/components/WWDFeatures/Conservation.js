@@ -60,7 +60,7 @@ const Conservation = () => {
 
       <section className={styles.aboutPanel}>
         <p className={styles.aboutText}>
-          This is where the small description for conservation threats goes.
+        Major threats of the BMF are deforestation especially the clearing of riparian buffers, natural disasters and climate change, contamination due to pesticides, sedimentation and solid waste, illegal extraction, Invasive non-native Species and primarily forest fires.  
         </p>
       </section>
     </div>

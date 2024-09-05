@@ -29,22 +29,10 @@ const panelsData = [
     link: '/volunteer',
   },
   {
-    title: 'Visit BMF',
+    title: 'Visitation Guidelines',
     description: 'Find out how you can visit us, including guidelines and application forms.',
     imageUrl: IGfor,
     link: '/visit',
-  },
-  {
-    title: 'Donate Monthly',
-    description: 'Contribute in a monthly subscription plan. Click to learn more and donate.', 
-    imageUrl: IGBird3, 
-    link: '/donate',
-  },
-  {
-    title: 'Donate Yearly', 
-    description: 'Contribute in a yearly subscription plan. Click to learn more and donate.', 
-    imageUrl: IGDeer, 
-    link: '/donate',
   },
 ];
 
