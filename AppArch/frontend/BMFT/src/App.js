@@ -16,6 +16,7 @@ import Rangers from "./components/BIOPages/Rangers";
 import Staff from "./components/GeneralFeatures/Staff";
 import Communitystewards from './components/WWDFeatures/Communitystewards';
 import AdminNews from "./components/API/AdminNews";
+import Setting from './components/API/Setting';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -97,9 +98,13 @@ function App() {
           <Login></Login>
           </Route>
 
-          <Route path = "/Post">
-          <Post></Post>
+          <Route path = "/settings">
+          <Nav isVisible={isNavbarVisible} />
+          <Setting></Setting>
+          <Footer/>
           </Route>
+       
+          
 
           </Switch>
           
