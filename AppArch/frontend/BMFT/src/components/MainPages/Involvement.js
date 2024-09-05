@@ -13,7 +13,7 @@ const Involvement = () => {
         <img src={Imonkey} alt="Header" />
         <div className={styles.titleoverlay}>
           <h1>Join Our Conservation Efforts</h1>
-          <button className={styles.donationButton}>Donate Now</button>
+          <button className={styles.donationButton}>Donate</button>
         </div>
       </header>
       <section className={styles.infoSection}>

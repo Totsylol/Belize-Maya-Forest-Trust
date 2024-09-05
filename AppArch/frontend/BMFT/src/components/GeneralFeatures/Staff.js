@@ -8,7 +8,7 @@ const Staff = () => {
   return (
     <div>
        <h1 className={styles.titleoverlay}>
-          Team Members
+          Our People
         </h1>
       <header className={styles.header}>
         <img src={Topstaff} alt="Header" />
@@ -19,7 +19,7 @@ const Staff = () => {
         <div className={styles.sectionContent}>
           <p className={styles.sectionContentParagraph}>
           To be a global benchmark for effective and lasting conservation.           </p>
-          <header className={styles.banner}>Board Members</header>
+          <header className={styles.banner}>Staff</header>
           <Board></Board>
           <header className={styles.banner}>Rangers</header>
           <Rangers></Rangers>
