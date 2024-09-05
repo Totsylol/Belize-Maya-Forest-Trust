@@ -17,5 +17,6 @@ Please refer to the documentation page:
 If you have any general or specific questions please contact us at:
 
 [Ivan Martinez-Kay](mailto:martinezkayivan@gmail.com)
+
 [Jonah Palm](mailto:thefishjonah@gmail.com)
 
