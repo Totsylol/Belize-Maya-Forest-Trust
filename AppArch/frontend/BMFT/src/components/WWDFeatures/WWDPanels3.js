@@ -3,6 +3,7 @@ import styles from '../styles/wwdpanels3.module.css';
 import WWDFire from "../assets/WWDFire.jpg"
 import Stewards from '../assets/Stewards.jpg';
 import WWArangers from "../assets/WWArangers.jpg"; 
+import OTplan from "../assets/OTplan.JPG";
 
 
 const panelsData = [
@@ -19,6 +20,12 @@ const panelsData = [
     imgSrc: WWDFire,
     title: 'Fire Management',
     link: '/firemanagement'
+  },
+  {
+    id: 3,
+    imgSrc: OTplan,
+    title: 'Scientific Research',
+    link: '/scientificresearch'
   },
 
  
