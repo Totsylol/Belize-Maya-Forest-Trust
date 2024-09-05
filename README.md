@@ -5,7 +5,9 @@ This read.me will have all the instructions and guides needed to mantain both th
 ## Technologies used:
 
 Node.js (Express)
+
 React.js
+
 MongoDB Atlas
 
 ## Contribution: 
