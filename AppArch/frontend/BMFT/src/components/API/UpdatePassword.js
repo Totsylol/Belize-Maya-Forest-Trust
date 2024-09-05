@@ -17,7 +17,6 @@ function UpdatePassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
-    console.log('Token used:', token); 
 
     try {
       const response = await axios.put(`${process.env.REACT_APP_API_BASE_URL}/user/update_password`, {

@@ -7,7 +7,6 @@ import Involvement from "./components/MainPages/Involvement";
 import WhoWeAre from "./components/MainPages/WhoWeAre"
 import Footer from "./components/GeneralFeatures/Footer"
 import Login from "./components/API/Login"
-import Post from "./components/API/Post"
 import WhatWeDo from "./components/MainPages/WhatWeDo";
 import AgroProj from "./components/WWDFeatures/AgroProj";
 import ProtBio from "./components/WWDFeatures/ProtBio";
