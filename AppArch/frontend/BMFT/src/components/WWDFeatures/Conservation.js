@@ -38,22 +38,22 @@ const Conservation = () => {
       <section className={styles.section}>
         <Dropdown 
           title="Forest Ecosystems"
-          content="Information about Forest Ecosystems."
+          content="To conserve forest ecosystems and their services, it is essential to reduce the occurrence of wildfires in the BMF and enhance the management of fire in the adjacent areas. Maintain and/or restore forest health in the larger BMF landscape. Key strategies to achieve this goal include raising awareness about fire safety, reforestation activities, and encouraging the adoption of regenerative agricultural practices."
           imageUrl={Cforest}
         />
         <Dropdown 
           title="Aquatic Ecosystems"
-          content="Information about Aquatic Ecosystems."
+          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
           imageUrl={Cturtle}
         />
         <Dropdown 
           title="Jaguars/Wildcats"
-          content="Information about Jaguars and Wildcats."
+          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
           imageUrl={Cjaguar}
         />
         <Dropdown 
           title="Cara Blanca Pools"
-          content="Information about Cara Blanca Pools."
+          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
           imageUrl={Cpools}
         />
       </section>
