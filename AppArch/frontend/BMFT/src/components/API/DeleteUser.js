@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { FaTrashAlt } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
-import styles from '../styles/profilepopup.module.css'
+import styles from '../styles/settings.module.css'
 
 function DeleteUser({ userId }) {
     const history = useHistory();
