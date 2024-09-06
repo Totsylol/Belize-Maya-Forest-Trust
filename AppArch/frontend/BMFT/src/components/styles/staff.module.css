@@ -6,7 +6,6 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: auto;
   max-height: 500px;
   overflow: hidden;
 }
@@ -35,10 +34,8 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
-  height: auto;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 2rem;
   box-sizing: border-box;
-  overflow: hidden;
   margin-top: 5vw;
   align-items: center;
   text-align: center;
@@ -123,7 +120,6 @@ body {
   position: relative;
   height: 30vh;
   overflow: hidden;
-  margin: 0;
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -155,32 +151,32 @@ body {
 
 @media (min-width: 768px) {
   .outreachSection {
-      flex-direction: row;
-      align-items: center;
-      text-align: left;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
   }
 
   .textSide, .imageSide {
-      padding: 3rem;
+    padding: 3rem;
   }
 
   .titleoverlay {
-      font-size: 5vw;
+    font-size: 5vw;
   }
 
   .textSide h2 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .textSide p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .outreachButton {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .titleoverlay2 {
-      font-size: 5vw;
+    font-size: 5vw;
   }
 }
