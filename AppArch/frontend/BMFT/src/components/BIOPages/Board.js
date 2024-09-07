@@ -5,6 +5,8 @@ import Tzul from "../assets/Tzul.JPG";
 import ProfilePic from "../assets/ProfilePic.jpg";
 import Lyndon from "../assets/Lyndon Mai.jpg";
 import Raquel from "../assets/Raquel Chun.JPG";
+import Stop from "../assets/Stop.JPG";
+
 const teamMembers = [
   {
       name: "Elma Kay",
@@ -44,7 +46,7 @@ const teamMembers = [
 
 ];
 
-const Board = () => {
+const Rangers = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   const openModal = (member) => {
@@ -56,28 +58,35 @@ const Board = () => {
   };
 
   return (
-    <div className={styles.biographypage}>
-      {teamMembers.map((member) => (
-        <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
-          <div className={styles.image}>
-            <img src={member.imgSrc} alt={member.name} />
+    <div>
+            <header className={styles.header}>
+        <img src={Stop} alt="Header" className={styles.headerImage} />
+        <h1 className={styles.titleoverlay}>Staff</h1>
+      </header>
+      <div className={styles.biographypage}>
+        {teamMembers.map((member) => (
+          <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
+            <div className={styles.image}>
+              <img src={member.imgSrc} alt={member.name} />
+            </div>
+            <div className={styles.description}>
+              <h2 className={styles.name}>{member.name}</h2>
+              <h3 className={styles.position}>{member.position}</h3>
+            </div>
           </div>
-          <div className={styles.description}>
-            <h2 className={styles.name}>{member.name}</h2>
-            <h3 className={styles.position}>{member.position}</h3>
-          </div>
-        </div>
-      ))}
-      <div className={`${styles.modal} ${selectedMember ? styles.show : ''}`}>
-        <div className={styles.modalContent}>
-          <span className={styles.close} onClick={closeModal}>&times;</span>
-          <div className={styles.modalImage}>
-            <img src={selectedMember?.imgSrc} alt={selectedMember?.name} />
-          </div>
-          <div className={styles.modalDetails}>
-            <h2 className={styles.name}>{selectedMember?.name}</h2>
-            <h3 className={styles.position}>{selectedMember?.position}</h3>
-            <p>{selectedMember?.description}</p>
+        ))}
+
+        <div className={`${styles.modal} ${selectedMember ? styles.show : ''}`}>
+          <div className={styles.modalContent}>
+            <span className={styles.close} onClick={closeModal}>&times;</span>
+            <div className={styles.modalImage}>
+              <img src={selectedMember?.imgSrc} alt={selectedMember?.name} />
+            </div>
+            <div className={styles.modalDetails}>
+              <h2 className={styles.name}>{selectedMember?.name}</h2>
+              <h3 className={styles.position}>{selectedMember?.position}</h3>
+              <p>{selectedMember?.description}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -85,4 +94,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default Rangers;
