@@ -170,24 +170,6 @@
     line-height: 1.7;
 }
 
-.outreachButton {
-    background-color: #52c742 ;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.outreachButton:hover {
-    background-color: #52c742 ;
-    transform: scale(1.01);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
 
 
 .infoContainer h2::after {
@@ -234,4 +216,306 @@
 
 .socialIcon:focus {
     outline: none;
+}
+.header2 {
+    width: 100%;
+    position: relative;
+    height: 30vh; 
+    overflow: hidden;
+    margin: 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.header2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+}
+
+.titleoverlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+    z-index: 10;
+}
+
+.seeMoreButton {
+    display: inline-block;
+    background-color: #52c742;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.seeMoreButton:hover {
+    background-color: #45a03a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.header2 {
+    width: 100%;
+    position: relative;
+    height: 30vh; 
+    overflow: hidden;
+    margin: 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.header2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+}
+
+.titleoverlay2 {
+    position: absolute;
+    top: 57%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.titleoverlay2 h1 {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+.titleoverlay2 .seeMoreButton {
+    background-color: #52c742;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0px; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.titleoverlay2 .seeMoreButton:hover {
+    background-color: #45a03a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.importanceSection {
+    padding: 60px 80px;
+    width: 100%;
+}
+
+.importanceSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.importanceSection h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 60%;
+    background-color:#52c742 ;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+
+.panelsContainer {
+    display: flex;
+    justify-content: space-around;
+    gap:40px;
+    flex-wrap: wrap; 
+}
+
+.panel {
+    width: 100%;
+    max-width: 280px;
+    height:350px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panelFront, .panelBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.panelFront {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.panelImageWrapper {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.panelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panelTitle {
+    width: 100%;
+    height: 20%;
+    background-color: #aaaeaa;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 5px;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    border-radius: 0 0 8px 8px; 
+}
+
+.panelTitle h3 {
+    margin: 0;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.panelBack {
+    background-color: #f0f0f0;
+    color: #555;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.panel.flipped .panelFront {
+    transform: rotateY(180deg);
+}
+
+.panel.flipped .panelBack {
+    transform: rotateY(0);
+}
+
+.panelFront::after {
+    content: '+';
+    position: absolute;
+    bottom: 310px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.panelFront:hover::after {
+    opacity: 1;
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.panel.flipped .panelFront::after {
+    opacity: 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.socialIcon {
+    display: inline-block;
+}
+
+.iconImage {
+    width: 40px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .infoContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .infoContainer {
+        max-width: 100%;
+    }
+
+    .infoImage {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .panelsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panel {
+        margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+    }
 }

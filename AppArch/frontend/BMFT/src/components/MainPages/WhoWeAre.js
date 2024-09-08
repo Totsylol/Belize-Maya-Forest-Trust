@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/whoweare.module.css'; 
 import WWAtop from "../assets/WWAtop.jpg";
 import WWAposter from "../assets/WWAposter.jpg";
@@ -8,6 +8,38 @@ import WWAboard from "../assets/WWAboard.jpg";
 import facebookicon from "../assets/facebookicon.webp";
 import youtubeicon from "../assets/youtubeicon.png";
 import gmailicon2 from "../assets/gmailicon2.jpg";
+import Wbird from "../assets/Wbird.JPG";
+import Wshed from "../assets/Wshed.jpg";
+import Wcul from "../assets/Wcul.JPG";
+import Wshed2 from "../assets/Wshed2.jpg";
+
+const Panel = ({ image, title, description }) => {
+    const [flipped, setFlipped] = useState(false);
+
+    const handleClick = () => {
+        setFlipped(!flipped);
+    };
+
+    return (
+        <div
+            className={`${styles.panel} ${flipped ? styles.flipped : ''}`}
+            onClick={handleClick}
+        >
+            <div className={styles.panelFront}>
+                <div className={styles.panelImageWrapper}>
+                    <img src={image} alt={title} className={styles.panelImage} />
+                </div>
+                <div className={styles.panelTitle}>
+                    <h3>{title}</h3>
+                </div>
+            </div>
+            <div className={styles.panelBack}>
+                <p>{description}</p>
+            </div>
+        </div>
+    );
+};
+
 
 const WhoWeAre = () => {
     return (
@@ -41,35 +73,40 @@ const WhoWeAre = () => {
                 </div>
             </section>
             <section className={styles.header2}>
-                <img src={WWAmid} alt="Fire Prevention" />
-                <h1 className={styles.titleoverlay2}>Meet the Team</h1>
-            </section>
-            <section className={`${styles.outreachSection} ${styles.rangers}`}>
-                <div className={styles.textSide}>
-                    <h2>Rangers</h2>
-                    <p>
-                        Our dedicated Rangers are crucial to our conservation efforts. They work tirelessly in the field, monitoring wildlife, patrolling the forest, and ensuring that the natural habitat remains protected from illegal activities.
-                    </p>
-                    <button className={styles.outreachButton}>See More</button>
-                </div>
-                <div className={styles.imageSide}>
-                    <img src={WWArangers} alt="Rangers" className={styles.image} />
+                <img src={WWAmid} alt="Meet the Team" />
+                <div className={styles.titleoverlay2}>
+                    <h1>Meet the Team</h1>
+                    <a href="/staff" className={styles.seeMoreButton}>See More</a>
                 </div>
             </section>
-            <section className={`${styles.outreachSection} ${styles.boardMembers}`}>
-                <div className={styles.imageSide}>
-                    <img src={WWAboard} alt="Board Members" className={styles.image} />
-                </div>
-                <div className={styles.textSide}>
-                    <h2>Board Members</h2>
-                    <p>
-                        Our Board Members bring a wealth of experience and dedication to our mission. They provide strategic guidance and governance, ensuring that our goals align with best practices and the evolving needs of our conservation efforts.
-                    </p>
-                    <button className={styles.outreachButton}>See More </button>
+            <section className={styles.importanceSection}>
+                <h2>Ecosystem Services</h2>
+                <div className={styles.panelsContainer}>
+                    <Panel 
+                        image={Wbird} 
+                        title="Biodiversity" 
+                        description="The Belize Maya Forest is home to a diverse range of species, contributing to global biodiversity and the health of various ecosystems."
+                    />
+                    <Panel 
+                        image={Wshed} 
+                        title="Watersheds" 
+                        description="The forest plays a vital role in watershed management, influencing water quality and availability for surrounding communities."
+                    />
+                    <Panel 
+                        image={Wshed2} 
+                        title="Aquatic Ecosystems" 
+                        description="This section covers the importance of rivers, creeks, and the Cara Blanca Pools within the Belize Maya Forest."
+                    />
+                    <Panel 
+                        image={Wcul} 
+                        title="Cultural Heritage" 
+                        description="The Belize Maya Forest is rich in cultural heritage, with significant archaeological sites and traditional practices."
+                    />
                 </div>
             </section>
+
             <section className={styles.socials}>
-                <a href="info@bmft.org.bz" className={styles.socialIcon} title="Email">
+                <a href="mailto:info@bmft.org.bz" className={styles.socialIcon} title="Email">
                     <img src={gmailicon2} alt="Gmail" className={styles.iconImage} />
                 </a>
                 <a href="https://www.facebook.com/BelizeMayaForestTrust" className={styles.socialIcon} title="Facebook">
@@ -79,7 +116,6 @@ const WhoWeAre = () => {
                     <img src={youtubeicon} alt="YouTube" className={styles.iconImage} />
                 </a>
             </section>
-
         </div>
     );
 };
