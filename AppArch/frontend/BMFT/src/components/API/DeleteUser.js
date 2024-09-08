@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaTrashAlt } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
 import styles from '../styles/settings.module.css'
+ 
 
 function DeleteUser({ userId }) {
     const history = useHistory();
@@ -18,7 +19,7 @@ function DeleteUser({ userId }) {
                 return; 
             }
 
-            const response = await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/user/delete_user/${userId}`, {
+            const response = await axios.delete(`/api/delete_user/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

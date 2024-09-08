@@ -98,9 +98,7 @@ function App() {
           </Route>
 
           <Route path = "/settings">
-          <Nav isVisible={isNavbarVisible} />
           <Setting></Setting>
-          <Footer/>
           </Route>
        
           
