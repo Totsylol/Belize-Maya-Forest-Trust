@@ -8,7 +8,12 @@ const fileSchema = new mongoose.Schema({
     year: Number,
     author: String,
     description: String,
-    uploadDate: { type: Date, default: Date.now }
+    uploadDate: { type: Date, default: Date.now },
+    tags: {
+        type: String,
+        enum: ['news', 'newsletter', 'annual report'], 
+        required: true 
+    }
 }, { collection: 'News' }); 
 
 const File = mongoose.model('File', fileSchema);

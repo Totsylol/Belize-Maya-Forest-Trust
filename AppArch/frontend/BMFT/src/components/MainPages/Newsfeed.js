@@ -10,15 +10,15 @@ function Newsfeed() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await axios.get('/api/news'); 
-        setNewsData(response.data); 
+        const response = await axios.get('/api/news?tag=news');
+        setNewsData(response.data);
       } catch (error) {
-        console.error('Error fetching news data:', error); 
+        console.error('Error fetching news data:', error);
       }
     };
-
-    fetchNewsData(); 
-  }, []); 
+  
+    fetchNewsData();
+  }, []);
 
   const handleOpenPopup = (news) => {
     setSelectedNews(news);

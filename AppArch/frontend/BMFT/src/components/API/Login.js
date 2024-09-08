@@ -8,7 +8,7 @@ import logo from '../assets/logo.png';
 import axios from 'axios'; 
 
 const Login = () => {
-    const [username, setUsername] = useState(''); // Changed from email to username
+    const [username, setUsername] = useState(''); 
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const nav = useHistory();

@@ -5,6 +5,7 @@ import styles from '../styles/newspost.module.css';
 const Post = () => {
     const [popup, setPopup] = useState(false);
     const [title, setTitle] = useState('');
+    const [tag, setTag] = useState('');
     const [year, setYear] = useState('');
     const [author, setAuthor] = useState('');
     const [description, setDescription] = useState('');
@@ -25,6 +26,7 @@ const Post = () => {
         formData.append('year', year);
         formData.append('author', author);
         formData.append('description', description);
+        formData.append('tag', tag);
         formData.append('image', image);
 
         try {
@@ -55,6 +57,7 @@ const Post = () => {
                             <input className={styles.input} type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
                             <input className={styles.input} type="number" value={year} onChange={(e) => setYear(e.target.value)} placeholder="Year" required />
                             <input className={styles.input} type="text" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Author" required />
+                            <input className={styles.input} type="text" value={tag} onChange={(e) => setTag(e.target.value)} placeholder="Tag" required />
                             <input className={styles.input} type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" required />
                             <input className={styles.btn2} type="file" onChange={handleFileChange} required />
                             <div className={styles.group}>

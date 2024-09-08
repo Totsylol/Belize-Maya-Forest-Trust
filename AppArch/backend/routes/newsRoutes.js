@@ -1,18 +1,23 @@
 const express = require('express');
 const multer = require('multer');
-const File = require('../models/newsModel'); 
+const File = require('../models/newsModel');
 const router = express.Router();
 
-const storage = multer.memoryStorage(); 
+const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 router.post('/news', upload.single('image'), async (req, res) => {
     try {
-        const { title, year, author, description } = req.body;
+        const { title, year, author, description, tag } = req.body;  // Extract tag from req.body
         const image = req.file;
 
         if (!image) {
             return res.status(400).json({ error: 'No file uploaded' });
+        }
+
+        // Ensure that the tag is one of the allowed values
+        if (!['news', 'newsletter', 'annual report'].includes(tag)) {
+            return res.status(400).json({ error: 'Invalid tag' });
         }
 
         const newFile = new File({
@@ -23,6 +28,7 @@ router.post('/news', upload.single('image'), async (req, res) => {
             year: year,
             author: author,
             description: description,
+            tags: tag  
         });
 
         await newFile.save();
@@ -36,7 +42,11 @@ router.post('/news', upload.single('image'), async (req, res) => {
 
 router.get('/news', async (req, res) => {
     try {
-        const newsPosts = await File.find({});
+        const filter = {};
+        if (req.query.tag) {
+            filter.tags = req.query.tag;
+        }
+        const newsPosts = await File.find(filter); // Find files based on the filter
         res.status(200).json(newsPosts);
     } catch (err) {
         console.error('Error fetching news posts:', err);
