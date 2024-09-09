@@ -18,6 +18,7 @@ import AdminNews from "./components/API/AdminNews";
 import Setting from './components/API/Setting';
 import Staff from './components/BIOPages/Staff';
 import Inprog from './components/GIFeatures/Inprog';
+import Mobilenav from './components/GeneralFeatures/Mobilenav';
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
   const token = localStorage.getItem('token');
@@ -29,78 +30,91 @@ function App() {
           <Switch>
           <Route exact path="/">
                 <Nav isVisible={isNavbarVisible} />
+                <Mobilenav></Mobilenav>
                 <Home setNavbarVisible={setNavbarVisible} />
                 <Footer />
           </Route>
           
           <Route path = "/WhatWeDo">
             <Nav isVisible={isNavbarVisible} />
+            <Mobilenav></Mobilenav>
             <WhatWeDo></WhatWeDo>
             <Footer/>
           </Route>
 
           <Route path = "/News">
             <Nav isVisible={isNavbarVisible} />
+            <Mobilenav></Mobilenav>
             {token ? <AdminNews /> : <Newsfeed />}
             <Footer/>
           </Route>
 
           <Route path = "/WhoWeAre">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <WhoWeAre></WhoWeAre>
           <Footer/>
           </Route>
          
           <Route path = "/Getinvolved">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav isVisible={isNavbarVisible} />
           <Involvement></Involvement>
           <Footer/>
           </Route>
          
           <Route path = "/AgroProj">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <AgroProj></AgroProj>
           <Footer/>
           </Route>
 
           <Route path = "/communitystewards">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <Communitystewards></Communitystewards>
           <Footer/> 
           </Route>
 
           <Route path = "/ProtBio">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <ProtBio></ProtBio>
           <Footer/>
           </Route>
 
           <Route path = "/ourpeople">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <OurPeople></OurPeople>
           <Footer/>
           </Route>
 
           <Route path = "/staff">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <Staff></Staff>
           <Footer/>
           </Route>
 
           <Route path = "/outreach">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav isVisible={isNavbarVisible} />
           <Outreach></Outreach>
           <Footer/>
           </Route>
           
           <Route path = "/rangers">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
           <Rangers></Rangers>
           <Footer/>
           </Route>
 
           <Route path = "/inprog">
           <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
          <Inprog></Inprog>
           </Route>
           <Footer/>
