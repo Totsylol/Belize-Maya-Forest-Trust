@@ -76,7 +76,7 @@ const WhoWeAre = () => {
                 <img src={WWAmid} alt="Meet the Team" />
                 <div className={styles.titleoverlay2}>
                     <h1>Meet the Team</h1>
-                    <a href="/staff" className={styles.seeMoreButton}>See More</a>
+                    <a href="/ourpeople" className={styles.seeMoreButton}>See More</a>
                 </div>
             </section>
             <section className={styles.importanceSection}>
