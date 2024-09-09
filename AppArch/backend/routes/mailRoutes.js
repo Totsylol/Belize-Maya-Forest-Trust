@@ -21,7 +21,7 @@ router.post('/subscribe', async (req, res) => {
     }
 
     const mailOptions = {
-        from: 'newsletter@yourdomain.com',
+        from: 'newsletter@BMFT.org',
         to: email,
         subject: 'Newsletter Subscription',
         text: 'Thank you for subscribing to our newsletter!',
