@@ -6,10 +6,10 @@ const router = express.Router();
 
 const transporter = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
-    port: 0000,
+    port: 2525,
     auth: {
-        user: "YOUR_MAILTRAP_USER", // Replace with your Mailtrap credentials
-        pass: "YOUR_MAILTRAP_PASS"  // Replace with your Mailtrap credentials
+        user: "05e81da0b5f35c", // Replace with your Mailtrap credentials
+        pass: "51a009aef27eb5"  // Replace with your Mailtrap credentials
     }
 });
 
