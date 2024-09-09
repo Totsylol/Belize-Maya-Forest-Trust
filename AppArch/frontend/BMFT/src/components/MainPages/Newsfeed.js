@@ -29,6 +29,9 @@ function Newsfeed() {
   };
 
   return (
+
+    
+
     <div className={styles.newsFeedPage}>
       <h1 className={styles.titleoverlay}>
         News
@@ -37,6 +40,13 @@ function Newsfeed() {
         <img src={Ntop} alt="Header" />
       </header>
       <main className={styles.newsFeed}>
+
+      <div className={styles.tab}>
+        <button className={styles.tablinks} onclick="openCity(event, 'London')">London</button>
+        <button className={styles.tablinks} onclick="openCity(event, 'Paris')">Paris</button>
+        <button className={styles.tablinks} onclick="openCity(event, 'Tokyo')">Tokyo</button>
+      </div>
+
         {newsData.map(news => (
           <div key={news._id} className={styles.newsItem}>
             <img src={`data:${news.type};base64,${btoa(
