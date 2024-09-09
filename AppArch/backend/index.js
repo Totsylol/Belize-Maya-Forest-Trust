@@ -1,6 +1,5 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const nodemailer = require('nodemailer');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes.js');
 const newsRoutes = require('./routes/newsRoutes.js');
