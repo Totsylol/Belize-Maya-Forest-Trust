@@ -46,7 +46,7 @@
   }
   
   .learnmorebtn {
-    background-color: #4CAF50;
+    background-color: #52c742 ;
     color: white;
     border: none;
     border-radius: 4px;
@@ -60,6 +60,6 @@
   }
   
   .learnmorebtn:hover {
-    background-color: #52c742;
+    background-color: #41a234;
   }
   
