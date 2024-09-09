@@ -1,15 +1,12 @@
 import React from 'react';
-import Rangers from '../BIOPages/Rangers';
-import Board from "../BIOPages/Board";
 import Topstaff from "../assets/Topstaff.JPG";
-import styles from "../styles/staff.module.css";
-import WWAmid from "../assets/WWAmid.jpg";
-import WWArangers from "../assets/WWArangers.jpg"; 
+import WWArangers from "../assets/WWArangers.jpg";
 import WWAboard from "../assets/WWAboard.jpg";
 import Supp from "../assets/Supp.jpg";
 import Vol from "../assets/Vol.jpg";
+import styles from "../styles/ourpeople.module.css";
 
-const Staff = () => {
+const OurPeople = () => {
   return (
     <div>
       <header className={styles.header}>
@@ -23,7 +20,7 @@ const Staff = () => {
           <p>
             Our dedicated Rangers are crucial to our conservation efforts. They work tirelessly in the field, monitoring wildlife, patrolling the forest, and ensuring that the natural habitat remains protected from illegal activities.
           </p>
-          <button className={styles.outreachButton}>See More</button>
+          <a href="/rangers" className={styles.outreachButton}>See More</a>
         </div>
         <div className={styles.imageSide}>
           <img src={WWArangers} alt="Rangers" className={styles.image} />
@@ -38,7 +35,7 @@ const Staff = () => {
           <p>
             Our staff members bring a wealth of experience and dedication to our mission. They provide strategic guidance and governance, ensuring that our goals align with best practices and the evolving needs of our conservation efforts.
           </p>
-          <button className={styles.outreachButton}>See More </button>
+          <a href="/staff" className={styles.outreachButton}>See More</a>
         </div>
       </section>
       <section className={`${styles.outreachSection} ${styles.rangers}`}>
@@ -47,7 +44,7 @@ const Staff = () => {
           <p>
             Supporters are the backbone of the Belize Maya Forest Trust (BMFT). Their contributions enable us to protect and preserve the vital Maya forest ecosystem, which is home to diverse wildlife and indigenous cultures.
           </p>
-          <button className={styles.outreachButton}>See More</button>
+          <a href="/supporters" className={styles.outreachButton}>See More</a>
         </div>
         <div className={styles.imageSide}>
           <img src={Supp} alt="Supporters" className={styles.image} />
@@ -62,11 +59,11 @@ const Staff = () => {
           <p>
             Volunteers and interns are crucial to the Belize Maya Forest Trust (BMFT). Their dedication and hard work are essential in advancing our conservation efforts and expanding our impact.
           </p>
-          <button className={styles.outreachButton}>See More </button>
+          <a href="/volunteers" className={styles.outreachButton}>See More</a>
         </div>
       </section>
     </div>
   );
 };
 
-export default Staff;
+export default OurPeople;

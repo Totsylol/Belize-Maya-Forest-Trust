@@ -104,6 +104,10 @@ const WhoWeAre = () => {
                     />
                 </div>
             </section>
+            <section className={styles.aboutPanel}>
+        <p className={styles.aboutText}>
+        The Belize Maya Forest (BMF), previously known as Yalbac and Laguna Seca, were owned and managed by a foreign logging company. The properties were bought in December 2020 for protection by the Belize Maya Forest Trust (BMFT) through an effort led by TNC, and many other generous organizations and individual supporters.          </p>
+      </section>
 
             <section className={styles.socials}>
                 <a href="mailto:info@bmft.org.bz" className={styles.socialIcon} title="Email">

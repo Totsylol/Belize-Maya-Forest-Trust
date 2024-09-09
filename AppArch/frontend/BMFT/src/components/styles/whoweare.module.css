@@ -492,6 +492,20 @@
     width: 40px;
     height: auto;
 }
+.aboutPanel {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-top: -10px; 
+    width: 100%;
+    border-top: 2px solid #ccc;
+   
+  }
+  
+  .aboutText {
+    font-size: 20px;
+    color: #333;
+  }
 
 @media (max-width: 768px) {
     .infoContent {
