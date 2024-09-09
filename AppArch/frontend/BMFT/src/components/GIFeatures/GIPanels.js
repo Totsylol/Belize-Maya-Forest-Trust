@@ -26,7 +26,7 @@ const panelsData = [
     title: 'Volunteer/Intern Opportunities',
     description: 'Discover ways to volunteer or intern with us. Check out guidelines and apply.',
     imageUrl: IGvol,
-    link: '/volunteer',
+    link: '/interns',
   },
   {
     title: 'Visitation Guidelines',

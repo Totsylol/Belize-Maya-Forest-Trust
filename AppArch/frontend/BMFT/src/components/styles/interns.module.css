@@ -1,0 +1,45 @@
+.internsSection {
+    display: flex;
+    align-items: center;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .description {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .description h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .description p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .applyButton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: green;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .picture {
+    flex: 1;
+  }
+  
+  .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

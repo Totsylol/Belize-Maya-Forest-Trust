@@ -17,6 +17,7 @@ import Communitystewards from './components/WWDFeatures/Communitystewards';
 import AdminNews from "./components/API/AdminNews";
 import Setting from './components/API/Setting';
 import Staff from './components/BIOPages/Staff';
+import Interns from './components/GIFeatures/Interns';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -97,6 +98,10 @@ function App() {
           <Nav isVisible={isNavbarVisible} />
           <Rangers></Rangers>
           <Footer/>
+          </Route>
+
+          <Route path = "/interns">
+          <Interns></Interns>
           </Route>
        
 

@@ -14,17 +14,17 @@ function Footer() {
           <img className={styles.FinalBMFT} src={FinalBMFT} alt="FinalBMFT" />
           <div className={styles.footerlinkitems}>
             <h2>About Us</h2>
-            <a href='/sign-up'>Our Story</a>
-            <a href='/protbio'>Biodiversity</a>
+            <a href='/whoweare'>Our Story</a>
+            <a href='/protbio'>Protecting Biodiversity</a>
             <a href='/outreach'>Outreach</a>
-            <a href='/agroproj'>Agriculture Program</a>
-            <a href='/communitystewards'>Community Stewards</a>
+            <a href='/agroproj'>Regenerative Agriculture</a>
+            <a href='/communitystewards'>Community Stewardship</a>
           </div>
           <div className={styles.footerlinkitems}>
             <h2>Learn More</h2>
             <a href='/whatwedo'>What We Do</a>
             <a href='/news'>News</a>
-            <a href='/staff'>The Team</a>
+            <a href='/ourpeople'>Our People</a>
           </div>
           <div className={styles.footerlinkitems}>
             <h2>Social Media</h2>
