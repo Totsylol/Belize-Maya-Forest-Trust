@@ -8,14 +8,13 @@ const upload = multer({ storage: storage });
 
 router.post('/news', upload.single('image'), async (req, res) => {
     try {
-        const { title, year, author, description, tag } = req.body;  // Extract tag from req.body
+        const { title, year, author, description, tag } = req.body; 
         const image = req.file;
 
         if (!image) {
             return res.status(400).json({ error: 'No file uploaded' });
         }
 
-        // Ensure that the tag is one of the allowed values
         if (!['news', 'newsletter', 'annual report'].includes(tag)) {
             return res.status(400).json({ error: 'Invalid tag' });
         }
