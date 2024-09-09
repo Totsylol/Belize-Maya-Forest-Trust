@@ -64,9 +64,8 @@ const Nav = ({ isVisible, currentPage }) => {
                         Get Involved
                     </a>
                 </li>
-                {/* Donation Button */}
                 <li className={`${styles.navItem} ${styles.donationItem}`}>
-                    <a href='/donate' className={`${styles.donationButton} ${isScrolled ? styles.scrolled : ''}`}>
+                    <a href='/Inprog' className={`${styles.donationButton} ${isScrolled ? styles.scrolled : ''}`}>
                         Donate
                     </a>
                 </li>

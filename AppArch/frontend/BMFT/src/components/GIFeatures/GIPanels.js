@@ -14,7 +14,7 @@ const panelsData = [
     title: 'Donate to Specific Programs',
     description: 'Support our various programs and initiatives. Click to learn more and donate.',
     imageUrl: IGBird,
-    link: '/donate',
+    link: '/inprog',
   },
   {
     title: 'Apply to Become a Community Steward',

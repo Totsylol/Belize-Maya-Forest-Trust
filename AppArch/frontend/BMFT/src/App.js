@@ -17,8 +17,7 @@ import Communitystewards from './components/WWDFeatures/Communitystewards';
 import AdminNews from "./components/API/AdminNews";
 import Setting from './components/API/Setting';
 import Staff from './components/BIOPages/Staff';
-import Interns from './components/GIFeatures/Interns';
-
+import Inprog from './components/GIFeatures/Inprog';
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
   const token = localStorage.getItem('token');
@@ -100,9 +99,11 @@ function App() {
           <Footer/>
           </Route>
 
-          <Route path = "/interns">
-          <Interns></Interns>
+          <Route path = "/inprog">
+          <Nav isVisible={isNavbarVisible} />
+         <Inprog></Inprog>
           </Route>
+          <Footer/>
        
 
           <Route path = "/Login">

@@ -1,10 +1,8 @@
 import React from 'react';
-import styles from "../styles/involvment.module.css"
-import Imonkey from "../assets/Imonkey.png"
-import ContactUs from "../GeneralFeatures/ContactUs"
-import GIPanels from '../GIFeatures/GIPanels'
-import GIbot from '../assets/GIbot.JPG'
-import Testbutton from '../GIFeatures/Testbutton'
+import { Link } from 'react-router-dom'; // Import Link for routing
+import styles from "../styles/involvment.module.css";
+import Imonkey from "../assets/Imonkey.png";
+import GIPanels from '../GIFeatures/GIPanels';
 
 const Involvement = () => {
   return (
@@ -13,7 +11,9 @@ const Involvement = () => {
         <img src={Imonkey} alt="Header" />
         <div className={styles.titleoverlay}>
           <h1>Join Our Conservation Efforts</h1>
-          <button className={styles.donationButton}>Donate</button>
+          <Link to="/Inprog" className={styles.donationButton}>
+            Donate
+          </Link>
         </div>
       </header>
       <section className={styles.infoSection}>
@@ -30,6 +30,3 @@ const Involvement = () => {
 };
 
 export default Involvement;
-
-
-
