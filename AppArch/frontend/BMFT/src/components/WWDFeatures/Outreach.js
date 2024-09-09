@@ -33,7 +33,7 @@ const Outreach = () => {
 
     return (
         <div className={styles.pageContainer}>
-            <h1 className={styles.titleoverlay}>Community Outreach</h1>
+            <h1 className={styles.titleoverlay}>Outreach</h1>
             <header className={styles.header}>
                 <img src={Otop} alt="Header" />
             </header>

@@ -93,7 +93,7 @@ const AgroProj = () => {
                 Agroforestry integrates trees and shrubs into crop and animal farming systems to create environmental and economic benefits. This approach enhances biodiversity, improves soil health, and increases farm resilience against climate change.
             </TopicSection>
             <TopicSection
-                title="Control Burns"
+                title="Reforestation"
                 imgSrc={Placeholder}
                 reverse={true} 
                 onImageClick={handleImageClick}
