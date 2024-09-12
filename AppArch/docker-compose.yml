@@ -1,0 +1,27 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-dev  # Use the frontend-dev stage for development
+    ports:
+      - "3000:3000"  # Map port 3000 for React dev server
+    depends_on:
+      - backend
+    volumes:
+      - ./AppArch/frontend:/app/frontend  # Mount the local frontend folder to the container for live updates
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:5001  # Set backend URL in frontend
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend-build  # Use the backend-build stage for the backend
+    ports:
+      - "5001:5001"  # Map port 5001 for the Express server
+    volumes:
+      - ./AppArch/backend:/app/backend  # Mount the local backend folder to the container for live updates
+    environment:
+      - NODE_ENV=development  # Set backend environment to development

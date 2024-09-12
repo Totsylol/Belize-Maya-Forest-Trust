@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import styles from '../styles/Newsfeed.module.css';
 import Ntop from '../assets/Ntop.jpg';
-import Post from './Post.js'
+import Post from './Post'
 
-function AdminNews()) {
+
+function AdminNews() {
   const [newsData, setNewsData] = useState([]);
   const [selectedNews, setSelectedNews] = useState(null);
-  const [tag, setTag] = useState('news');
 
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await axios.get('/api/news?tag=${setTag}');
+        const response = await axios.get('/api/news?tag=news');
         setNewsData(response.data);
       } catch (error) {
         console.error('Error fetching news data:', error);
@@ -72,7 +72,7 @@ function AdminNews()) {
       </div>
 
 
-      <div id={setTag} className={styles.tabcontent}>
+      <div id='report' className={styles.tabcontent}>
         {newsData.map(news => (
           <div key={news._id} className={styles.newsItem}>
             <img src={`data:${news.type};base64,${btoa(
@@ -101,7 +101,7 @@ function AdminNews()) {
         </div>
         </div>
 
-        <div id={setTag} className={styles.tabcontent}>
+        <div id='news' className={styles.tabcontent}>
         {newsData.map(news => (
           <div key={news._id} className={styles.newsItem}>
             <img src={`data:${news.type};base64,${btoa(
