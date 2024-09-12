@@ -8,6 +8,7 @@ import IGvol from '../assets/IGvol.jpg';
 import IGfor from '../assets/IGfor.jpg';
 import IGBird3 from '../assets/IGBird3.JPG';
 import IGDeer from '../assets/IGDeer.JPG';
+import rangerad from "../assets/ranger ad.png"
 
 const panelsData = [
   {
@@ -26,7 +27,7 @@ const panelsData = [
     title: 'Staff/Volunteer Opportunities',
     description: 'Discover ways to volunteer or intern with us. Check out guidelines and apply.',
     imageUrl: IGvol,
-    link: '/interns',
+    link: rangerad,  
   },
   /*
   {
@@ -37,6 +38,7 @@ const panelsData = [
   },
   */
 ];
+
 
 const GIPanels = () => {
   return (
