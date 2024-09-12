@@ -26,30 +26,29 @@ const Nav = ({ isVisible, currentPage }) => {
                     </a>
                 </li>
                 <li className={`${styles.navItem} ${styles.dropdown}`}>
-                    <a href='/WhatWeDo' className={`${styles.navLink} ${currentPage === 'whatwedo' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                        What We Do
-                    </a>
-                    <div className={styles.dropdownContent}>
-                        <div className={styles.row}>
-                            <div className={styles.column}>
-                                <a href="/outreach">Outreach</a>
-                                <a href="/protbio">Protecting Biodiversity</a>
-                                <a href="/agroproj">Regenerative Agriculture Project</a>
-                                <a href="/communitystewards">Community Stewards Program</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li className={`${styles.navItem} ${styles.dropdown}`}>
                     <a href='/whoweare' className={`${styles.navLink} ${currentPage === 'whoweare' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
                         Who We Are
                     </a>
                     <div className={styles.dropdownContent}>
                         <div className={styles.row}>
                             <div className={styles.column}>
+                                <a href="#">Mission</a>
+                                <a href="#">Vision</a>
                                 <a href="/ourpeople">Our People</a>
-                                <a href="/rangers">Rangers</a>
-                                <a href="/staff">Staff</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li className={`${styles.navItem} ${styles.dropdown}`}>
+                    <a href='/WhatWeDo' className={`${styles.navLink} ${currentPage === 'whatwedo' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
+                        What We Do
+                    </a>
+                    <div className={styles.dropdownContent}>
+                        <div className={styles.row}>
+                            <div className={styles.column}>
+                                <a href="/protbio">Protecting Biodiversity</a>
+                                <a href="/communitystewards">Building Stewardship</a>
+                                <a href="#">Publications</a>
                             </div>
                         </div>
                     </div>

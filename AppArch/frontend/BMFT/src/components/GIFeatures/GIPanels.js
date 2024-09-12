@@ -23,17 +23,19 @@ const panelsData = [
     link: '/apply',
   },
   {
-    title: 'Volunteer/Intern Opportunities',
+    title: 'Staff/Volunteer Opportunities',
     description: 'Discover ways to volunteer or intern with us. Check out guidelines and apply.',
     imageUrl: IGvol,
     link: '/interns',
   },
+  /*
   {
     title: 'Visitation Guidelines',
     description: 'Find out how you can visit us, including guidelines and application forms.',
     imageUrl: IGfor,
     link: '/visit',
   },
+  */
 ];
 
 const GIPanels = () => {
