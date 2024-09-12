@@ -12,6 +12,7 @@ import Wbird from "../assets/Wbird.JPG";
 import Wshed from "../assets/Wshed.jpg";
 import Wcul from "../assets/Wcul.JPG";
 import Wshed2 from "../assets/Wshed2.jpg";
+import Placeholder from "../assets/Placeholder.jpg"
 
 const Panel = ({ image, title, description }) => {
     const [flipped, setFlipped] = useState(false);
@@ -88,14 +89,14 @@ const WhoWeAre = () => {
                         description="The Belize Maya Forest is home to a diverse range of species, contributing to global biodiversity and the health of various ecosystems."
                     />
                     <Panel 
-                        image={Wshed} 
+                        image={Wshed2} 
                         title="Watersheds" 
                         description="The forest plays a vital role in watershed management, influencing water quality and availability for surrounding communities."
                     />
                     <Panel 
-                        image={Wshed2} 
-                        title="Aquatic Ecosystems" 
-                        description="This section covers the importance of rivers, creeks, and the Cara Blanca Pools within the Belize Maya Forest."
+                        image={Placeholder} 
+                        title="Climate Regulation" 
+                        description="About climate regulation."
                     />
                     <Panel 
                         image={Wcul} 
