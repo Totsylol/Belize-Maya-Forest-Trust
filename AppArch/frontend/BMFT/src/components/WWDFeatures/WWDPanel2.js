@@ -18,7 +18,7 @@ const panelsData = [
   {
     id: 3,
     imgSrc: Agrigo,
-    title: 'Regenerative Agriculture',
+    title: 'Restorative and Regenerative Agriculture',
     link: '/agroproj'
   },
 

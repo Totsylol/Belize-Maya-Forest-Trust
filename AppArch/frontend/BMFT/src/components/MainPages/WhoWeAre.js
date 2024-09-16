@@ -13,6 +13,8 @@ import Wshed from "../assets/Wshed.jpg";
 import Wcul from "../assets/Wcul.JPG";
 import Wshed2 from "../assets/Wshed2.jpg";
 import Placeholder from "../assets/Placeholder.jpg"
+import WWDInfo from '../WWDFeatures/WWDInfo';
+import Ntop from "../assets/Ntop.jpg"
 
 const Panel = ({ image, title, description }) => {
     const [flipped, setFlipped] = useState(false);
@@ -51,6 +53,14 @@ const WhoWeAre = () => {
                     <h1>Belize Maya Forest Trust</h1>
                 </div>
             </header>
+            <section className={styles.missionVisionSection}>
+                <div className={styles.missionPanel}>
+                    <h2>Our Mission</h2>
+                    <p>
+                        Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.
+                    </p>
+                </div>
+                </section>
             <section className={styles.infoSection}>
                 <div className={styles.infoContent}>
                     <div className={styles.infoContainer}>
@@ -78,6 +88,14 @@ const WhoWeAre = () => {
                 <div className={styles.titleoverlay2}>
                     <h1>Meet the Team</h1>
                     <a href="/ourpeople" className={styles.seeMoreButton}>See More</a>
+                </div>
+            </section>
+            <section className={styles.missionVisionSection}>
+                <div className={styles.visionPanel}>
+                    <h2>Our Vision</h2>
+                    <p>
+                        A world where the Belize Maya Forest serves as a model for sustainable conservation, ensuring the health and well-being of our planet and its inhabitants.
+                    </p>
                 </div>
             </section>
             <section className={styles.importanceSection}>

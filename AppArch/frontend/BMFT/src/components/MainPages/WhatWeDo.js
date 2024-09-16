@@ -17,7 +17,12 @@ const WhatWeDoPage = () => {
         </div>
         </header>
         
-
+        <section className={styles.aboutSection}>
+      <h2>Comprehensive Management and Protection of Expansive Forest Landscapes</h2>
+      <p>
+      Expansive forest areas are managed and protected to ensure their long-term preservation. Strategic partnerships and effective conservation strategies safeguard these vital landscapes against threats such as deforestation and climate change. Coordination with local communities and stakeholders maintains ecological balance, supports biodiversity, and enhances environmental resilience. Through sustainable management practices, these forests provide essential ecosystem services and support diverse wildlife.
+      </p> 
+         </section>
     
       
       <section className={`${styles.section2} ${styles.animateRollIn}`}>
