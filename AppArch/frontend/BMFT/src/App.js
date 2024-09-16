@@ -19,6 +19,8 @@ import Setting from './components/API/Setting';
 import Staff from './components/BIOPages/Staff';
 import Inprog from './components/GIFeatures/Inprog';
 import Mobilenav from './components/GeneralFeatures/Mobilenav';
+import Fireman from './components/WWDFeatures/Fireman';
+
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
   const token = localStorage.getItem('token');
@@ -83,6 +85,14 @@ function App() {
           <ProtBio></ProtBio>
           <Footer/>
           </Route>
+
+          <Route path = "/firemanagement">
+          <Nav isVisible={isNavbarVisible} />
+          <Mobilenav isVisible={isNavbarVisible} />
+          <Fireman></Fireman>
+          <Footer/>
+          </Route>
+         
 
           <Route path = "/ourpeople">
           <Nav isVisible={isNavbarVisible} />

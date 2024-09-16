@@ -43,6 +43,8 @@
   margin: 0;
   text-align: center;
   font-weight: bold;
+  line-height: 1.4; 
+  padding: 0 10px; 
 }
 
 .learnmorebtn {
@@ -56,7 +58,7 @@
   font-size: 14px;
   transition: background-color 0.3s ease;
   position: relative;
-  top: -10px;
+  top: 0px;
 }
 
 .learnmorebtn:hover {

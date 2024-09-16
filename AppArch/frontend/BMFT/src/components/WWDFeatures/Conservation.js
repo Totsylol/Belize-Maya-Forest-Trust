@@ -9,8 +9,10 @@ const Dropdown = ({ title, content, imageUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    
     <div className={styles.dropdown}>
       <div className={styles.imageContainer}>
+      <span className={styles.dropdownTitle}>{title}</span>
         <img src={imageUrl} alt={title} className={styles.image} />
       </div>
       <button 
@@ -25,7 +27,6 @@ const Dropdown = ({ title, content, imageUrl }) => {
       <div 
         className={`${styles.dropdownContent} ${isOpen ? styles.show : ''}`}
       >
-        <span className={styles.dropdownTitle}>{title}</span>
         <p>{content}</p>
       </div>
     </div>
