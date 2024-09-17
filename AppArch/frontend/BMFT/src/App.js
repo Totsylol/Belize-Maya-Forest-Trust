@@ -11,7 +11,7 @@ import WhatWeDo from "./components/MainPages/WhatWeDo";
 import AgroProj from "./components/WWDFeatures/AgroProj";
 import ProtBio from "./components/WWDFeatures/ProtBio";
 import Outreach from "./components/WWDFeatures/Outreach";
-import Rangers from "./components/BIOPages/Rangers";
+import Ourteam from "./components/BIOPages/Ourteam";
 import OurPeople from "./components/GeneralFeatures/OurPeople";
 import Communitystewards from './components/WWDFeatures/Communitystewards';
 import AdminNews from "./components/API/AdminNews";
@@ -115,10 +115,10 @@ function App() {
           <Footer/>
           </Route>
           
-          <Route path = "/rangers">
+          <Route path = "/Ourteam">
           <Nav isVisible={isNavbarVisible} />
           <Mobilenav></Mobilenav>
-          <Rangers></Rangers>
+          <Ourteam></Ourteam>
           <Footer/>
           </Route>
 

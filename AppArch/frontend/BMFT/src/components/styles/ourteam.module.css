@@ -1,7 +1,7 @@
 .biographypage {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px; 
+  gap: 20px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -14,41 +14,32 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  border: 1px solid #ddd;
   padding: 10px;
-  border-radius: 12px;
-  width: 100%;
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.teammember:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
-}
-
 .image {
-  width: 100px; 
-  height: 100px; 
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
 .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
 }
 
-.teammember:hover .image img {
-  transform: scale(1.05);
+.teammember:hover .image {
+  transform: scale(1.1);
 }
 
-.description {
+.text {
   text-align: center;
 }
 
@@ -57,12 +48,15 @@
   font-weight: bold;
   margin: 5px 0;
   color: #333;
+  text-align: center;
 }
 
 .position {
   font-size: 1rem;
   font-weight: 500;
   color: #666;
+
+  text-align: center;
 }
 
 .modal {
@@ -80,22 +74,53 @@
   transition: opacity 0.3s, visibility 0.3s;
 }
 
+
 .modal.show {
   opacity: 1;
   visibility: visible;
+  animation: fadeIn 0.4s forwards;
+}
+
+
+.modal.hide {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOut 0.7s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 
 .modalContent {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
   width: 80%;
   max-width: 600px;
   position: relative;
   transform: translateY(-50px);
   transition: transform 0.3s;
-  border: 2px solid #aaabac;
-  
+  border: 3px solid transparent;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .modal.show .modalContent {
@@ -149,7 +174,7 @@
 .close:hover,
 .close:focus {
   color: #f00;
-  outline: none; 
+  outline: none;
 }
 
 .header {

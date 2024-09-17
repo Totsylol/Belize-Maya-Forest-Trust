@@ -16,8 +16,6 @@ function Footer() {
             <h2>About Us</h2>
             <a href='/whoweare'>Our Story</a>
             <a href='/protbio'>Protecting Biodiversity</a>
-            <a href='/outreach'>Outreach</a>
-            <a href='/agroproj'>Regenerative Agriculture</a>
             <a href='/communitystewards'>Community Stewardship</a>
           </div>
           <div className={styles.footerlinkitems}>

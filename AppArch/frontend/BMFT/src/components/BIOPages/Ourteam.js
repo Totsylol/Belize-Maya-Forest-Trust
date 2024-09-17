@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/rangers.module.css';
+import styles from '../styles/ourteam.module.css';
 import ProfilePic from "../assets/ProfilePic.jpg";
 import Rhajjed_Reyes from "../assets/Rhajjed_Reyes.jpg";
 import AndyNaj from "../assets/Andy Naj.JPG";
@@ -9,6 +9,7 @@ import Byron from "../assets/Byron August.JPG";
 import Mar from "../assets/Mariano Taca.JPG";
 import Alpheos from "../assets/Alpheos Edwards.JPG";
 import Edgar from "../assets/Edgar Mendrano.JPG";
+import Rtop from "../assets/Rtop.JPG";
 import Rtop from "../assets/Rtop.JPG";
 
 const teamMembers = [
@@ -83,55 +84,60 @@ const teamMembers = [
 
 
 
-];
+  ];
 
-
-const Rangers = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
-
-  const openModal = (member) => {
-    setSelectedMember(member);
-  };
-
-  const closeModal = () => {
-    setSelectedMember(null);
-  };
-
-  return (
-    <div>
-            <header className={styles.header}>
-        <img src={Rtop} alt="Header" className={styles.headerImage} />
-        <h1 className={styles.titleoverlay}>Protection Team</h1>
-      </header>
-      <div className={styles.biographypage}>
-        {teamMembers.map((member) => (
-          <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
-            <div className={styles.image}>
-              <img src={member.imgSrc} alt={member.name} />
+  const Ourteam = () => {
+    const [selectedMember, setSelectedMember] = useState(null);
+  
+    const openModal = (member) => {
+      setSelectedMember(member);
+    };
+  
+    const closeModal = () => {
+      setSelectedMember(null);
+    };
+  
+    return (
+      <div>
+        <header className={styles.header}>
+          <img src={Rtop} alt="Header" className={styles.headerImage} />
+          <h1 className={styles.titleoverlay}>Protection Team</h1>
+        </header>
+        <div className={styles.biographypage}>
+          {teamMembers.map((member) => (
+            <div
+              key={member.name}
+              className={styles.teammember}
+              onClick={() => openModal(member)}
+            >
+              <div className={styles.image}>
+                <img src={member.imgSrc} alt={member.name} />
+              </div>
+              <div className={styles.text}>
+                <h2 className={styles.name}>{member.name}</h2>
+                <h3 className={styles.position}>{member.position}</h3>
+              </div>
             </div>
-            <div className={styles.description}>
-              <h2 className={styles.name}>{member.name}</h2>
-              <h3 className={styles.position}>{member.position}</h3>
+          ))}
+  
+          {selectedMember && (
+            <div className={`${styles.modal} ${styles.show}`}>
+              <div className={styles.modalContent}>
+                <span className={styles.close} onClick={closeModal}>&times;</span>
+                <div className={styles.modalImage}>
+                  <img src={selectedMember.imgSrc} alt={selectedMember.name} />
+                </div>
+                <div className={styles.modalDetails}>
+                  <h2 className={styles.name}>{selectedMember.name}</h2>
+                  <h3 className={styles.position}>{selectedMember.position}</h3>
+                  <p>{selectedMember.description}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-
-        <div className={`${styles.modal} ${selectedMember ? styles.show : ''}`}>
-          <div className={styles.modalContent}>
-            <span className={styles.close} onClick={closeModal}>&times;</span>
-            <div className={styles.modalImage}>
-              <img src={selectedMember?.imgSrc} alt={selectedMember?.name} />
-            </div>
-            <div className={styles.modalDetails}>
-              <h2 className={styles.name}>{selectedMember?.name}</h2>
-              <h3 className={styles.position}>{selectedMember?.position}</h3>
-              <p>{selectedMember?.description}</p>
-            </div>
-          </div>
+          )}
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Rangers;
+    );
+  };
+  
+  export default Ourteam;

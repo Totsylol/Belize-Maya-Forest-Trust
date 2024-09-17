@@ -10,7 +10,7 @@ import Stop from "../assets/Stop.JPG";
 const teamMembers = [
   {
       name: "Elma Kay",
-      position: "Managing Director of the Belize Maya Forest Trust",
+      position: "Managing Director",
       description: "Elma Kay, Managing Director of the Belize Maya Forest Trust was part of the effort to secure the protection of the Belize Maya Forest. She combines almost 20 years of experience in academics, conservation and policy work for protected areas and forest management, as well as institutional building and organizational leadership for civil society organizations. She has served in committees related to carbon such as the Belize National Climate Change Committee and the Reducing Emissions from Deforestation and Forest Degradation (REDD+) Technical Expert Group, currently serves in several non-governmental organization (NGO) boards and is Chairwoman of the board of directors of the Belize Network of NGO’s.",
       imgSrc: Elma
     },
@@ -28,7 +28,7 @@ const teamMembers = [
     },
     {
       name: "Ermain Requena",
-      position: "Restoration and Regenerative Agriculture Coordinator",
+      position: "Regenerative Agriculture Coordinator",
       description: "Ermain Requena is a proud team member of the Belize Maya Forest Trust, serving as the Restoration and Regenerative Agriculture Coordinator. With over fifteen years of experience in working with farmers and providing technical support for small-scale agriculture, Ermain is dedicated to sharing his knowledge and promoting sustainable farming practices within the farming community. As part of the Belize Maya Forest Trust, Ermain collaborates with nine stakeholder communities in the wider Belize Maya Forest landscape. The focus of their regenerative agriculture program is to enhance livelihoods through nature-based solutions while working closely with farmers, community stakeholders, and community stewards. Ermain is grateful to be part of a passionate and diverse team that is committed to conserving the Belize Maya Forest through collaboration with nearby communities. ",
       imgSrc: ProfilePic
     },
