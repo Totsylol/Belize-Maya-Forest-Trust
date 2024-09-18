@@ -100,6 +100,14 @@ const AgroProj = () => {
             >
                 Controlled or prescribed burns are a land management tool used to reduce the risk of uncontrolled wildfires, improve soil health, and promote new plant growth. This technique helps in maintaining ecological balance by mimicking natural fire cycles.
             </TopicSection>
+            <TopicSection
+                title="Workshops and Training"
+                imgSrc={Placeholder}
+                reverse={false} 
+                onImageClick={handleImageClick}
+            >
+The Belize Maya Forest Trust’s Regenerative Agriculture Program is dedicated to empowering local communities through a series of hands-on training and workshops focused on sustainable agricultural practices. These sessions are designed to enhance farmers' knowledge and skills, ensuring that they can implement methods that improve soil health, increase biodiversity, and promote climate resilience.
+            </TopicSection>
             <section className={styles.videoSection}>
                 <h2>Empowering Women in Conservation</h2>
                 <div className={styles.videoContainer}>

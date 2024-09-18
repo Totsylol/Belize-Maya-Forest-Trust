@@ -59,7 +59,7 @@ const Communitystewards = () => {
 
       <section className={styles.gallery}>
                 <div className={styles.introduction2}>
-                    <h2 className={styles.introText2}>Recipients</h2>
+                    <h2 className={styles.introText2}>Community Stewards</h2>
                     </div>
         <div className={styles.grid}>
           {images.map((image, index) => (

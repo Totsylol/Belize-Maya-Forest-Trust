@@ -31,7 +31,7 @@ const WhatWeDoPage = () => {
       </section>
 
       <section className={`${styles.section2} ${styles.animateRollIn}`}>
-        <header className={styles.banner2}>Building Community Stewards</header>
+        <header className={styles.banner2}>Building Stewardship</header>
         <WWDPanel2 />
       </section>
 

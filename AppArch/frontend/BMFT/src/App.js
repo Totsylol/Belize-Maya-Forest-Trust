@@ -20,6 +20,7 @@ import Staff from './components/BIOPages/Staff';
 import Inprog from './components/GIFeatures/Inprog';
 import Mobilenav from './components/GeneralFeatures/Mobilenav';
 import Fireman from './components/WWDFeatures/Fireman';
+import Buildingstewards from './components/WWDFeatures/Buildingstewards';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -83,6 +84,13 @@ function App() {
           <Nav isVisible={isNavbarVisible} />
           <Mobilenav></Mobilenav>
           <ProtBio></ProtBio>
+          <Footer/>
+          </Route>
+
+          <Route path = "/stewards2">
+          <Nav isVisible={isNavbarVisible} />
+          <Mobilenav></Mobilenav>
+          <Buildingstewards></Buildingstewards>
           <Footer/>
           </Route>
 
