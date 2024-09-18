@@ -10,7 +10,7 @@ import Mar from "../assets/Mariano Taca.JPG";
 import Alpheos from "../assets/Alpheos Edwards.JPG";
 import Edgar from "../assets/Edgar Mendrano.JPG";
 import Rtop from "../assets/Rtop.JPG";
-import Rtop from "../assets/Rtop.JPG";
+import Staff from "./Staff";
 
 const teamMembers = [
     {
@@ -101,8 +101,12 @@ const teamMembers = [
       <div>
         <header className={styles.header}>
           <img src={Rtop} alt="Header" className={styles.headerImage} />
-          <h1 className={styles.titleoverlay}>Protection Team</h1>
+          <h1 className={styles.titleoverlay}>Our Team</h1>
         </header>
+        <Staff></Staff>
+        <section className={`${styles.section2} ${styles.animateRollIn}`}>
+        <header className={styles.banner3}>Protection Team</header>
+      </section>
         <div className={styles.biographypage}>
           {teamMembers.map((member) => (
             <div

@@ -59,10 +59,9 @@ const Staff = () => {
 
   return (
     <div>
-            <header className={styles.header}>
-        <img src={Stop} alt="Header" className={styles.headerImage} />
-        <h1 className={styles.titleoverlay}>Staff</h1>
-      </header>
+       <section className={`${styles.section2} ${styles.animateRollIn}`}>
+        <header className={styles.banner4}>Staff</header>
+      </section>
       <div className={styles.biographypage}>
         {teamMembers.map((member) => (
           <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
