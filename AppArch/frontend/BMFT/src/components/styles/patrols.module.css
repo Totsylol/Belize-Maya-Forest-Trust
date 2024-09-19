@@ -20,13 +20,14 @@
     overflow: hidden;
 }
 .greenBackground {
-    background-color: rgb(65, 171, 65);
+    background-color: rgb(71, 76, 71);
     width: 100%;
     height: 100%; 
     position: absolute; 
     top: 0; 
     left: 0; 
     z-index: 1; 
+    border-bottom: solid 2px #00bef0;
 }
 
 
