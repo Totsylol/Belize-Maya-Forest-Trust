@@ -55,7 +55,7 @@ const WhoWeAre = () => {
             </header>
             <section className={styles.missionVisionSection}>
                 <div className={styles.missionPanel}>
-                    <h2>Our Mission</h2>
+                    <h2>BMFT's Mission</h2>
                     <p>
                         Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.
                     </p>
@@ -92,7 +92,7 @@ const WhoWeAre = () => {
             </section>
             <section className={styles.missionVisionSection}>
                 <div className={styles.visionPanel}>
-                    <h2>Our Vision</h2>
+                    <h2>BMFT's Vision</h2>
                     <p>
                         A world where the Belize Maya Forest serves as a model for sustainable conservation, ensuring the health and well-being of our planet and its inhabitants.
                     </p>
