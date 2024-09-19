@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f7f9fc; 
-  border-radius: 15px;
-  border: 2px solid #9ee5c0; 
+  background: #f0f0f0; 
+  border-top: 2px solid #00bef0; 
+  border-bottom: 2px solid #00bef0; 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   padding: 30px;
   margin: 20px auto;
   width: 90%; 
-  max-width: 800px; 
+  max-width: 10000px; 
   position: relative;
 }
 
@@ -31,7 +31,7 @@
 .counter {
   font-size: 60px;
   font-weight: bold;
-  color: #80ee96; 
+  color: #52c742; 
   margin-left: 10px; 
   animation: countAnimation 2s ease-in-out;
   font-family: 'Arial', sans-serif; 

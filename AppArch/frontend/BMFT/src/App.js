@@ -21,6 +21,7 @@ import Inprog from './components/GIFeatures/Inprog';
 import Mobilenav from './components/GeneralFeatures/Mobilenav';
 import Fireman from './components/WWDFeatures/Fireman';
 import Buildingstewards from './components/WWDFeatures/Buildingstewards';
+import Patrols from './components/WWDFeatures/Patrols';
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -120,6 +121,13 @@ function App() {
           <Nav isVisible={isNavbarVisible} />
           <Mobilenav isVisible={isNavbarVisible} />
           <Outreach></Outreach>
+          <Footer/>
+          </Route>
+
+          <Route path = "/patrols">
+          <Nav isVisible={isNavbarVisible} />
+          <Mobilenav isVisible={isNavbarVisible} />
+          <Patrols></Patrols>
           <Footer/>
           </Route>
           
