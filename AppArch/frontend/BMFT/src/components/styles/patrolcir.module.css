@@ -1,0 +1,24 @@
+.bubbleContainer {
+  display: flex;
+  justify-content: center; 
+  margin: 2rem 0; 
+}
+
+.bubble {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 6rem; 
+}
+
+.bubbleImage {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  margin-bottom: 0.5rem; 
+}
+
+.bubbleTitle {
+  font-size: 1.2rem; 
+  text-align: center; 
+}
