@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/MainPages/Home";
 import Nav from "./components/GeneralFeatures/Nav";
 import Newsfeed from "./components/MainPages/Newsfeed";
@@ -30,154 +30,179 @@ function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
   const token = localStorage.getItem('token');
 
-
   return (
     <div className="App">
       <Router>
-          <Switch>
-          <Route exact path="/">
-                <Nav isVisible={isNavbarVisible} />
-                <Mobilenav></Mobilenav>
-                <Home setNavbarVisible={setNavbarVisible} />
-                <Footer />
-          </Route>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Home setNavbarVisible={setNavbarVisible} />
+              <Footer />
+            </>
+          } />
           
-          <Route path = "/WhatWeDo">
-            <Nav isVisible={isNavbarVisible} />
-            <Mobilenav></Mobilenav>
-            <WhatWeDo></WhatWeDo>
-            <Footer/>
-          </Route>
+          <Route path="/WhatWeDo" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <WhatWeDo />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/News">
-            <Nav isVisible={isNavbarVisible} />
-            <Mobilenav></Mobilenav>
-            {token ? <AdminNews /> : <Newsfeed />}
-            <Footer/>
-          </Route>
+          <Route path="/News" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              {token ? <AdminNews /> : <Newsfeed />}
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/WhoWeAre">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <WhoWeAre></WhoWeAre>
-          <Footer/>
-          </Route>
+          <Route path="/WhoWeAre" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <WhoWeAre />
+              <Footer />
+            </>
+          } />
          
-          <Route path = "/Getinvolved">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav isVisible={isNavbarVisible} />
-          <Involvement></Involvement>
-          <Footer/>
-          </Route>
+          <Route path="/Getinvolved" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav isVisible={isNavbarVisible} />
+              <Involvement />
+              <Footer />
+            </>
+          } />
          
-          <Route path = "/AgroProj">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <AgroProj></AgroProj>
-          <Footer/>
-          </Route>
+          <Route path="/AgroProj" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <AgroProj />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/communitystewards">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Communitystewards></Communitystewards>
-          <Footer/> 
-          </Route>
+          <Route path="/communitystewards" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Communitystewards />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/ProtBio">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <ProtBio></ProtBio>
-          <Footer/>
-          </Route>
+          <Route path="/ProtBio" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <ProtBio />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/stewards2">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Buildingstewards></Buildingstewards>
-          <Footer/>
-          </Route>
+          <Route path="/stewards2" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Buildingstewards />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/firemanagement">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav isVisible={isNavbarVisible} />
-          <Fireman></Fireman>
-          <Footer/>
-          </Route>
-         
+          <Route path="/firemanagement" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav isVisible={isNavbarVisible} />
+              <Fireman />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/ourpeople">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <OurPeople></OurPeople>
-          <Footer/>
-          </Route>
+          <Route path="/ourpeople" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <OurPeople />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/staff">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Staff></Staff>
-          <Footer/>
-          </Route>
+          <Route path="/staff" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Staff />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/outreach">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav isVisible={isNavbarVisible} />
-          <Outreach></Outreach>
-          <Footer/>
-          </Route>
+          <Route path="/outreach" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav isVisible={isNavbarVisible} />
+              <Outreach />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/patrols">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav isVisible={isNavbarVisible} />
-          <Patrols></Patrols>
-          <Footer/>
-          </Route>
+          <Route path="/patrols" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav isVisible={isNavbarVisible} />
+              <Patrols />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/scientificresearch">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav isVisible={isNavbarVisible} />
-          <Scientificresearch></Scientificresearch>
-          <Footer/>
-          </Route>
+          <Route path="/scientificresearch" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav isVisible={isNavbarVisible} />
+              <Scientificresearch />
+              <Footer />
+            </>
+          } />
           
-          <Route path = "/Ourteam">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Ourteam></Ourteam>
-          <Footer/>
-          </Route>
+          <Route path="/Ourteam" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Ourteam />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/developers">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Developers></Developers>
-          <Footer/>
-          </Route>
+          <Route path="/developers" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Developers />
+              <Footer />
+            </>
+          } />
 
-          <Route path = "/inprog">
-          <Nav isVisible={isNavbarVisible} />
-          <Mobilenav></Mobilenav>
-          <Inprog></Inprog>
-          </Route>
+          <Route path="/inprog" element={
+            <>
+              <Nav isVisible={isNavbarVisible} />
+              <Mobilenav />
+              <Inprog />
+            </>
+          } />
           
-          <Route path = "/settings">
-          <Setting></Setting>
-          </Route>
+          <Route path="/settings" element={<Setting />} />
 
-          <Route path = "/login">
-          <Login></Login>
-          </Route>
+          <Route path="/login" element={<Login />} />
 
-          <Route path="/article/:title" component={NewsPages}></Route>
-       
-          </Switch>
-          
-          
+          <Route path="/article/:title" element={<NewsPages />} />
+        </Routes>
       </Router>
-      
     </div>
-    
   );
 }
 

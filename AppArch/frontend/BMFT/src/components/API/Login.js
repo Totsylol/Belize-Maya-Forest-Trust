@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import styles from "../styles/login.module.css";
 import { FaUser } from "react-icons/fa";
 import { IoLockClosedSharp } from "react-icons/io5";
@@ -11,7 +11,7 @@ const Login = () => {
     const [username, setUsername] = useState(''); 
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const nav = useHistory();
+    const nav = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();

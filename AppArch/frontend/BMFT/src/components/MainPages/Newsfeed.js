@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import axios from 'axios'; 
+import { useNavigate } from 'react-router-dom'
 import styles from '../styles/Newsfeed.module.css'; 
 import Ntop from '../assets/Ntop.jpg';
 
@@ -9,7 +9,7 @@ function Newsfeed() {
   const [annualReportData, setAnnualReportData] = useState([]);
   const [selectedNews, setSelectedNews] = useState(null);
   const [activeTab, setActiveTab] = useState('news');
-  const nav = useHistory();
+  const nav = useNavigate();
 
 
   useEffect(() => {

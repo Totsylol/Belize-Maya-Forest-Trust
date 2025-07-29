@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import UpdatePassword from './UpdatePassword';
 import DeleteUser from './DeleteUser';
 
 const Setting = () => {
-  const history = useHistory();
+  const history = useNavigate();
   const [userData, setUserData] = useState({
     email: '',
     id: '',

@@ -1,10 +1,10 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from "../styles/foot.module.css"
 
 const Logout = () => {
 
-    const nav = useHistory();
+    const nav = useNavigate();
 
     const handleLogout = () =>{
         

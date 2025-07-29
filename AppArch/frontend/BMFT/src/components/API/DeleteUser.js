@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import { FaTrashAlt } from "react-icons/fa";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import styles from '../styles/settings.module.css'
  
 
 function DeleteUser({ userId }) {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleDelete = async () => {
         try {
@@ -26,7 +26,7 @@ function DeleteUser({ userId }) {
             });
             alert(response.data.message);
             localStorage.removeItem('token');
-            history.push('/'); 
+            navigate.push('/'); 
             window.location.reload();
         } catch (error) {
             if (error.response) {
