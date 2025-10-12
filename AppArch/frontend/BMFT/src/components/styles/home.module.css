@@ -644,7 +644,7 @@
 .newsCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(82, 199, 66, 0.1);
-  border-color: #52c742;
+  
 }
 
 .newsImage {
