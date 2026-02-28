@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/foot.module.css';
-import FinalBMFT from '../assets/FinalBMFT.jpg';
+import BMFTlogo from '../assets/BMFTlogo.jpg';
 import Logout from '../API/Logout';
 
 function Footer() {
@@ -14,18 +14,20 @@ function Footer() {
       </section>
       <div className='footerlinks'>
         <div className={styles.footerlinkwrapper}>
-          <img className={styles.FinalBMFT} src={FinalBMFT} alt="FinalBMFT" />
+          <img className={styles.BMFTlogo} src={BMFTlogo} alt="BMFT Logo" />
           <div className={styles.footerlinkitems}>
-            <h2>About Us</h2>
+            <h2>Explore</h2>
             <a href='/whoweare'>Our Story</a>
             <a href='/protbio'>Protecting Biodiversity</a>
             <a href='/communitystewards'>Community Stewardship</a>
+            <a href='/ourpeople'>Our Team</a>
+            <a href='/news'>News</a>
           </div>
           <div className={styles.footerlinkitems}>
-            <h2>Learn More</h2>
-            <a href='/whatwedo'>What We Do</a>
-            <a href='/news'>News</a>
-            <a href='/ourpeople'>Our People</a>
+            <h2>Connect</h2>
+            <a href='/whatwedo'>Contact Us</a>
+            <a href='/news'>Volunteer</a>
+            <a href='/ourpeople'>FAQ</a>
           </div>
           <div className={styles.footerlinkitems}>
             <h2>Social Media</h2>
@@ -36,7 +38,7 @@ function Footer() {
           
           <div className={styles.inputareas}>
             <p className={styles.footersubscriptionheading}>
-              Subscribe to Our Newsletter
+              Subscribe to Our E-Newsletter
             </p>
             <form>
               <input

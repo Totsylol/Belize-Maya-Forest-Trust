@@ -35,7 +35,7 @@ const Communitystewards = () => {
 
   return (
     <main className={styles.container}>
-         <h1 className={styles.titleoverlay}>Community Steward Program</h1>
+         <h1 className={styles.titleoverlay}>Community Stewards Program</h1>
             <header className={styles.header}>
                 <img src={Ctop} alt="Header" />
             </header>
@@ -43,9 +43,18 @@ const Communitystewards = () => {
                 <div className={styles.introText}>
                     <h2>About the Program</h2>
                     <p>
-                    Community Steward Program's goal is to guide initiatives and solutions to conservation and sustainable livelihood challenges within the BMF landscape.                      </p>
+                    The Community Stewards Program empowers local stakeholders to lead 
+                    conservation and sustainable development efforts across the Belize Maya Forest (BMF) landscape. 
+                    By promoting inclusive participation, the program ensures that men, women, youth, and community 
+                    groups play an active role in shaping solutions that support both environmental protection and 
+                    sustainable livelihoods.                      </p>
                     <p>
-                    The Belize Maya Forest Community Stewards Program aims to involve stakeholders in conservation projects and initiatives of their interest to bring socio-ecological benefits that will contribute to the protection of the BMF, and the sustainable livelihoods, health, and well-being of the stakeholder communities.  Fostering stewardship in the stakeholder communities builds stronger relationships than traditional outreach or engagement activities centered on environmental education. Stewardship establishes ownership, collaboration, inclusion, and leadership with community members who are key to the accomplishment of the BMFT’s conservation objectives. It also contributes to productive and sustained relationships with the environment. The program will have people as the main actors in caring for the environment, using their expertise, knowledge, and skills to lead local conservation stewardship actions.                      </p>
+                    Community stewards apply their knowledge, skills, and experience to implement locally driven initiatives such 
+                    as regenerative agriculture, outreach, reforestation, Sustainability Support Microgrants, and Green Futures Scholarships. The program strengthens 
+                    stewardship by fostering ownership, collaboration, and leadership within stakeholder communities.                      </p>
+                    By placing people at the center of conservation, the program builds lasting relationships between 
+                    communities and the forest, contributing to the protection of the BMF while enhancing community 
+                    well-being and resilience.
                 </div>
                 </section>
                 <header className={styles.header2}>
@@ -54,7 +63,19 @@ const Communitystewards = () => {
                 <section className={styles.descriptionSection}>
                 <h2 className={styles.sectionTitle}>Stewards Projects</h2>
                 <p className={styles.descriptionText}>
-                Stewards will have the opportunity to design and implement initiatives and projects of interest in their communities aligned with the BMFT mission, vision, and conservation targets and objectives. The BMFT will provide technical capacity, capacity-building opportunities, and financial support towards the completion of the stewards’ projects. The program will support the nine stakeholder communities in attaining higher stewardship levels in an environmentally beneficial and cost-effective manner.                  </p>
+               Sustainability Support Microgrants provide technical guidance, capacity-building opportunities, and financial support to 
+               help stewards implement impactful, locally driven initiatives that strengthen long-term conservation and community resilience. 
+               Supported projects include reforestation of farms and community spaces, installation of solar energy and water harvesting systems, 
+               establishment of cover crop plots, composting and biofertilizer production, beekeeping, ecotourism ventures, fruit farm 
+               diversification, and sustainable livestock practices.  </p>
+                    <p> 
+Green Futures Scholarships expand educational opportunities for youth at high school, tertiary, and vocational training levels. 
+The program supports a wide range of academic disciplines, including tourism and hospitality, natural resource management, accounting, 
+economics, agriculture, agribusiness, and more. Beyond financial assistance, scholarship recipients are encouraged to give back through 
+community service and environmental stewardship. Scholars actively engage in BMFT community stewardship activities while receiving mentorship 
+that strengthens their skills and prepares them for future careers.
+Meet each of the Community Stewards and learn about their projects by clicking on the images below. Each steward is making a unique contribution, 
+demonstrating the power of local leadership and community-driven solutions.</p>
             </section>
 
       <section className={styles.gallery}>

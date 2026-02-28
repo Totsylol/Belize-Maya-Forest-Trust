@@ -13,14 +13,13 @@ const WhatWeDoPage = () => {
     <header className={styles.header}>
       <img src={WWDtop} alt="Header" />
       <div className={styles.titleoverlay}>
-        <h1>Setting New Standards in Conservation</h1>
+        <h1>Protecting Forest Ecosystems</h1>
         </div>
         </header>
         
         <section className={styles.aboutSection}>
-      <h2>Comprehensive Management and Protection of Expansive Forest Landscapes</h2>
-      <p>
-      Expansive forest areas are managed and protected to ensure their long-term preservation. Strategic partnerships and effective conservation strategies safeguard these vital landscapes against threats such as deforestation and climate change. Coordination with local communities and stakeholders maintains ecological balance, supports biodiversity, and enhances environmental resilience. Through sustainable management practices, these forests provide essential ecosystem services and support diverse wildlife.
+      <h2>Protecting Forests, Sustaining Our Future</h2>
+      <p> The Belize Maya Forest (BMF) protection offers crucial ecological benefits including the provision of clean air and water, fertile soils, essential pollinators and strengthen the regional Selva Maya Forest connectivity.  At the core of our work is the commitment to preserving a vibrant and diverse forest that remains protected by and for the benefit of all Belizeans..
       </p> 
          </section>
     

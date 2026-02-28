@@ -51,16 +51,13 @@ const ProtBio = () => {
                 <div className={styles.introText}>
                     <h2>About the Program</h2>
                     <p>
-                    The Belize Maya Forest represents a vital and ecologically rich protected area that serves as a sanctuary for numerous endangered species, including the spider monkey and the white-lipped peccary. This forest is also inhabited by several emblematic species, notably the five wild cats of Belize: the jaguar, puma, ocelot, margay, and jaguarundi. Additionally, it is home to the national animal, the tapir, and the national bird, the keel-billed toucan, among a plethora of other wildlife. Beyond its biological diversity, the Belize Maya Forest holds significant cultural importance, particularly through the preservation of the Secret Cara Blanca Pools, which are integral to the history of the Yucatec Maya, and logging years.  
-                    
-The conservation of the Belize Maya Forest is of paramount importance, prompting the establishment of a dedicated protection team that conducts regular patrols to safeguard the area's natural resources and deter illegal activities.  
-
-In recent years, the occurrence of wildfires has posed a significant threat to this ecosystem, leading the ranger team to enhance their knowledge and skills in fire suppression and prevention strategies. Through training and experience, they have developed effective mechanisms to combat wildfires, ensuring the continued protection of this invaluable forest and its diverse inhabitants. The ongoing efforts of the protection team are crucial in maintaining the ecological integrity and cultural heritage of the Belize Maya Forest. 
+                     The Protection Program safeguards the Belize Maya Forest (BMF) through a dedicated ranger team that conducts regular patrols, deters illegal activities, and strengthens wildfire prevention and response.
+The BMF is a vital sanctuary for endangered and iconic species, including Belize’s five wild cats, the spider monkey, white-lipped peccary, tapir, and keel-billed toucan. Beyond its rich biodiversity, the forest also holds deep cultural significance, including the historic Cara Blanca Pools. Through active protection and fire management, the team works to preserve both the ecological integrity and cultural heritage of this irreplaceable landscape. 
                     </p>
                 </div>
             </section>
             <section className={`${styles.section2} ${styles.animateRollIn}`}>
-        <header className={styles.banner3}>Join the Journey</header>
+        <header className={styles.banner3}>Our focus</header>
         <WWDPanels3 />
       </section>
            

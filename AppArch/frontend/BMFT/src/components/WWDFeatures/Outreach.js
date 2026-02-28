@@ -33,18 +33,30 @@ const Outreach = () => {
 
     return (
         <div className={styles.pageContainer}>
-            <h1 className={styles.titleoverlay}>Outreach</h1>
+            <h1 className={styles.titleoverlay}>Evironmental Outreach</h1>
             <header className={styles.header}>
                 <img src={Otop} alt="Header" />
             </header>
             <section className={styles.outreachSection}>
                 <div className={styles.textSide}>
-                    <h2>Outreach Events</h2>
+                    <h2>Environmental Education and Awareness Campaigns</h2>
                     <p>
-                    Community outreach encompasses a range of initiatives aimed at disseminating information about the organization's conservation work while fostering an understanding of the significance and impact of the natural environment on local communities. The BMF actively involved nine stakeholder communities through various activities, including cleanup campaigns, training sessions, workshops, and educational field trips and awareness events, all designed to enhance awareness and promote environmental stewardship. 
-</p>
-<p>
-                    Through these diverse outreach efforts, the BMF sought to not only inform but also empower community members by providing them with the knowledge and skills necessary to engage with and protect their natural surroundings. By facilitating hands-on experiences and interactive learning opportunities, the organization aimed to cultivate a deeper appreciation for environmental issues and encourage collaborative efforts towards sustainable practices within the communities it serves. 
+                   In response to the widespread wildfires of 2024, BMFT launched a Fire Safety Campaign aimed at raising awareness 
+                   about safe burning practices and preventing uncontrolled fires. The campaign includes informational booths at 
+                   community events, school presentations, workshops, digital outreach, and the distribution of printed fire safety 
+                   materials. This initiative remains ongoing across stakeholder communities, strengthening local knowledge and promoting 
+                   responsible land management practices.
+
+Environmental awareness presentations are also a key component of BMFT’s outreach efforts, engaging children and youth through school 
+visits and educational events. These sessions highlight biodiversity within the Belize Maya Forest and showcase ongoing research initiatives. 
+Scientists collaborating with BMFT actively share their work and findings with students, helping inspire the next generation of environmental 
+stewards.
+
+BMFT also participates in national conservation events that promote environmental awareness and wildlife protection. 
+Jaguar Day highlights the importance of the jaguar as an apex species and its critical role in maintaining healthy forest ecosystems. 
+BMFT also supports the Belize Bird Festival, contributing to bird conservation efforts while helping raise public awareness of Belize’s 
+rich avian biodiversity.
+
                     </p>
                 </div>
                 <div className={styles.imageSide}>
@@ -64,17 +76,35 @@ const Outreach = () => {
                     </div>
                     </div>
                 <div className={styles.textSide}>
-                    <h2>Clean Up Events</h2>
-                    <p>
-                Description
+                    <h2>Community Stewards Taking Action</h2>
+                    <p> For many years, Yalbac Creek accumulated debris that obstructed the natural flow of water, affecting an important 
+                        resource for the entire community. In recognition of Earth Day 2024, the Yalbac community, in collaboration with 
+                        the Belize Defence Force Second Infantry Battalion and the Belize Maya Forest Trust (BMFT), mobilized volunteers to 
+                        remove waste and debris from the creek, restoring its flow. To reinforce long-term stewardship, six no-litter and 
+                        plastic-free signs were strategically installed throughout the community.
+
+Students from Valley of Peace SDA Academy participated in a series of workshops exploring youth-led climate initiatives taking place around 
+the world. Inspired by these discussions, the students organized a community cleanup campaign to promote environmental responsibility and 
+raise awareness about the importance of maintaining a clean and healthy environment. They also enhanced public spaces by beautifying three 
+community bus stops, incorporating climate action messages through art. The murals highlighted wildlife and forest beauty while promoting 
+actions such as controlled burning, recycling, reforestation, and freshwater watershed protection.
+
+Five primary schools took part in a mural initiative that encouraged children to express their perspectives on nature and wildlife within 
+their communities. Working alongside local artists, students created unique murals showcasing birds and their habitats. These vibrant 
+artworks now serve as lasting reminders of the importance of conserving natural resources and protecting the environment for future generations. 
+
                 </p>
                 </div>
             </section>
             <section className={styles.outreachSection}>
                 <div className={styles.textSide}>
-                    <h2>Public Outreach</h2>
+                    <h2>Educational Field Trips</h2>
                  <p>
-                    Description
+                    The Belize Maya Forest and Gallon Jug partners welcome visitors to learn about conservation, biodiversity, and 
+                    sustainable coffee production while experiencing the stunning scenery of the forest. These shared immersive 
+                    experiences strengthen environmental awareness, inspire stewardship, and encourage participants to become active 
+                    advocates for conservation within their communities. Currently, educational field trips are exclusively for educational 
+                    purposes to stakeholder communities and direct partners. 
                  </p>
                 </div>
                 <div className={styles.imageSide}>

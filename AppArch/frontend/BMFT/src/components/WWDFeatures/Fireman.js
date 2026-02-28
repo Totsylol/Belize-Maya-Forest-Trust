@@ -3,6 +3,7 @@ import styles from '../styles/fireman.module.css';
 import PBfireteam from '../assets/PBfireteam.jpg';
 import PBCheck from "../assets/PBCheck.jpg";
 import PBfire from "../assets/PBfire.jpg";
+import BMFTFire from "../assets/BMFTFire.jpg";
 import Placeholder from "../assets/Placeholder.jpg";
 import PBtop from "../assets/PBtop.JPG";
 import PBbird from  "../assets/PBbird.JPG";
@@ -53,14 +54,15 @@ const Fireman = () => {
          
             <section className={styles.Head2}>
                 <header className={styles.header2}>
-                    <img src={PBbird} alt="Fire Prevention" />
-                    <h1 className={styles.titleoverlay2}>Fire Prevention</h1>
+                    <img src={PBfireteam} alt="Fire Prevention" />
+                    <h1 className={styles.titleoverlay2}>Fire Safety</h1>
                 </header>
             </section>
             <section className={styles.descriptionSection}>
-                <h2 className={styles.sectionTitle}>Project Goals</h2>
+                <h2 className={styles.sectionTitle}>Forest Fire Prevention</h2>
                 <p className={styles.descriptionText}>
-                    Effective fire prevention is crucial for protecting the diverse ecosystems within the Belize Maya Forest. By implementing proactive measures and strategies, such as controlled burns and firebreaks, we can reduce the risk of devastating wildfires. Education and community involvement also play a vital role in ensuring that the local population understands and supports fire prevention efforts. Continued research and innovation in fire management techniques are essential for adapting to changing environmental conditions and safeguarding our natural resources.
+                    Wildfires are the greatest threat to the Belize Maya Forest (BMF). To address this, the ranger team has received specialized training in fire suppression and uses strategies like controlled burns and firebreaks to reduce wildfire risk. 
+Additionally, a Fire Safety Awareness Campaign was launched that promotes safe burning practices, fire safety training, strengthens fire prevention, and build awareness within stakeholder communities about the importance of protecting the forest. By combining proactive management, community engagement, and ongoing innovation, the campaign helps safeguard the BMF’s rich ecosystems and biodiversity.
                 </p>
             </section>
             <section className={styles.imageGallery}>

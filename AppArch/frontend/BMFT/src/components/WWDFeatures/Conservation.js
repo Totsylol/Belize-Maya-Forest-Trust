@@ -39,29 +39,33 @@ const Conservation = () => {
       <section className={styles.section}>
         <Dropdown 
           title="Forest Ecosystems"
-          content="To conserve forest ecosystems and their services, it is essential to reduce the occurrence of wildfires in the BMF and enhance the management of fire in the adjacent areas. Maintain and/or restore forest health in the larger BMF landscape. Key strategies to achieve this goal include raising awareness about fire safety, reforestation activities, and encouraging the adoption of regenerative agricultural practices."
+          content="To conserve the Belize Maya Forest and its important services, we must reduce wildfires, strengthen fire management, and restore forest health across the landscape. Key actions include fire prevention awareness, reforestation, and promoting regenerative agriculture."
           imageUrl={Cforest}
         />
         <Dropdown 
           title="Aquatic Ecosystems"
-          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
-          imageUrl={Cturtle}
+          content="To conserve aquatic ecosystems and their services in the BMF, it is essential to reduce water contamination and control the population of Armoured Catfish. Key actions include establishing a contamination baseline, reduce pesticide practices, protecting and restoring the Cara Blanca Pools Forest, and promoting proper solid waste management. "
+          imageUrl={Cpools}
         />
         <Dropdown 
           title="Jaguars/Wildcats"
-          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
+          content="Maintain healthy and stable predator–prey populations by protecting habitat connectivity, reducing poaching, and ensuring adequate prey availability, allowing jaguars and other wildcats to continue fulfilling their important role as top predators in the ecosystem."
           imageUrl={Cjaguar}
         />
-        <Dropdown 
-          title="Cara Blanca Pools"
-          content="To conserve aquatic ecosystem and their services, is critical to reduce contamination in aquatic ecosystems of BMF and surrounding landscape. Reduce the population of Armored Catfish in BMF. Key strategies to achieve this goal include the establishment of a baseline for contamination from pesticides and other runoff, improve pesticides use practices in farms in the BMF landscape, protect and restore the Cara Balance Pools Forest, and promote solutions for handling solid waste. "
-          imageUrl={Cpools}
-        />
+    
       </section>
 
       <section className={styles.aboutPanel}>
         <p className={styles.aboutText}>
-        Major threats of the BMF are deforestation especially the clearing of riparian buffers, natural disasters and climate change, contamination due to pesticides, sedimentation and solid waste, illegal extraction, Invasive non-native Species and primarily forest fires.  
+        BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.
+        </p>
+      </section>
+
+      <section className={styles.aboutPanel}>
+        <p className={styles.aboutText}>
+        <p className={styles.aboutText}>
+        BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.
+        </p>.
         </p>
       </section>
     </div>

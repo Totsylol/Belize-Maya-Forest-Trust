@@ -9,8 +9,8 @@ import Stop from "../assets/Stop.JPG";
 
 const teamMembers = [
   {
-      name: "Elma Kay",
-      position: "Managing Director of the Belize Maya Forest Trust",
+      name: "Dr. Elma Kay",
+      position: "Managing Director",
       description: "Elma Kay, Managing Director of the Belize Maya Forest Trust was part of the effort to secure the protection of the Belize Maya Forest. She combines almost 20 years of experience in academics, conservation and policy work for protected areas and forest management, as well as institutional building and organizational leadership for civil society organizations. She has served in committees related to carbon such as the Belize National Climate Change Committee and the Reducing Emissions from Deforestation and Forest Degradation (REDD+) Technical Expert Group, currently serves in several non-governmental organization (NGO) boards and is Chairwoman of the board of directors of the Belize Network of NGO’s.",
       imgSrc: Elma
     },
@@ -33,7 +33,7 @@ const teamMembers = [
       imgSrc: ProfilePic
     },
     {
-      name: "Raquel Chun",
+      name: "Dr. Raquel Chun",
       position: "Conservation Data Analyst",
       description: "Raquel comes from the beautiful village of Roaring Creek in the Cayo District. She has joined the Belize Maya Forest Trust (BMFT) team as the new Conservation Data Analyst. The endless natural beauty of Belize, along with the struggles and challenges in managing these areas, has always fascinated her. Her journey into conservation started at the University of Belize, where she studied marine science and natural resource management. She furthered her studies abroad with a Master's degree in Wildlife Health and Population Management at the University of Sydney, Australia and she is completing a doctoral degree in Climate Change and Smallholder Agriculture at Durham University in the United Kingdom. Belize has always held her heart and she has returned home to help protect the vibrant natural resources and contribute to the communities that depend on them.",
       imgSrc: Raquel

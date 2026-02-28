@@ -46,8 +46,7 @@ const Patrols = () => {
                     <div className={styles.textContainer}>
                         <h2 className={styles.introText}>What Are Patrols?</h2>
                         <p>
-                            Patrols are essential for monitoring, protecting, and preserving wildlife and natural resources.
-                            ...
+                            The ranger team conducts routine foot patrols for the protection of the BMF's natural resources and the prevention and detection of unlawful activities. These patrols involve traversing extensive distances on foot through the jungle regardless of weather and conditions. The team is equipped with the necessary tools and provides comprehensive trainings. BMF rangers also engage in data collection utilizing the Spatial Monitoring and Reporting Tool (SMART) alongside advanced technologies such as drones and satellite imagery.
                         </p>
                     </div>
                     <img src={Pat1} alt="Ranger Team" className={styles.image} />
@@ -60,18 +59,18 @@ const Patrols = () => {
                 <div className={styles.sideBySideContainer}>
                     <div className={`${styles.panel} ${styles.animateRollIn}`}>
                         <div className={styles.textContainer}>
-                            <h2 className={styles.introText}>The Reserve</h2>
+                            <h2 className={styles.introText}>Foot Patrols</h2>
                             <p>
-                                The Reserve is a vital ecological sanctuary where diverse species thrive...
+                                Patrols allow rangers to monitor the forest on the ground, providing real-time insights into ecological conditions, wildlife presence, and potential threats such as illegal logging, poaching, or unauthorized land use. Unlike remote surveillance or occasional aerial monitoring, foot patrols give rangers access to remote and sensitive areas that are otherwise difficult to reach, ensuring no part of the forest is left unmonitored. These observations provide critical data that informs conservation strategies, ensuring protection efforts are adaptive, targeted, and effective.
                             </p>
                         </div>
                     </div>
 
                     <div className={`${styles.panel} ${styles.animateRollIn}`}>
                         <div className={styles.textContainer}>
-                            <h2 className={styles.introText}>Importance of Patrols</h2>
+                            <h2 className={styles.introText}>Capacity Building</h2>
                             <p>
-                                Patrols play a crucial role in conservation efforts...
+                                Rangers receive comprehensive training in wilderness survival, first aid, and navigation, while also gaining hands-on experience with innovative technologies used for biodiversity monitoring and conservation. Beyond skills development, rangers have the incredible opportunity to witness Belize’s rich wildlife up close, spotting e jaguars, tapirs, and many bird species, while immersing themselves in the breathtaking landscapes of the Belize Maya Forest.
                             </p>
                         </div>
                     </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../styles/buildingstewards.module.css';
 import S2 from "../assets/S2.jpg";
+import StewardSum from "../assets/StewardSum.jpg";
+import MapSC from "../assets/MapSC.jpg";
 import WWDPanel2 from './WWDPanel2';
 
 const Modal = ({ src, alt, onClose }) => {
@@ -44,20 +46,25 @@ const Buildingstewards = () => {
         <div className={styles.PageContainer}>
             <h1 className={styles.titleoverlay}>Building Stewardship</h1>
             <header className={styles.header}>
-                <img src={S2} alt="Header" />
+                <img src={StewardSum} alt="Header" />
             </header>
             <section className={styles.introduction}>
                 <div className={styles.introText}>
-                    <h2>About the Program</h2>
-                    <p>
-                    The Belize Maya Forest Trust works with nine stakeholder communities that directly benefit from the protected area through watershed services, clean air, biodiversity, and other ecosystem services. The following map shows the location of each stakeholder community in the landscape. Sylvester village within the Gallon Jug Estate is surrounded by BMF and is a direct neighbour. The northern communities that directly and largely benefit from the BMF because it comprises a major part of their watershed, the Rio Hondo, are Blue Creek and San Felipe. Blue Creek is the second largest Mennonite community in the landscape and San Felipe is a primarily Mestizo community. The western communities that directly benefit from portions of the Belize River watershed that BMF protects are Yalbac, Los Tambos, La Gracia, Buena Vista, and Valley of Peace, which are primarily Hispanic communities first established by Central American migrants, and Spanish Lookout, the largest Mennonite community in the landscape and BMF’s direct neighbour.   
+                    <h2>About the stakeholder communities</h2>
+                    <p> The Belize Maya Forest Trust (BMFT) works closely with ten (10) stakeholder communities neighboring the reserve. These communities benefit from the protected area through vital ecosystem services, including watershed protection, clean air, biodiversity conservation, and climate regulation. The map below illustrates the location of each stakeholder community within the broader landscape.
+<p> </p>In northern Belize, BMFT collaborates with Sylvester, Blue Creek, and San Felipe. These communities benefit significantly from the Rio Hondo River, whose water cycle is supported by the healthy forests of the Belize Maya Forest.
+<p> </p>In western Belize, BMFT works with Yalbac, Los Tambos, Selena, La Gracia, Buena Vista, and Valley of Peace. These villages rely heavily on the Belize River. The forested landscape of the Belize Maya Forest helps maintain the health of multiple tributaries that feed into the river, strengthening the overall watershed.
+<p> </p>The stakeholder communities are primarily Hispanic, originally established by Central American migrants and Mestizo families. Spanish Lookout and Blue Creek are among the largest Mennonite communities within the Belize Maya Forest landscape. Agriculture and agribusiness are the main sources of income and livelihoods, making healthy natural resources, such as fertile soils and clean, abundant water indispensable.
+However, climate change, ecosystem degradation, and the expansion of commercialized agricultural practices have disrupted natural cycles, resulting in economic losses and production challenges for farmers.
+<p> </p>Across the landscape, there is a shared recognition of the need for sustainable solutions. Through regenerative agriculture, community stewardship, and environmental outreach, BMFT partners with these communities to restore ecosystems, enhance climate resilience, and safeguard the natural resources that sustain livelihoods and well-being for generations to come.   
 
-The stakeholder communities’ main source of income and livelihoods is agriculture and agribusiness, for which healthy natural resources such as fertile soils and clean and abundant water are indispensable. Due to climate change and ecosystem degradation, agricultural practices and natural cycles have been altered causing farmers economic losses and production challenges. In key informant surveys, community members across the landscape expressed concern about long and intense dry seasons, and few recognized capacity-building opportunities for women and youth. Elders in the communities indicated that they would like children to experience the forest and wildlife like it was once in the landscape, to give the younger generation pride and appreciation for their community and nature. The BMFT stakeholder communities also recognized the importance of nature and the sustainable use of resources.   
+<img src={MapSC} alt="Map of Stakeholder Communities" className={styles.mapImage} onClick={() => handleImageClick(MapSC, "Map of Stakeholder Communities")} />
+
                     </p>
                 </div>
             </section>
             <section className={`${styles.section2} ${styles.animateRollIn}`}>
-        <header className={styles.banner2}>Join the Journey</header>
+        <header className={styles.banner2}>Community Stewards Program</header>
         <WWDPanel2 />
       </section>
 

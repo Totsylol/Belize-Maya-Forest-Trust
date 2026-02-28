@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/WWDPanel2.module.css';
 import WWDFire from "../assets/WWDFire.jpg"
-import CommOut from "../assets/CommOut.jpg"
+import Supp from "../assets/Supp.jpg"
 import Agrigo from "../assets/Agrigo.jpg"
 import { Link } from 'react-router-dom';
 import Stewards from '../assets/Stewards.jpg';
@@ -10,23 +10,23 @@ const panelsData = [
   
   {
     id: 2,
-    imgSrc: CommOut,
-    title: 'Outreach',
-    link: '/outreach'
+    imgSrc: Supp,
+    title: 'Community Stewards',
+    link: '/communitystewards'
     
   },
   {
     id: 3,
     imgSrc: Agrigo,
-    title: 'Restorative and Regenerative Agriculture',
+    title: 'Regenerative Agriculture',
     link: '/agroproj'
   },
 
   {
     id: 4,
     imgSrc: Stewards,
-    title: 'Community Stewards',
-    link: '/communitystewards'
+    title: 'Environmental Outreach',
+    link: '/outreach'
   },
 ];
 

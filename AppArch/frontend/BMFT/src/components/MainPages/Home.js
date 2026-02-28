@@ -9,8 +9,14 @@ import c3 from "../assets/c3.jpg";
 import c4 from "../assets/c4.jpg";
 import c5 from "../assets/c5.jpg";
 import c6 from "../assets/c6.jpg";
-import c7 from "../assets/c7.jpg";
+import Cforest from "../assets/Cforest.jpg";
 import c8 from "../assets/c8.jpg";
+import Pool16 from "../assets/Pool16.jpg";
+import StewardSum from "../assets/StewardSum.jpg";
+import Ivol from "../assets/Ivol.jpg";
+import Pat3 from "../assets/Pat3.jpg";
+import APpeople from "../assets/APpeople.jpg";
+import Jaguar01 from "../assets/Jaguar01.jpg";
 import Placeholder from "../assets/Placeholder.jpg";
 
 const Home = ({ setNavbarVisible }) => {
@@ -26,18 +32,18 @@ const Home = ({ setNavbarVisible }) => {
 
   const slides = [
     {
-      title: "Protecting Belize's Natural Heritage",
-      subtitle: "Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.",
+      title: "Protecting Belize's Great Forest",
+      subtitle: "",
       buttons: ["Our Mission", "Learn More"]
     },
     {
-      title: "236,000 Acres Under Protection",
-      subtitle: "Working with local communities to safeguard one of Central America's most important forest ecosystems.",
+      title: "Protecting Critical Ecosystems and Biodiversity",
+      subtitle: "",
       buttons: ["Get Involved", "Our Impact"]
     },
     {
-      title: "Community-Driven Conservation",
-      subtitle: "Empowering local communities through sustainable practices and environmental education programs.",
+      title: "Building Community Stewardship",
+      subtitle: "",
       buttons: ["Our People", "Learn More"]
     }
   ];
@@ -61,6 +67,8 @@ const Home = ({ setNavbarVisible }) => {
           }}
         >
           <img src={home} alt="Belize Maya Forest" />
+          <img src={Pool16} alt="Pool 16" className={styles.pool16Image} />
+          <img src={StewardSum} alt="StewardSum" className={styles.StewardSumImage} />
           <div className={styles.carouselOverlay}></div>
         </div>
         
@@ -99,8 +107,8 @@ const Home = ({ setNavbarVisible }) => {
       <section className={styles.videoSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Our Mission in Action</h2>
-            <p>Discover how we're protecting Belize's natural heritage through community partnership and innovative conservation strategies.</p>
+            <h2>A glimpse into our landscape</h2>
+            <p>Protecting 241,000 acres of the Belize Maya Forest, linked to the Rio Bravo Conservation Management Area and the greater Selva Maya, safeguards iconic wildlife, sacred Cara Blanca Pools, and the Rio Hondo watershed, while strengthening Belize’s climate resilience and conservation goals.</p>
           </div>
           <div className={styles.videoWrapper}>
             <iframe
@@ -122,38 +130,38 @@ const Home = ({ setNavbarVisible }) => {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2>Explore Our Work</h2>
-            <p>Learn more about our conservation efforts, community partnerships, and ongoing initiatives.</p>
+            <p>Learn more about our story, conservation efforts, community partnerships, and ongoing initiatives.</p>
           </div>
           <div className={styles.exploreGrid}>
             <a href="/WhatWeDo" className={styles.exploreCard}>
               <div className={styles.cardImage}>
-                <img src={c4} alt="What We Do" />
+                <img src={Cforest} alt="What We Do" />
               </div>
               <div className={styles.cardContent}>
                 <h3>What We Do</h3>
-                <p>Discover our conservation programs, forest protection initiatives, and community engagement efforts.</p>
+                <p>Explore our conservation programs, forest protection initiatives, and community engagement efforts.</p>
                 <span className={styles.cardArrow}>→</span>
               </div>
             </a>
             
             <a href="/WhoWeAre" className={styles.exploreCard}>
               <div className={styles.cardImage}>
-                <img src={c6} alt="Who We Are" />
+                <img src={Pat3} alt="Who We Are" />
               </div>
               <div className={styles.cardContent}>
                 <h3>Who We Are</h3>
-                <p>Meet our team, learn about our history, and understand the people behind the conservation mission.</p>
+                <p>Learn about our history, meet our team, and stewards behind the conservation efforts.</p>
                 <span className={styles.cardArrow}>→</span>
               </div>
             </a>
             
             <a href="/GetInvolved" className={styles.exploreCard}>
               <div className={styles.cardImage}>
-                <img src={c7} alt="Get Involved" />
+                <img src={APpeople} alt="Get Involved" />
               </div>
               <div className={styles.cardContent}>
                 <h3>Get Involved</h3>
-                <p>Join our mission to protect Belize's forests through volunteering, partnerships, and support.</p>
+                <p>Join our mission to protect Belize's Great Forest through volunteering, partnerships, and support.</p>
                 <span className={styles.cardArrow}>→</span>
               </div>
             </a>
@@ -166,7 +174,7 @@ const Home = ({ setNavbarVisible }) => {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2>Latest News</h2>
-            <p>Stay informed about our conservation efforts and forest protection updates.</p>
+            <p>Stay informed about our conservation efforts.</p>
           </div>
           <div className={styles.newsGrid}>
             <article className={styles.newsCard}>
@@ -174,8 +182,8 @@ const Home = ({ setNavbarVisible }) => {
                 <img src={c8} alt="Conservation Success Story" />
               </div>
               <div className={styles.newsContent}>
-                <h3>New Ranger Station Established in Eastern Sector</h3>
-                <p>BMFT opens a new ranger outpost to strengthen protection of critical wildlife corridors in the eastern section of our 236,000-acre reserve.</p>
+                <h3>New Ranger Station</h3>
+                <p>BMFT opens a new ranger outpost to strengthen protection of critical wildlife corridors in the eastern section of our 241,000-acre reserve.</p>
                 <a href="/news/ranger-station-eastern" className={styles.readMore}>Read More</a>
               </div>
             </article>
@@ -197,7 +205,7 @@ const Home = ({ setNavbarVisible }) => {
               </div>
               <div className={styles.newsContent}>
                 <h3>Community Stewardship Program Expands</h3>
-                <p>BMFT partners with three additional local communities to expand our successful environmental education and sustainable livelihood programs.</p>
+                <p>BMFT partners with ten additional local communities to expand our successful environmental education and sustainable livelihood programs.</p>
                 <a href="/news/community-expansion" className={styles.readMore}>Read More</a>
               </div>
             </article>

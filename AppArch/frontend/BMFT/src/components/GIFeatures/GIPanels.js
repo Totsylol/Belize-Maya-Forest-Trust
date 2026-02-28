@@ -12,20 +12,20 @@ import rangerad from "../assets/ranger ad.png"
 
 const panelsData = [
   {
-    title: 'Donate to Specific Programs',
+    title: 'Support a Specific Programs',
     description: 'Support our various programs and initiatives. Click to learn more and donate.',
     imageUrl: IGBird,
     link: '/inprog',
   },
   {
-    title: 'Apply to Become a Community Steward',
-    description: 'Learn about eligibility and apply for microgrants or scholarships.',
+    title: 'Community Steward Opportunities',
+    description: 'Learn about eligibility and apply for Green Futures scholarships or submit your sustainable project proposal.',
     imageUrl: IGBird2,
     link: '/apply',
   },
   {
     title: 'Staff/Volunteer Opportunities',
-    description: 'Discover ways to volunteer or intern with us. Check out guidelines and apply.',
+    description: 'Explore open volunteer and vacancy opportunities and become part of our team. Review the guidelines and submit your application.',
     imageUrl: IGvol,
     link: rangerad,  
   },
