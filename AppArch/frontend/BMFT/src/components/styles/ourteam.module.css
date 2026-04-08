@@ -1,0 +1,215 @@
+.biographypage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.teammember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teammember:hover .image {
+  transform: scale(1.1);
+}
+
+.text {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+  text-align: center;
+}
+
+.position {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.4s forwards;
+}
+
+
+.modal.hide {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOut 0.7s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform 0.3s;
+  border: 3px solid transparent;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal.show .modalContent {
+  transform: translateY(0);
+}
+
+.modalImage {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modalImage img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.modalDetails {
+  text-align: center;
+}
+
+.modalDetails .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.modalDetails .position {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 5px 0;
+  color: #666;
+}
+
+.modalDetails p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #f00;
+  outline: none;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.titleoverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  font-weight: bold;
+  color: #f5f5f5;
+  text-align: center;
+  z-index: 10;
+}
+.banner3 {
+  background-color: #52c742 ; 
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+   margin-top: 40px;
+   margin-bottom: 70px;
+   text-align: center;
+}

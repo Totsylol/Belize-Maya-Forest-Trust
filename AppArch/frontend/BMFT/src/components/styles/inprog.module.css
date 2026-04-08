@@ -1,0 +1,136 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeIn 1s ease-in;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(50%);
+  z-index: 1;
+}
+
+.textWrapper {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.fancyText {
+  font-size: 5rem; 
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.subtextWrapper {
+  margin-top: 30px;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #52c742;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 13px; 
+}
+
+.button:hover {
+  background-color: #41a234;
+}
+
+
+.fancyText {
+  font-size: 5rem;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.fancyText::before,
+.fancyText::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+
+.fancyText::before {
+  top: -10px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.fancyText::after {
+  bottom: -10px;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.fancyText::before {
+  animation: lineInTop 8s forwards;
+}
+
+.fancyText::after {
+  animation: lineInBottom 8s forwards;
+}
+
+@keyframes lineInTop {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes lineInBottom {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

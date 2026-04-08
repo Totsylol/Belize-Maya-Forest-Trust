@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  .main{
+    width: 100%;
+    height: 100vh; 
+  }
+  
+  .videobg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    padding: 6vh 10vh;
+    background-color: rgba(255, 255, 255, .5);
+    border: none;
+    border-radius: 20px;
+    max-width: 90vw;
+  }
+  
+  .header {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 7vh;
+    font-weight: 700;
+  }
+  
+  .header a{
+    text-decoration: none;
+  }
+  
+  .h2 {
+    color: #00bef0;
+  }
+  
+  .h1 {
+    color: black;
+  }
+  
+  .inputbox {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    margin: 35px 0;
+  }
+  
+  .input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .input::placeholder {
+    color: black;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #00bef0;
+  }
+  
+  .forgot {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: black;
+  }
+  
+  .in {
+    font-family: "Poppins", sans-serif;
+    accent-color: black;
+    margin-right: 3px;
+  }
+  
+  .a {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .a:hover {
+    font-family: "Poppins", sans-serif;
+    text-decoration: underline;
+  }
+  .btn {
+    width: 100%;
+    height: 45px;
+    background: rgba(0,0,0,.5);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: background 700ms ease;
+    transition: color 700ms ease;
+  }
+  
+  .btn:hover {
+    background: rgba(0,0,0,.7);
+    color:#00bef0;
+  }
+  
+  .register {
+    font-family: "Poppins", sans-serif;
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    color:black;
+  }
+  
+  .a2 {
+    font-family: "Poppins", sans-serif;
+    color: #00bef0;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  
+  .a2:hover {
+    font-family: "Poppins", sans-serif;
+    text-decoration: underline;
+  }
+  
+  .p{
+    font-family: "Poppins", sans-serif;
+  }
+
+
+  @keyframes scaleUpDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); } 
+    100% { transform: scale(1); } 
+  }
+  
+  
+  .logo {
+    position: fixed; 
+    top: 2vh;
+    left: 2vh;
+    width: 4%;
+    height: auto;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out; 
+  }
+  
+  .logo:active {
+    animation: scaleUpDown 0.4s ease-in-out; 
+  }
+  
+  @media(max-width: 768px){
+    .inputbox {
+      position: relative;
+      width: 80vw;
+      height: 50px;
+      margin: 35px 0;
+    }
+    .container {
+      padding: 6vh 10vh;
+      padding-top: 40vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+      height: 45px;
+      background-color: #9900004f;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      color: black;
+      font-weight: 800;
+      transition: background 700ms ease;
+      transition: color 700ms ease;
+    }
+  }

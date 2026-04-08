@@ -1,0 +1,181 @@
+.footer {
+  background: #0099c4;
+  color: #fff;
+  padding: 4rem 6rem 0;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Top four-column grid */
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1.4fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Brand column */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  height: 110px;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  align-self: flex-start;
+}
+
+.brand p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* Nav columns */
+.col h4,
+.newsletter h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.col a {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.col a:hover {
+  color: #52c742;
+}
+
+/* Newsletter column */
+.newsletter p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputRow input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.inputRow input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.inputRow button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #52c742;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.inputRow button:hover {
+  background: #41a234;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socials a:hover {
+  background: #52c742;
+  border-color: #52c742;
+  color: #fff;
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem 0;
+}
+
+.bottom small {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 3rem 3rem 0;
+  }
+
+  .top {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem 0;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .inputRow input {
+    flex: 1;
+  }
+}

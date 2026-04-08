@@ -1,0 +1,144 @@
+@keyframes rollIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+  }
+  .animateRollIn {
+    animation: rollIn 1s ease-out forwards;
+    
+  }
+.header {
+    width: 100%;
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter:brightness(0.75);
+}
+
+.titleoverlay {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.pageContainer {
+ 
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    animation: rollIn 1s ease-out; 
+}
+
+
+
+.introduction {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.introText h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: oblique;
+}
+
+.introText p {
+    color: #333;
+    margin-top: 40px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+
+.introContent {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.mapSide {
+    flex-shrink: 0;
+    width: 280px;
+    text-align: center;
+}
+
+.mapImage {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mapImage:hover {
+    transform: scale(1.02);
+}
+
+.mapCaption {
+    font-size: 0.85rem;
+    color: #636e72;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.introText p {
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.section2 {
+    margin-bottom: 10px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .introContent {
+        flex-direction: column;
+    }
+    .mapSide {
+        width: 100%;
+    }
+}
+
+.banner2 {
+    background-color: #52c742 ; 
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: -20px;
+    text-align: center;
+
+   
+     
+  }

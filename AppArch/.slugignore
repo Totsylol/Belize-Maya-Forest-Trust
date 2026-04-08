@@ -1,0 +1,12 @@
+AppArch/frontend/BMFT/node_modules/
+test/
+docs/
+.env
+*.log
+*.jpg
+*.png
+dist/
+build/
+.git/
+AppArch/frontend/BMFT/components/assets/
+

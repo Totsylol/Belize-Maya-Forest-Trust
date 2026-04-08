@@ -1,0 +1,83 @@
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    background-color: rgba(175, 184, 184, 0.802);
+    overflow-x: hidden;
+    transition: height 0.5s ease;
+    display: block;
+}
+
+.overlay.open {
+    height: 100%;
+    
+}
+
+.overlayContent {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f8f8f8; 
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #000000;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: opacity 0.3s ease;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.overlay.open ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(50deg) translateY(10px) translateX(-1px) scale(0.9);
+}
+
+.overlay.open ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.overlay.open ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(-47deg) translateY(-14px) translateX(3.5px) scale(0.9);
+}
+
+@media (min-width: 768px) {
+    .overlay {
+        display: none;
+    }
+    .overlayContent {
+        display: none;
+    }
+    .overlay a {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+}
