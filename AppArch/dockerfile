@@ -1,0 +1,57 @@
+# Stage 1: Build React Frontend
+FROM node:18-alpine AS frontend-build
+
+# Set working directory for the frontend
+WORKDIR /app/frontend
+
+# Copy package.json and package-lock.json to install dependencies
+COPY frontend/package.json frontend/package-lock.json* ./
+
+# Install frontend dependencies
+RUN npm install
+
+# Copy all frontend source files
+COPY frontend/ .
+
+# Build the React app
+RUN npm run build
+
+# Stage 2: Backend Setup (ExpressJS)
+FROM node:18-alpine AS backend-build
+
+# Set working directory for the backend
+WORKDIR /app/backend
+
+# Copy backend package.json and package-lock.json to install dependencies
+COPY backend/package.json backend/package-lock.json* ./
+
+# Install backend dependencies
+RUN npm install
+
+# Copy all backend source files
+COPY backend/ .
+
+# Expose the backend port (adjust according to your app's port)
+EXPOSE 5001
+
+# Start the backend ExpressJS server
+CMD ["npm", "start"]
+
+# Stage 3: Serve Frontend in Development Mode (if needed)
+# If you plan to serve the frontend through the React dev server on port 3000
+FROM node:18-alpine AS frontend-dev
+
+# Set working directory for the frontend
+WORKDIR /app/frontend
+
+# Copy the React app files for development
+COPY frontend/ .
+
+# Install frontend dependencies
+RUN npm install
+
+# Expose the frontend dev server port
+EXPOSE 3000
+
+# Start the frontend React dev server (hot reload enabled)
+CMD ["npm", "start"]

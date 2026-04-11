@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mission/Vision/Values Tile Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; padding: 40px 20px; }
+  h1 { text-align: center; color: #2d3436; margin-bottom: 8px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { text-align: center; color: #636e72; margin-bottom: 40px; font-size: 0.85rem; }
+
+  .preview { max-width: 1000px; margin: 0 auto 50px; }
+  .preview > h2 { color: #2d3436; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; background: #0099c4; color: #fff; padding: 6px 14px; border-radius: 4px; display: inline-block; }
+
+  /* ── Option A: Icon + coloured top border ── */
+  .a-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .a-card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 5px solid #52c742; }
+  .a-card.blue { border-top-color: #0099c4; }
+  .a-card.green2 { border-top-color: #1a7a4a; }
+  .a-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+  .a-card h3 { font-size: 1.2rem; font-weight: 800; color: #2d3436; margin-bottom: 0.75rem; }
+  .a-card p { color: #636e72; font-size: 0.9rem; line-height: 1.7; }
+
+  /* ── Option B: Dark forest cards ── */
+  .b-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .b-card { background: #0d2b0d; border-radius: 12px; padding: 2rem; color: #fff; }
+  .b-card h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #52c742; margin-bottom: 0.75rem; font-weight: 800; }
+  .b-card p { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.88); }
+  .b-num { font-size: 3rem; font-weight: 900; color: rgba(82,199,66,0.2); line-height: 1; margin-bottom: 0.5rem; }
+
+  /* ── Option C: Left accent bar + quote style ── */
+  .c-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .c-card { background: #fff; border-radius: 8px; padding: 2rem 2rem 2rem 2.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-left: 5px solid #52c742; }
+  .c-card.blue { border-left-color: #0099c4; }
+  .c-card.teal { border-left-color: #1a7a4a; }
+  .c-card h3 { font-size: 1.1rem; font-weight: 700; color: #2d3436; margin-bottom: 0.75rem; }
+  .c-card p { color: #555; font-size: 0.92rem; line-height: 1.7; font-style: italic; }
+
+  /* ── Option D: Horizontal full-width rows ── */
+  .d-grid { display: flex; flex-direction: column; gap: 16px; }
+  .d-card { background: #fff; border-radius: 10px; padding: 1.8rem 2.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.07); display: flex; align-items: center; gap: 2rem; }
+  .d-label { min-width: 140px; }
+  .d-label h3 { font-size: 1rem; font-weight: 800; color: #2d3436; }
+  .d-dot { width: 10px; height: 10px; border-radius: 50%; background: #52c742; margin-top: 4px; }
+  .d-card.blue .d-dot { background: #0099c4; }
+  .d-card.teal .d-dot { background: #1a7a4a; }
+  .d-divider { width: 1px; height: 48px; background: #e0e0e0; }
+  .d-card p { color: #555; font-size: 0.92rem; line-height: 1.6; }
+
+  /* ── Option E: Glassmorphism on image background ── */
+  .e-wrap { border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #0a3a1a, #1a5c2e, #0d4a20); padding: 3rem 2rem; }
+  .e-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .e-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 2rem; color: #fff; text-align: center; }
+  .e-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .e-card h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #52c742; margin-bottom: 0.75rem; font-weight: 800; }
+  .e-card p { font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.88); }
+
+</style>
+</head>
+<body>
+<h1>Mission / Vision / Values Options</h1>
+<p class="subtitle">5 different layouts — pick your favourite</p>
+
+<!-- A -->
+<div class="preview">
+  <h2>A — Icon + coloured top border</h2>
+  <div class="a-grid">
+    <div class="a-card">
+      <div class="a-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="a-card blue">
+      <div class="a-icon">🌿</div>
+      <h3>Our Vision</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="a-card green2">
+      <div class="a-icon">🤝</div>
+      <h3>Our Values</h3>
+      <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- B -->
+<div class="preview">
+  <h2>B — Dark forest cards</h2>
+  <div class="b-grid">
+    <div class="b-card">
+      <div class="b-num">01</div>
+      <h3>Our Mission</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="b-card">
+      <div class="b-num">02</div>
+      <h3>Our Vision</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="b-card">
+      <div class="b-num">03</div>
+      <h3>Our Values</h3>
+      <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- C -->
+<div class="preview">
+  <h2>C — Left accent bar, italic quote style</h2>
+  <div class="c-grid">
+    <div class="c-card">
+      <h3>Our Mission</h3>
+      <p>"To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans."</p>
+    </div>
+    <div class="c-card blue">
+      <h3>Our Vision</h3>
+      <p>"To be a global benchmark for effective and lasting conservation."</p>
+    </div>
+    <div class="c-card teal">
+      <h3>Our Values</h3>
+      <p>"Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship."</p>
+    </div>
+  </div>
+</div>
+
+<!-- D -->
+<div class="preview">
+  <h2>D — Horizontal full-width rows</h2>
+  <div class="d-grid">
+    <div class="d-card">
+      <div class="d-label"><h3>Our Mission</h3><div class="d-dot"></div></div>
+      <div class="d-divider"></div>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="d-card blue">
+      <div class="d-label"><h3>Our Vision</h3><div class="d-dot"></div></div>
+      <div class="d-divider"></div>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="d-card teal">
+      <div class="d-label"><h3>Our Values</h3><div class="d-dot"></div></div>
+      <div class="d-divider"></div>
+      <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- E -->
+<div class="preview">
+  <h2>E — Frosted glass on forest background</h2>
+  <div class="e-wrap">
+    <div class="e-grid">
+      <div class="e-card">
+        <div class="e-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-icon">🌿</div>
+        <h3>Our Vision</h3>
+        <p>To be a global benchmark for effective and lasting conservation.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-icon">🤝</div>
+        <h3>Our Values</h3>
+        <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

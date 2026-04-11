@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Carousel Control Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; padding: 40px 20px; }
+  h1 { color: #fff; text-align: center; margin-bottom: 8px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 40px; font-size: 0.85rem; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+
+  .card { border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+
+  .hero {
+    position: relative;
+    height: 220px;
+    background: linear-gradient(160deg, #0a3a1a 0%, #1a5c2e 50%, #0d4a20 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.38);
+  }
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+  .hero-text h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+  .hero-text p { font-size: 0.8rem; opacity: 0.75; }
+
+  .label {
+    background: #0099c4;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .hint {
+    background: #fff;
+    color: #636e72;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  /* ── A: Hover arrows ── */
+  .hover-hero { position: relative; }
+  .hover-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: #fff;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease, background 0.2s ease;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+  }
+  .hover-arrow.left { left: 16px; }
+  .hover-arrow.right { right: 16px; }
+  .hover-hero:hover .hover-arrow { opacity: 1; }
+  .hover-arrow:hover { background: rgba(255,255,255,0.28); }
+
+  /* ── B: Half-click zones ── */
+  .zone-hero { position: relative; cursor: pointer; }
+  .zone {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .zone.left-zone { left: 0; background: linear-gradient(to right, rgba(0,0,0,0.18), transparent); }
+  .zone.right-zone { right: 0; background: linear-gradient(to left, rgba(0,0,0,0.18), transparent); }
+  .zone-hero:hover .zone { opacity: 1; }
+  .zone-icon { color: rgba(255,255,255,0.8); font-size: 1.6rem; font-weight: 300; }
+
+  /* ── C: Slim side bars ── */
+  .bar-hero { position: relative; }
+  .side-bar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 36px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.25);
+    color: rgba(255,255,255,0.7);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .side-bar.left { left: 0; }
+  .side-bar.right { right: 0; }
+  .side-bar:hover { background: rgba(82,199,66,0.5); color: #fff; }
+
+  /* ── D: Pill buttons ── */
+  .pill-hero { position: relative; }
+  .pill-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+  }
+  .pill-btn.left { left: 16px; }
+  .pill-btn.right { right: 16px; }
+  .pill-btn:hover { background: rgba(255,255,255,0.28); }
+
+  /* ── E: Bottom corner arrows ── */
+  .corner-hero { position: relative; }
+  .corner-btns {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 4;
+    display: flex;
+    gap: 8px;
+  }
+  .corner-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.5);
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+  }
+  .corner-btn:hover { background: rgba(82,199,66,0.5); border-color: #52c742; }
+
+</style>
+</head>
+<body>
+<h1>Carousel Control Options</h1>
+<p class="subtitle">Hover over each hero to see the interaction</p>
+
+<div class="grid">
+
+  <!-- A: Hover arrows -->
+  <div class="card">
+    <div class="hero hover-hero">
+      <div class="hover-arrow left">&#8249;</div>
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>Hover to reveal controls</p></div>
+      <div class="hover-arrow right">&#8250;</div>
+    </div>
+    <div class="hint">Arrows appear on hover, hidden otherwise</div>
+    <div class="label">A — Hover arrows</div>
+  </div>
+
+  <!-- B: Half-click zones -->
+  <div class="card">
+    <div class="hero zone-hero">
+      <div class="zone left-zone"><span class="zone-icon">&#8249;</span></div>
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>Click left or right half of image</p></div>
+      <div class="zone right-zone"><span class="zone-icon">&#8250;</span></div>
+    </div>
+    <div class="hint">Click left half = prev, right half = next</div>
+    <div class="label">B — Click zones (no visible buttons)</div>
+  </div>
+
+  <!-- C: Slim side bars -->
+  <div class="card">
+    <div class="hero bar-hero">
+      <div class="side-bar left">&#8249;</div>
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>Thin bars on each side</p></div>
+      <div class="side-bar right">&#8250;</div>
+    </div>
+    <div class="hint">Always visible slim bars, highlight green on hover</div>
+    <div class="label">C — Slim side bars</div>
+  </div>
+
+  <!-- D: Pill buttons -->
+  <div class="card">
+    <div class="hero pill-hero">
+      <div class="pill-btn left">&#8592; PREV</div>
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>Pill-shaped nav buttons</p></div>
+      <div class="pill-btn right">NEXT &#8594;</div>
+    </div>
+    <div class="hint">Always visible, frosted glass pill buttons</div>
+    <div class="label">D — Pill buttons</div>
+  </div>
+
+  <!-- E: Corner arrows -->
+  <div class="card">
+    <div class="hero corner-hero">
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>Controls tucked in bottom corner</p></div>
+      <div class="corner-btns">
+        <div class="corner-btn">&#8249;</div>
+        <div class="corner-btn">&#8250;</div>
+      </div>
+    </div>
+    <div class="hint">Both arrows grouped in bottom-right corner</div>
+    <div class="label">E — Bottom corner arrows</div>
+  </div>
+
+</div>
+</body>
+</html>

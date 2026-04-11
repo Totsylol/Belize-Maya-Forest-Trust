@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Section Previews</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #eee; }
+    .label {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #333;
+      background: #ddd;
+      border-bottom: 3px solid #aaa;
+    }
+
+    /* ── OPTION A: Minimal Light ── */
+    .optionA {
+      background: #fff;
+      padding: 4rem 6rem;
+    }
+    .optionA h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #1a3a1a;
+      margin-bottom: 3rem;
+      font-weight: 800;
+    }
+    .optionA .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .optionA .stat {
+      text-align: center;
+      padding: 1rem 0.5rem;
+    }
+    .optionA .accent {
+      width: 40px;
+      height: 4px;
+      background: #52c742;
+      margin: 0 auto 1rem;
+      border-radius: 2px;
+    }
+    .optionA .num {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #1a3a1a;
+      line-height: 1.1;
+    }
+    .optionA .lbl {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /* ── OPTION B: Forest Canopy ── */
+    .optionB {
+      position: relative;
+      padding: 4rem 6rem;
+      background: linear-gradient(135deg, #0d2b0d 0%, #1a4a1a 50%, #0d2b0d 100%);
+      overflow: hidden;
+    }
+    .optionB::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('AppArch/frontend/BMFT/src/components/assets/Cforest.jpg') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    .optionB h2 {
+      position: relative;
+      text-align: center;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 3rem;
+      font-weight: 800;
+    }
+    .optionB .grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .optionB .stat {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .optionB .stat:hover { background: rgba(255,255,255,0.13); }
+    .optionB .num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #52c742;
+      line-height: 1.1;
+    }
+    .optionB .lbl {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 0.6rem;
+      line-height: 1.4;
+    }
+
+    /* ── OPTION C: Impact Banner ── */
+    .optionC {
+      background: #1a3a1a;
+      padding: 3.5rem 4rem;
+    }
+    .optionC h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 2.5rem;
+      font-weight: 800;
+    }
+    .optionC .strip {
+      display: flex;
+      align-items: stretch;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .optionC .stat {
+      flex: 1;
+      text-align: center;
+      padding: 2rem 0.8rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .optionC .stat:last-child { border-right: none; }
+    .optionC .num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .optionC .lbl {
+      font-size: 0.75rem;
+      color: #52c742;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── OPTION D: Alternating Tiles ── */
+    .optionD {
+      background: #f8f9fa;
+      padding: 4rem 6rem;
+    }
+    .optionD h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #1a3a1a;
+      margin-bottom: 3rem;
+      font-weight: 800;
+    }
+    .optionD .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    }
+    .optionD .stat {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .optionD .stat.dark {
+      background: #1a3a1a;
+    }
+    .optionD .stat.light {
+      background: #fff;
+    }
+    .optionD .num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .optionD .stat.dark .num { color: #52c742; }
+    .optionD .stat.light .num { color: #1a3a1a; }
+    .optionD .lbl {
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+      line-height: 1.4;
+    }
+    .optionD .stat.dark .lbl { color: rgba(255,255,255,0.75); }
+    .optionD .stat.light .lbl { color: #666; }
+  </style>
+</head>
+<body>
+
+  <!-- OPTION A -->
+  <div class="label">Option A — Minimal Light</div>
+  <section class="optionA">
+    <h2>Our Impact</h2>
+    <div class="grid">
+      <div class="stat"><div class="accent"></div><div class="num">11,549 km</div><div class="lbl">of foot patrols</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">8</div><div class="lbl">research and monitoring projects</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">19,707</div><div class="lbl">trees planted</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">15</div><div class="lbl">scholarship recipients</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">10</div><div class="lbl">Microgrants</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">843</div><div class="lbl">stakeholders engaged in outreach</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">123</div><div class="lbl">youths, women and men in capacity building</div></div>
+      <div class="stat"><div class="accent"></div><div class="num">10</div><div class="lbl">stakeholder communities</div></div>
+    </div>
+  </section>
+
+  <!-- OPTION B -->
+  <div class="label">Option B — Forest Canopy</div>
+  <section class="optionB">
+    <h2>Our Impact</h2>
+    <div class="grid">
+      <div class="stat"><div class="num">11,549 km</div><div class="lbl">of foot patrols</div></div>
+      <div class="stat"><div class="num">8</div><div class="lbl">research and monitoring projects</div></div>
+      <div class="stat"><div class="num">19,707</div><div class="lbl">trees planted</div></div>
+      <div class="stat"><div class="num">15</div><div class="lbl">scholarship recipients</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">Microgrants</div></div>
+      <div class="stat"><div class="num">843</div><div class="lbl">stakeholders engaged in outreach</div></div>
+      <div class="stat"><div class="num">123</div><div class="lbl">youths, women and men in capacity building</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">stakeholder communities</div></div>
+    </div>
+  </section>
+
+  <!-- OPTION C -->
+  <div class="label">Option C — Impact Banner</div>
+  <section class="optionC">
+    <h2>Our Impact</h2>
+    <div class="strip">
+      <div class="stat"><div class="num">11,549 km</div><div class="lbl">foot patrols</div></div>
+      <div class="stat"><div class="num">8</div><div class="lbl">research projects</div></div>
+      <div class="stat"><div class="num">19,707</div><div class="lbl">trees planted</div></div>
+      <div class="stat"><div class="num">15</div><div class="lbl">scholarships</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">Microgrants</div></div>
+      <div class="stat"><div class="num">843</div><div class="lbl">outreach stakeholders</div></div>
+      <div class="stat"><div class="num">123</div><div class="lbl">in capacity building</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">communities</div></div>
+    </div>
+  </section>
+
+  <!-- OPTION D -->
+  <div class="label">Option D — Alternating Tiles</div>
+  <section class="optionD">
+    <h2>Our Impact</h2>
+    <div class="grid">
+      <div class="stat dark"><div class="num">11,549 km</div><div class="lbl">of foot patrols</div></div>
+      <div class="stat light"><div class="num">8</div><div class="lbl">research and monitoring projects</div></div>
+      <div class="stat dark"><div class="num">19,707</div><div class="lbl">trees planted</div></div>
+      <div class="stat light"><div class="num">15</div><div class="lbl">scholarship recipients</div></div>
+      <div class="stat light"><div class="num">10</div><div class="lbl">Microgrants</div></div>
+      <div class="stat dark"><div class="num">843</div><div class="lbl">stakeholders engaged in outreach</div></div>
+      <div class="stat light"><div class="num">123</div><div class="lbl">youths, women and men in capacity building</div></div>
+      <div class="stat dark"><div class="num">10</div><div class="lbl">stakeholder communities</div></div>
+    </div>
+  </section>
+
+</body>
+</html>

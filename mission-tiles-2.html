@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mission/Vision/Values — More Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #eef2f5; padding: 40px 20px; }
+  h1 { text-align: center; color: #2d3436; margin-bottom: 6px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { text-align: center; color: #636e72; margin-bottom: 40px; font-size: 0.85rem; }
+  .preview { max-width: 1000px; margin: 0 auto 50px; }
+  .preview > h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; background: #0099c4; color: #fff; padding: 6px 14px; border-radius: 4px; display: inline-block; margin-bottom: 14px; }
+
+  /* ── F: Big stat/word hero cards ── */
+  .f-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
+  .f-card { padding: 3rem 2.5rem; position: relative; overflow: hidden; }
+  .f-card:nth-child(1) { background: #0099c4; }
+  .f-card:nth-child(2) { background: #52c742; }
+  .f-card:nth-child(3) { background: #0d2b0d; }
+  .f-word { font-size: 4rem; font-weight: 900; color: rgba(255,255,255,0.12); position: absolute; bottom: -10px; right: 10px; line-height: 1; }
+  .f-card h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+  .f-card p { color: #fff; font-size: 1rem; line-height: 1.7; position: relative; z-index: 1; }
+
+  /* ── G: Minimal underline, large text ── */
+  .g-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; background: #fff; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .g-card { border-bottom: 3px solid #52c742; padding-bottom: 1.5rem; }
+  .g-card.blue { border-bottom-color: #0099c4; }
+  .g-card.dark { border-bottom-color: #0d2b0d; }
+  .g-card h3 { font-size: 1.4rem; font-weight: 800; color: #2d3436; margin-bottom: 1rem; }
+  .g-card p { color: #636e72; font-size: 0.93rem; line-height: 1.75; }
+
+  /* ── H: Overlapping pill badge ── */
+  .h-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .h-card { background: #fff; border-radius: 16px; padding: 2.5rem 2rem 2rem; box-shadow: 0 6px 24px rgba(0,0,0,0.09); position: relative; margin-top: 24px; }
+  .h-badge { position: absolute; top: -18px; left: 2rem; background: #52c742; color: #fff; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; }
+  .h-card:nth-child(2) .h-badge { background: #0099c4; }
+  .h-card:nth-child(3) .h-badge { background: #0d2b0d; }
+  .h-card h3 { font-size: 1.15rem; font-weight: 700; color: #2d3436; margin-bottom: 0.75rem; margin-top: 0.25rem; }
+  .h-card p { color: #636e72; font-size: 0.91rem; line-height: 1.7; }
+
+  /* ── I: Two-tone split card ── */
+  .i-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .i-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.1); }
+  .i-top { padding: 1.2rem 1.8rem; }
+  .i-card:nth-child(1) .i-top { background: #52c742; }
+  .i-card:nth-child(2) .i-top { background: #0099c4; }
+  .i-card:nth-child(3) .i-top { background: #0d2b0d; }
+  .i-top h3 { color: #fff; font-size: 1rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .i-bottom { background: #fff; padding: 1.5rem 1.8rem; }
+  .i-bottom p { color: #555; font-size: 0.91rem; line-height: 1.7; }
+
+  /* ── J: Timeline / step flow ── */
+  .j-wrap { background: #fff; border-radius: 16px; padding: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .j-row { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem; }
+  .j-row:last-child { margin-bottom: 0; }
+  .j-step { display: flex; flex-direction: column; align-items: center; min-width: 48px; }
+  .j-circle { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+  .j-row:nth-child(1) .j-circle { background: #52c742; }
+  .j-row:nth-child(2) .j-circle { background: #0099c4; }
+  .j-row:nth-child(3) .j-circle { background: #0d2b0d; }
+  .j-line { width: 2px; flex: 1; background: #e0e0e0; margin-top: 6px; min-height: 30px; }
+  .j-row:last-child .j-line { display: none; }
+  .j-text h3 { font-size: 1.1rem; font-weight: 800; color: #2d3436; margin-bottom: 0.5rem; }
+  .j-text p { color: #636e72; font-size: 0.91rem; line-height: 1.7; }
+
+</style>
+</head>
+<body>
+<h1>Mission / Vision / Values — More Previews</h1>
+<p class="subtitle">5 more layout ideas</p>
+
+<!-- F -->
+<div class="preview">
+  <h2>F — Bold colour block cards</h2>
+  <div class="f-grid">
+    <div class="f-card">
+      <h3>Our Mission</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+      <span class="f-word">Mission</span>
+    </div>
+    <div class="f-card">
+      <h3>Our Vision</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+      <span class="f-word">Vision</span>
+    </div>
+    <div class="f-card">
+      <h3>Our Values</h3>
+      <p>Respect for people, communities, and diversity, transparency, accountability, and environmental stewardship.</p>
+      <span class="f-word">Values</span>
+    </div>
+  </div>
+</div>
+
+<!-- G -->
+<div class="preview">
+  <h2>G — Minimal underline, clean white panel</h2>
+  <div class="g-grid">
+    <div class="g-card">
+      <h3>Our Mission</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="g-card blue">
+      <h3>Our Vision</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="g-card dark">
+      <h3>Our Values</h3>
+      <p>Respect for people, communities, and diversity, transparency, accountability, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- H -->
+<div class="preview">
+  <h2>H — Floating pill badge on card</h2>
+  <div class="h-grid">
+    <div class="h-card">
+      <div class="h-badge">Mission</div>
+      <h3>Protecting Belize's Forest</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="h-card">
+      <div class="h-badge">Vision</div>
+      <h3>A Global Benchmark</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="h-card">
+      <div class="h-badge">Values</div>
+      <h3>How We Work</h3>
+      <p>Respect for people, communities, and diversity, transparency, accountability, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- I -->
+<div class="preview">
+  <h2>I — Two-tone split card</h2>
+  <div class="i-grid">
+    <div class="i-card">
+      <div class="i-top"><h3>Our Mission</h3></div>
+      <div class="i-bottom"><p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p></div>
+    </div>
+    <div class="i-card">
+      <div class="i-top"><h3>Our Vision</h3></div>
+      <div class="i-bottom"><p>To be a global benchmark for effective and lasting conservation.</p></div>
+    </div>
+    <div class="i-card">
+      <div class="i-top"><h3>Our Values</h3></div>
+      <div class="i-bottom"><p>Respect for people, communities, and diversity, transparency, accountability, and environmental stewardship.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- J -->
+<div class="preview">
+  <h2>J — Vertical timeline / step flow</h2>
+  <div class="j-wrap">
+    <div class="j-row">
+      <div class="j-step">
+        <div class="j-circle">M</div>
+        <div class="j-line"></div>
+      </div>
+      <div class="j-text">
+        <h3>Our Mission</h3>
+        <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+      </div>
+    </div>
+    <div class="j-row">
+      <div class="j-step">
+        <div class="j-circle">V</div>
+        <div class="j-line"></div>
+      </div>
+      <div class="j-text">
+        <h3>Our Vision</h3>
+        <p>To be a global benchmark for effective and lasting conservation.</p>
+      </div>
+    </div>
+    <div class="j-row">
+      <div class="j-step">
+        <div class="j-circle">V</div>
+        <div class="j-line"></div>
+      </div>
+      <div class="j-text">
+        <h3>Our Values</h3>
+        <p>Respect for people, communities, and diversity, transparency, accountability, and environmental stewardship.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

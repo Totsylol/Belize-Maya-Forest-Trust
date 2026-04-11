@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Section Divider Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #e8edf0; padding: 40px 20px; }
+  h1 { text-align: center; color: #2d3436; margin-bottom: 10px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { text-align: center; color: #636e72; margin-bottom: 40px; font-size: 0.9rem; }
+
+  .preview-wrap { max-width: 780px; margin: 0 auto 50px; }
+  .preview-wrap h2 { color: #2d3436; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+
+  .section-mock {
+    padding: 40px 50px;
+    text-align: center;
+  }
+  .section-mock h3 { font-size: 1.6rem; font-weight: 700; color: #2d3436; margin-bottom: 10px; }
+  .section-mock p { color: #636e72; font-size: 0.95rem; line-height: 1.6; max-width: 400px; margin: 0 auto; }
+  .mock-cards { display: flex; gap: 16px; justify-content: center; margin-top: 20px; }
+  .mock-card { width: 130px; height: 80px; border-radius: 10px; background: #dfe6e9; }
+
+  /* ── Option A: Alternating tint ── */
+  .a-1 { background: #fff; }
+  .a-2 { background: #f0f7fa; }
+  .a-3 { background: #fff; }
+
+  /* ── Option B: Green top border ── */
+  .b-section { background: #fff; border-top: 4px solid #52c742; }
+
+  /* ── Option C: Blue top border ── */
+  .c-section { background: #fff; border-top: 4px solid #0099c4; }
+
+  /* ── Option D: Wave divider ── */
+  .wave-wrap { background: #fff; }
+  .wave-wrap + .wave-wrap { background: #f0f7fa; }
+  .wave-divider { display: block; width: 100%; overflow: hidden; line-height: 0; }
+  .wave-divider svg { display: block; }
+
+  /* ── Option E: Shadow divider ── */
+  .e-section { background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.07); margin-bottom: 8px; }
+
+  /* ── Option F: Left colored bar ── */
+  .f-section { background: #fff; border-left: 6px solid #52c742; padding-left: 44px; }
+  .f-section + .f-section { border-left-color: #0099c4; }
+
+  .badge { display: inline-block; background: #0099c4; color: #fff; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<h1>Section Divider Options</h1>
+<p class="subtitle">Each preview shows 2–3 stacked sections so you can see the transitions</p>
+
+<!-- Option A -->
+<div class="preview-wrap">
+  <h2>A — Alternating light tint</h2>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+    <div class="section-mock a-1">
+      <div class="badge">Section 1</div>
+      <h3>Explore Our Work</h3>
+      <p>Learn about the initiatives protecting 241,000 acres of Belize's Great Forest.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+    <div class="section-mock a-2">
+      <div class="badge">Section 2</div>
+      <h3>Our Impact</h3>
+      <p>Real numbers. Real results. Conservation that makes a measurable difference.</p>
+      <div class="mock-cards"><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div></div>
+    </div>
+    <div class="section-mock a-3">
+      <div class="badge">Section 3</div>
+      <h3>Latest News</h3>
+      <p>Stay up to date with conservation stories from the field.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Option B -->
+<div class="preview-wrap">
+  <h2>B — Green top border accent</h2>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+    <div class="section-mock b-section">
+      <div class="badge">Section 1</div>
+      <h3>Explore Our Work</h3>
+      <p>Learn about the initiatives protecting 241,000 acres of Belize's Great Forest.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+    <div class="section-mock b-section">
+      <div class="badge">Section 2</div>
+      <h3>Our Impact</h3>
+      <p>Real numbers. Real results. Conservation that makes a measurable difference.</p>
+      <div class="mock-cards"><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div></div>
+    </div>
+    <div class="section-mock b-section">
+      <div class="badge">Section 3</div>
+      <h3>Latest News</h3>
+      <p>Stay up to date with conservation stories from the field.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Option C -->
+<div class="preview-wrap">
+  <h2>C — Blue top border accent</h2>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+    <div class="section-mock c-section">
+      <div class="badge">Section 1</div>
+      <h3>Explore Our Work</h3>
+      <p>Learn about the initiatives protecting 241,000 acres of Belize's Great Forest.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+    <div class="section-mock c-section">
+      <div class="badge">Section 2</div>
+      <h3>Our Impact</h3>
+      <p>Real numbers. Real results. Conservation that makes a measurable difference.</p>
+      <div class="mock-cards"><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div></div>
+    </div>
+    <div class="section-mock c-section">
+      <div class="badge">Section 3</div>
+      <h3>Latest News</h3>
+      <p>Stay up to date with conservation stories from the field.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Option D -->
+<div class="preview-wrap">
+  <h2>D — Wave divider between sections</h2>
+  <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+    <div style="background:#fff; padding: 40px 50px 0; text-align:center;">
+      <div class="badge">Section 1</div>
+      <h3 style="font-size:1.6rem;font-weight:700;color:#2d3436;margin-bottom:10px;">Explore Our Work</h3>
+      <p style="color:#636e72;font-size:0.95rem;max-width:400px;margin:0 auto 24px;">Learn about the initiatives protecting 241,000 acres of Belize's Great Forest.</p>
+      <div class="mock-cards" style="justify-content:center;margin-bottom:0;"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+    <div style="background:#fff;">
+      <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:50px;">
+        <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#f0f7fa"/>
+      </svg>
+    </div>
+    <div style="background:#f0f7fa; padding: 0 50px 40px; text-align:center;">
+      <div class="badge">Section 2</div>
+      <h3 style="font-size:1.6rem;font-weight:700;color:#2d3436;margin-bottom:10px;">Our Impact</h3>
+      <p style="color:#636e72;font-size:0.95rem;max-width:400px;margin:0 auto 20px;">Real numbers. Real results. Conservation that makes a measurable difference.</p>
+      <div class="mock-cards" style="justify-content:center;"><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div></div>
+    </div>
+    <div style="background:#f0f7fa;">
+      <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:50px;">
+        <path d="M0,30 C300,0 900,60 1200,30 L1200,60 L0,60 Z" fill="#fff"/>
+      </svg>
+    </div>
+    <div style="background:#fff; padding: 0 50px 40px; text-align:center;">
+      <div class="badge">Section 3</div>
+      <h3 style="font-size:1.6rem;font-weight:700;color:#2d3436;margin-bottom:10px;">Latest News</h3>
+      <p style="color:#636e72;font-size:0.95rem;max-width:400px;margin:0 auto 20px;">Stay up to date with conservation stories from the field.</p>
+      <div class="mock-cards" style="justify-content:center;"><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Option E -->
+<div class="preview-wrap">
+  <h2>E — Shadow depth between sections</h2>
+  <div style="border-radius:12px; overflow:hidden;">
+    <div class="section-mock e-section" style="border-radius:12px 12px 0 0;">
+      <div class="badge">Section 1</div>
+      <h3>Explore Our Work</h3>
+      <p>Learn about the initiatives protecting 241,000 acres of Belize's Great Forest.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+    <div class="section-mock e-section">
+      <div class="badge">Section 2</div>
+      <h3>Our Impact</h3>
+      <p>Real numbers. Real results. Conservation that makes a measurable difference.</p>
+      <div class="mock-cards"><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div><div class="mock-card" style="background:#c8e6c9"></div></div>
+    </div>
+    <div class="section-mock e-section" style="border-radius:0 0 12px 12px; margin-bottom:0;">
+      <div class="badge">Section 3</div>
+      <h3>Latest News</h3>
+      <p>Stay up to date with conservation stories from the field.</p>
+      <div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

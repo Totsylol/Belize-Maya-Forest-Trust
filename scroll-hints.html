@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scroll Hint Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; padding: 40px 20px; }
+  h1 { color: #fff; text-align: center; margin-bottom: 8px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 40px; font-size: 0.85rem; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+
+  .card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+
+  .hero {
+    position: relative;
+    height: 280px;
+    background: linear-gradient(160deg, #0a3a1a 0%, #1a5c2e 40%, #0d4a20 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+  .hero-text h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; }
+  .hero-text p { font-size: 0.85rem; opacity: 0.8; }
+
+  .section-below {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .section-below p { color: #636e72; font-size: 0.85rem; }
+
+  .label {
+    background: #0099c4;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* ── A: Bouncing chevron ── */
+  .bounce-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    animation: bounce 1.6s ease-in-out infinite;
+  }
+  .bounce-arrow span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    opacity: 0.9;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ── B: Scroll text + animated line ── */
+  .scroll-line-wrap {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .scroll-line-wrap span {
+    color: #fff;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-line::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: lineDown 1.4s ease-in-out infinite;
+  }
+  @keyframes lineDown {
+    0%   { top: -100%; }
+    100% { top: 100%; }
+  }
+
+  /* ── C: Mouse icon ── */
+  .mouse-wrap {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .mouse {
+    width: 22px;
+    height: 34px;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 11px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .mouse-dot {
+    width: 4px;
+    height: 7px;
+    background: #fff;
+    border-radius: 2px;
+    margin-top: 5px;
+    animation: scrollDot 1.4s ease-in-out infinite;
+  }
+  .mouse-wrap span {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @keyframes scrollDot {
+    0%   { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
+  }
+
+  /* ── D: Peek of next section ── */
+  .peek-hero {
+    position: relative;
+    height: 240px;
+    background: linear-gradient(160deg, #0a3a1a 0%, #1a5c2e 40%, #0d4a20 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .peek-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+  .peek-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    z-index: 3;
+  }
+  .peek-below {
+    background: #fff;
+    padding: 14px 20px 20px;
+    text-align: center;
+  }
+  .peek-below p { color: #636e72; font-size: 0.85rem; }
+
+  /* ── E: Dual chevrons ── */
+  .dual-chevron {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ch {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+  }
+  .ch:nth-child(1) { opacity: 0.3; animation: fade 1.4s ease infinite 0s; }
+  .ch:nth-child(2) { opacity: 0.6; animation: fade 1.4s ease infinite 0.2s; margin-top: -4px; }
+  .ch:nth-child(3) { opacity: 1;   animation: fade 1.4s ease infinite 0.4s; margin-top: -4px; }
+  @keyframes fade {
+    0%, 100% { opacity: 0.2; }
+    50%       { opacity: 1; }
+  }
+
+</style>
+</head>
+<body>
+<h1>Scroll Hint Options</h1>
+<p class="subtitle">All shown at the bottom of the hero image</p>
+
+<div class="grid">
+
+  <!-- A -->
+  <div class="card">
+    <div class="hero">
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>241,000 acres of protected land</p></div>
+      <div class="bounce-arrow"><span></span></div>
+    </div>
+    <div class="section-below"><p>Next section content here...</p></div>
+    <div class="label">A — Bouncing chevron</div>
+  </div>
+
+  <!-- B -->
+  <div class="card">
+    <div class="hero">
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>241,000 acres of protected land</p></div>
+      <div class="scroll-line-wrap">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="section-below"><p>Next section content here...</p></div>
+    <div class="label">B — Scroll text + animated line</div>
+  </div>
+
+  <!-- C -->
+  <div class="card">
+    <div class="hero">
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>241,000 acres of protected land</p></div>
+      <div class="mouse-wrap">
+        <div class="mouse"><div class="mouse-dot"></div></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+    <div class="section-below"><p>Next section content here...</p></div>
+    <div class="label">C — Animated mouse icon</div>
+  </div>
+
+  <!-- D -->
+  <div class="card">
+    <div class="peek-hero">
+      <div class="hero-text" style="position:relative;z-index:2;text-align:center;color:white;"><h2>Protecting Belize's Great Forest</h2><p>241,000 acres of protected land</p></div>
+      <div class="peek-fade"></div>
+    </div>
+    <div class="peek-below"><p>Next section content here...</p></div>
+    <div class="label">D — Fade peek of next section</div>
+  </div>
+
+  <!-- E -->
+  <div class="card">
+    <div class="hero">
+      <div class="hero-text"><h2>Protecting Belize's Great Forest</h2><p>241,000 acres of protected land</p></div>
+      <div class="dual-chevron">
+        <span class="ch"></span>
+        <span class="ch"></span>
+        <span class="ch"></span>
+      </div>
+    </div>
+    <div class="section-below"><p>Next section content here...</p></div>
+    <div class="label">E — Triple cascading chevrons</div>
+  </div>
+
+</div>
+</body>
+</html>

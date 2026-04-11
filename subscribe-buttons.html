@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subscribe Button Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a2e; font-family: 'Segoe UI', sans-serif; padding: 40px; }
+  h1 { color: #fff; text-align: center; margin-bottom: 40px; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+
+  .card {
+    background: #0099c4;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card h3 { color: #fff; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; }
+  .card p { color: rgba(255,255,255,0.85); font-size: 0.85rem; margin-bottom: 4px; }
+  .label { color: rgba(255,255,255,0.6); font-size: 0.7rem; text-align: center; margin-top: 4px; }
+
+  /* Option A – Current green pill */
+  .a-row { display: flex; align-items: stretch; }
+  .a-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 2px solid #fff;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .a-input::placeholder { color: rgba(255,255,255,0.8); }
+  .a-btn {
+    padding: 0.65rem 1.2rem;
+    background: #52c742;
+    color: #fff;
+    border: 2px solid #52c742;
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* Option B – White button, blue text */
+  .b-row { display: flex; align-items: stretch; }
+  .b-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .b-input::placeholder { color: rgba(255,255,255,0.7); }
+  .b-btn {
+    padding: 0.65rem 1.2rem;
+    background: #fff;
+    color: #0077a0;
+    border: 2px solid #fff;
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* Option C – Stacked full-width */
+  .c-wrap { display: flex; flex-direction: column; gap: 8px; }
+  .c-input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .c-input::placeholder { color: rgba(255,255,255,0.7); }
+  .c-btn {
+    width: 100%;
+    padding: 0.7rem;
+    background: #52c742;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  /* Option D – Outlined ghost button */
+  .d-row { display: flex; align-items: stretch; }
+  .d-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .d-input::placeholder { color: rgba(255,255,255,0.7); }
+  .d-btn {
+    padding: 0.65rem 1.2rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+
+  /* Option E – Dark navy button */
+  .e-row { display: flex; align-items: stretch; }
+  .e-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .e-input::placeholder { color: rgba(255,255,255,0.7); }
+  .e-btn {
+    padding: 0.65rem 1.2rem;
+    background: #004d6e;
+    color: #fff;
+    border: 2px solid #004d6e;
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* Option F – Arrow icon button */
+  .f-row { display: flex; align-items: stretch; }
+  .f-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 2px solid #fff;
+    border-right: none;
+    border-radius: 30px 0 0 30px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 0.88rem;
+    outline: none;
+  }
+  .f-input::placeholder { color: rgba(255,255,255,0.8); }
+  .f-btn {
+    padding: 0.65rem 1.1rem;
+    background: #52c742;
+    color: #fff;
+    border: 2px solid #52c742;
+    border-radius: 0 30px 30px 0;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+<h1>Subscribe Button Options</h1>
+<div class="grid">
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="a-row">
+      <input class="a-input" type="email" placeholder="Your email" />
+      <button class="a-btn">Subscribe</button>
+    </div>
+    <div class="label">A — Current (green attached)</div>
+  </div>
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="b-row">
+      <input class="b-input" type="email" placeholder="Your email" />
+      <button class="b-btn">Subscribe</button>
+    </div>
+    <div class="label">B — White button, blue text</div>
+  </div>
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="c-wrap">
+      <input class="c-input" type="email" placeholder="Your email" />
+      <button class="c-btn">Subscribe</button>
+    </div>
+    <div class="label">C — Stacked full-width</div>
+  </div>
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="d-row">
+      <input class="d-input" type="email" placeholder="Your email" />
+      <button class="d-btn">Subscribe</button>
+    </div>
+    <div class="label">D — Ghost / outlined</div>
+  </div>
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="e-row">
+      <input class="e-input" type="email" placeholder="Your email" />
+      <button class="e-btn">Subscribe</button>
+    </div>
+    <div class="label">E — Dark navy button</div>
+  </div>
+
+  <div class="card">
+    <h3>Stay in Touch</h3>
+    <p>Subscribe for conservation updates.</p>
+    <div class="f-row">
+      <input class="f-input" type="email" placeholder="Your email" />
+      <button class="f-btn">&#8594;</button>
+    </div>
+    <div class="label">F — Pill shape with arrow</div>
+  </div>
+
+</div>
+</body>
+</html>
