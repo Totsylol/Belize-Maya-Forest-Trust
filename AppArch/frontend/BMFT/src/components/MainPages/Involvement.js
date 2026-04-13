@@ -11,9 +11,6 @@ const Involvement = () => {
         <img src={Imonkey} alt="Header" />
         <div className={styles.titleoverlay}>
           <h1>Join Our Conservation Efforts</h1>
-          <Link to="/Inprog" className={styles.donationButton}>
-            Donate
-          </Link>
         </div>
       </header>
       <section className={styles.infoSection}>

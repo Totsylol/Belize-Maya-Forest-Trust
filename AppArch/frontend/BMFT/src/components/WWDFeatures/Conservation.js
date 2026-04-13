@@ -36,29 +36,31 @@ const Dropdown = ({ title, content, imageUrl }) => {
 const Conservation = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.aboutPanel}>
+        <div className={styles.aboutPanelAccent}></div>
+        <div className={styles.aboutPanelBody}>
+          <p className={styles.aboutText}>
+            BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.
+          </p>
+        </div>
+      </div>
+
       <section className={styles.section}>
-        <Dropdown 
+        <Dropdown
           title="Forest Ecosystems"
           content="To conserve the Belize Maya Forest and its important services, we must reduce wildfires, strengthen fire management, and restore forest health across the landscape. Key actions include fire prevention awareness, reforestation, and promoting regenerative agriculture."
           imageUrl={Cforest}
         />
-        <Dropdown 
-          title="Aquatic Ecosystems"
-          content="To conserve aquatic ecosystems and their services in the BMF, it is essential to reduce water contamination and control the population of Armoured Catfish. Key actions include establishing a contamination baseline, reduce pesticide practices, protecting and restoring the Cara Blanca Pools Forest, and promoting proper solid waste management. "
-          imageUrl={Cpools}
-        />
-        <Dropdown 
+        <Dropdown
           title="Jaguars/Wildcats"
           content="Maintain healthy and stable predator–prey populations by protecting habitat connectivity, reducing poaching, and ensuring adequate prey availability, allowing jaguars and other wildcats to continue fulfilling their important role as top predators in the ecosystem."
           imageUrl={Cjaguar}
         />
-    
-      </section>
-
-      <section className={styles.aboutPanel}>
-        <p className={styles.aboutText}>
-        BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.
-        </p>
+        <Dropdown
+          title="Aquatic Ecosystems"
+          content="Protect and maintain the ecological integrity of the Cara Blanca Pools and surrounding aquatic habitats by reducing sedimentation, preventing contamination, and safeguarding biodiversity — including the critically endangered Hicatee turtle — within the BMF's freshwater ecosystems."
+          imageUrl={Cturtle}
+        />
       </section>
     </div>
   );

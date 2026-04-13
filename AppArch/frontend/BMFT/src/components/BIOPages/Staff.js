@@ -15,18 +15,18 @@ const teamMembers = [
       name: "Dr. Elma Kay",
       position: "Managing Director", 
       Education: "Ph.D. Biology (Ecology, Evolution and Systematics), Saint Louis University", 
-      description: "Under Elma’s leadership, Belize Maya Forest (BMF) has seen significant advancements in biodiversity conservation, habitat restoration, and community engagement initiatives. She combines almost twenty (20) years of experience in academics, conservation and policy work. Prior to joining, she served on committees related to carbon projects and is currently on several non-governmental organization (NGO) boards while acting as Chairwoman for the board of directors of the Belize Network of NGOs.",
+      description: "Under Elma's leadership, Belize Maya Forest (BMF) has seen significant advancements in biodiversity conservation, habitat restoration, and community engagement initiatives. She combines almost twenty (20) years of experience in academics, conservation and policy work. Prior to joining, she served on committees related to carbon projects and is currently on several non-governmental organization (NGO) boards while acting as Chairwoman for the board of directors of the Belize Network of NGOs.",
       imgSrc: EKay
     },
     {
       name: "Deeriann Wade ",
-      position: "The Nature Conservancy’s Conservation Analyst", 
-      description: "Deeriann is the Conservation Analyst with The Nature Conservancy’s (TNC) Belize Business Unit. Prior to TNC, she served as a public officer with the Government of Belize for sixteen (16) years. Most recently, she served as a Blue Economy Officer responsible for matters related to energy, climate change, maritime transport and sustainable development.",
+      position: "The Nature Conservancy's Conservation Analyst", 
+      description: "Deeriann is the Conservation Analyst with The Nature Conservancy's (TNC) Belize Business Unit. Prior to TNC, she served as a public officer with the Government of Belize for sixteen (16) years. Most recently, she served as a Blue Economy Officer responsible for matters related to energy, climate change, maritime transport and sustainable development.",
       imgSrc: DWade
     },
     {
   name: "Justin Pepper",
-      position: "Bobolink Foundation’s Chief Conservation Officer", 
+      position: "Bobolink Foundation's Chief Conservation Officer", 
       description: "Justin engages in community-based conservation of biodiversity in the Americas. Prior to Bobolink, he worked for Audubon supporting and amplifying grassroots conservation leaders in the Chicago area, and later, developing a market-based approach to grassland bird conservation.",
       imgSrc: JPepper
     },
@@ -98,6 +98,7 @@ const Staff = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

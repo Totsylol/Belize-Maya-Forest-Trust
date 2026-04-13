@@ -44,15 +44,18 @@
 }
 
 .infoSection {
-    padding: 60px 90px;
+    padding: 0;
     text-align: center;
+    width: 100%;
+    align-self: stretch;
+    background: #fff;
 }
 
 .infoContent {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
+    align-items: stretch;
+    gap: 0;
     text-align: left;
 }
 
@@ -84,13 +87,14 @@
   }
   
   .banner {
-    background-color: #52c742 ; 
-      color: #fff;
-      padding: 1.5rem;
-      font-size: 3.5rem;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-bottom: 15px;
+    background-color: #52c742;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
     margin-top: -150px;
       
      
@@ -99,36 +103,49 @@
 
 .infoContainer {
     flex: 1;
-    max-width: 58%;
     text-align: left;
+    padding: 60px 60px 60px 80px;
+    background: #fff;
 }
 
 .infoContainer h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+    font-size: 3rem;
+    color: #1a3d1f;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+}
+
+.storyUnderline {
+    width: 80px;
+    height: 4px;
+    background: #52c742;
+    border-radius: 2px;
+    margin: 6px auto 50px;
 }
 
 .infoContainer p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-top: 30px;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 .infoImage {
-    flex: 1;
-    max-width: 35%;
+    flex: 0 0 35%;
     display: flex;
     align-items: center;
-    margin-top: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px 60px 40px 0;
+    background: #fff;
 }
 
 .infoImage img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
 }
 
 .header2 {
@@ -554,6 +571,187 @@
   }
 
 
+.quoteSection {
+    width: 100%;
+    align-self: stretch;
+    background: #fff;
+    padding: 90px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    box-sizing: border-box;
+}
+
+.quoteItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.quoteTag {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #52c742;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    text-shadow: 0 1px 4px rgba(82, 199, 66, 0.2);
+}
+
+.quoteText {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    line-height: 1.7;
+    max-width: 1200px;
+    font-style: italic;
+}
+
+.quoteBar {
+    width: 100px;
+    height: 4px;
+    background: #52c742;
+    margin-top: 36px;
+}
+
+.accordionSection {
+    background: #fff;
+    padding: 60px 80px;
+    width: 100%;
+    align-self: stretch;
+    box-sizing: border-box;
+}
+
+.accItem {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+
+.accHeader {
+    display: flex;
+    align-items: center;
+    padding: 28px 60px;
+    background: #f9f9f9;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.accBody {
+    padding: 28px 60px;
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.9;
+    border-top: 2px solid #52c742;
+    background: #fff;
+}
+
+.timelineSection {
+    background: #fff;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.timelineSection::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #52c742;
+    transform: translateX(-50%);
+}
+
+.timelineRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.timelineRowReverse {
+    flex-direction: row-reverse;
+}
+
+.timelineContent {
+    flex: 1;
+    padding: 28px 36px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+}
+
+.timelineRow:not(.timelineRowReverse) .timelineContent {
+    margin-right: 48px;
+}
+
+.timelineRowReverse .timelineContent {
+    margin-left: 48px;
+}
+
+.timelineContent h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.timelineContent p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.timelineDot {
+    width: 18px;
+    height: 18px;
+    background: #52c742;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 0 5px #d4f7cf;
+    flex-shrink: 0;
+}
+
+.timelineSpacer {
+    flex: 1;
+}
+
+.mvSection {
+    width: 100%;
+}
+
+.mvRow {
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+    gap: 60px;
+    background: #fff;
+}
+
+.mvRowAlt {
+    background: #f4fdf3;
+    flex-direction: row-reverse;
+}
+
+.mvTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #52c742;
+    text-transform: uppercase;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.mvText {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.8;
+}
 
 .missionVisionSection {
     display: flex;

@@ -103,13 +103,13 @@ const scholarshipRecipients = [
 ];
 
 const StewardCard = ({ person, category, onClick }) => (
-  <div className={styles.stewardCard} onClick={() => onClick(person, category)}>
-    <div className={styles.cardImageWrap}>
-      <img src={person.imgSrc} alt={person.name} className={styles.cardImg} />
+  <div className={styles.bubble} onClick={() => onClick(person, category)}>
+    <div className={styles.bubbleImage}>
+      <img src={person.imgSrc} alt={person.name} />
     </div>
-    <div className={styles.cardInfo}>
-      <p className={styles.cardName}>{person.name}</p>
-      <p className={styles.cardVillage}>{person.village}</p>
+    <div className={styles.bubbleText}>
+      <p className={styles.bubbleName}>{person.name}</p>
+      <p className={styles.bubbleVillage}>{person.village}</p>
     </div>
   </div>
 );
@@ -208,6 +208,24 @@ const Communitystewards = () => {
           </div>
         </div>
       )}
+
+      <div style={{textAlign: 'center', padding: '2rem 0 3rem'}}>
+        <a
+          href="/ourpeople"
+          style={{
+            display: 'inline-block',
+            backgroundColor: '#52c742',
+            color: '#fff',
+            padding: '0.6rem 1.8rem',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: '600',
+          }}
+        >
+          ← Back to Our People
+        </a>
+      </div>
     </main>
   );
 };

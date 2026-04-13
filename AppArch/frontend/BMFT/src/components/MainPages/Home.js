@@ -12,6 +12,7 @@ import c6 from "../assets/c6.jpg";
 import Cforest from "../assets/Cforest.jpg";
 import c8 from "../assets/c8.jpg";
 import Pool16 from "../assets/Pool166.png";
+import HomepageVideoImg from "../assets/Homepage image next to video.jpg";
 import StewardSum from "../assets/Placeholder.jpg";
 import Ivol from "../assets/Ivol.jpg";
 import Pat3 from "../assets/Pat3.jpg";
@@ -22,19 +23,28 @@ const slides = [
   {
     title: "Protecting Belize's Great Forest",
     subtitle: "",
-    buttons: ["Our Mission", "Learn More"],
+    buttons: [
+      { label: "Our Mission", href: "/WhoWeAre" },
+      { label: "Learn More",  href: "/WhatWeDo" }
+    ],
     image: home
   },
   {
     title: "Protecting Critical Ecosystems and Biodiversity",
     subtitle: "",
-    buttons: ["Get Involved", "Our Impact"],
+    buttons: [
+      { label: "Get Involved", href: "/GetInvolved" },
+      { label: "Our Impact",   href: "/WhatWeDo" }
+    ],
     image: Cforest
   },
   {
     title: "Building Community Stewardship",
     subtitle: "",
-    buttons: ["Our People", "Learn More"],
+    buttons: [
+      { label: "Our People", href: "/OurPeople" },
+      { label: "Learn More", href: "/WhatWeDo" }
+    ],
     image: c3
   }
 ];
@@ -129,8 +139,8 @@ const Home = ({ setNavbarVisible }) => {
             <h1 className={styles.slideTitle}>{slides[dotIndex].title}</h1>
             <p className={styles.slideSubtitle}>{slides[dotIndex].subtitle}</p>
             <div className={styles.slideButtons}>
-              <button className={styles.primaryBtn}>{slides[dotIndex].buttons[0]}</button>
-              <button className={styles.secondaryBtn}>{slides[dotIndex].buttons[1]}</button>
+              <a href={slides[dotIndex].buttons[0].href} className={styles.primaryBtn}>{slides[dotIndex].buttons[0].label}</a>
+              <a href={slides[dotIndex].buttons[1].href} className={styles.secondaryBtn}>{slides[dotIndex].buttons[1].label}</a>
             </div>
           </div>
         </div>
@@ -155,6 +165,12 @@ const Home = ({ setNavbarVisible }) => {
       <section className={styles.videoSection}>
         <div className={styles.container}>
           <div className={styles.videoColumns}>
+            <div className={styles.videoRight}>
+              <h2>A glimpse into our landscape</h2>
+              <p>Protecting 241,000 acres of the Belize Maya Forest, linked to the Rio Bravo Conservation Management Area and the greater Selva Maya, safeguards iconic wildlife, sacred Cara Blanca Pools, and the Rio Hondo watershed, while strengthening Belize's climate resilience and conservation goals.</p>
+              {/* Replace Pool16 with BMFMap image once added to assets */}
+              <img src={HomepageVideoImg} alt="Belize Maya Forest" className={styles.mapImage} />
+            </div>
             <div className={styles.videoLeft}>
               <iframe
                 width="560"
@@ -166,12 +182,6 @@ const Home = ({ setNavbarVisible }) => {
                 allowFullScreen
                 className={styles.videoFrame}
               ></iframe>
-            </div>
-            <div className={styles.videoRight}>
-              <h2>A glimpse into our landscape</h2>
-              <p>Protecting 241,000 acres of the Belize Maya Forest, linked to the Rio Bravo Conservation Management Area and the greater Selva Maya, safeguards iconic wildlife, sacred Cara Blanca Pools, and the Rio Hondo watershed, while strengthening Belize's climate resilience and conservation goals.</p>
-              {/* Replace Pool16 with BMFMap image once added to assets */}
-              <img src={Pool16} alt="Belize Maya Forest Map" className={styles.mapImage} />
             </div>
           </div>
         </div>

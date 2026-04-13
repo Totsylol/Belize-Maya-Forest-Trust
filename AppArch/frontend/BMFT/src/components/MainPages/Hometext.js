@@ -7,7 +7,7 @@ const HomeText = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>
-          BMFT’s Mission
+          BMFT's Mission
           <br />
           Demonstrating a globally recognized, locally relevant model of healthy, biodiverse forest protected for and by all Belizeans.
         </h1>

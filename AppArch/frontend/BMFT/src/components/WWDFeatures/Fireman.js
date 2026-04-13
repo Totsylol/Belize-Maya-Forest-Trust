@@ -62,7 +62,7 @@ const Fireman = () => {
                 <h2 className={styles.sectionTitle}>Forest Fire Prevention</h2>
                 <p className={styles.descriptionText}>
                     Wildfires are the greatest threat to the Belize Maya Forest (BMF). To address this, the ranger team has received specialized training in fire suppression and uses strategies like controlled burns and firebreaks to reduce wildfire risk. 
-Additionally, a Fire Safety Awareness Campaign was launched that promotes safe burning practices, fire safety training, strengthens fire prevention, and build awareness within stakeholder communities about the importance of protecting the forest. By combining proactive management, community engagement, and ongoing innovation, the campaign helps safeguard the BMF’s rich ecosystems and biodiversity.
+Additionally, a Fire Safety Awareness Campaign was launched that promotes safe burning practices, fire safety training, strengthens fire prevention, and build awareness within stakeholder communities about the importance of protecting the forest. By combining proactive management, community engagement, and ongoing innovation, the campaign helps safeguard the BMF's rich ecosystems and biodiversity.
                 </p>
             </section>
             <section className={styles.imageGallery}>

@@ -47,6 +47,7 @@ const Panel = ({ image, title, description }) => {
 };
 
 
+
 const WhoWeAre = () => {
     useEffect(() => {
         const hash = window.location.hash;
@@ -73,17 +74,18 @@ const WhoWeAre = () => {
                 <div className={styles.infoContent}>
                     <div className={styles.infoContainer}>
                         <h2>Our Story</h2>
+                        <div className={styles.storyUnderline}></div>
                         <p>
-                            Belize is situated within the heart of the Maya region, a land steeped in rich cultural history, that we refer to as The Maya World. The Belize Maya Forest (BMF) carries an illustrious history marked by the activities of chicleros, loggers, and the Yucatec Maya community. Following Belize’s independence from colonial rule, the land transitioned into the hands of a foreign timber company, which operated under the names Yalbac Ranch and Laguna Seca.
+                            Belize is situated within the heart of the Maya region, a land steeped in rich cultural history, that we refer to as The Maya World. The Belize Maya Forest (BMF) carries an illustrious history marked by the activities of chicleros, loggers, and the Yucatec Maya community. Following Belize's independence from colonial rule, the land transitioned into the hands of a foreign timber company, which operated under the names Yalbac Ranch and Laguna Seca.
                         </p>
                         <p>
                             In December 2020, supporters conserved 236,000 acres of forest that is now recognized as the last extensive and contiguous lowland broadleaf forest in Belize.
                         </p>
                         <p>
-                            In August 2021, the Belize Maya Forest Trust (BMFT) was recognized as a Non-Governmental Organization (NGO) under Belize’s NGO Act. The BMFT serves as a dedicated trustee, steward, and manager tasked with the vital role of implementing protective and sustainable conservation measures within the reserve and its surrounding areas.
+                            In August 2021, the Belize Maya Forest Trust (BMFT) was recognized as a Non-Governmental Organization (NGO) under Belize's NGO Act. The BMFT serves as a dedicated trustee, steward, and manager tasked with the vital role of implementing protective and sustainable conservation measures within the reserve and its surrounding areas.
                         </p>
                         <p>
-                            Furthermore, in September 2024, an additional 5,500 acres of adjacent forest known as Sierra de Agua were acquired from a private owner. Today, the BMF now encompasses a total of 241,000 acres, ten (10) percent of Belize’s total land area, for all Belizeans.
+                            Furthermore, in September 2024, an additional 5,500 acres of adjacent forest known as Sierra de Agua were acquired from a private owner. Today, the BMF now encompasses a total of 241,000 acres, ten (10) percent of Belize's total land area, for all Belizeans.
                         </p>
                     </div>
                     <div className={styles.infoImage}>
@@ -92,22 +94,21 @@ const WhoWeAre = () => {
                 </div>
             </section>
 
-            <section id="mission" className={styles.missionVisionSection}>
-                <div className={styles.visionPanel}>
-                    <h2>Our Mission</h2>
-                    <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+            <section id="mission" className={styles.quoteSection}>
+                <div className={styles.quoteItem}>
+                    <div className={styles.quoteTag}>Our Mission</div>
+                    <p className={styles.quoteText}>"To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans."</p>
+                    <div className={styles.quoteBar}></div>
                 </div>
-            </section>
-            <section className={styles.missionVisionSection}>
-                <div className={styles.visionPanel}>
-                    <h2>Our Vision</h2>
-                    <p>To be a global benchmark for effective and lasting conservation.</p>
+                <div className={styles.quoteItem}>
+                    <div className={styles.quoteTag}>Our Vision</div>
+                    <p className={styles.quoteText}>"To be a global benchmark for effective and lasting conservation."</p>
+                    <div className={styles.quoteBar}></div>
                 </div>
-            </section>
-            <section className={styles.missionVisionSection}>
-                <div className={styles.visionPanel}>
-                    <h2>Our Values</h2>
-                    <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+                <div className={styles.quoteItem}>
+                    <div className={styles.quoteTag}>Our Values</div>
+                    <p className={styles.quoteText}>"Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship."</p>
+                    <div className={styles.quoteBar}></div>
                 </div>
             </section>
 
@@ -116,32 +117,6 @@ const WhoWeAre = () => {
                 <div className={styles.titleoverlay2}>
                     <h1>Meet the BMFT Team</h1>
                     <a href="/ourpeople" className={styles.seeMoreButton}>See More</a>
-                </div>
-            </section>
-
-            <section className={styles.importanceSection}>
-                <h2>Ecosystem Services and Cultural Heritage</h2>
-                <div className={styles.panelsContainer}>
-                    <Panel 
-                        image={Wbird} 
-                        title="Biodiversity" 
-                        description="The Belize Maya Forest is home to a remarkable diversity of wildlife, including the majestic jaguar, tapir, 19 species of bats, and over 100 species of birds, all of which contribute to global biodiversity and the health of vital ecosystems."
-                    />
-                    <Panel 
-                        image={pools} 
-                        title="Fresh Watersheds" 
-                        description="The forest plays a vital role in watershed management, influencing water quality and availability for surrounding communities. Efforts focus on protecting and restoring the Cara Blanca Pools, promoting solutions for solid waste management, and reducing the population of armoured catfish."
-                    />
-                    <Panel 
-                        image={WWAtop} 
-                        title="Climate Regulation" 
-                        description="Protecting the BMF helps regulate the climate by storing large amounts of carbon, reducing greenhouse gas concentrations in the atmosphere. Its extensive forest cover moderates local temperatures and supports rainfall patterns. By conserving this ecosystem, we strengthen natural defenses against climate change while supporting regional and global climate stability."
-                    />
-                    <Panel 
-                        image={archvisit} 
-                        title="Cultural Heritage" 
-                        description="The BMF is rich in cultural heritage, shaped by ancient Maya civilizations, generations of chicleros, and a long history of logging, all of which have left a lasting legacy of Belizean history and cultural heritage."
-                    />
                 </div>
             </section>
         </div>

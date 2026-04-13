@@ -48,24 +48,27 @@ const Nav = ({ isVisible, currentPage }) => {
                             <div className={styles.column}>
                                 <a href="/protbio">Protecting Biodiversity</a>
                                 <a href="/stewards2">Building Stewardship</a>
-                                <a href="#">Publications</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li className={`${styles.navItem} ${styles.dropdown}`}>
+                    <a href='/News' className={`${styles.navLink} ${currentPage === 'news' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
+                        News
+                    </a>
+                    <div className={styles.dropdownContent}>
+                        <div className={styles.row}>
+                            <div className={styles.column}>
+                                <a href="/News">Latest News</a>
+                                <a href="/News?tab=annual-report">Annual Report</a>
+                                <a href="/News?tab=publications">Publications</a>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li className={`${styles.navItem}`}>
-                    <a href='/News' className={`${styles.navLink} ${currentPage === 'news' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                        News
-                    </a>
-                </li>
-                <li className={`${styles.navItem}`}>
                     <a href='/Getinvolved' className={`${styles.navLink} ${currentPage === 'getinvolved' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
                         Get Involved
-                    </a>
-                </li>
-                <li className={`${styles.navItem} ${styles.donationItem}`}>
-                    <a href='/Inprog' className={`${styles.donationButton} ${isScrolled ? styles.scrolled : ''}`}>
-                        Donate
                     </a>
                 </li>
             </ul>

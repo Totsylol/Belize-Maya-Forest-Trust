@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; 
-import { useNavigate } from 'react-router-dom'
-import styles from '../styles/Newsfeed.module.css'; 
+import axios from 'axios';
+import { useNavigate, useLocation } from 'react-router-dom'
+import styles from '../styles/Newsfeed.module.css';
 import Ntop from '../assets/Ntop.jpg';
 
 function Newsfeed() {
   const [newsData, setNewsData] = useState([]);
   const [annualReportData, setAnnualReportData] = useState([]);
+  const [publicationsData, setPublicationsData] = useState([]);
   const [selectedNews, setSelectedNews] = useState(null);
-  const [activeTab, setActiveTab] = useState('news');
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const tabParam = params.get('tab');
+  const initialTab = tabParam === 'annual-report' ? 'annual report' : tabParam === 'publications' ? 'publication' : 'news';
+  const [activeTab, setActiveTab] = useState(initialTab);
   const nav = useNavigate();
 
 
@@ -16,8 +21,8 @@ function Newsfeed() {
     const fetchNewsData = async () => {
       try {
         const response = await axios.get(`/api/news?tag=news`);
-        console.log('Fetched news data:', response.data);  
-        setNewsData(response.data); 
+        console.log('Fetched news data:', response.data);
+        setNewsData(response.data);
       } catch (error) {
         console.error('Error fetching news data:', error);
       }
@@ -27,15 +32,26 @@ function Newsfeed() {
       try {
         const response = await axios.get(`/api/news?tag=annual report`);
         console.log('Fetched annual report data:', response.data);
-        setAnnualReportData(response.data); 
+        setAnnualReportData(response.data);
       } catch (error) {
         console.error('Error fetching annual report data:', error);
       }
     };
 
-    // Fetch both tabs' content
+    const fetchPublicationsData = async () => {
+      try {
+        const response = await axios.get(`/api/news?tag=publication`);
+        console.log('Fetched publications data:', response.data);
+        setPublicationsData(response.data);
+      } catch (error) {
+        console.error('Error fetching publications data:', error);
+      }
+    };
+
+    // Fetch all tabs' content
     fetchNewsData();
     fetchAnnualReportData();
+    fetchPublicationsData();
   }, []);
 
   const history = (title) => {
@@ -73,6 +89,12 @@ function Newsfeed() {
             onClick={() => setActiveTab('annual report')}
           >
             Annual Report
+          </button>
+          <button
+            className={`${styles.tablinks} ${activeTab === 'publication' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('publication')}
+          >
+            Publications
           </button>
         </div>
 
@@ -150,15 +172,57 @@ function Newsfeed() {
                     {new Date(report.uploadDate).toLocaleDateString()}
                   </p>
                   <p className={styles.newsDescription}>{report.description}</p>
-                  
+
                   <button className={styles.readMore} onClick={() => history(report.title)}>
                       Read More
                   </button>
-                  
+
                 </div>
               ))
             ) : (
               <p>No annual reports available.</p>
+            )}
+          </div>
+
+          <div
+            className={styles.tabcontent}
+            style={{ visibility: activeTab === 'publication' ? 'visible' : 'hidden', position: activeTab === 'publication' ? 'relative' : 'absolute' }}
+          >
+            {publicationsData.length > 0 ? (
+              publicationsData.map((pub) => (
+                <div key={pub._id} className={styles.newsItem}>
+                  <img
+                    src={`data:${pub.type};base64,${btoa(
+                      new Uint8Array(pub.content.data).reduce(
+                        (data, byte) => data + String.fromCharCode(byte),
+                        ''
+                      )
+                    )}`}
+                    alt={pub.title}
+                    className={styles.newsImage}
+                  />
+                  <a
+                    href="#"
+                    className={styles.newsTitle}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleOpenPopup(pub);
+                    }}
+                  >
+                    {pub.title}
+                  </a>
+                  <p className={styles.newsDate}>
+                    {new Date(pub.uploadDate).toLocaleDateString()}
+                  </p>
+                  <p className={styles.newsDescription}>{pub.description}</p>
+
+                  <button className={styles.readMore} onClick={() => history(pub.title)}>
+                    Read More
+                  </button>
+                </div>
+              ))
+            ) : (
+              <p>No publications available.</p>
             )}
           </div>
         </div>

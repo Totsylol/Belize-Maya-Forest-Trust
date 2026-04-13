@@ -58,7 +58,7 @@ const researchProjects = [
     id: 7,
     category: "Archaeology Studies",
     title: "Valley of Peace Archaeology (VOPA) Project",
-    lead: "Dr. Lisa Lucero | University of Illinois at Urbana-Champaign",
+    lead: "Dr. Lisa Lucero | University of Illinois",
     mainImage: OTteam2,
     description: "Dr. Lisa Lucero embarked on an extensive study of the Maya Civilization in the Cayo District beginning in 1997. This archaeological study highlights the significant role of the landscape and the hidden cultural heritage associated with the BMF. There remains a wealth of information yet to be discovered. Although the project is currently on hold, interested parties can access the project reports through the provided link.",
   },
@@ -82,15 +82,14 @@ const researchProjects = [
 
 const categories = [...new Set(researchProjects.map(p => p.category))];
 
-const ResearchCard = ({ project, onClick }) => (
-  <div className={styles.researchCard} onClick={() => onClick(project)}>
-    <img src={project.mainImage} alt={project.title} className={styles.cardImage} />
-    <div className={styles.cardContent}>
-      <h3 className={styles.cardTitle}>{project.title}</h3>
-      <p className={styles.cardLead}>{project.lead}</p>
+const ResearchBubble = ({ project, onClick }) => (
+  <div className={styles.bubble} onClick={() => onClick(project)}>
+    <div className={styles.bubbleImage}>
+      <img src={project.mainImage} alt={project.title} />
     </div>
-    <div className={styles.cardOverlay}>
-      <span>Read More</span>
+    <div className={styles.bubbleText}>
+      <h2 className={styles.bubbleName}>{project.title}</h2>
+      <h3 className={styles.bubblePosition}>{project.lead}</h3>
     </div>
   </div>
 );
@@ -112,11 +111,11 @@ const ScientificResearch = () => {
       {categories.map(category => (
         <section key={category} className={styles.categorySection}>
           <h2 className={styles.categoryTitle}>{category}</h2>
-          <div className={styles.projectsGrid}>
+          <div className={styles.bubbleGrid}>
             {researchProjects
               .filter(p => p.category === category)
               .map(project => (
-                <ResearchCard
+                <ResearchBubble
                   key={project.id}
                   project={project}
                   onClick={setSelectedProject}
@@ -142,6 +141,24 @@ const ScientificResearch = () => {
           </div>
         </div>
       )}
+
+      <div style={{textAlign: 'center', padding: '2rem 0 3rem'}}>
+        <a
+          href="/ourpeople"
+          style={{
+            display: 'inline-block',
+            backgroundColor: '#52c742',
+            color: '#fff',
+            padding: '0.6rem 1.8rem',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontSize: '1rem',
+            fontWeight: '600',
+          }}
+        >
+          ← Back to Our People
+        </a>
+      </div>
     </div>
   );
 };

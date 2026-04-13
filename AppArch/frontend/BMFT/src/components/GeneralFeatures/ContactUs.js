@@ -40,7 +40,7 @@ const ContactUs = () => {
           </div>
           <div className={styles.infoCard}>
             <h3>Email</h3>
-            <p><a href="mailto:info@bmft.org.bz" className={styles.emailLink}>info@bmft.org.bz</a></p>
+            <p><a href="mailto:email@placeholder.com" className={styles.emailLink}>email@placeholder.com</a></p>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ const ContactUs = () => {
             The BMFT is committed to responsible and transparent operations. If you have a concern, complaint, or grievance related to BMFT's activities, programs, or personnel, we encourage you to reach out through our formal grievance process.
           </p>
           <p style={{marginTop: '0.75rem'}}>
-            Grievances can be submitted in writing to: <a href="mailto:info@bmft.org.bz" className={styles.emailLink}>info@bmft.org.bz</a>
+            Grievances can be submitted in writing to: <a href="mailto:email@placeholder.com" className={styles.emailLink}>email@placeholder.com</a>
           </p>
           <p style={{marginTop: '0.75rem'}}>
             All grievances are treated confidentially and will be reviewed and addressed in a timely manner. BMFT prohibits any retaliation against individuals who submit concerns in good faith.
@@ -70,13 +70,13 @@ const ContactUs = () => {
             For inquiries related to the Community Stewards Program, including the Sustainability Support Microgrants and Green Futures Scholarships, please contact our Community Outreach Coordinator:
           </p>
           <p style={{marginTop: '0.75rem'}}>
-            <a href="mailto:communitycoordinator@bmft.org.bz" className={styles.emailLink}>communitycoordinator@bmft.org.bz</a>
+            <a href="mailto:email@placeholder.com" className={styles.emailLink}>email@placeholder.com</a>
           </p>
         </AccordionItem>
 
         <AccordionItem title="Volunteer & Partnership Opportunities">
           <p>
-            Interested in volunteering, interning, or partnering with BMFT? We welcome individuals and organizations who share our commitment to conservation. Reach out to us at <a href="mailto:info@bmft.org.bz" className={styles.emailLink}>info@bmft.org.bz</a> or visit our <a href="/Getinvolved" className={styles.emailLink}>Get Involved</a> page to learn more.
+            Interested in volunteering, interning, or partnering with BMFT? We welcome individuals and organizations who share our commitment to conservation. Reach out to us at <a href="mailto:email@placeholder.com" className={styles.emailLink}>email@placeholder.com</a> or visit our <a href="/Getinvolved" className={styles.emailLink}>Get Involved</a> page to learn more.
           </p>
         </AccordionItem>
       </section>
@@ -85,7 +85,7 @@ const ContactUs = () => {
       <section id="feedback" className={styles.formSection}>
         <h2 className={styles.formTitle}>Send Us a Message</h2>
         <p className={styles.formSubtitle}>
-          Use this form to get in touch or share your feedback. Messages are directed to <strong>info@bmft.org.bz</strong> and <strong>communitycoordinator@bmft.org.bz</strong>.
+          Use this form to get in touch or share your feedback.
         </p>
         {submitted ? (
           <p className={styles.successMessage}>Thanks for reaching out! We'll get back to you soon.</p>

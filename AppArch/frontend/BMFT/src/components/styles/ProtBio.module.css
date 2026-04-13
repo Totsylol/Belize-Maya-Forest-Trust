@@ -74,13 +74,276 @@
 }
 
 .banner3 {
-    background-color: #52c742 ; 
-    color: #fff;
-    padding: 1.5rem;
-    font-size: 3.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    text-align: center;
-    margin-top:-20px;
-  
+  background-color: #52c742;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+/* Ecosystem Services Section */
+.ecosystemSection {
+  padding: 4rem 2rem;
+  background: #f4fdf3;
+  margin-top: 2rem;
+}
+
+.ecosystemHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ecosystemHeader h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a3d1f;
+  margin-bottom: 0.5rem;
+}
+
+.ecosystemHeader p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ecosystemCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 24px;
+  text-align: center;
+  border-bottom: 3px solid #52c742;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.ecosystemIcon {
+  font-size: 2.5rem;
+  margin-bottom: 14px;
+}
+
+.ecosystemCard h3 {
+  font-size: 1.1rem;
+  color: #1a3d1f;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ecosystemCard p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .ecosystemGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 500px) {
+  .ecosystemGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flip-card Panel section */
+.importanceSection {
+    padding: 60px 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.importanceSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.importanceSection h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 60%;
+    background-color: #52c742;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.panelsContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.panel {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panelFront, .panelBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.panelFront {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.panelImageWrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.panelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panelTitle {
+    width: 100%;
+    height: 20%;
+    background-color: #52c742;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.panelTitle h3 {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.panelBack {
+    background-color: #f0f0f0;
+    color: #555;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.panel.flipped .panelFront {
+    transform: rotateY(180deg);
+}
+
+.panel.flipped .panelBack {
+    transform: rotateY(0);
+}
+
+.panelFront::after {
+    content: '+';
+    position: absolute;
+    bottom: 310px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.panelFront:hover::after {
+    opacity: 1;
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.panel.flipped .panelFront::after {
+    opacity: 0;
+}
+
+/* Modal styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.modalContent {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.modalImage {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    display: block;
+}
+
+.modalClose {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+}
+
+.modalClose:hover { color: #e00; }

@@ -1,7 +1,7 @@
 .dropdown {
-  flex: 1 1 calc(25% - 20px);
+  flex: 1 1 calc(30% - 20px);
   box-sizing: border-box;
-  max-width: calc(25% - 20px);
+  max-width: calc(30% - 20px);
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -119,17 +119,29 @@
 
 
 .aboutPanel {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  margin-top: -10px;
-  width: 100%;
-  border-top: 2px solid #ccc;
+  display: flex;
+  margin: 0 120px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: #fff;
+}
+
+.aboutPanelAccent {
+  width: 8px;
+  background: #52c742;
+  flex-shrink: 0;
+}
+
+.aboutPanelBody {
+  padding: 28px 36px;
 }
 
 .aboutText {
-  font-size: 20px;
-  color: #333;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .dropdownTitle {
@@ -144,6 +156,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-left: 20px;
+  justify-content: center;
 }
 
 @media (max-width: 774px) {

@@ -27,7 +27,13 @@ const panelsData = [
     title: 'Staff/Volunteer Opportunities',
     description: 'Explore open volunteer and vacancy opportunities and become part of our team. Review the guidelines and submit your application.',
     imageUrl: IGvol,
-    link: rangerad,  
+    link: rangerad,
+  },
+  {
+    title: 'Researchers & Scientists',
+    description: 'Collaborate with us on scientific research and monitoring projects within the Belize Maya Forest. Learn about research opportunities and how to apply.',
+    imageUrl: IGBird3,
+    link: '/scientificresearch',
   },
   /*
   {

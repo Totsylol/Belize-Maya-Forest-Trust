@@ -70,7 +70,7 @@ const Patrols = () => {
                         <div className={styles.textContainer}>
                             <h2 className={styles.introText}>Capacity Building</h2>
                             <p>
-                                Rangers receive comprehensive training in wilderness survival, first aid, and navigation, while also gaining hands-on experience with innovative technologies used for biodiversity monitoring and conservation. Beyond skills development, rangers have the incredible opportunity to witness Belize’s rich wildlife up close, spotting e jaguars, tapirs, and many bird species, while immersing themselves in the breathtaking landscapes of the Belize Maya Forest.
+                                Rangers receive comprehensive training in wilderness survival, first aid, and navigation, while also gaining hands-on experience with innovative technologies used for biodiversity monitoring and conservation. Beyond skills development, rangers have the incredible opportunity to witness Belize's rich wildlife up close, spotting e jaguars, tapirs, and many bird species, while immersing themselves in the breathtaking landscapes of the Belize Maya Forest.
                             </p>
                         </div>
                     </div>
