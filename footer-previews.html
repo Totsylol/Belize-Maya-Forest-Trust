@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Previews</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #ccc; }
+
+    .label {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #333;
+      background: #ddd;
+      border-bottom: 3px solid #aaa;
+      letter-spacing: 1px;
+    }
+    a { text-decoration: none; }
+
+    /* ══════════════════════════════════════
+       OPTION A — Forest Dark
+    ══════════════════════════════════════ */
+    .footerA {
+      background: #0d2b0d;
+      color: #fff;
+      padding: 4rem 6rem 0;
+    }
+    .footerA .top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footerA .brand img {
+      height: 100px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .footerA .brand p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+    .footerA .col h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #52c742;
+      margin-bottom: 1.2rem;
+    }
+    .footerA .col a {
+      display: block;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+      transition: color 0.2s;
+    }
+    .footerA .col a:hover { color: #fff; }
+    .footerA .newsletter h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #52c742;
+      margin-bottom: 1.2rem;
+    }
+    .footerA .newsletter p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .footerA .input-row {
+      display: flex;
+      gap: 0;
+    }
+    .footerA .input-row input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .footerA .input-row input::placeholder { color: rgba(255,255,255,0.4); }
+    .footerA .input-row button {
+      padding: 0.7rem 1.2rem;
+      background: #52c742;
+      color: #fff;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .footerA .socials {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+    .footerA .socials a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .footerA .socials a:hover { background: #52c742; border-color: #52c742; color: #fff; }
+    .footerA .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+    .footerA .bottom small { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+
+    /* ══════════════════════════════════════
+       OPTION B — Split Wave
+    ══════════════════════════════════════ */
+    .footerB {
+      background: #fff;
+      color: #333;
+    }
+    .footerB .wave-top {
+      display: block;
+      width: 100%;
+      line-height: 0;
+    }
+    .footerB .wave-top svg { display: block; width: 100%; }
+    .footerB .inner {
+      background: #1a3a1a;
+      padding: 3rem 6rem;
+    }
+    .footerB .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .footerB .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footerB .brand img {
+      height: 90px;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
+    .footerB .brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+    .footerB .col h4 {
+      color: #52c742;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+    .footerB .col a {
+      display: block;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+      margin-bottom: 0.65rem;
+    }
+    .footerB .col a:hover { color: #fff; }
+    .footerB .subscribe-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      gap: 2rem;
+    }
+    .footerB .subscribe-bar p {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .footerB .subscribe-bar span {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+    }
+    .footerB .sub-form {
+      display: flex;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .footerB .sub-form input {
+      padding: 0.65rem 1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 0.88rem;
+      width: 200px;
+      outline: none;
+    }
+    .footerB .sub-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .footerB .sub-form button {
+      padding: 0.65rem 1.2rem;
+      background: #52c742;
+      color: #fff;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .footerB .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footerB .bottom small { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+    .footerB .soc-icons { display: flex; gap: 1rem; }
+    .footerB .soc-icons a {
+      color: rgba(255,255,255,0.5);
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    .footerB .soc-icons a:hover { color: #52c742; }
+
+    /* ══════════════════════════════════════
+       OPTION C — Centered Minimal
+    ══════════════════════════════════════ */
+    .footerC {
+      background: #f4f9f4;
+      padding: 4rem 6rem 0;
+      border-top: 4px solid #52c742;
+    }
+    .footerC .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+      padding-bottom: 3rem;
+    }
+    .footerC .top img {
+      height: 110px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .footerC .tagline {
+      font-size: 1rem;
+      color: #555;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+    .footerC .links {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footerC .links a {
+      color: #1a3a1a;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footerC .links a:hover { color: #52c742; }
+    .footerC .soc-row {
+      display: flex;
+      gap: 1rem;
+    }
+    .footerC .soc-row a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #1a3a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .footerC .soc-row a:hover { background: #52c742; }
+    .footerC .sub-row {
+      display: flex;
+      gap: 0;
+    }
+    .footerC .sub-row input {
+      padding: 0.7rem 1.2rem;
+      border: 2px solid #1a3a1a;
+      border-right: none;
+      border-radius: 50px 0 0 50px;
+      font-size: 0.9rem;
+      outline: none;
+      width: 220px;
+      background: #fff;
+    }
+    .footerC .sub-row button {
+      padding: 0.7rem 1.5rem;
+      background: #1a3a1a;
+      color: #fff;
+      border: none;
+      border-radius: 0 50px 50px 0;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .footerC .sub-row button:hover { background: #52c742; }
+    .footerC .bottom {
+      text-align: center;
+      padding: 1.2rem;
+      border-top: 1px solid #ddd;
+      margin-top: 1rem;
+    }
+    .footerC .bottom small { color: #999; font-size: 0.8rem; }
+
+    /* ══════════════════════════════════════
+       OPTION D — Bold Two-Tone
+    ══════════════════════════════════════ */
+    .footerD { color: #fff; }
+    .footerD .top-bar {
+      background: #52c742;
+      padding: 2rem 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footerD .top-bar .cta-text h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .footerD .top-bar .cta-text p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 0.2rem;
+    }
+    .footerD .top-bar .sub-form {
+      display: flex;
+      gap: 0;
+    }
+    .footerD .top-bar .sub-form input {
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      font-size: 0.9rem;
+      width: 220px;
+      outline: none;
+    }
+    .footerD .top-bar .sub-form button {
+      padding: 0.7rem 1.5rem;
+      background: #1a3a1a;
+      color: #fff;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .footerD .main {
+      background: #1a3a1a;
+      padding: 3rem 6rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    .footerD .brand img {
+      height: 95px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .footerD .brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .footerD .soc-icons { display: flex; gap: 0.7rem; }
+    .footerD .soc-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .footerD .soc-icons a:hover { background: #52c742; color: #fff; }
+    .footerD .col h4 {
+      color: #52c742;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.2rem;
+    }
+    .footerD .col a {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.88rem;
+      margin-bottom: 0.65rem;
+    }
+    .footerD .col a:hover { color: #fff; }
+    .footerD .bottom {
+      background: #0d2b0d;
+      padding: 1rem 6rem;
+      display: flex;
+      justify-content: center;
+    }
+    .footerD .bottom small { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <!-- OPTION A -->
+  <div class="label">Option A — Forest Dark</div>
+  <footer class="footerA">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" alt="BMFT Logo" />
+        <p>Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col">
+        <h4>Explore</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Protecting Biodiversity</a>
+        <a href="#">Community Stewardship</a>
+        <a href="#">Our Team</a>
+        <a href="#">News</a>
+      </div>
+      <div class="col">
+        <h4>Connect</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Volunteer</a>
+      </div>
+      <div class="newsletter">
+        <h4>Stay in Touch</h4>
+        <p>Subscribe to our e-newsletter for conservation updates.</p>
+        <div class="input-row">
+          <input type="email" placeholder="Your email" />
+          <button>Subscribe</button>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <small>©Belize Maya Forest Trust 2020</small>
+    </div>
+  </footer>
+
+  <!-- OPTION B -->
+  <div class="label">Option B — Split Wave</div>
+  <footer class="footerB">
+    <div class="wave-top">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a3a1a"/>
+      </svg>
+    </div>
+    <div class="inner">
+      <div class="top">
+        <div class="brand">
+          <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" alt="BMFT Logo" />
+          <p>Protecting Belize's Great Forest for all Belizeans.</p>
+        </div>
+        <div class="col">
+          <h4>Explore</h4>
+          <a href="#">Our Story</a>
+          <a href="#">Protecting Biodiversity</a>
+          <a href="#">Community Stewardship</a>
+          <a href="#">Our Team</a>
+          <a href="#">News</a>
+        </div>
+        <div class="col">
+          <h4>Connect</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">Volunteer</a>
+        </div>
+        <div class="col">
+          <h4>Follow Us</h4>
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+          <a href="#"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+      </div>
+      <div class="subscribe-bar">
+        <div>
+          <p>Subscribe to Our E-Newsletter</p>
+          <span>Get conservation updates delivered to your inbox.</span>
+        </div>
+        <div class="sub-form">
+          <input type="email" placeholder="Your email address" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+      <div class="bottom">
+        <small>©Belize Maya Forest Trust 2020</small>
+        <div class="soc-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OPTION C -->
+  <div class="label">Option C — Centered Minimal</div>
+  <footer class="footerC">
+    <div class="top">
+      <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" alt="BMFT Logo" />
+      <p class="tagline">Protecting 241,000 acres of Belize's Great Forest — safeguarding wildlife, watersheds, and cultural heritage for all Belizeans.</p>
+      <div class="links">
+        <a href="#">Our Story</a>
+        <a href="#">What We Do</a>
+        <a href="#">Our Team</a>
+        <a href="#">News</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="soc-row">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="sub-row">
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <small>©Belize Maya Forest Trust 2020</small>
+    </div>
+  </footer>
+
+  <!-- OPTION D -->
+  <div class="label">Option D — Bold Two-Tone</div>
+  <footer class="footerD">
+    <div class="top-bar">
+      <div class="cta-text">
+        <h3>Stay Connected with BMFT</h3>
+        <p>Get the latest conservation news delivered to your inbox.</p>
+      </div>
+      <div class="sub-form">
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" alt="BMFT Logo" />
+        <p>Protecting Belize's Great Forest for all Belizeans.</p>
+        <div class="soc-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Explore</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Protecting Biodiversity</a>
+        <a href="#">Community Stewardship</a>
+        <a href="#">Our Team</a>
+        <a href="#">News</a>
+      </div>
+      <div class="col">
+        <h4>Connect</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Volunteer</a>
+      </div>
+      <div class="col">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="#"><i class="fas fa-envelope"></i> Email Us</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <small>©Belize Maya Forest Trust 2020</small>
+    </div>
+  </footer>
+
+</body>
+</html>

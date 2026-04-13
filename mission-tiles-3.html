@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mission — Vertical Pronounced Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #eef2f5; padding: 40px 20px; }
+  h1 { text-align: center; color: #2d3436; margin-bottom: 6px; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+  .subtitle { text-align: center; color: #636e72; margin-bottom: 50px; font-size: 0.85rem; }
+  .preview { max-width: 900px; margin: 0 auto 60px; }
+  .preview > .tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; background: #0099c4; color: #fff; padding: 5px 14px; border-radius: 4px; display: inline-block; margin-bottom: 16px; }
+
+  /* ── A: Full-width stacked with large number ── */
+  .a-stack { display: flex; flex-direction: column; gap: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+  .a-row { display: flex; align-items: stretch; background: #fff; border-bottom: 1px solid #f0f0f0; }
+  .a-row:last-child { border-bottom: none; }
+  .a-num { min-width: 100px; background: #52c742; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 900; color: rgba(255,255,255,0.9); }
+  .a-row:nth-child(2) .a-num { background: #0099c4; }
+  .a-row:nth-child(3) .a-num { background: #0d2b0d; }
+  .a-body { padding: 2rem 2.5rem; }
+  .a-body h3 { font-size: 1.3rem; font-weight: 800; color: #2d3436; margin-bottom: 0.6rem; }
+  .a-body p { color: #636e72; font-size: 0.95rem; line-height: 1.75; }
+
+  /* ── B: Full-width coloured rows ── */
+  .b-stack { display: flex; flex-direction: column; gap: 16px; }
+  .b-row { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+  .b-header { padding: 1.2rem 2.5rem; display: flex; align-items: center; gap: 1rem; }
+  .b-row:nth-child(1) .b-header { background: #52c742; }
+  .b-row:nth-child(2) .b-header { background: #0099c4; }
+  .b-row:nth-child(3) .b-header { background: #0d2b0d; }
+  .b-header h3 { color: #fff; font-size: 1.2rem; font-weight: 800; letter-spacing: 0.5px; }
+  .b-body { background: #fff; padding: 1.5rem 2.5rem; }
+  .b-body p { color: #555; font-size: 0.95rem; line-height: 1.75; }
+
+  /* ── C: Giant bold text reveal ── */
+  .c-stack { display: flex; flex-direction: column; gap: 0; background: #fff; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); overflow: hidden; }
+  .c-item { padding: 2.5rem 3rem; border-bottom: 1px solid #f0f0f0; position: relative; }
+  .c-item:last-child { border-bottom: none; }
+  .c-bg-word { position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); font-size: 5rem; font-weight: 900; color: rgba(82,199,66,0.07); line-height: 1; pointer-events: none; }
+  .c-item:nth-child(2) .c-bg-word { color: rgba(0,153,196,0.07); }
+  .c-item:nth-child(3) .c-bg-word { color: rgba(13,43,13,0.06); }
+  .c-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; color: #52c742; margin-bottom: 0.6rem; }
+  .c-item:nth-child(2) .c-label { color: #0099c4; }
+  .c-item:nth-child(3) .c-label { color: #0d2b0d; }
+  .c-item h3 { font-size: 1.6rem; font-weight: 800; color: #2d3436; margin-bottom: 0.75rem; }
+  .c-item p { color: #636e72; font-size: 0.95rem; line-height: 1.75; max-width: 70%; }
+
+  /* ── D: Dark full-width statement banner ── */
+  .d-stack { display: flex; flex-direction: column; gap: 12px; }
+  .d-card { background: #0d2b0d; border-radius: 12px; padding: 2.5rem 3rem; display: flex; gap: 2.5rem; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+  .d-card:nth-child(2) { background: #003d52; }
+  .d-card:nth-child(3) { background: #1a3a1a; }
+  .d-side { min-width: 140px; }
+  .d-side h3 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; color: #52c742; font-weight: 800; margin-bottom: 6px; }
+  .d-card:nth-child(2) .d-side h3 { color: #0099c4; }
+  .d-divider { width: 1px; min-height: 60px; background: rgba(255,255,255,0.15); }
+  .d-card p { color: rgba(255,255,255,0.88); font-size: 1.05rem; line-height: 1.75; }
+
+  /* ── E: Centred hero statement blocks ── */
+  .e-stack { display: flex; flex-direction: column; gap: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+  .e-block { padding: 3.5rem 4rem; text-align: center; position: relative; }
+  .e-block:nth-child(1) { background: #fff; }
+  .e-block:nth-child(2) { background: #f7fffe; border-top: 1px solid #e8f8f8; border-bottom: 1px solid #e8f8f8; }
+  .e-block:nth-child(3) { background: #fff; }
+  .e-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .e-block h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; margin-bottom: 1rem; }
+  .e-block:nth-child(1) h3 { color: #52c742; }
+  .e-block:nth-child(2) h3 { color: #0099c4; }
+  .e-block:nth-child(3) h3 { color: #0d2b0d; }
+  .e-block p { color: #555; font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin: 0 auto; font-style: italic; }
+
+</style>
+</head>
+<body>
+<h1>Mission / Vision / Values — Vertical & Pronounced</h1>
+<p class="subtitle">Designed to fill the screen and draw attention when scrolled to</p>
+
+<!-- A -->
+<div class="preview">
+  <div class="tag">A — Stacked rows with colour number block</div>
+  <div class="a-stack">
+    <div class="a-row">
+      <div class="a-num">01</div>
+      <div class="a-body"><h3>Our Mission</h3><p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p></div>
+    </div>
+    <div class="a-row">
+      <div class="a-num">02</div>
+      <div class="a-body"><h3>Our Vision</h3><p>To be a global benchmark for effective and lasting conservation.</p></div>
+    </div>
+    <div class="a-row">
+      <div class="a-num">03</div>
+      <div class="a-body"><h3>Our Values</h3><p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- B -->
+<div class="preview">
+  <div class="tag">B — Coloured header bar + white body</div>
+  <div class="b-stack">
+    <div class="b-row">
+      <div class="b-header"><h3>Our Mission</h3></div>
+      <div class="b-body"><p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p></div>
+    </div>
+    <div class="b-row">
+      <div class="b-header"><h3>Our Vision</h3></div>
+      <div class="b-body"><p>To be a global benchmark for effective and lasting conservation.</p></div>
+    </div>
+    <div class="b-row">
+      <div class="b-header"><h3>Our Values</h3></div>
+      <div class="b-body"><p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- C -->
+<div class="preview">
+  <div class="tag">C — Clean rows with ghost watermark word</div>
+  <div class="c-stack">
+    <div class="c-item">
+      <div class="c-label">Mission</div>
+      <h3>Protecting for All Belizeans</h3>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+      <div class="c-bg-word">Mission</div>
+    </div>
+    <div class="c-item">
+      <div class="c-label">Vision</div>
+      <h3>A Global Benchmark</h3>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+      <div class="c-bg-word">Vision</div>
+    </div>
+    <div class="c-item">
+      <div class="c-label">Values</div>
+      <h3>How We Work Together</h3>
+      <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+      <div class="c-bg-word">Values</div>
+    </div>
+  </div>
+</div>
+
+<!-- D -->
+<div class="preview">
+  <div class="tag">D — Dark full-width statement rows</div>
+  <div class="d-stack">
+    <div class="d-card">
+      <div class="d-side"><h3>Our Mission</h3></div>
+      <div class="d-divider"></div>
+      <p>To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans.</p>
+    </div>
+    <div class="d-card">
+      <div class="d-side"><h3>Our Vision</h3></div>
+      <div class="d-divider"></div>
+      <p>To be a global benchmark for effective and lasting conservation.</p>
+    </div>
+    <div class="d-card">
+      <div class="d-side"><h3>Our Values</h3></div>
+      <div class="d-divider"></div>
+      <p>Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship.</p>
+    </div>
+  </div>
+</div>
+
+<!-- E -->
+<div class="preview">
+  <div class="tag">E — Centred hero statement blocks</div>
+  <div class="e-stack">
+    <div class="e-block">
+      <div class="e-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>"To demonstrate a locally relevant, globally recognized model of healthy, biodiverse forest protected by and for all Belizeans."</p>
+    </div>
+    <div class="e-block">
+      <div class="e-icon">🌿</div>
+      <h3>Our Vision</h3>
+      <p>"To be a global benchmark for effective and lasting conservation."</p>
+    </div>
+    <div class="e-block">
+      <div class="e-icon">🤝</div>
+      <h3>Our Values</h3>
+      <p>"Respect for people, communities, and diversity, transparency and accountability, collaboration, and environmental stewardship."</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

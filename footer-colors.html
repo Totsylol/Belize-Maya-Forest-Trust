@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Color Previews</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #ccc; }
+    a { text-decoration: none; }
+
+    .label {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #333;
+      background: #ddd;
+      border-bottom: 3px solid #aaa;
+      letter-spacing: 1px;
+    }
+
+    /* Shared footer structure */
+    .ft {
+      padding: 3.5rem 6rem 0;
+    }
+    .ft .top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+    }
+    .ft .logo {
+      height: 95px;
+      border-radius: 12px;
+      object-fit: contain;
+      margin-bottom: 0.8rem;
+      display: block;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .ft .brand-text {
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+    .ft .col h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .ft .col a {
+      display: block;
+      font-size: 0.88rem;
+      margin-bottom: 0.65rem;
+      transition: opacity 0.2s;
+    }
+    .ft .col a:hover { opacity: 1 !important; }
+    .ft .nl h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .ft .nl p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 0.9rem;
+    }
+    .ft .input-row { display: flex; }
+    .ft .input-row input {
+      flex: 1;
+      padding: 0.65rem 0.9rem;
+      border-right: none;
+      font-size: 0.88rem;
+      outline: none;
+    }
+    .ft .input-row button {
+      padding: 0.65rem 1.1rem;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      border: none;
+    }
+    .ft .socials {
+      display: flex;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .ft .socials a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .ft .divider {
+      border: none;
+      border-top-width: 1px;
+      border-top-style: solid;
+      margin: 0;
+    }
+    .ft .bottom {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    .ft .bottom small { font-size: 0.78rem; }
+
+    /* ── A: Charcoal ── */
+    .ftA { background: #1c1c1e; }
+    .ftA .brand-text { color: rgba(255,255,255,0.5); }
+    .ftA .col h4 { color: #52c742; }
+    .ftA .col a { color: rgba(255,255,255,0.6); }
+    .ftA .nl h4 { color: #52c742; }
+    .ftA .nl p { color: rgba(255,255,255,0.5); }
+    .ftA .input-row input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+    .ftA .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .ftA .input-row button {
+      background: #52c742; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftA .socials a {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+    }
+    .ftA .socials a:hover { background: #52c742; color: #fff; border-color: #52c742; }
+    .ftA .divider { border-color: rgba(255,255,255,0.08); }
+    .ftA .bottom small { color: rgba(255,255,255,0.3); }
+
+    /* ── B: Navy Blue ── */
+    .ftB { background: #0f2240; }
+    .ftB .brand-text { color: rgba(255,255,255,0.5); }
+    .ftB .col h4 { color: #4da6ff; }
+    .ftB .col a { color: rgba(255,255,255,0.6); }
+    .ftB .nl h4 { color: #4da6ff; }
+    .ftB .nl p { color: rgba(255,255,255,0.5); }
+    .ftB .input-row input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+    .ftB .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .ftB .input-row button {
+      background: #4da6ff; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftB .socials a {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+    }
+    .ftB .socials a:hover { background: #4da6ff; color: #fff; border-color: #4da6ff; }
+    .ftB .divider { border-color: rgba(255,255,255,0.08); }
+    .ftB .bottom small { color: rgba(255,255,255,0.3); }
+
+    /* ── C: Warm Earth ── */
+    .ftC { background: #2c1810; }
+    .ftC .brand-text { color: rgba(255,255,255,0.5); }
+    .ftC .col h4 { color: #e8a450; }
+    .ftC .col a { color: rgba(255,255,255,0.6); }
+    .ftC .nl h4 { color: #e8a450; }
+    .ftC .nl p { color: rgba(255,255,255,0.5); }
+    .ftC .input-row input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+    .ftC .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .ftC .input-row button {
+      background: #e8a450; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftC .socials a {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+    }
+    .ftC .socials a:hover { background: #e8a450; color: #fff; border-color: #e8a450; }
+    .ftC .divider { border-color: rgba(255,255,255,0.08); }
+    .ftC .bottom small { color: rgba(255,255,255,0.3); }
+
+    /* ── D: Slate Teal ── */
+    .ftD { background: #0e2d2d; }
+    .ftD .brand-text { color: rgba(255,255,255,0.5); }
+    .ftD .col h4 { color: #3ecfcf; }
+    .ftD .col a { color: rgba(255,255,255,0.6); }
+    .ftD .nl h4 { color: #3ecfcf; }
+    .ftD .nl p { color: rgba(255,255,255,0.5); }
+    .ftD .input-row input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+    .ftD .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .ftD .input-row button {
+      background: #3ecfcf; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftD .socials a {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+    }
+    .ftD .socials a:hover { background: #3ecfcf; color: #fff; border-color: #3ecfcf; }
+    .ftD .divider { border-color: rgba(255,255,255,0.08); }
+    .ftD .bottom small { color: rgba(255,255,255,0.3); }
+
+    /* ── E: Light / White ── */
+    .ftE { background: #f5f5f5; border-top: 3px solid #52c742; }
+    .ftE .brand-text { color: #666; }
+    .ftE .col h4 { color: #1a3a1a; }
+    .ftE .col a { color: #555; }
+    .ftE .col a:hover { color: #52c742 !important; }
+    .ftE .nl h4 { color: #1a3a1a; }
+    .ftE .nl p { color: #666; }
+    .ftE .input-row input {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+      color: #333;
+    }
+    .ftE .input-row input::placeholder { color: #aaa; }
+    .ftE .input-row button {
+      background: #52c742; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftE .socials a {
+      border: 1px solid #ccc;
+      color: #555;
+      background: #fff;
+    }
+    .ftE .socials a:hover { background: #52c742; color: #fff; border-color: #52c742; }
+    .ftE .divider { border-color: #ddd; }
+    .ftE .bottom small { color: #aaa; }
+
+    /* ── F: Deep Purple ── */
+    .ftF { background: #1a0d2e; }
+    .ftF .brand-text { color: rgba(255,255,255,0.5); }
+    .ftF .col h4 { color: #b57bee; }
+    .ftF .col a { color: rgba(255,255,255,0.6); }
+    .ftF .nl h4 { color: #b57bee; }
+    .ftF .nl p { color: rgba(255,255,255,0.5); }
+    .ftF .input-row input {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+    .ftF .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .ftF .input-row button {
+      background: #b57bee; color: #fff;
+      border-radius: 0 6px 6px 0;
+    }
+    .ftF .socials a {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+    }
+    .ftF .socials a:hover { background: #b57bee; color: #fff; border-color: #b57bee; }
+    .ftF .divider { border-color: rgba(255,255,255,0.08); }
+    .ftF .bottom small { color: rgba(255,255,255,0.3); }
+  </style>
+</head>
+<body>
+
+  <!-- shared footer HTML macro -->
+  <!-- OPTION A -->
+  <div class="label">A — Charcoal (#1c1c1e)</div>
+  <footer class="ft ftA">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+  <!-- OPTION B -->
+  <div class="label">B — Navy Blue (#0f2240)</div>
+  <footer class="ft ftB">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+  <!-- OPTION C -->
+  <div class="label">C — Warm Earth (#2c1810)</div>
+  <footer class="ft ftC">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+  <!-- OPTION D -->
+  <div class="label">D — Slate Teal (#0e2d2d)</div>
+  <footer class="ft ftD">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+  <!-- OPTION E -->
+  <div class="label">E — Light / White (#f5f5f5)</div>
+  <footer class="ft ftE">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+  <!-- OPTION F -->
+  <div class="label">F — Deep Purple (#1a0d2e)</div>
+  <footer class="ft ftF">
+    <div class="top">
+      <div class="brand">
+        <img src="AppArch/frontend/BMFT/src/components/assets/Final BMFT.jpg" class="logo" alt="logo" />
+        <p class="brand-text">Protecting 241,000 acres of Belize's Great Forest for all Belizeans.</p>
+      </div>
+      <div class="col"><h4>Explore</h4><a href="#">Our Story</a><a href="#">Protecting Biodiversity</a><a href="#">Community Stewardship</a><a href="#">Our Team</a><a href="#">News</a></div>
+      <div class="col"><h4>Connect</h4><a href="#">Contact Us</a><a href="#">Volunteer</a></div>
+      <div class="nl"><h4>Stay in Touch</h4><p>Subscribe for conservation updates.</p>
+        <div class="input-row"><input type="email" placeholder="Your email" /><button>Subscribe</button></div>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="bottom"><small>©Belize Maya Forest Trust 2020</small></div>
+  </footer>
+
+</body>
+</html>

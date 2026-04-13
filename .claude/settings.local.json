@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(copy \"C:\\\\Users\\\\jonahp\\\\Documents\\\\Belize-Maya-Forest-Trust-1\\\\accent-art.html\" \"C:\\\\Users\\\\jonahp\\\\Documents\\\\Belize-Maya-Forest-Trust-1\\\\AppArch\\\\frontend\\\\BMFT\\\\public\\\\accent-art.html\")",
+      "Read(//c/Users/jonahp/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/88ec5f7b-974c-446a-823b-372a9abf7e78/3d765a93-37ec-438c-88b5-fe167d78adae/skills/docx/**)",
+      "Bash(pandoc --track-changes=all \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" -o output.md)",
+      "Bash(python \"C:\\\\Users\\\\jonahp\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\88ec5f7b-974c-446a-823b-372a9abf7e78\\\\3d765a93-37ec-438c-88b5-fe167d78adae\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" \"/tmp/bmf_feedback\")",
+      "Bash(python3 \"C:\\\\Users\\\\jonahp\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\88ec5f7b-974c-446a-823b-372a9abf7e78\\\\3d765a93-37ec-438c-88b5-fe167d78adae\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" \"/tmp/bmf_feedback\")",
+      "Read(//c/Users/jonahp/Documents/**)",
+      "Bash(unzip -o \"1st round of BMF Website feedback.docx\" -d /tmp/bmf_feedback)",
+      "Read(//tmp/bmf_feedback/word/**)",
+      "Bash(pandoc \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" -t plain)",
+      "Bash(python scripts/office/unpack.py \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" /tmp/bmf_unpacked/)",
+      "Bash(py --version)",
+      "Bash(where python*)",
+      "Bash(mkdir -p /tmp/bmf_docx)",
+      "Bash(cp \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" /tmp/bmf_docx/feedback.docx)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o feedback.docx -d extracted/)"
+    ]
+  }
+}

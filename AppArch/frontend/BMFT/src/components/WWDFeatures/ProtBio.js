@@ -35,7 +35,7 @@ const Modal = ({ src, alt, onClose }) => {
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
                 <img src={src} alt={alt} className={styles.modalImage} />
-                <button className={styles.modalClose} onClick={onClose}>×</button>
+                <button className={styles.modalClose} onClick={onClose}>&times;</button>
             </div>
         </div>
     );
@@ -47,11 +47,11 @@ const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
             <h2>{title}</h2>
             <p>{children}</p>
         </div>
-        <img 
-            src={imgSrc} 
-            alt={title} 
-            className={styles.topicImage} 
-            onClick={() => onImageClick(imgSrc, title)} 
+        <img
+            src={imgSrc}
+            alt={title}
+            className={styles.topicImage}
+            onClick={() => onImageClick(imgSrc, title)}
         />
     </section>
 );
@@ -77,8 +77,8 @@ const ProtBio = () => {
                 <div className={styles.introText}>
                     <h2>About the Program</h2>
                     <p>
-                     The Protection Program safeguards the Belize Maya Forest (BMF) through a dedicated ranger team that conducts regular patrols, deters illegal activities, and strengthens wildfire prevention and response.
-The BMF is a vital sanctuary for endangered and iconic species, including Belize's five wild cats, the spider monkey, white-lipped peccary, tapir, and keel-billed toucan. Beyond its rich biodiversity, the forest also holds deep cultural significance, including the historic Cara Blanca Pools. Through active protection and fire management, the team works to preserve both the ecological integrity and cultural heritage of this irreplaceable landscape.
+                        The Protection Program safeguards the Belize Maya Forest (BMF) through a dedicated ranger team that conducts regular patrols, deters illegal activities, and strengthens wildfire prevention and response.
+                        The BMF is a vital sanctuary for endangered and iconic species, including Belize's five wild cats, the spider monkey, white-lipped peccary, tapir, and keel-billed toucan. Beyond its rich biodiversity, the forest also holds deep cultural significance, including the historic Cara Blanca Pools. Through active protection and fire management, the team works to preserve both the ecological integrity and cultural heritage of this irreplaceable landscape.
                     </p>
                     <div style={{marginTop: '1.5rem', textAlign: 'center'}}>
                         <a
