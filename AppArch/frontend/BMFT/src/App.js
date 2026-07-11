@@ -6,6 +6,7 @@ import Nav from "./components/GeneralFeatures/Nav";
 import Footer from "./components/GeneralFeatures/Footer";
 import Mobilenav from './components/GeneralFeatures/Mobilenav';
 import Home from "./components/MainPages/Home";
+import PasswordGate from "./components/GeneralFeatures/PasswordGate";
 
 // Every other page is split into its own chunk, loaded only when visited
 const Newsfeed = lazy(() => import("./components/MainPages/Newsfeed"));
@@ -36,6 +37,7 @@ function App() {
   const token = localStorage.getItem('token');
 
   return (
+    <PasswordGate>
     <div className="App">
       <Router>
         <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
@@ -219,6 +221,7 @@ function App() {
         </Suspense>
       </Router>
     </div>
+    </PasswordGate>
   );
 }
 
