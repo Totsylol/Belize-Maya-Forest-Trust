@@ -1,13 +1,10 @@
 import React from 'react';
 import styles from "../styles/GIPanels.module.css";
-import Placeholder from "../assets/Placeholder.jpg";
 import Testbutton from '../GIFeatures/Testbutton';
 import IGBird from '../assets/IGBird.jpg';
 import IGBird2 from '../assets/IGBird2.JPG';
 import IGvol from '../assets/IGvol.jpg';
-import IGfor from '../assets/IGfor.jpg';
 import IGBird3 from '../assets/IGBird3.JPG';
-import IGDeer from '../assets/IGDeer.JPG';
 import rangerad from "../assets/ranger ad.png"
 
 const panelsData = [

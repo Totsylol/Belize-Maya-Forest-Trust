@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/WhatWeDo.module.css';
 import WWDtop from '../assets/WWDtop.jpg';
 import WWDPanels3 from '../WWDFeatures/WWDPanels3';
-import WWDInfo from '../WWDFeatures/WWDInfo';
 import WWDPanel2 from '../WWDFeatures/WWDPanel2';
 import Conservation from '../WWDFeatures/Conservation';
 

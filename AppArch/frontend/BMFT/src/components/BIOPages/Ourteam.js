@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/ourteam.module.css';
 import ProfilePic from "../assets/ProfilePic.jpg";
-import Staff26 from "../assets/Topstaff.JPG";
 import AndyNaj from "../assets/Andy Naj.JPG";
 import EKay from "../assets/Elma.png";
 import Sayuri from "../assets/Tzul.JPG";

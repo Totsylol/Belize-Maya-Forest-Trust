@@ -1,14 +1,20 @@
-AppArch/frontend/BMFT/src/components/styles/Footer.module.css
+# Backend secrets — never commit
+AppArch/backend/.env
+AppArch/backend/server/.env
 AppArch/backend/server/Model/.env
+
+# Dependencies
+AppArch/frontend/BMFT/node_modules
+node_modules/
+
+# Unused legacy assets (not referenced by the app)
+AppArch/frontend/BMFT/src/components/styles/Footer.module.css
 AppArch/frontend/BMFT/src/components/assets/WWDHeader1.JPG
 AppArch/frontend/BMFT/src/components/assets/WWDHeader2.jpg
 AppArch/frontend/BMFT/src/components/assets/WWDHeader3.JPG
 AppArch/frontend/BMFT/src/components/assets/WWDRand.jpg
-AppArch/backend/server/.env
-AppArch/backend/.env
-AppArch/frontend/BMFT/node_modules
-AppArch/frontend/BMFT/package.json
-AppArch/frontend/BMFT/package-lock.json
-*.jpg
 
-
+# Local backups / build artifacts — keep out of the repo
+_assets_backup_ORIGINAL/
+*.tar.gz
+*.bak

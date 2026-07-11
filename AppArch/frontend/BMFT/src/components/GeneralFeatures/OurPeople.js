@@ -1,12 +1,7 @@
 import React from 'react';
-import Topstaff from "../assets/Topstaff.JPG";
-import WWArangers from "../assets/WWArangers.jpg";
-import OTduo from "../assets/OTduo.jpg";
-import Supp from "../assets/Supp.jpg";
 import StewardSum from "../assets/Placeholder.jpg";
 import styles from "../styles/ourpeople.module.css";
 import Staff26 from "../assets/Topstaff.JPG";
-import OTplan from "../assets/OTplan.JPG";
 import OTteam2 from "../assets/OTteam2.JPG";
 import Ctop from "../assets/Ctop.jpg";
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from '../styles/buildingstewards.module.css';
-import S2 from "../assets/S2.jpg";
 import StewardSum from "../assets/Placeholder.jpg";
 import MapSC from "../assets/Placeholder.jpg";
 import WWDPanel2 from './WWDPanel2';

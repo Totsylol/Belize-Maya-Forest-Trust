@@ -3,7 +3,6 @@ import styles from '../styles/conservation.module.css';
 import Cjaguar from "../assets/Cjaguar.JPG";
 import Cforest from "../assets/Cforest.jpg";
 import Cturtle from "../assets/Cturtle.JPG";
-import Cpools from "../assets/Cpools.jpg";
 
 const Dropdown = ({ title, content, imageUrl }) => {
   const [isOpen, setIsOpen] = useState(false);

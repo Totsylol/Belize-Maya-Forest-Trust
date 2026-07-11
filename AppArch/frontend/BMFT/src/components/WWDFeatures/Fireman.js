@@ -4,13 +4,6 @@ import PBfireteam from '../assets/PBfireteam.jpg';
 import Cfire from '../assets/Cfire.jpg';
 import PBCheck from "../assets/PBCheck.jpg";
 import PBfire from "../assets/PBfire.jpg";
-import Placeholder from "../assets/Placeholder.jpg";
-import PBtop from "../assets/PBtop.JPG";
-import PBbird from  "../assets/PBbird.JPG";
-import PBgator from "../assets/PBgator.jpg";
-import OTteam2 from "../assets/OTteam2.JPG";
-import OTplan from "../assets/OTplan.JPG";
-import OTplan2 from "../assets/OTplan2.JPG";
 
 const Modal = ({ src, alt, onClose }) => {
     return (
@@ -23,27 +16,8 @@ const Modal = ({ src, alt, onClose }) => {
     );
 };
 
-const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
-    <section className={`${styles.topicSection} ${reverse ? styles.reverse : ''}`}>
-        <div className={styles.topicText}>
-            <h2>{title}</h2>
-            <p>{children}</p>
-        </div>
-        <img loading="lazy" 
-            src={imgSrc} 
-            alt={title} 
-            className={styles.topicImage} 
-            onClick={() => onImageClick(imgSrc, title)} 
-        />
-    </section>
-);
-
 const Fireman = () => {
     const [modalImage, setModalImage] = useState(null);
-
-    const handleImageClick = (src, alt) => {
-        setModalImage({ src, alt });
-    };
 
     const closeModal = () => {
         setModalImage(null);

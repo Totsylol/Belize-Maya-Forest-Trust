@@ -99,16 +99,13 @@ function AdminNews() {
                     alt={news.title}
                     className={styles.newsImage}
                   />
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     className={styles.newsTitle}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleOpenPopup(news);
-                    }}
+                    onClick={() => handleOpenPopup(news)}
                   >
                     {news.title}
-                  </a>
+                  </button>
                   <p className={styles.newsDate}>
                     {new Date(news.uploadDate).toLocaleDateString()}
                   </p>
@@ -140,16 +137,13 @@ function AdminNews() {
                     alt={report.title}
                     className={styles.newsImage}
                   />
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     className={styles.newsTitle}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleOpenPopup(report);
-                    }}
+                    onClick={() => handleOpenPopup(report)}
                   >
                     {report.title}
-                  </a>
+                  </button>
                   <p className={styles.newsDate}>
                     {new Date(report.uploadDate).toLocaleDateString()}
                   </p>

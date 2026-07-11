@@ -1,52 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styles from '../styles/whoweare.module.css'; 
+import React, { useEffect } from 'react';
+import styles from '../styles/whoweare.module.css';
 import WWAtop from "../assets/WWAtop.jpg";
 import BMFPoster from "../assets/BMFPoster.png";
 import Staff26 from "../assets/Topstaff.JPG";
-import pools from "../assets/Cpools.jpg";
-import archvisit from "../assets/Placeholder.jpg";
-import WWAposter from "../assets/WWAposter.jpg";
-import WWAmid from "../assets/WWAmid.jpg";
-import WWArangers from "../assets/WWArangers.jpg"; 
-import facebookicon from "../assets/facebookicon.webp";
-import youtubeicon from "../assets/youtubeicon.png";
-import gmailicon2 from "../assets/gmailicon2.jpg";
-import Wbird from "../assets/Wbird.JPG";
-import Wshed from "../assets/Wshed.jpg";
-import Wcul from "../assets/Wcul.JPG";
-import Wshed2 from "../assets/Wshed2.jpg";
-import Placeholder from "../assets/Placeholder.jpg";
-import WWDInfo from '../WWDFeatures/WWDInfo';
-import Ntop from "../assets/Ntop.jpg";
-
-const Panel = ({ image, title, description }) => {
-    const [flipped, setFlipped] = useState(false);
-
-    const handleClick = () => {
-        setFlipped(!flipped);
-    };
-
-    return (
-        <div
-            className={`${styles.panel} ${flipped ? styles.flipped : ''}`}
-            onClick={handleClick}
-        >
-            <div className={styles.panelFront}>
-                <div className={styles.panelImageWrapper}>
-                    <img loading="lazy" src={image} alt={title} className={styles.panelImage} />
-                </div>
-                <div className={styles.panelTitle}>
-                    <h3>{title}</h3>
-                </div>
-            </div>
-            <div className={styles.panelBack}>
-                <p>{description}</p>
-            </div>
-        </div>
-    );
-};
-
-
 
 const WhoWeAre = () => {
     useEffect(() => {

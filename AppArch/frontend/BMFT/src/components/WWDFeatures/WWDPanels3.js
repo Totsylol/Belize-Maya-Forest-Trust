@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from '../styles/wwdpanels3.module.css';
 import WWDFire from "../assets/WWDFire.jpg"
-import Stewards from '../assets/Stewards.jpg';
-import WWArangers from "../assets/WWArangers.jpg"; 
+import WWArangers from "../assets/WWArangers.jpg";
 import OTplan from "../assets/OTplan.JPG";
 
 

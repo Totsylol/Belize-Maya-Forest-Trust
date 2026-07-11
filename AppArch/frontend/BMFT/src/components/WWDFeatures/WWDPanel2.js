@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from '../styles/WWDPanel2.module.css';
-import WWDFire from "../assets/WWDFire.jpg"
 import Supp from "../assets/Supp.jpg"
 import Agrigo from "../assets/Agrigo.jpg"
-import { Link } from 'react-router-dom';
 import Stewards from '../assets/Stewards.jpg';
 
 const panelsData = [

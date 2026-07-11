@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styles from "../styles/home.module.css";
 import home from "../assets/Home.jpg";
-import cenote from "../assets/cenote.jpg";
-import diver1 from "../assets/diver1.jpg";
 import fish from "../assets/fish.jpg";
 import diver2 from "../assets/diver2.jpg";
 import c3 from "../assets/c3.jpg";
-import c4 from "../assets/c4.jpg";
-import c5 from "../assets/c5.jpg";
-import c6 from "../assets/c6.jpg";
 import Cforest from "../assets/Cforest.jpg";
 import c8 from "../assets/c8.jpg";
-import Pool16 from "../assets/Pool166.png";
 import HomepageVideoImg from "../assets/Homepage image next to video.jpg";
-import StewardSum from "../assets/Placeholder.jpg";
-import Ivol from "../assets/Ivol.jpg";
 import Pat3 from "../assets/Pat3.jpg";
 import APpeople from "../assets/APpeople.jpg";
-import Placeholder from "../assets/Placeholder.jpg";
 
 const slides = [
   {
@@ -96,8 +87,6 @@ const Home = ({ setNavbarVisible }) => {
   }, [transitionEnabled]);
 
   const dotIndex = (position - 1 + slides.length) % slides.length;
-  const nextSlide = () => setPosition((prev) => prev + 1);
-  const prevSlide = () => setPosition((prev) => prev - 1);
 
   return (
     <div className={styles.homePage}>

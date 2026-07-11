@@ -6,9 +6,6 @@ import JPepper from "../assets/JPepper.png";
 import MGriffis from "../assets/Placeholder.jpg";
 import MBowen from "../assets/MBowen.png";
 import MGruin from "../assets/MGruin.png";
-import ProfilePic from "../assets/ProfilePic.jpg";
-
-import Stop from "../assets/Stop.JPG";
 
 const teamMembers = [
   {

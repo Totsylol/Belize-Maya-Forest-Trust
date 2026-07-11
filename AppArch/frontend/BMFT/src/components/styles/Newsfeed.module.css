@@ -49,6 +49,12 @@
   text-decoration: none;
   display: block;
   margin: 10px 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
 }
 
 .newsTitle:hover {

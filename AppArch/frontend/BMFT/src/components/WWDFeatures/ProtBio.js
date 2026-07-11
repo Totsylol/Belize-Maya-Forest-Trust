@@ -41,27 +41,8 @@ const Modal = ({ src, alt, onClose }) => {
     );
 };
 
-const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
-    <section className={`${styles.topicSection} ${reverse ? styles.reverse : ''}`}>
-        <div className={styles.topicText}>
-            <h2>{title}</h2>
-            <p>{children}</p>
-        </div>
-        <img loading="lazy"
-            src={imgSrc}
-            alt={title}
-            className={styles.topicImage}
-            onClick={() => onImageClick(imgSrc, title)}
-        />
-    </section>
-);
-
 const ProtBio = () => {
     const [modalImage, setModalImage] = useState(null);
-
-    const handleImageClick = (src, alt) => {
-        setModalImage({ src, alt });
-    };
 
     const closeModal = () => {
         setModalImage(null);

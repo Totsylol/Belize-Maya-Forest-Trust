@@ -38,7 +38,18 @@
       "Bash(tar -czf build.tar.gz build)",
       "Bash(awk '{print $5, $9}')",
       "Bash(tar -tzf build.tar.gz)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh repo *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://github.com/IvanMK518/Belize-Maya-Forest-Trust)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git check-ignore *)",
+      "Bash(grep -vE \"^\\\\s*$\")",
+      "Bash(grep -iE \"\\\\.env$|\\\\.env\\\\.|_assets_backup|\\\\.tar\\\\.gz|\\\\.bak$|node_modules\")"
     ]
   }
 }
