@@ -8,7 +8,7 @@ import logo from '../assets/logo.png';
 // To set the password, either:
 //   (a) put it between the quotes below, e.g. FALLBACK_PASSWORD = 'yourpassword'
 //   (b) or set REACT_APP_SITE_PASSWORD in Vercel / .env.local (takes priority)
-const FALLBACK_PASSWORD = '';
+const FALLBACK_PASSWORD = 'BMFTRocks!@';
 const SITE_PASSWORD = process.env.REACT_APP_SITE_PASSWORD || FALLBACK_PASSWORD;
 const STORAGE_KEY = 'site_access';
 
