@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 
-// NOTE: This is a lightweight viewing gate, NOT strong security.
-// The password lives in REACT_APP_SITE_PASSWORD (set in Vercel / .env.local),
-// but because this is a client-side check, the value ships in the browser
-// bundle and a technical visitor could bypass it. It only keeps casual
-// viewers out while the site is being reviewed.
-const SITE_PASSWORD = process.env.REACT_APP_SITE_PASSWORD;
+// NOTE: This is a lightweight pre-launch viewing gate, NOT strong security.
+// It only keeps the prototype from being casually/publicly accessible; a
+// technical visitor could read the bundle and bypass it.
+//
+// To set the password, either:
+//   (a) put it between the quotes below, e.g. FALLBACK_PASSWORD = 'yourpassword'
+//   (b) or set REACT_APP_SITE_PASSWORD in Vercel / .env.local (takes priority)
+const FALLBACK_PASSWORD = '';
+const SITE_PASSWORD = process.env.REACT_APP_SITE_PASSWORD || FALLBACK_PASSWORD;
 const STORAGE_KEY = 'site_access';
 
 function PasswordGate({ children }) {
