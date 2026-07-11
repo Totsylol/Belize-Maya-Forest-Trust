@@ -102,7 +102,7 @@
     color: white;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 .navLink.scrolled {
@@ -238,8 +238,8 @@
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease; 
-    margin-top:23px;
-    margin-left: 30px;
+    margin-top:15px;
+    margin-left: 15px;
 }
 
 .donationButton {

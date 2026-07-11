@@ -17,7 +17,28 @@
       "Bash(mkdir -p /tmp/bmf_docx)",
       "Bash(cp \"C:\\\\Users\\\\jonahp\\\\Documents\\\\1st round of BMF Website feedback.docx\" /tmp/bmf_docx/feedback.docx)",
       "Read(//tmp/**)",
-      "Bash(unzip -o feedback.docx -d extracted/)"
+      "Bash(unzip -o feedback.docx -d extracted/)",
+      "Bash(du -sh \"C:/Users/elija/OneDrive/Desktop/Belize-Maya-Forest-Trust/AppArch/frontend/BMFT/src/components/assets/\"*)",
+      "Bash(awk -F'\\\\t' '{printf \"%7.1f MB  %s\\\\n\", $1/1048576, $2}')",
+      "Bash(node -e \"const s=require\\('sharp'\\); console.log\\('sharp OK, version', require\\('sharp/package.json'\\).version\\);\")",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(node -e \"try{require\\('sharp'\\);console.log\\('OK'\\)}catch\\(e\\){console.log\\('ERR:'+e.message.split\\('\\\\n'\\)[0]\\)}\")",
+      "Bash(node optimize-images.js)",
+      "Bash(awk -F'\\\\t' '{printf \"%.0f KB  %s\\\\n\",$1/1024,$2}')",
+      "Bash(node add-lazy.js)",
+      "Bash(rm -f add-lazy.js)",
+      "Bash(cat Dockerfile)",
+      "Bash(cat compose.yaml)",
+      "Bash(cat AppArch/dockerfile)",
+      "Bash(cat AppArch/docker-compose.yml)",
+      "Bash(cat AppArch/frontend/BMFT/Dockerfile)",
+      "Bash(npm run *)",
+      "Bash(awk -F'\\\\t' '{printf \"%.0f KB %s\\\\n\",$1/1024,$2}')",
+      "Bash(cd \"/c/Users/elija/OneDrive/Desktop/Belize-Maya-Forest-Trust\" && echo \"=== root .gitignore ===\" && cat .gitignore 2>/dev/null | head -40; echo \"=== frontend .gitignore ===\" && cat AppArch/frontend/BMFT/.gitignore 2>/dev/null; echo \"=== any .gitignore mentioning assets ===\" && grep -rn \"assets\" .gitignore AppArch/.gitignore AppArch/frontend/.gitignore AppArch/frontend/BMFT/.gitignore 2>/dev/null)",
+      "Bash(tar -czf build.tar.gz build)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(tar -tzf build.tar.gz)",
+      "Bash(git add *)"
     ]
   }
 }

@@ -13,7 +13,7 @@
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 1rem;
 }
 
 /* Hero Carousel */
@@ -24,7 +24,7 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   background: #0a2e10;
 }
 
@@ -73,7 +73,7 @@
   color: white;
   max-width: 800px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 .slideContent {
@@ -172,7 +172,7 @@
 
 .scrollHint {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
@@ -196,7 +196,7 @@
 
 .carouselDots {
   position: absolute;
-  bottom: 4.5rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -222,7 +222,7 @@
 /* Mission Section */
 .missionSection {
   position: relative;
-  padding: 8rem 0;
+  padding: 2.5rem 0;
   overflow: hidden;
 }
 
@@ -256,11 +256,11 @@
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 0 2rem;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+  padding: 0;
 }
 
 .missionCard {
@@ -268,7 +268,7 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 1.5rem;
   text-align: center;
   color: white;
   transition: transform 0.3s ease;
@@ -314,8 +314,8 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 3rem;
-  max-width: 1000px;
+  padding: 1.5rem;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   color: white;
@@ -336,33 +336,33 @@
 /* Join Section */
 .joinSection {
   background: #2c3e50;
-  padding: 8rem 0;
+  padding: 2.5rem 0;
   color: white;
 }
 
 .joinContent {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   text-align: center;
 }
 
 .joinContent h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .joinCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 
 .joinCard {
   background: white;
   color: #2c3e50;
-  padding: 3rem 2rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -414,7 +414,7 @@
 /* Why Section - Simple Parallax */
 .whySection {
   position: relative;
-  padding: 8rem 0;
+  padding: 2.5rem 0;
   overflow: hidden;
   min-height: 100vh;
 }
@@ -447,9 +447,9 @@
 .whyContent {
   position: relative;
   z-index: 3;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   text-align: center;
   color: white;
 }
@@ -457,14 +457,14 @@
 .whyContent h2 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .whyVideoWrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .whyVideoFrame {
@@ -486,8 +486,8 @@
 
 .whyGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
 .whyCard {
@@ -528,7 +528,7 @@
 /* Section Headers */
 .sectionHeader {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .sectionHeader h2 {
@@ -559,78 +559,123 @@
   width: 100%;
 }
 
-/* Video Section */
+/* Video / Glimpse Section */
 .videoSection {
-  padding: 4rem 0;
+  padding: 3rem 0;
+  background: #ffffff;
+}
+
+/* Unified white panel wrapping text/map + video */
+.videoPanel {
   background: #fff;
+  border: 1px solid #e8efe7;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(26, 61, 31, 0.07);
 }
 
 .videoColumns {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 0.8fr 2.2fr;
+  gap: 2rem;
   align-items: stretch;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
-  height: 420px;
 }
 
-.videoLeft {
-  flex: 1.4;
-  display: flex;
-}
-
+/* Left: text + inset map */
 .videoRight {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  overflow: hidden;
+  gap: 1rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #52c742;
 }
 
 .videoRight h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  color: #2d3436;
-  font-weight: 700;
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  color: #1a3d1f;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.videoRight h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  background: #52c742;
+  border-radius: 2px;
 }
 
 .videoRight p {
-  color: #636e72;
-  line-height: 1.7;
+  color: #5a6b5c;
+  line-height: 1.75;
   font-size: 1rem;
+  margin: 0;
+}
+
+.mapWrap {
+  flex: 1 1 0;
+  min-height: 140px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
 }
 
 .mapImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  flex: 1;
-  min-height: 0;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Right: video */
+.videoLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .videoFrame {
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(82, 199, 66, 0.2);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .videoFrame:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 60px rgba(82, 199, 66, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 /* Explore Section */
 .exploreSection {
-  padding: 3.5rem 0 4rem;
+  padding: 1rem 0 1.5rem;
   background: #fff;
 }
 
 .exploreGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .exploreCard {
@@ -673,7 +718,7 @@
 }
 
 .cardContent {
-  padding: 2.5rem;
+  padding: 1.5rem;
   position: relative;
 }
 
@@ -704,7 +749,7 @@
 
 /* Ecosystem Services Section */
 .ecosystemSection {
-  padding: 4rem 0;
+  padding: 1rem 0;
   background: #f4fdf3;
 }
 
@@ -712,13 +757,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .ecosystemCard {
   background: #fff;
   border-radius: 12px;
-  padding: 36px 24px;
+  padding: 20px 16px;
   text-align: center;
   border-bottom: 4px solid #52c742;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -745,7 +790,7 @@
 /* Impact Section */
 .impactSection {
   position: relative;
-  padding: 4rem 0;
+  padding: 1.5rem 0;
   background-size: cover;
   background-position: center;
 }
@@ -766,12 +811,12 @@
 .impactGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .impactCard {
   text-align: center;
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.07);
@@ -802,14 +847,14 @@
 
 /* News Section */
 .newsSection {
-  padding: 4rem 0;
+  padding: 1rem 0;
   background: #fff;
 }
 
 .newsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .newsCard {
@@ -845,7 +890,7 @@
 }
 
 .newsContent {
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 
 .newsContent h3 {
@@ -924,7 +969,7 @@
   }
 
   .videoColumns {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .impactGrid {
@@ -970,7 +1015,7 @@
   }
 
   .videoFrame {
-    height: 250px;
+    height: auto;
   }
 
   .exploreGrid {

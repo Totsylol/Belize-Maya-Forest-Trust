@@ -33,7 +33,7 @@ const Panel = ({ image, title, description }) => {
         >
             <div className={styles.panelFront}>
                 <div className={styles.panelImageWrapper}>
-                    <img src={image} alt={title} className={styles.panelImage} />
+                    <img loading="lazy" src={image} alt={title} className={styles.panelImage} />
                 </div>
                 <div className={styles.panelTitle}>
                     <h3>{title}</h3>
@@ -64,7 +64,7 @@ const WhoWeAre = () => {
     return (
         <div className={styles.pageContainer}>
             <header className={styles.header}>
-                <img src={WWAtop} alt="Header" />
+                <img loading="lazy" src={WWAtop} alt="Header" />
                 <div className={styles.titleoverlay}>
                     <h1>Belize Maya Forest Trust</h1>
                 </div>
@@ -89,7 +89,7 @@ const WhoWeAre = () => {
                         </p>
                     </div>
                     <div className={styles.infoImage}>
-                        <img src={BMFPoster} alt="BMFPoster" />
+                        <img loading="lazy" src={BMFPoster} alt="BMFPoster" />
                     </div>
                 </div>
             </section>
@@ -113,7 +113,7 @@ const WhoWeAre = () => {
             </section>
 
             <section className={styles.header2}>
-                <img src={Staff26} alt="Meet the Team" />
+                <img loading="lazy" src={Staff26} alt="Meet the Team" />
                 <div className={styles.titleoverlay2}>
                     <h1>Meet the BMFT Team</h1>
                     <a href="/ourpeople" className={styles.seeMoreButton}>See More</a>

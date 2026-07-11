@@ -57,7 +57,7 @@
 .introduction {
     margin-bottom: 2rem;
     text-align: center;
-    padding: 2.5rem;
+    padding: 1.5rem;
 }
 
 .introText h2 {
@@ -86,7 +86,7 @@
 
 /* Ecosystem Services Section */
 .ecosystemSection {
-  padding: 4rem 2rem;
+  padding: 2rem;
   background: #f4fdf3;
   margin-top: 2rem;
 }
@@ -112,7 +112,7 @@
 .ecosystemGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 32px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -120,7 +120,7 @@
 .ecosystemCard {
   background: #fff;
   border-radius: 12px;
-  padding: 36px 24px;
+  padding: 20px 16px;
   text-align: center;
   border-bottom: 3px solid #52c742;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -159,14 +159,14 @@
 
 /* Flip-card Panel section */
 .importanceSection {
-    padding: 60px 80px;
+    padding: 30px 40px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .importanceSection h2 {
     font-size: 2.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: center;
     position: relative;
 }
@@ -186,8 +186,8 @@
 
 .panelsContainer {
     display: flex;
-    justify-content: space-around;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
 }
 

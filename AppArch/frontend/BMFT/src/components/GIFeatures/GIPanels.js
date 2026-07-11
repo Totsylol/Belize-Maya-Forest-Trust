@@ -51,7 +51,7 @@ const GIPanels = () => {
     <div className={styles.panelsContainer}>
       {panelsData.map((panel, index) => (
         <div key={index} className={styles.panel}>
-          <img src={panel.imageUrl} alt={panel.title} className={styles.panelImage} />
+          <img loading="lazy" src={panel.imageUrl} alt={panel.title} className={styles.panelImage} />
           <div className={styles.panelContent}>
             <h3 className={styles.panelTitle}>{panel.title}</h3>
             <p className={styles.panelDescription}>{panel.description}</p>

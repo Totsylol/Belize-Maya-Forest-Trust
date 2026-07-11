@@ -8,7 +8,7 @@ const Involvement = () => {
   return (
     <div className={styles.PageContainer}>
       <header className={styles.header}>
-        <img src={Imonkey} alt="Header" />
+        <img loading="lazy" src={Imonkey} alt="Header" />
         <div className={styles.titleoverlay}>
           <h1>Join Our Conservation Efforts</h1>
         </div>

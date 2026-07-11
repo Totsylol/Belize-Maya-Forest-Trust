@@ -30,7 +30,7 @@ const AutoCarousel = ({ images }) => {
     return (
         <div className={styles.carousel}>
             <button onClick={handlePrev} className={styles.carouselButton}>‹</button>
-            <img src={images[current]} alt="Outreach" className={`${styles.image} ${styles.imageEntering}`} />
+            <img loading="lazy" src={images[current]} alt="Outreach" className={`${styles.image} ${styles.imageEntering}`} />
             <button onClick={handleNext} className={styles.carouselButton}>›</button>
         </div>
     );
@@ -45,7 +45,7 @@ const Outreach = () => {
         <div className={styles.pageContainer}>
             <h1 className={styles.titleoverlay}>Environmental Outreach</h1>
             <header className={styles.header}>
-                <img src={Otop} alt="Header" />
+                <img loading="lazy" src={Otop} alt="Header" />
             </header>
 
             <section className={styles.introSection}>

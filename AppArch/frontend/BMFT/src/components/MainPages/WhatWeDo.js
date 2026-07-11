@@ -11,7 +11,7 @@ const WhatWeDoPage = () => {
   return (
     <div className={styles.PageContainer}>
       <header className={styles.header}>
-        <img src={WWDtop} alt="Header" />
+        <img loading="lazy" src={WWDtop} alt="Header" />
         <div className={styles.titleoverlay}>
           <h1>Protecting Forest Ecosystems</h1>
         </div>

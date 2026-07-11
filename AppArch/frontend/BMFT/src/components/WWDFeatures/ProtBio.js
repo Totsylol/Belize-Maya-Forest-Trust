@@ -16,7 +16,7 @@ const Panel = ({ image, title, description }) => {
         >
             <div className={styles.panelFront}>
                 <div className={styles.panelImageWrapper}>
-                    <img src={image} alt={title} className={styles.panelImage} />
+                    <img loading="lazy" src={image} alt={title} className={styles.panelImage} />
                 </div>
                 <div className={styles.panelTitle}>
                     <h3>{title}</h3>
@@ -34,7 +34,7 @@ const Modal = ({ src, alt, onClose }) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <img src={src} alt={alt} className={styles.modalImage} />
+                <img loading="lazy" src={src} alt={alt} className={styles.modalImage} />
                 <button className={styles.modalClose} onClick={onClose}>&times;</button>
             </div>
         </div>
@@ -47,7 +47,7 @@ const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
             <h2>{title}</h2>
             <p>{children}</p>
         </div>
-        <img
+        <img loading="lazy"
             src={imgSrc}
             alt={title}
             className={styles.topicImage}
@@ -71,7 +71,7 @@ const ProtBio = () => {
         <div className={styles.PageContainer}>
             <h1 className={styles.titleoverlay}>Protecting Biodiversity</h1>
             <header className={styles.header}>
-                <img src={PBtop} alt="Header" />
+                <img loading="lazy" src={PBtop} alt="Header" />
             </header>
             <section className={styles.introduction}>
                 <div className={styles.introText}>

@@ -52,7 +52,7 @@
 .introduction {
     margin-bottom: 2rem;
     text-align: center;
-    padding: 2.5rem;
+    padding: 1.5rem;
 }
 
 .introText h2 {
@@ -63,7 +63,7 @@
 
 .introText p {
     color: #333;
-    margin-top: 40px;
+    margin-top: 20px;
     line-height: 1.7;
     font-size: 1.1rem;
 }
@@ -71,13 +71,13 @@
 .imageGallery {
     width: 100%;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .images {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 2rem;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -96,7 +96,7 @@
 
 .videoSection h2 {
     font-size: 2rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
     font-style: oblique;
     margin-top: 2rem;
 }
@@ -132,8 +132,8 @@
 
 .topicText {
     flex: 1;
-    margin-right: 1.5rem; 
-    padding:40px;
+    margin-right: 1.5rem;
+    padding: 20px;
 }
 
 .topicText h2 {

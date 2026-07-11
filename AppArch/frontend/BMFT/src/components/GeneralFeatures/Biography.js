@@ -170,7 +170,7 @@ import JRob from "../assets/Placeholder.jpg"
             {teamMembers.map((member) => (
               <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
                 <div className={styles.image}>
-                  <img src={member.imgSrc} alt={member.name} />
+                  <img loading="lazy" src={member.imgSrc} alt={member.name} />
                 </div>
                 <div className={styles.description}>
                   <h2 className={styles.name}>{member.name}</h2>
@@ -182,7 +182,7 @@ import JRob from "../assets/Placeholder.jpg"
               <div className={styles.modalContent}>
                 <span className={styles.close} onClick={closeModal}>&times;</span>
                 <div className={styles.modalImage}>
-                  <img src={selectedMember?.imgSrc} alt={selectedMember?.name} />
+                  <img loading="lazy" src={selectedMember?.imgSrc} alt={selectedMember?.name} />
                 </div>
                 <div className={styles.modalDetails}>
                   <h2 className={styles.name}>{selectedMember?.name}</h2>

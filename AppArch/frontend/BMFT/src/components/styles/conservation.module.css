@@ -120,7 +120,7 @@
 
 .aboutPanel {
   display: flex;
-  margin: 0 120px 24px;
+  margin: 0 40px 16px;
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -134,7 +134,7 @@
 }
 
 .aboutPanelBody {
-  padding: 28px 36px;
+  padding: 16px 20px;
 }
 
 .aboutText {
@@ -154,9 +154,9 @@
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-left: 20px;
-  justify-content: center;
+  gap: 20px;
+  margin-left: 0;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 774px) {

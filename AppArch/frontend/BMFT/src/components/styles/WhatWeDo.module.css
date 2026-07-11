@@ -91,7 +91,7 @@ background-color: #f9f9f9;
 
 .section2 {
   margin-bottom: 10px;
-  margin-top:160px;
+  margin-top:80px;
   text-align: center;
 
 }
@@ -101,7 +101,7 @@ background-color: #f9f9f9;
   margin-bottom: 10px;
   color: #020202 ;
   font-weight: bold;
-  margin-top: -100px;
+  margin-top: -60px;
 
 }
 
@@ -113,13 +113,13 @@ background-color: #f9f9f9;
 }
 
 .sectionContentParagraph {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 
 .section {
   margin-bottom: 10px;
-  margin-top:160px;
+  margin-top:80px;
   text-align: center;
 }
 
@@ -142,8 +142,8 @@ background-color: #f9f9f9;
   font-weight: bold;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 70px;
-  margin-top: -80px;
+  margin-bottom: 40px;
+  margin-top: -50px;
 }
 .banner3 {
   background-color: #52c742;
@@ -153,8 +153,8 @@ background-color: #f9f9f9;
   font-weight: bold;
   border-radius: 8px;
   text-align: center;
-  margin-top: -90px;
-  margin-bottom: 70px;
+  margin-top: -50px;
+  margin-bottom: 40px;
 }
 .banner4 {
   background-color: #52c742;
@@ -164,8 +164,8 @@ background-color: #f9f9f9;
   font-weight: bold;
   border-radius: 8px;
   text-align: center;
-  margin-top: -130px;
-  margin-bottom: 70px;
+  margin-top: -80px;
+  margin-bottom: 40px;
 }
 @keyframes rollIn {
   0% {
@@ -199,7 +199,7 @@ background-color: #f9f9f9;
   }
 }
 .aboutSection {
-  padding: 40px 20px;
+  padding: 24px 20px;
   margin: 20px auto;
   max-width: 90%;
   text-align: center;

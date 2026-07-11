@@ -116,16 +116,16 @@ const Home = ({ setNavbarVisible }) => {
           >
             {/* Clone of last slide */}
             <div className={styles.carouselSlide}>
-              <img src={slides[slides.length - 1].image} alt={slides[slides.length - 1].title} />
+              <img loading="lazy" src={slides[slides.length - 1].image} alt={slides[slides.length - 1].title} />
             </div>
             {slides.map((slide, index) => (
               <div key={index} className={styles.carouselSlide}>
-                <img src={slide.image} alt={slide.title} />
+                <img loading="lazy" src={slide.image} alt={slide.title} />
               </div>
             ))}
             {/* Clone of first slide */}
             <div className={styles.carouselSlide}>
-              <img src={slides[0].image} alt={slides[0].title} />
+              <img loading="lazy" src={slides[0].image} alt={slides[0].title} />
             </div>
           </div>
           <div className={styles.carouselOverlay}></div>
@@ -164,12 +164,16 @@ const Home = ({ setNavbarVisible }) => {
       {/* Video Section */}
       <section className={styles.videoSection}>
         <div className={styles.container}>
+          <div className={styles.videoPanel}>
           <div className={styles.videoColumns}>
             <div className={styles.videoRight}>
+              <span className={styles.eyebrow}>Our Landscape</span>
               <h2>A glimpse into our landscape</h2>
               <p>Protecting 241,000 acres of the Belize Maya Forest, linked to the Rio Bravo Conservation Management Area and the greater Selva Maya, safeguards iconic wildlife, sacred Cara Blanca Pools, and the Rio Hondo watershed, while strengthening Belize's climate resilience and conservation goals.</p>
               {/* Replace Pool16 with BMFMap image once added to assets */}
-              <img src={HomepageVideoImg} alt="Belize Maya Forest" className={styles.mapImage} />
+              <div className={styles.mapWrap}>
+                <img loading="lazy" src={HomepageVideoImg} alt="Belize Maya Forest" className={styles.mapImage} />
+              </div>
             </div>
             <div className={styles.videoLeft}>
               <iframe
@@ -178,11 +182,13 @@ const Home = ({ setNavbarVisible }) => {
                 src="https://www.youtube.com/embed/gU-yYppmWNM"
                 title="BMFT Mission Video"
                 frameBorder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className={styles.videoFrame}
               ></iframe>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -197,7 +203,7 @@ const Home = ({ setNavbarVisible }) => {
           <div className={styles.newsGrid}>
             <a href="/WhatWeDo" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={Cforest} alt="What We Do" />
+                <img loading="lazy" src={Cforest} alt="What We Do" />
               </div>
               <div className={styles.newsContent}>
                 <h3>What We Do</h3>
@@ -208,7 +214,7 @@ const Home = ({ setNavbarVisible }) => {
 
             <a href="/WhoWeAre" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={Pat3} alt="Who We Are" />
+                <img loading="lazy" src={Pat3} alt="Who We Are" />
               </div>
               <div className={styles.newsContent}>
                 <h3>Who We Are</h3>
@@ -219,7 +225,7 @@ const Home = ({ setNavbarVisible }) => {
 
             <a href="/GetInvolved" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={APpeople} alt="Get Involved" />
+                <img loading="lazy" src={APpeople} alt="Get Involved" />
               </div>
               <div className={styles.newsContent}>
                 <h3>Get Involved</h3>
@@ -267,7 +273,7 @@ const Home = ({ setNavbarVisible }) => {
           <div className={styles.newsGrid}>
             <a href="/news/ranger-station-eastern" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={c8} alt="Conservation Success Story" />
+                <img loading="lazy" src={c8} alt="Conservation Success Story" />
               </div>
               <div className={styles.newsContent}>
                 <h3>New Ranger Station</h3>
@@ -278,7 +284,7 @@ const Home = ({ setNavbarVisible }) => {
 
             <a href="/news/biodiversity-study" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={fish} alt="Biodiversity Research" />
+                <img loading="lazy" src={fish} alt="Biodiversity Research" />
               </div>
               <div className={styles.newsContent}>
                 <h3>Cara Blanca Pools Biodiversity Study Released</h3>
@@ -289,7 +295,7 @@ const Home = ({ setNavbarVisible }) => {
 
             <a href="/news/community-expansion" className={styles.newsCard} style={{textDecoration:'none',color:'inherit'}}>
               <div className={styles.newsImage}>
-                <img src={diver2} alt="Community Partnership" />
+                <img loading="lazy" src={diver2} alt="Community Partnership" />
               </div>
               <div className={styles.newsContent}>
                 <h3>Community Stewardship Program Expands</h3>

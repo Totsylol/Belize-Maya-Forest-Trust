@@ -85,7 +85,7 @@ const categories = [...new Set(researchProjects.map(p => p.category))];
 const ResearchBubble = ({ project, onClick }) => (
   <div className={styles.bubble} onClick={() => onClick(project)}>
     <div className={styles.bubbleImage}>
-      <img src={project.mainImage} alt={project.title} />
+      <img loading="lazy" src={project.mainImage} alt={project.title} />
     </div>
     <div className={styles.bubbleText}>
       <h2 className={styles.bubbleName}>{project.title}</h2>
@@ -131,7 +131,7 @@ const ScientificResearch = () => {
           <div className={styles.modalBox} onClick={e => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setSelectedProject(null)}>×</button>
             <div className={styles.modalInner}>
-              <img src={selectedProject.mainImage} alt={selectedProject.title} className={styles.modalImg} />
+              <img loading="lazy" src={selectedProject.mainImage} alt={selectedProject.title} className={styles.modalImg} />
               <div className={styles.modalText}>
                 <h2>{selectedProject.title}</h2>
                 <p className={styles.modalLead}><em>{selectedProject.lead}</em></p>

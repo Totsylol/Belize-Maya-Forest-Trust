@@ -105,7 +105,7 @@ const scholarshipRecipients = [
 const StewardCard = ({ person, category, onClick }) => (
   <div className={styles.bubble} onClick={() => onClick(person, category)}>
     <div className={styles.bubbleImage}>
-      <img src={person.imgSrc} alt={person.name} />
+      <img loading="lazy" src={person.imgSrc} alt={person.name} />
     </div>
     <div className={styles.bubbleText}>
       <p className={styles.bubbleName}>{person.name}</p>
@@ -132,7 +132,7 @@ const Communitystewards = () => {
     <main className={styles.container}>
       <h1 className={styles.titleoverlay}>Community Stewards Program</h1>
       <header className={styles.header}>
-        <img src={Ctop} alt="Header" />
+        <img loading="lazy" src={Ctop} alt="Header" />
       </header>
 
       <section className={styles.introduction}>
@@ -151,7 +151,7 @@ const Communitystewards = () => {
       </section>
 
       <header className={styles.header2}>
-        <img src={Cback} alt="Community Stewards" />
+        <img loading="lazy" src={Cback} alt="Community Stewards" />
       </header>
 
       {/* Microgrants Section */}
@@ -186,7 +186,7 @@ const Communitystewards = () => {
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <span className={styles.close} onClick={handleClose}>&times;</span>
             <div className={styles.modalInner}>
-              <img src={selectedPerson.imgSrc} alt={selectedPerson.name} className={styles.modalImage} />
+              <img loading="lazy" src={selectedPerson.imgSrc} alt={selectedPerson.name} className={styles.modalImage} />
               <div className={styles.modalDetails}>
                 <span className={`${styles.categoryBadge} ${selectedCategory === 'scholarship' ? styles.badgeScholarship : styles.badgeMicrogrant}`}>
                   {selectedCategory === 'scholarship' ? 'Green Futures Scholarship' : 'Sustainability Support Microgrant'}

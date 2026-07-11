@@ -118,7 +118,7 @@ const categories = [
 const TeamBubble = ({ member, onClick }) => (
   <div className={styles.bubble} onClick={() => onClick(member)}>
     <div className={styles.bubbleImage}>
-      <img src={member.imgSrc} alt={member.name} />
+      <img loading="lazy" src={member.imgSrc} alt={member.name} />
     </div>
     <div className={styles.bubbleText}>
       <h2 className={styles.bubbleName}>{member.name}</h2>
@@ -153,7 +153,7 @@ const Ourteam = () => {
           <div className={styles.modalBox} onClick={e => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setSelectedMember(null)}>×</button>
             <div className={styles.modalInner}>
-              <img src={selectedMember.imgSrc} alt={selectedMember.name} className={styles.modalImg} />
+              <img loading="lazy" src={selectedMember.imgSrc} alt={selectedMember.name} className={styles.modalImg} />
               <div className={styles.modalText}>
                 <h2>{selectedMember.name}</h2>
                 <h3 className={styles.modalPosition}>{selectedMember.position}</h3>

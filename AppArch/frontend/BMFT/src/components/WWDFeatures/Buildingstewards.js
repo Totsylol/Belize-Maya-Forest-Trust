@@ -9,7 +9,7 @@ const Modal = ({ src, alt, onClose }) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <img src={src} alt={alt} className={styles.modalImage} />
+                <img loading="lazy" src={src} alt={alt} className={styles.modalImage} />
                 <button className={styles.modalClose} onClick={onClose}>×</button>
             </div>
         </div>
@@ -31,7 +31,7 @@ const Buildingstewards = () => {
         <div className={styles.PageContainer}>
             <h1 className={styles.titleoverlay}>Building Stewardship</h1>
             <header className={styles.header}>
-                <img src={StewardSum} alt="Header" />
+                <img loading="lazy" src={StewardSum} alt="Header" />
             </header>
             <section className={styles.introduction}>
                 <div className={styles.introContent}>
@@ -57,7 +57,7 @@ const Buildingstewards = () => {
                         </p>
                     </div>
                     <div className={styles.mapSide}>
-                        <img
+                        <img loading="lazy"
                             src={MapSC}
                             alt="Map of Stakeholder Communities"
                             className={styles.mapImage}

@@ -14,13 +14,13 @@ const OurPeople = () => {
   return (
     <div>
       <header className={styles.header}>
-        <img src={Staff26} alt="Header" />
+        <img loading="lazy" src={Staff26} alt="Header" />
         <h1 className={styles.titleoverlay}>Our People</h1>
       </header>
 
       <section className={`${styles.outreachSection} ${styles.boardMembers}`}>
         <div className={styles.imageSide}>
-          <img src={StewardSum} alt="Our Team" className={styles.image} />
+          <img loading="lazy" src={StewardSum} alt="Our Team" className={styles.image} />
         </div>
         <div className={styles.textSide}>
           <h2>Our Team & Staff</h2>
@@ -40,13 +40,13 @@ const OurPeople = () => {
           <a href="/scientificresearch" className={styles.outreachButton}>See More</a>
         </div>
         <div className={styles.imageSide}>
-          <img src={OTteam2} alt="Researchers & Scientists" className={styles.image} />
+          <img loading="lazy" src={OTteam2} alt="Researchers & Scientists" className={styles.image} />
         </div>
       </section>
 
       <section className={`${styles.outreachSection} ${styles.stewards}`}>
         <div className={styles.imageSide}>
-          <img src={Ctop} alt="Community Stewards" className={styles.image} />
+          <img loading="lazy" src={Ctop} alt="Community Stewards" className={styles.image} />
         </div>
         <div className={styles.textSide}>
           <h2>Community Stewards</h2>

@@ -29,7 +29,7 @@ const Login = () => {
 
     return (
         <div>
-            <a href ='./'><img className={styles.logo} src={logo} alt="Logo"/></a>
+            <a href ='./'><img loading="lazy" className={styles.logo} src={logo} alt="Logo"/></a>
             <video className={styles.videobg} src={bgVid} autoPlay muted loop />
             <div className={styles.wrapper}>
                 <div className={styles.container}>

@@ -11,7 +11,7 @@ const Modal = ({ src, alt, onClose }) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <img src={src} alt={alt} className={styles.modalImage} />
+                <img loading="lazy" src={src} alt={alt} className={styles.modalImage} />
                 <button className={styles.modalClose} onClick={onClose}>×</button>
             </div>
         </div>
@@ -24,7 +24,7 @@ const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
             <h2>{title}</h2>
             <p>{children}</p>
         </div>
-        <img 
+        <img loading="lazy" 
             src={imgSrc} 
             alt={title} 
             className={styles.topicImage} 
@@ -48,7 +48,7 @@ const AgroProj = () => {
         <div className={styles.PageContainer}>
             <h1 className={styles.titleoverlay}>Regenerative Agriculture</h1>
             <header className={styles.header}>
-                <img src={APField} alt="Header" />
+                <img loading="lazy" src={APField} alt="Header" />
             </header>
             <section className={styles.introduction}>
                 <div className={styles.introText}>
@@ -71,9 +71,9 @@ empowers communities to adopt climate-resilient farming methods that boost produ
                 </div>
                 <section className={styles.imageGallery}>
                 <div className={styles.images}>
-                    <img src={APshells} alt="Field showcasing regenerative agriculture practices" className={styles.image} />
-                    <img src={APpeople} alt="Farmers engaged in sustainable farming" className={styles.image} />
-                    <img src={APgreen} alt="Close-up of healthy, green soil" className={styles.image} />
+                    <img loading="lazy" src={APshells} alt="Field showcasing regenerative agriculture practices" className={styles.image} />
+                    <img loading="lazy" src={APpeople} alt="Farmers engaged in sustainable farming" className={styles.image} />
+                    <img loading="lazy" src={APgreen} alt="Close-up of healthy, green soil" className={styles.image} />
                 </div>
             </section>
             </section>

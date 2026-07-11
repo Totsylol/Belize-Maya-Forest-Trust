@@ -32,7 +32,7 @@ const panelsData = [
 
 const Panel = ({ imgSrc, title, description, link }) => (
   <div className={styles.panel}>
-    <img className={styles.panelimg} src={imgSrc} alt={title} />
+    <img loading="lazy" className={styles.panelimg} src={imgSrc} alt={title} />
     <h2 className={styles.paneltitle}>{title}</h2>
     <p className={styles.paneldescription}>{description}</p>
     <button

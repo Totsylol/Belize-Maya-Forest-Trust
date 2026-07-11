@@ -13,7 +13,7 @@ const Dropdown = ({ title, content, imageUrl }) => {
     <div className={styles.dropdown}>
       <div className={styles.imageContainer}>
       <span className={styles.dropdownTitle}>{title}</span>
-        <img src={imageUrl} alt={title} className={styles.image} />
+        <img loading="lazy" src={imageUrl} alt={title} className={styles.image} />
       </div>
       <button 
         className={`${styles.button} ${isOpen ? styles.buttonOpen : ''}`} 

@@ -42,7 +42,7 @@ function LoadingScreen() {
   return (
     <div className={`${styles.overlay} ${fadingOut ? styles.fadeOut : ''}`}>
       <div className={styles.spinner}>
-        <img src={logo} alt="Loading" className={styles.paw} />
+        <img loading="lazy" src={logo} alt="Loading" className={styles.paw} />
       </div>
     </div>
   );

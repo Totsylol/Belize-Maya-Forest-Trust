@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Conservation Section — Design Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f4f4; }
+  .label { text-align: center; padding: 30px 0 10px; font-size: 1.5rem; font-weight: 800; color: #333; letter-spacing: 1px; }
+  .sublabel { text-align: center; color: #888; font-size: 0.95rem; margin-bottom: 24px; }
+  .divider { border: none; border-top: 2px dashed #ccc; margin: 40px auto; width: 80%; }
+
+  /* ── OPTION A – Soft card with left accent bar ── */
+  .optionA { background: #fff; max-width: 900px; margin: 0 auto 10px; border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08); overflow: hidden; display: flex; }
+  .optionA .accent { width: 8px; background: #52c742; flex-shrink: 0; }
+  .optionA .body { padding: 32px 40px; }
+  .optionA .body p { font-size: 1.05rem; color: #444; line-height: 1.8; }
+
+  /* ── OPTION B – Full-width green banner style ── */
+  .optionB { background: linear-gradient(135deg, #2d6a27 0%, #52c742 100%);
+    max-width: 100%; padding: 40px 80px; }
+  .optionB p { font-size: 1.1rem; color: #fff; line-height: 1.85; text-align: center;
+    max-width: 860px; margin: 0 auto; opacity: 0.95; }
+
+  /* ── OPTION C – Italic quote style with big opening mark ── */
+  .optionC { max-width: 860px; margin: 0 auto 10px; padding: 40px 60px; position: relative; }
+  .optionC::before { content: '\201C'; font-size: 8rem; color: #52c742; opacity: 0.2;
+    position: absolute; top: -10px; left: 20px; font-family: Georgia, serif; line-height: 1; }
+  .optionC p { font-size: 1.1rem; color: #444; line-height: 1.85; font-style: italic;
+    text-align: center; }
+
+  /* ── OPTION D – Split layout: icon column + text ── */
+  .optionD { max-width: 900px; margin: 0 auto 10px; display: flex; gap: 32px;
+    align-items: center; background: #fff; border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08); padding: 36px 40px; }
+  .optionD .icon-col { flex-shrink: 0; width: 70px; height: 70px; background: #e8f8e5;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem; }
+  .optionD .text-col p { font-size: 1.05rem; color: #444; line-height: 1.8; }
+
+  /* ── OPTION E – Minimal centered with green underline ── */
+  .optionE { max-width: 860px; margin: 0 auto 10px; padding: 36px 40px; text-align: center; }
+  .optionE .bar { width: 60px; height: 4px; background: #52c742; border-radius: 2px;
+    margin: 0 auto 24px; }
+  .optionE p { font-size: 1.05rem; color: #555; line-height: 1.85; }
+
+  /* ── OPTION F – Dark earth tone panel ── */
+  .optionF { max-width: 100%; background: #1e2d1e; padding: 44px 80px; }
+  .optionF p { font-size: 1.1rem; color: #c8e6c2; line-height: 1.85; text-align: center;
+    max-width: 860px; margin: 0 auto; }
+
+  /* ── shared card row ── */
+  .cards { display: flex; gap: 20px; justify-content: center; max-width: 960px;
+    margin: 30px auto 0; flex-wrap: wrap; }
+  .card { flex: 1 1 calc(30% - 20px); max-width: calc(30% - 20px); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.1); background: #fff; }
+  .card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+  .card .card-label { font-weight: 700; font-size: 0.95rem; text-align: center;
+    padding: 10px 8px; color: #2d3436; }
+  .card .card-btn { display: block; background: rgba(82,199,66,0.5); color: #fff;
+    text-align: center; padding: 8px; font-size: 0.9rem; border-top: 3px solid #52c742; }
+
+  /* forest image placeholder colours */
+  .img-forest { background: linear-gradient(160deg,#4a7c59,#7ec866); height: 180px; }
+  .img-jaguar { background: linear-gradient(160deg,#7c6a2a,#c8a84b); height: 180px; }
+  .img-aqua   { background: linear-gradient(160deg,#2a6a7c,#4bb5c8); height: 180px; }
+
+  .section-wrap { padding: 40px 20px; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     OPTION A — White card with green left bar
+════════════════════════════════════════════ -->
+<div class="label">Option A — White Card with Green Accent Bar</div>
+<div class="sublabel">Clean card, subtle shadow, bold green left stripe</div>
+<div class="section-wrap">
+  <div class="optionA">
+    <div class="accent"></div>
+    <div class="body">
+      <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ══════════════════════════════════════════
+     OPTION B — Full-width green gradient banner
+════════════════════════════════════════════ -->
+<div class="label">Option B — Full-Width Green Gradient Banner</div>
+<div class="sublabel">Bold green wash, white text — strong visual impact</div>
+<div class="section-wrap" style="padding:0 0 40px;">
+  <div class="optionB">
+    <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ══════════════════════════════════════════
+     OPTION C — Large italic quote style
+════════════════════════════════════════════ -->
+<div class="label">Option C — Italic Quote Style</div>
+<div class="sublabel">Large decorative quote mark, centred italic text</div>
+<div class="section-wrap">
+  <div class="optionC">
+    <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ══════════════════════════════════════════
+     OPTION D — Icon + text side by side
+════════════════════════════════════════════ -->
+<div class="label">Option D — Icon + Text Card</div>
+<div class="sublabel">Leaf icon alongside text in a clean white card</div>
+<div class="section-wrap">
+  <div class="optionD">
+    <div class="icon-col">🌿</div>
+    <div class="text-col">
+      <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ══════════════════════════════════════════
+     OPTION E — Minimal centred with green bar
+════════════════════════════════════════════ -->
+<div class="label">Option E — Minimal Centred with Green Underbar</div>
+<div class="sublabel">No background, just a small green rule and centred text</div>
+<div class="section-wrap">
+  <div class="optionE">
+    <div class="bar"></div>
+    <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ══════════════════════════════════════════
+     OPTION F — Dark forest panel
+════════════════════════════════════════════ -->
+<div class="label">Option F — Dark Forest Panel</div>
+<div class="sublabel">Deep green background, soft mint text — earthy and immersive</div>
+<div class="section-wrap" style="padding:0 0 40px;">
+  <div class="optionF">
+    <p>BMFT initiated a yearlong process of engaging stakeholders to create a Conservation Action Plan (CAP), identifying key conservation goals to address the various threats the BMF face. Among the most pressing challenges are deforestation, natural disasters, climate change, pesticide contamination, sediment buildup, and accumulation of solid waste. Illegal extraction activities, presence of invasive non-native species, and occurrence of forest fires further exacerbate these issues. As a result, it is essential to focus on specific conservation targets.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="img-forest"></div><div class="card-label">Forest Ecosystems</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-jaguar"></div><div class="card-label">Jaguars / Wildcats</div><div class="card-btn">Learn More</div></div>
+    <div class="card"><div class="img-aqua"></div><div class="card-label">Aquatic Ecosystems</div><div class="card-btn">Learn More</div></div>
+  </div>
+</div>
+
+</body>
+</html>

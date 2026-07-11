@@ -14,7 +14,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc }) => {
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                 <span className={styles.close} onClick={onClose}>&times;</span>
-                <img src={imageSrc} alt="Modal" className={styles.modalImage} />
+                <img loading="lazy" src={imageSrc} alt="Modal" className={styles.modalImage} />
             </div>
         </div>
     );
@@ -49,7 +49,7 @@ const Patrols = () => {
                             The ranger team conducts routine foot patrols for the protection of the BMF's natural resources and the prevention and detection of unlawful activities. These patrols involve traversing extensive distances on foot through the jungle regardless of weather and conditions. The team is equipped with the necessary tools and provides comprehensive trainings. BMF rangers also engage in data collection utilizing the Spatial Monitoring and Reporting Tool (SMART) alongside advanced technologies such as drones and satellite imagery.
                         </p>
                     </div>
-                    <img src={Pat1} alt="Ranger Team" className={styles.image} />
+                    <img loading="lazy" src={Pat1} alt="Ranger Team" className={styles.image} />
                 </div>
 
                 <section>
@@ -77,9 +77,9 @@ const Patrols = () => {
                 </div>
 
                 <div className={styles.imageGallery}>
-                    <img src={Pat3} alt="Patrol 1" onClick={() => openModal(Pat3)} className={styles.galleryImage} />
-                    <img src={Pat4} alt="Patrol 2" onClick={() => openModal(Pat4)} className={styles.galleryImage} />
-                    <img src={Pat5} alt="Patrol 3" onClick={() => openModal(Pat5)} className={styles.galleryImage} />
+                    <img loading="lazy" src={Pat3} alt="Patrol 1" onClick={() => openModal(Pat3)} className={styles.galleryImage} />
+                    <img loading="lazy" src={Pat4} alt="Patrol 2" onClick={() => openModal(Pat4)} className={styles.galleryImage} />
+                    <img loading="lazy" src={Pat5} alt="Patrol 3" onClick={() => openModal(Pat5)} className={styles.galleryImage} />
                 </div>
 
                 <ImageModal isOpen={isModalOpen} onClose={closeModal} imageSrc={currentImage} />

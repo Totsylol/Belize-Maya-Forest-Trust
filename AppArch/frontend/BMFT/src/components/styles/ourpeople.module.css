@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto 2rem;
   box-sizing: border-box;
   margin-top: 5vw;
@@ -43,7 +43,7 @@ body {
 
 .textSide, .imageSide {
   flex: 1;
-  padding: 2rem;
+  padding: 1rem;
   box-sizing: border-box;
 }
 

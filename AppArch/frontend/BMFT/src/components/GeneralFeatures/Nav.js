@@ -22,7 +22,7 @@ const Nav = ({ isVisible, currentPage }) => {
             <ul className={styles.navList}>
                 <li className={`${styles.navItem} ${styles.logoItem}`}>
                     <a href='/' className={`${styles.navLink} ${currentPage === 'home' ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}>
-                        <img className={styles.logo} src={logo} alt="Logo" />
+                        <img loading="lazy" className={styles.logo} src={logo} alt="Logo" />
                     </a>
                 </li>
                 <li className={`${styles.navItem} ${styles.dropdown}`}>

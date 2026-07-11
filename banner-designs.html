@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Banner Design Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f0f0; }
+
+  .page-label { text-align: center; padding: 36px 0 6px; font-size: 1.6rem;
+    font-weight: 900; color: #222; letter-spacing: 2px; text-transform: uppercase; }
+  .page-sub { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 28px; }
+  .divider { border: none; border-top: 2px dashed #ccc; margin: 48px 40px; }
+  .demo { padding: 0 40px 20px; }
+
+  /* filler content so banners look in context */
+  .filler { height: 40px; background: #e8e8e8; border-radius: 6px; margin-bottom: 0; }
+  .filler2 { height: 120px; background: #e4e4e4; border-radius: 6px; margin-top: 16px; }
+
+  /* ── OPTION A: current style (reference) ── */
+  .a-banner {
+    background-color: #52c742;
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* ── OPTION B: Left-border + white background ── */
+  .b-banner {
+    background: #fff;
+    color: #2d3436;
+    padding: 1.2rem 2rem;
+    font-size: 2.4rem;
+    font-weight: 800;
+    border-left: 10px solid #52c742;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+  }
+
+  /* ── OPTION C: Diagonal stripe background ── */
+  .c-banner {
+    background: repeating-linear-gradient(
+      -45deg,
+      #52c742,
+      #52c742 18px,
+      #45a835 18px,
+      #45a835 36px
+    );
+    color: #fff;
+    padding: 1.4rem 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    border-radius: 8px;
+    text-align: center;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.25);
+  }
+
+  /* ── OPTION D: Full dark with green underline ── */
+  .d-banner {
+    background: #1a2e1a;
+    color: #fff;
+    padding: 1.4rem 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+  }
+  .d-banner::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #52c742;
+    border-radius: 2px;
+    margin: 10px auto 0;
+  }
+
+  /* ── OPTION E: Outlined / ghost style ── */
+  .e-banner {
+    background: transparent;
+    color: #2d3436;
+    padding: 1.2rem 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    border: 3px solid #52c742;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .e-banner span {
+    color: #52c742;
+  }
+
+  /* ── OPTION F: Split colour half-and-half ── */
+  .f-banner {
+    display: flex;
+    align-items: stretch;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 2.6rem;
+    font-weight: 800;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+  }
+  .f-banner .f-left {
+    background: #52c742;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .f-banner .f-right {
+    background: #1a2e1a;
+    color: #c8e6c2;
+    padding: 1.2rem 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* ── OPTION G: Pill / capsule style ── */
+  .g-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .g-banner {
+    background: linear-gradient(90deg, #3aad2e, #52c742);
+    color: #fff;
+    padding: 1rem 3.5rem;
+    font-size: 2.4rem;
+    font-weight: 800;
+    border-radius: 60px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(82,199,66,0.4);
+    display: inline-block;
+  }
+
+  /* ── OPTION H: Underline only — minimal ── */
+  .h-banner {
+    background: transparent;
+    color: #2d3436;
+    padding: 1rem 0 0.6rem;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 5px solid #52c742;
+  }
+
+  /* ── OPTION I: Image overlay style ── */
+  .i-banner {
+    background: linear-gradient(135deg, #1e4d1a 0%, #52c742 100%);
+    color: #fff;
+    padding: 2rem 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+</style>
+</head>
+<body>
+
+<!-- OPTION A (Current) -->
+<div class="page-label">Option A — Current Style (Reference)</div>
+<div class="page-sub">Solid green block, rounded corners</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="a-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="a-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="a-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION B -->
+<div class="page-label">Option B — White Card with Green Left Border</div>
+<div class="page-sub">Clean white background, bold green left accent — modern editorial</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="b-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="b-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="b-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION C -->
+<div class="page-label">Option C — Diagonal Stripe</div>
+<div class="page-sub">Repeating diagonal green stripes — energetic and bold</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="c-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="c-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="c-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION D -->
+<div class="page-label">Option D — Dark Forest with Green Underline</div>
+<div class="page-sub">Deep dark green panel with a glowing green rule — rich and premium</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="d-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="d-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="d-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION E -->
+<div class="page-label">Option E — Outlined / Ghost Style</div>
+<div class="page-sub">Green border outline on white — clean and understated</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="e-banner">BMF <span>Conservation</span> Targets</div>
+  <div class="filler2"></div>
+  <div class="e-banner" style="margin-top:16px">Protecting <span>Biodiversity</span></div>
+  <div class="filler2"></div>
+  <div class="e-banner" style="margin-top:16px">Building <span>Stewardship</span></div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION F -->
+<div class="page-label">Option F — Split Half &amp; Half</div>
+<div class="page-sub">Left half green title, right half dark with a subtitle — informative</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="f-banner">
+    <div class="f-left">BMF Conservation Targets</div>
+    <div class="f-right">Protecting the Belize Maya Forest through targeted action</div>
+  </div>
+  <div class="filler2"></div>
+  <div class="f-banner" style="margin-top:16px">
+    <div class="f-left">Protecting Biodiversity</div>
+    <div class="f-right">Safeguarding wildlife and ecosystems across the BMF landscape</div>
+  </div>
+  <div class="filler2"></div>
+  <div class="f-banner" style="margin-top:16px">
+    <div class="f-left">Building Stewardship</div>
+    <div class="f-right">Empowering communities to lead conservation efforts</div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION G -->
+<div class="page-label">Option G — Pill / Capsule</div>
+<div class="page-sub">Rounded pill shape, centred — friendly and modern</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="g-wrap"><div class="g-banner">BMF Conservation Targets</div></div>
+  <div class="filler2"></div>
+  <div class="g-wrap" style="margin-top:16px"><div class="g-banner">Protecting Biodiversity</div></div>
+  <div class="filler2"></div>
+  <div class="g-wrap" style="margin-top:16px"><div class="g-banner">Building Stewardship</div></div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION H -->
+<div class="page-label">Option H — Underline Only (Minimal)</div>
+<div class="page-sub">No background, just a bold green underline — very clean</div>
+<div class="demo">
+  <div class="filler"></div>
+  <div class="h-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="h-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="h-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+<hr class="divider"/>
+
+<!-- OPTION I -->
+<div class="page-label">Option I — Dark-to-Green Gradient</div>
+<div class="page-sub">Deep forest to bright green gradient, uppercase — striking and immersive</div>
+<div class="demo" style="padding-bottom:60px">
+  <div class="filler"></div>
+  <div class="i-banner">BMF Conservation Targets</div>
+  <div class="filler2"></div>
+  <div class="i-banner" style="margin-top:16px">Protecting Biodiversity</div>
+  <div class="filler2"></div>
+  <div class="i-banner" style="margin-top:16px">Building Stewardship</div>
+</div>
+
+</body>
+</html>

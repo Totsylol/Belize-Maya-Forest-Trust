@@ -16,7 +16,7 @@ const Modal = ({ src, alt, onClose }) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-                <img src={src} alt={alt} className={styles.modalImage} />
+                <img loading="lazy" src={src} alt={alt} className={styles.modalImage} />
                 <button className={styles.modalClose} onClick={onClose}>×</button>
             </div>
         </div>
@@ -29,7 +29,7 @@ const TopicSection = ({ title, imgSrc, children, reverse, onImageClick }) => (
             <h2>{title}</h2>
             <p>{children}</p>
         </div>
-        <img 
+        <img loading="lazy" 
             src={imgSrc} 
             alt={title} 
             className={styles.topicImage} 
@@ -54,7 +54,7 @@ const Fireman = () => {
          
             <section className={styles.Head2}>
                 <header className={styles.header2}>
-                    <img src={PBfireteam} alt="Fire Prevention" />
+                    <img loading="lazy" src={PBfireteam} alt="Fire Prevention" />
                     <h1 className={styles.titleoverlay2}>Fire Safety</h1>
                 </header>
             </section>
@@ -67,16 +67,16 @@ Additionally, a Fire Safety Awareness Campaign was launched that promotes safe b
             </section>
             <section className={styles.imageGallery}>
                 <div className={styles.images}>
-                    <img src={PBfireteam} alt="Habitat Restoration" className={styles.image} />
-                    <img src={PBCheck} alt="Endangered Species" className={styles.image} />
-                    <img src={PBfire} alt="Community Education" className={styles.image} />
+                    <img loading="lazy" src={PBfireteam} alt="Habitat Restoration" className={styles.image} />
+                    <img loading="lazy" src={PBCheck} alt="Endangered Species" className={styles.image} />
+                    <img loading="lazy" src={PBfire} alt="Community Education" className={styles.image} />
                 </div>
             </section>
             
             <section className={styles.videoSection}>
                 <h2>LET FIRE SAFETY START WITH YOU!</h2>
                 <div style={{maxWidth: '600px', margin: '1.5rem auto', textAlign: 'center'}}>
-                    <img
+                    <img loading="lazy"
                         src={Cfire}
                         alt="Fire Safety Poster"
                         style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.2)'}}

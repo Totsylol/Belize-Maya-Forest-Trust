@@ -29,25 +29,25 @@ const HomeText = () => {
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <a href="/WhatWeDo" className={styles.navLink}>
-              <img src={Placeholder} alt="What We Do" className={styles.navImage} />
+              <img loading="lazy" src={Placeholder} alt="What We Do" className={styles.navImage} />
               <span className={styles.navTitle}>What We Do</span>
             </a>
           </li>
           <li className={styles.navItem}>
             <a href="/News" className={styles.navLink}>
-              <img src={Placeholder} alt="News" className={styles.navImage} />
+              <img loading="lazy" src={Placeholder} alt="News" className={styles.navImage} />
               <span className={styles.navTitle}>News</span>
             </a>
           </li>
           <li className={styles.navItem}>
             <a href="/WhoWeAre" className={styles.navLink}>
-              <img src={Placeholder} alt="Who We Are" className={styles.navImage} />
+              <img loading="lazy" src={Placeholder} alt="Who We Are" className={styles.navImage} />
               <span className={styles.navTitle}>Who We Are</span>
             </a>
           </li>
           <li className={styles.navItem}>
             <a href="/GetInvolved" className={styles.navLink}>
-              <img src={Placeholder} alt="Get Involved" className={styles.navImage} />
+              <img loading="lazy" src={Placeholder} alt="Get Involved" className={styles.navImage} />
               <span className={styles.navTitle}>Get Involved</span>
             </a>
           </li>
@@ -58,7 +58,7 @@ const HomeText = () => {
         <h2>Latest News</h2>
         <div className={styles.newsPanel}>
           <div className={styles.newsItem}>
-            <img src={Placeholder} alt="News Article 1" className={styles.newsImage} />
+            <img loading="lazy" src={Placeholder} alt="News Article 1" className={styles.newsImage} />
             <div className={styles.newsContent}>
               <h3>Article Title 1</h3>
               <p>Brief summary of the news article...</p>
@@ -66,7 +66,7 @@ const HomeText = () => {
             </div>
           </div>
           <div className={styles.newsItem}>
-            <img src={Placeholder} alt="News Article 2" className={styles.newsImage} />
+            <img loading="lazy" src={Placeholder} alt="News Article 2" className={styles.newsImage} />
             <div className={styles.newsContent}>
               <h3>Article Title 2</h3>
               <p>Brief summary of the news article...</p>
@@ -74,7 +74,7 @@ const HomeText = () => {
             </div>
           </div>
           <div className={styles.newsItem}>
-            <img src={Placeholder} alt="News Article 3" className={styles.newsImage} />
+            <img loading="lazy" src={Placeholder} alt="News Article 3" className={styles.newsImage} />
             <div className={styles.newsContent}>
               <h3>Article Title 3</h3>
               <p>Brief summary of the news article...</p>

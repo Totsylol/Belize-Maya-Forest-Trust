@@ -96,7 +96,7 @@
 
 /* Research card grid */
 .introSection {
-    padding: 1.5rem 4rem 0.5rem;
+    padding: 1.5rem 1rem 0.5rem;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
@@ -106,7 +106,7 @@
 }
 
 .categorySection {
-    padding: 1.5rem 4rem 2rem;
+    padding: 1.5rem 1rem 2rem;
 }
 
 .categoryTitle {
@@ -121,8 +121,8 @@
 
 .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
 }
 
 .researchCard {
@@ -272,8 +272,8 @@
 .bubbleGrid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 30px;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;

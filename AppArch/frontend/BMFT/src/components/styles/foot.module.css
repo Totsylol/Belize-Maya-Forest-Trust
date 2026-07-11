@@ -1,7 +1,7 @@
 .footer {
   background: #0099c4;
   color: #fff;
-  padding: 4rem 6rem 0;
+  padding: 2rem 1.5rem 0;
 }
 
 .inner {
@@ -13,8 +13,8 @@
 .top {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr 1.4fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -156,7 +156,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .footer {
-    padding: 3rem 3rem 0;
+    padding: 1.5rem 1.5rem 0;
   }
 
   .top {

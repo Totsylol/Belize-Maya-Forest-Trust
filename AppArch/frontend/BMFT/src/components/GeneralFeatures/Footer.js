@@ -10,7 +10,7 @@ function Footer() {
       <div className={styles.top}>
 
         <div className={styles.brand}>
-          <img src={BMFTlogo} alt="BMFT Logo" className={styles.logo} />
+          <img loading="lazy" src={BMFTlogo} alt="BMFT Logo" className={styles.logo} />
           <p>Protecting 241,000 acres of Belize's Great Forest — safeguarding wildlife, watersheds, and cultural heritage for all Belizeans.</p>
         </div>
 

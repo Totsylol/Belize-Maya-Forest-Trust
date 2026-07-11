@@ -36,7 +36,7 @@ const NewsPages = () => {
       <p>{new Date(news.uploadDate).toLocaleDateString()}</p>
       <p>{news.description}</p>
       {news.content && (
-        <img
+        <img loading="lazy"
           src={`data:${news.type};base64,${btoa(
             new Uint8Array(news.content.data).reduce(
               (data, byte) => data + String.fromCharCode(byte),

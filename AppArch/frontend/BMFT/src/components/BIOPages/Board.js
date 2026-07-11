@@ -60,14 +60,14 @@ const Rangers = () => {
   return (
     <div>
             <header className={styles.header}>
-        <img src={Stop} alt="Header" className={styles.headerImage} />
+        <img loading="lazy" src={Stop} alt="Header" className={styles.headerImage} />
         <h1 className={styles.titleoverlay}>Staff</h1>
       </header>
       <div className={styles.biographypage}>
         {teamMembers.map((member) => (
           <div key={member.name} className={styles.teammember} onClick={() => openModal(member)}>
             <div className={styles.image}>
-              <img src={member.imgSrc} alt={member.name} />
+              <img loading="lazy" src={member.imgSrc} alt={member.name} />
             </div>
             <div className={styles.description}>
               <h2 className={styles.name}>{member.name}</h2>
@@ -80,7 +80,7 @@ const Rangers = () => {
           <div className={styles.modalContent}>
             <span className={styles.close} onClick={closeModal}>&times;</span>
             <div className={styles.modalImage}>
-              <img src={selectedMember?.imgSrc} alt={selectedMember?.name} />
+              <img loading="lazy" src={selectedMember?.imgSrc} alt={selectedMember?.name} />
             </div>
             <div className={styles.modalDetails}>
               <h2 className={styles.name}>{selectedMember?.name}</h2>

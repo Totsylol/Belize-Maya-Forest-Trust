@@ -72,7 +72,7 @@ function Newsfeed() {
     <div className={styles.newsFeedPage}>
       <h1 className={styles.titleoverlay}>News</h1>
       <header className={styles.header}>
-        <img src={Ntop} alt="Header" />
+        <img loading="lazy" src={Ntop} alt="Header" />
       </header>
       <main className={styles.newsFeed}>
 
@@ -107,7 +107,7 @@ function Newsfeed() {
             {newsData.length > 0 ? (
               newsData.map((news) => (
                 <div key={news._id} className={styles.newsItem}>
-                  <img
+                  <img loading="lazy"
                     src={`data:${news.type};base64,${btoa(
                       new Uint8Array(news.content.data).reduce(
                         (data, byte) => data + String.fromCharCode(byte),
@@ -148,7 +148,7 @@ function Newsfeed() {
             {annualReportData.length > 0 ? (
               annualReportData.map((report) => (
                 <div key={report._id} className={styles.newsItem}>
-                  <img
+                  <img loading="lazy"
                     src={`data:${report.type};base64,${btoa(
                       new Uint8Array(report.content.data).reduce(
                         (data, byte) => data + String.fromCharCode(byte),
@@ -191,7 +191,7 @@ function Newsfeed() {
             {publicationsData.length > 0 ? (
               publicationsData.map((pub) => (
                 <div key={pub._id} className={styles.newsItem}>
-                  <img
+                  <img loading="lazy"
                     src={`data:${pub.type};base64,${btoa(
                       new Uint8Array(pub.content.data).reduce(
                         (data, byte) => data + String.fromCharCode(byte),

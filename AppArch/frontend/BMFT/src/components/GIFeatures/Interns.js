@@ -16,7 +16,7 @@ const Interns = () => {
         </a>
       </div>
       <div className={styles.picture}>
-        <img src="/path-to-your-image.jpg" alt="Internships and Volunteers" />
+        <img loading="lazy" src="/path-to-your-image.jpg" alt="Internships and Volunteers" />
       </div>
     </section>
   );

@@ -1,31 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/MainPages/Home";
+
+// Shared chrome + landing page load eagerly (needed on first paint)
 import Nav from "./components/GeneralFeatures/Nav";
-import Newsfeed from "./components/MainPages/Newsfeed";
-import Involvement from "./components/MainPages/Involvement";
-import WhoWeAre from "./components/MainPages/WhoWeAre"
-import Footer from "./components/GeneralFeatures/Footer"
-import WhatWeDo from "./components/MainPages/WhatWeDo";
-import AgroProj from "./components/WWDFeatures/AgroProj";
-import ProtBio from "./components/WWDFeatures/ProtBio";
-import Outreach from "./components/WWDFeatures/Outreach";
-import Ourteam from "./components/BIOPages/Ourteam";
-import OurPeople from "./components/GeneralFeatures/OurPeople";
-import Communitystewards from './components/WWDFeatures/Communitystewards';
-import AdminNews from "./components/API/AdminNews";
-import Setting from './components/API/Setting';
-import Staff from './components/BIOPages/Staff';
-import Inprog from './components/GIFeatures/Inprog';
+import Footer from "./components/GeneralFeatures/Footer";
 import Mobilenav from './components/GeneralFeatures/Mobilenav';
-import Fireman from './components/WWDFeatures/Fireman';
-import Buildingstewards from './components/WWDFeatures/Buildingstewards';
-import Patrols from './components/WWDFeatures/Patrols';
-import Scientificresearch from './components/WWDFeatures/Scientificresearch';
-import Developers from './components/WWDFeatures/Developers';
-import NewsPages from './components/API/NewsPages';
-import Login from './components/API/Login';
-import ContactUsPage from './components/GeneralFeatures/ContactUs';
+import Home from "./components/MainPages/Home";
+
+// Every other page is split into its own chunk, loaded only when visited
+const Newsfeed = lazy(() => import("./components/MainPages/Newsfeed"));
+const Involvement = lazy(() => import("./components/MainPages/Involvement"));
+const WhoWeAre = lazy(() => import("./components/MainPages/WhoWeAre"));
+const WhatWeDo = lazy(() => import("./components/MainPages/WhatWeDo"));
+const AgroProj = lazy(() => import("./components/WWDFeatures/AgroProj"));
+const ProtBio = lazy(() => import("./components/WWDFeatures/ProtBio"));
+const Outreach = lazy(() => import("./components/WWDFeatures/Outreach"));
+const Ourteam = lazy(() => import("./components/BIOPages/Ourteam"));
+const OurPeople = lazy(() => import("./components/GeneralFeatures/OurPeople"));
+const Communitystewards = lazy(() => import('./components/WWDFeatures/Communitystewards'));
+const AdminNews = lazy(() => import("./components/API/AdminNews"));
+const Setting = lazy(() => import('./components/API/Setting'));
+const Staff = lazy(() => import('./components/BIOPages/Staff'));
+const Inprog = lazy(() => import('./components/GIFeatures/Inprog'));
+const Fireman = lazy(() => import('./components/WWDFeatures/Fireman'));
+const Buildingstewards = lazy(() => import('./components/WWDFeatures/Buildingstewards'));
+const Patrols = lazy(() => import('./components/WWDFeatures/Patrols'));
+const Scientificresearch = lazy(() => import('./components/WWDFeatures/Scientificresearch'));
+const Developers = lazy(() => import('./components/WWDFeatures/Developers'));
+const NewsPages = lazy(() => import('./components/API/NewsPages'));
+const Login = lazy(() => import('./components/API/Login'));
+const ContactUsPage = lazy(() => import('./components/GeneralFeatures/ContactUs'));
 
 function App() {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
@@ -34,6 +38,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
         <Routes>
           <Route path="/" element={
             <>
@@ -211,6 +216,7 @@ function App() {
             </>
           } />
         </Routes>
+        </Suspense>
       </Router>
     </div>
   );

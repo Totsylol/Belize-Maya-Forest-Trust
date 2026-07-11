@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We Do — Page Design Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #e8e8e8; }
+  .page-label { text-align: center; font-size: 1rem; font-weight: bold; color: #52c742; padding: 30px 0 10px; text-transform: uppercase; letter-spacing: 2px; background: #e8e8e8; }
+  .divider { border: none; border-top: 2px dashed #ccc; margin: 10px 40px 0; }
+
+  /* ─── OPTION A: Clean card-based sections ─── */
+  .optA { background: #f9f9f9; }
+  .optA .hero { height: 300px; background: linear-gradient(135deg,#1a3d1f,#2e6b35); display:flex; align-items:center; justify-content:center; }
+  .optA .hero h1 { color:#fff; font-size:2.2rem; font-weight:800; letter-spacing:1px; }
+  .optA .intro { max-width: 800px; margin: 50px auto; text-align:center; padding: 0 40px; }
+  .optA .intro p { font-size:1.05rem; color:#555; line-height:1.8; }
+  .optA .sections { display:flex; flex-direction:column; gap:0; }
+  .optA .sec { display:flex; align-items:stretch; }
+  .optA .sec:nth-child(even) { flex-direction:row-reverse; }
+  .optA .sec .label-col { flex:0 0 280px; background:#1a3d1f; display:flex; align-items:center; justify-content:center; padding:40px; }
+  .optA .sec:nth-child(2) .label-col { background:#52c742; }
+  .optA .sec:nth-child(3) .label-col { background:#2e6b35; }
+  .optA .sec .label-col h2 { color:#fff; font-size:1.4rem; text-align:center; line-height:1.4; }
+  .optA .sec .content-col { flex:1; padding:40px 60px; background:#fff; display:flex; align-items:center; }
+  .optA .sec .content-col p { font-size:1rem; color:#555; line-height:1.8; }
+
+  /* ─── OPTION B: Icon + title cards in a row ─── */
+  .optB { background:#fff; }
+  .optB .hero { height:300px; background:linear-gradient(135deg,#1a3d1f,#52c742); display:flex; align-items:center; justify-content:center; }
+  .optB .hero h1 { color:#fff; font-size:2.2rem; font-weight:800; }
+  .optB .intro { padding:50px 80px 30px; text-align:center; }
+  .optB .intro p { font-size:1.05rem; color:#555; line-height:1.8; max-width:800px; margin:0 auto; }
+  .optB .cards { display:flex; gap:0; }
+  .optB .card { flex:1; padding:50px 36px; text-align:center; border-right:1px solid #eee; cursor:pointer; transition:background 0.2s; }
+  .optB .card:last-child { border-right:none; }
+  .optB .card:hover { background:#f4fdf3; }
+  .optB .card .icon { font-size:3rem; margin-bottom:16px; }
+  .optB .card h2 { font-size:1.2rem; color:#1a3d1f; font-weight:700; margin-bottom:12px; }
+  .optB .card p { font-size:0.9rem; color:#666; line-height:1.7; }
+  .optB .card .btn { display:inline-block; margin-top:20px; padding:8px 24px; background:#52c742; color:#fff; border-radius:50px; font-size:0.85rem; font-weight:600; }
+
+  /* ─── OPTION C: Timeline steps ─── */
+  .optC { background:#f9f9f9; }
+  .optC .hero { height:300px; background:linear-gradient(160deg,#1a3d1f 60%,#52c742); display:flex; align-items:center; justify-content:center; }
+  .optC .hero h1 { color:#fff; font-size:2.2rem; font-weight:800; }
+  .optC .intro { padding:50px 80px 20px; text-align:center; }
+  .optC .intro p { font-size:1.05rem; color:#555; line-height:1.8; max-width:800px; margin:0 auto; }
+  .optC .steps { padding:40px 80px 60px; position:relative; }
+  .optC .steps::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:3px; background:#52c742; transform:translateX(-50%); }
+  .optC .step { display:flex; align-items:center; margin-bottom:50px; }
+  .optC .step:nth-child(even) { flex-direction:row-reverse; }
+  .optC .step .box { flex:1; background:#fff; border-radius:12px; padding:30px 36px; box-shadow:0 3px 12px rgba(0,0,0,0.08); }
+  .optC .step:not(:nth-child(even)) .box { margin-right:60px; }
+  .optC .step:nth-child(even) .box { margin-left:60px; }
+  .optC .step .dot { width:20px; height:20px; background:#52c742; border-radius:50%; position:absolute; left:50%; transform:translateX(-50%); box-shadow:0 0 0 5px #d4f7cf; flex-shrink:0; }
+  .optC .step .box h2 { font-size:1.2rem; color:#1a3d1f; margin-bottom:10px; }
+  .optC .step .box p { font-size:0.95rem; color:#555; line-height:1.7; }
+
+  /* ─── OPTION D: Full bleed sections with overlapping title ─── */
+  .optD { background:#fff; }
+  .optD .hero { height:300px; background:linear-gradient(135deg,#1a3d1f,#2e6b35); display:flex; align-items:center; justify-content:center; position:relative; }
+  .optD .hero h1 { color:#fff; font-size:2.2rem; font-weight:800; }
+  .optD .intro { padding:50px 80px 30px; text-align:center; border-bottom:1px solid #eee; }
+  .optD .intro p { font-size:1.05rem; color:#555; line-height:1.8; max-width:800px; margin:0 auto; }
+  .optD .blk { position:relative; padding:60px 80px; }
+  .optD .blk:nth-child(odd) { background:#fff; }
+  .optD .blk:nth-child(even) { background:#f4fdf3; }
+  .optD .blk .num { position:absolute; top:20px; right:80px; font-size:6rem; font-weight:900; color:rgba(82,199,66,0.1); line-height:1; }
+  .optD .blk h2 { font-size:1.6rem; color:#1a3d1f; margin-bottom:16px; font-weight:800; }
+  .optD .blk p { font-size:1rem; color:#555; line-height:1.8; max-width:700px; }
+  .optD .blk .tag { display:inline-block; background:#52c742; color:#fff; padding:4px 16px; border-radius:50px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; }
+</style>
+</head>
+<body>
+
+<!-- OPTION A -->
+<p class="page-label">Option A — Alternating Side Panels</p>
+<div class="optA">
+  <div class="hero"><h1>Protecting Forest Ecosystems</h1></div>
+  <div class="intro"><p>The Belize Maya Forest protection offers crucial ecological benefits including clean air, water, fertile soils, and essential pollinators while strengthening the regional Selva Maya Forest connectivity.</p></div>
+  <div class="sections">
+    <div class="sec">
+      <div class="label-col"><h2>BMF Conservation Targets</h2></div>
+      <div class="content-col"><p>Key conservation goals addressing deforestation, climate change, pesticide contamination, and invasive species — focusing on Forest Ecosystems, Aquatic Ecosystems, and Jaguars/Wildcats.</p></div>
+    </div>
+    <div class="sec">
+      <div class="label-col"><h2>Protecting Biodiversity</h2></div>
+      <div class="content-col"><p>A dedicated ranger team conducts regular patrols, deters illegal activities, and manages wildfire prevention across the 241,000-acre reserve.</p></div>
+    </div>
+    <div class="sec">
+      <div class="label-col"><h2>Building Stewardship</h2></div>
+      <div class="content-col"><p>Community stewardship programs empowering local communities to protect and sustainably manage the forest for generations to come.</p></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OPTION B -->
+<p class="page-label">Option B — Three Clickable Feature Cards</p>
+<div class="optB">
+  <div class="hero"><h1>Protecting Forest Ecosystems</h1></div>
+  <div class="intro"><p>The Belize Maya Forest protection offers crucial ecological benefits including clean air, water, fertile soils, and essential pollinators.</p></div>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🌳</div>
+      <h2>BMF Conservation Targets</h2>
+      <p>Addressing deforestation, climate change, pesticide contamination, and invasive species through targeted action plans.</p>
+      <div class="btn">Learn More</div>
+    </div>
+    <div class="card">
+      <div class="icon">🐆</div>
+      <h2>Protecting Biodiversity</h2>
+      <p>A dedicated ranger team patrolling 241,000 acres to protect wildlife, deter illegal activities, and manage wildfires.</p>
+      <div class="btn">Learn More</div>
+    </div>
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h2>Building Stewardship</h2>
+      <p>Empowering local communities to protect and sustainably manage the forest for generations to come.</p>
+      <div class="btn">Learn More</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OPTION C -->
+<p class="page-label">Option C — Vertical Timeline Steps</p>
+<div class="optC">
+  <div class="hero"><h1>Protecting Forest Ecosystems</h1></div>
+  <div class="intro"><p>The Belize Maya Forest protection offers crucial ecological benefits including clean air, water, fertile soils, and essential pollinators.</p></div>
+  <div class="steps">
+    <div class="step">
+      <div class="box"><h2>BMF Conservation Targets</h2><p>Addressing deforestation, climate change, pesticide contamination, and invasive species through targeted conservation action plans.</p></div>
+      <div class="dot"></div>
+    </div>
+    <div class="step">
+      <div class="box"><h2>Protecting Biodiversity</h2><p>A dedicated ranger team patrolling 241,000 acres to protect wildlife, deter illegal activities, and manage wildfires.</p></div>
+      <div class="dot"></div>
+    </div>
+    <div class="step">
+      <div class="box"><h2>Building Stewardship</h2><p>Empowering local communities to protect and sustainably manage the forest for generations to come.</p></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OPTION D -->
+<p class="page-label">Option D — Numbered Full-Width Blocks</p>
+<div class="optD">
+  <div class="hero"><h1>Protecting Forest Ecosystems</h1></div>
+  <div class="intro"><p>The Belize Maya Forest protection offers crucial ecological benefits including clean air, water, fertile soils, and essential pollinators.</p></div>
+  <div class="blk">
+    <div class="num">01</div>
+    <div class="tag">Conservation</div>
+    <h2>BMF Conservation Targets</h2>
+    <p>Addressing deforestation, climate change, pesticide contamination, and invasive species through targeted conservation action plans.</p>
+  </div>
+  <div class="blk">
+    <div class="num">02</div>
+    <div class="tag">Biodiversity</div>
+    <h2>Protecting Biodiversity</h2>
+    <p>A dedicated ranger team patrolling 241,000 acres to protect wildlife, deter illegal activities, and manage wildfires.</p>
+  </div>
+  <div class="blk">
+    <div class="num">03</div>
+    <div class="tag">Stewardship</div>
+    <h2>Building Stewardship</h2>
+    <p>Empowering local communities to protect and sustainably manage the forest for generations to come.</p>
+  </div>
+</div>
+
+<br><br>
+</body>
+</html>

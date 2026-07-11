@@ -51,7 +51,7 @@
 }
 
 .outreachSection {
-    margin-top: 70px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -147,7 +147,7 @@
 }
 
 .introSection {
-    padding: 2rem 4rem 1rem;
+    padding: 1.5rem 2rem 1rem;
     text-align: center;
     max-width: 900px;
     width: 100%;
