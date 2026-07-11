@@ -4,13 +4,13 @@
     gap: 32px;
     margin: 10px auto 20px;
     justify-content: center;
-    max-width: 1300px;
+    max-width: 1700px;
     padding: 0 1%;
   }
-  
+
   .panel {
     flex: 1;
-    max-width: 300px; 
+    max-width: 400px;
     min-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
