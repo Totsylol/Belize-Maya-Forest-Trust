@@ -16,9 +16,9 @@ function AdminNews() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await axios.get(`/api/news?tag=news`);
-        console.log('Fetched news data:', response.data);  
-        setNewsData(response.data); 
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news?tag=news`);
+        console.log('Fetched news data:', response.data);
+        setNewsData(response.data);
       } catch (error) {
         console.error('Error fetching news data:', error);
       }
@@ -26,7 +26,7 @@ function AdminNews() {
 
     const fetchAnnualReportData = async () => {
       try {
-        const response = await axios.get(`/api/news?tag=annual report`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news?tag=annual report`);
         console.log('Fetched annual report data:', response.data);
         setAnnualReportData(response.data); 
       } catch (error) {

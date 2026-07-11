@@ -20,7 +20,7 @@ function Newsfeed() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await axios.get(`/api/news?tag=news`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news?tag=news`);
         console.log('Fetched news data:', response.data);
         setNewsData(response.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function Newsfeed() {
 
     const fetchAnnualReportData = async () => {
       try {
-        const response = await axios.get(`/api/news?tag=annual report`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news?tag=annual report`);
         console.log('Fetched annual report data:', response.data);
         setAnnualReportData(response.data);
       } catch (error) {
@@ -40,7 +40,7 @@ function Newsfeed() {
 
     const fetchPublicationsData = async () => {
       try {
-        const response = await axios.get(`/api/news?tag=publication`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news?tag=publication`);
         console.log('Fetched publications data:', response.data);
         setPublicationsData(response.data);
       } catch (error) {

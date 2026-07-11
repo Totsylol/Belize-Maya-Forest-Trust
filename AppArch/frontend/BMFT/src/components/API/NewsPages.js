@@ -10,7 +10,7 @@ const NewsPages = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get(`/api/news/${title}`); // Fetch the news post by title
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/news/${title}`); // Fetch the news post by title
         setNews(response.data); 
       } catch (err) {
         setError('Failed to fetch news post');

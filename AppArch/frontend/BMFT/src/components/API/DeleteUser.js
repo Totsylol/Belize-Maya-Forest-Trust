@@ -19,7 +19,7 @@ function DeleteUser({ userId }) {
                 return; 
             }
 
-            const response = await axios.delete(`/api/delete_user/${userId}`, {
+            const response = await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/delete_user/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

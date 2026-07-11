@@ -25,7 +25,7 @@ const Setting = () => {
 
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/api/details`, {
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/details`, {
           headers: {
             Authorization: `Bearer ${token}`, // Add token in Authorization header
           },

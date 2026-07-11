@@ -18,7 +18,7 @@ const Login = () => {
         setError(''); 
 
         try {
-            const response = await axios.post('http://localhost:5001/api/login', { username, password }); // Changed email to username in the payload
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/login`, { username, password }); // Changed email to username in the payload
             localStorage.setItem('token', response.data.token); 
             nav.push('/');
             window.location.reload();

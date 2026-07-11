@@ -30,7 +30,7 @@ const Post = () => {
         formData.append('image', image);
 
         try {
-            const response = await axios.post('/api/news', formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/news`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
